@@ -1,0 +1,11 @@
+# Modell-/Druckdateien bleiben exklusiv auf MakerWorld
+*.scad
+*.stl
+*.3mf
+*.step
+*.stp
+*.gcode
+*.obj
+*.amf
+*.f3d
+*.blend
