@@ -1,6 +1,6 @@
 # Parametrische 3D-Druck-Modelle
 
-Dokumentation, Bilder und Links zu meinen parametrischen OpenSCAD-Modellen für den FDM-Druck. Die 27 Modelle sind parametrisch aufgebaut und werden im MakerWorld-Customizer eingestellt; die Modelle samt Druckprofilen gibt es ausschließlich auf MakerWorld.
+Dokumentation, Bilder und Links zu meinen parametrischen OpenSCAD-Modellen für den FDM-Druck. Die 28 Modelle sind parametrisch aufgebaut und werden im MakerWorld-Customizer eingestellt; die Modelle samt Druckprofilen gibt es ausschließlich auf MakerWorld.
 
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-BetaHydri-00AE42)](https://makerworld.com/en/@BetaHydri)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
@@ -14,7 +14,7 @@ Ein Klick auf das Bild oder auf **Details** öffnet die ausführliche Beschreibu
 
 ## Inhaltsverzeichnis
 
-- [Aufbewahrung und Ordnung](#aufbewahrung-und-ordnung) (11)
+- [Aufbewahrung und Ordnung](#aufbewahrung-und-ordnung) (12)
 - [Küche und Haushalt](#küche-und-haushalt) (3)
 - [Haus, Möbel und Licht](#haus-möbel-und-licht) (6)
 - [Technik und Elektronik](#technik-und-elektronik) (2)
@@ -37,6 +37,7 @@ Ein Klick auf das Bild oder auf **Details** öffnet die ausführliche Beschreibu
 | [<img src="docs/thumbs/parametric-pill-box.jpg" width="220" alt="Parametric Pill Box">](models/parametric-pill-box/README.md) | **Parametric Pill Box**<br>Wochen-Pillendose mit Scharnier- oder Reibdeckeln, stapelbar und beschriftbar. | [Details](models/parametric-pill-box/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3120609-ultimate-parametric-pill-box) |
 | [<img src="docs/thumbs/parametric-bowl.jpg" width="220" alt="Parametric Bowl">](models/parametric-bowl/README.md) | **Parametric Bowl**<br>Deckelschale mit Gitterwand, Reibsitz-Deckel und Einklebe-Knauf. | [Details](models/parametric-bowl/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3006569-parametric-bowl-with-friction-fit-lid) |
 | [<img src="docs/thumbs/parametric-coin-inlets.jpg" width="220" alt="Ultimate Parametric Coin Sorter and Drop-in">](models/parametric-coin-inlets/README.md) | **Ultimate Parametric Coin Sorter and Drop-in**<br>Münzsortierer aus Gefäß, Einsatz und Deckel, automatisch passend zu deinen Münzen dimensioniert. | [Details](models/parametric-coin-inlets/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3248811-ultimate-parametric-coin-sorter-drop-in-vessel) |
+| [<img src="docs/thumbs/parametric-niche-shelf-system.jpg" width="220" alt="Parametric Niche Shelf System">](models/parametric-niche-shelf-system/README.md) | **Parametric Niche Shelf System**<br>Regal für schmale, auch schräge Nischen mit 1–4 Schalen, Eckpfosten, gedruckten Schraubfüßen, fünf Befestigungsarten und optionaler Schlauchabdeckung. | [Details](models/parametric-niche-shelf-system/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3464475-parametric-niche-shelf-system) |
 
 ## Küche und Haushalt
 
