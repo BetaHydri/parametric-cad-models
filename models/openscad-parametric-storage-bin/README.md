@@ -1,381 +1,376 @@
-# Parametric Open-Front Storage Bin – Offener Behälter mit Schrägfase, Stapelrand und Rillen
+# Parametric Open-Front Storage Bin – Open Bin with Angled Chamfer, Stacking Rim and Grooves
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Parametrischer, vorne offener Aufbewahrungsbehälter für den FDM-Druck: niedrige
-Frontwand, diagonal abfallende Seitenwände, optional stapelbar und mit
-senkrechten Rillen an den Außenwänden – alles im MakerWorld-Customizer.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/2867878-stackable-parametric-open-front-storage-bin)
+Parametric open-front storage bin for FDM printing: low front wall, diagonally
+sloping side walls, optionally stackable and with vertical grooves on the outer
+walls – all in the MakerWorld Customizer.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/2867878-stackable-parametric-open-front-storage-bin)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-P1S%20%7C%20P2S%20%7C%20H2C%20%7C%20H2D-green)
 ![Print files](https://img.shields.io/badge/Print%20files-MakerWorld%20only-blue)
 
-> **Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:**
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/2867878-stackable-parametric-open-front-storage-bin](https://makerworld.com/en/models/2867878-stackable-parametric-open-front-storage-bin)
+> **The model with all print profiles is available exclusively on MakerWorld:**
+> 👉 [MakerWorld link: https://makerworld.com/en/models/2867878-stackable-parametric-open-front-storage-bin](https://makerworld.com/en/models/2867878-stackable-parametric-open-front-storage-bin)
 >
-> ![Open-Front Storage Bins mit Schrauben, Bohrern und Kleinteilen vor einer Werkstattwand](images/01_hero.jpg)
+> ![Open-front storage bins with screws, drill bits and small parts in front of a workshop wall](images/01_hero.jpg)
 
-Der **Parametric Open-Front Storage Bin** ist ein Behälter, in den du von vorne
-greifst: Die Frontwand ist niedrig, die Seitenwände fallen diagonal zur Front
-hin ab. Breite, Tiefe, Höhe, Frontwandhöhe und Länge der Fase stellst du frei
-ein. Optional bekommt der Behälter einen Stapelrand, der in die Unterseite des
-nächsten Behälters greift, und senkrechte Rillen an den Außenwänden. Er druckt
-flach auf dem Bett und braucht keine Stützen.
+The **Parametric Open-Front Storage Bin** is a bin you reach into from the
+front: the front wall is low, and the side walls slope diagonally down toward
+the front. You freely set width, depth, height, front wall height and chamfer
+length. Optionally, the bin gets a stacking rim that engages the underside of
+the next bin, and vertical grooves on the outer walls. It prints flat on the
+bed and needs no supports.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Konstruktion](#konstruktion)
-- [Varianten](#varianten)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Parametric Options](#parametric-options)
+- [Design](#design)
+- [Variants](#variants)
+- [Print Recommendations](#print-recommendations)
+- [Use Cases](#use-cases)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Wer Schrauben, Bohrer, Kabel oder Werkzeug sortiert, kennt die Lücke zwischen
-Fach und Behälter:
+Anyone who sorts screws, drill bits, cables or tools knows the gap between
+compartment and bin:
 
-- Die Kiste aus dem Laden ist 5 mm zu breit oder 15 mm zu tief für das Fach.
-- Behälter mit hoher Frontwand zwingen dich, den Inhalt über die Kante zu
-  heben – bei Kleinteilen nervig.
-- Wer Behälter stapelt, ohne dass sie einrasten, baut einen wackeligen Turm.
-- Stapelhilfen kosten oft Innenraum, weil Rand und Wand doppelt Platz brauchen.
-- Ein Behälter im Wohnmobil-Staufach muss exakt in das vorhandene Fach passen.
+- The box from the store is 5 mm too wide or 15 mm too deep for the
+  compartment.
+- Bins with a high front wall force you to lift the contents over the edge –
+  annoying with small parts.
+- Stacking bins that don't lock together makes a wobbly tower.
+- Stacking aids often cost interior space, because rim and wall each need
+  extra room.
+- A bin in a motorhome storage compartment has to fit the existing compartment
+  exactly.
 
-## Die Idee
+## The Idea
 
-Der Behälter wurde ursprünglich für die technischen Fächer eines HYMER Grand
-Canyon S entworfen und ist darüber hinaus überall nützlich, wo ein Einsatz
-passgenau ins Regal, in die Schublade oder in den Van soll. Die Grundform ist
-eine Wanne mit hoher Rückwand, niedriger Frontwand und Seitenwänden mit
-Schrägfase. Alles andere sind Optionen auf dieser Form: Stapelrand,
-Rillenstruktur und Fase an der Unterkante. Alle Maße sind Millimeter, alle
-Werte Customizer-Parameter, und alle Eingaben werden intern begrenzt – jede
-Reglerkombination ergibt ein gültiges Modell.
+The bin was originally designed for the technical compartments of a HYMER Grand
+Canyon S and is useful anywhere an insert needs to fit a shelf, drawer or van
+precisely. The basic shape is a tub with a tall back wall, a low front wall and
+side walls with an angled chamfer. Everything else is an option on top of that
+shape: stacking rim, groove texture and a chamfer on the bottom edge. All
+dimensions are in millimeters, all values are Customizer parameters, and all
+inputs are limited internally – every combination of sliders yields a valid
+model.
 
 ## Highlights
 
-- **Freie Maße:** `width` und `depth` von 40 bis 500 mm, `height` von 20 bis
-  500 mm, automatisch auf das Bauvolumen des gewählten Druckers begrenzt.
-- **Offene Front mit Schrägfase:** `front_height` setzt die niedrige Frontwand,
-  `chamfer_len` die Länge der diagonalen Fase an den Seitenwänden
-  (0 = senkrechte Stufe).
-- **Stapelbar ohne Platzverlust:** Eine Lippe aus der inneren Wandhälfte greift
-  in eine Aussparung in der Bodenunterseite des nächsten Behälters. Der
-  Innenraum bleibt unverändert.
-- **Rillenstruktur:** senkrechte Rillen an den Außenwänden in drei Profilen
-  (rechteckig, V-förmig, gerundet), symmetrisch pro Wand verteilt.
-- **Druckerpresets:** `P1S`, `P2S`, `H2C`, `H2D` und `Custom` mit eigenem
-  Bauvolumen.
-- **Fase an der Unterkante** (`bottom_chamfer`) gegen den Elefantenfuß.
-- **Druckfreundlich:** ein Körper, flach auf dem Bett, ohne Stützen.
-- **Robuste Eingaben:** Wand, Boden, Fasenlänge und Rillentiefe werden
-  begrenzt, damit nichts durchschneidet.
+- **Free dimensions:** `width` and `depth` from 40 to 500 mm, `height` from 20
+  to 500 mm, automatically limited to the build volume of the selected printer.
+- **Open front with angled chamfer:** `front_height` sets the low front wall,
+  `chamfer_len` the length of the diagonal chamfer on the side walls
+  (0 = vertical step).
+- **Stackable without losing space:** A lip made from the inner half of the
+  wall engages a recess in the underside of the floor of the next bin. The
+  interior stays unchanged.
+- **Groove texture:** vertical grooves on the outer walls in three profiles
+  (rectangular, V-shaped, rounded), distributed symmetrically per wall.
+- **Printer presets:** `P1S`, `P2S`, `H2C`, `H2D` and `Custom` with your own
+  build volume.
+- **Chamfer on the bottom edge** (`bottom_chamfer`) against elephant's foot.
+- **Print-friendly:** one body, flat on the bed, no supports.
+- **Robust inputs:** wall, floor, chamfer length and groove depth are limited
+  so that nothing cuts through.
 
-![Mehrere Behälter in verschiedenen Größen mit Titel und Funktionssymbolen](images/06_titel-uebersicht.jpg)
+![Several bins in different sizes with title and function icons](images/06_titel-uebersicht.jpg)
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Namen entsprechen den Customizer-Parametern des Modells.
+The names correspond to the model's Customizer parameters.
 
-### Drucker / Bauvolumen
+### Printer / Build Volume
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `printer` | Preset: `P1S`, `P2S`, `H2C`, `H2D` oder `Custom` | `H2D` | Auswahl |
-| `max_build_x` | Bauvolumen X, nur bei `Custom` | 350 | 100–500 mm |
-| `max_build_y` | Bauvolumen Y, nur bei `Custom` | 320 | 100–500 mm |
-| `max_build_z` | Bauvolumen Z, nur bei `Custom` | 325 | 100–500 mm |
+| `printer` | Preset: `P1S`, `P2S`, `H2C`, `H2D` or `Custom` | `H2D` | Selection |
+| `max_build_x` | Build volume X, only with `Custom` | 350 | 100–500 mm |
+| `max_build_y` | Build volume Y, only with `Custom` | 320 | 100–500 mm |
+| `max_build_z` | Build volume Z, only with `Custom` | 325 | 100–500 mm |
 
-Die Presets setzen folgende Bauvolumen (X × Y × Z): `P1S` und `P2S`
+The presets set the following build volumes (X × Y × Z): `P1S` and `P2S`
 256 × 256 × 256 mm, `H2C` 330 × 320 × 325 mm, `H2D` 350 × 320 × 325 mm.
 
-### Außenmaße
+### Outer Dimensions
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `width` | Breite (links–rechts) | 120 | 40–500 mm |
-| `depth` | Tiefe (vorne–hinten) | 100 | 40–500 mm |
-| `height` | Gesamthöhe an der Rückwand | 70 | 20–500 mm |
+| `width` | Width (left–right) | 120 | 40–500 mm |
+| `depth` | Depth (front–back) | 100 | 40–500 mm |
+| `height` | Overall height at the back wall | 70 | 20–500 mm |
 
-### Offene Front
+### Open Front
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `front_height` | Höhe der niedrigen Frontwand, begrenzt auf `height` − 5 | 30 | 5–495 mm |
-| `chamfer_len` | Länge der Schrägfase entlang der Tiefe ab der Front, 0 = senkrechte Stufe; begrenzt auf `depth` − `wall` | 35 | 0–495 mm |
+| `front_height` | Height of the low front wall, limited to `height` − 5 | 30 | 5–495 mm |
+| `chamfer_len` | Length of the angled chamfer along the depth from the front, 0 = vertical step; limited to `depth` − `wall` | 35 | 0–495 mm |
 
-### Wände
+### Walls
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `wall` | Wandstärke von Seiten, Front und Rückwand; bei Stapelrand mindestens 3,0 | 2,0 | 1,2–4,0 mm, Schritt 0,1 |
-| `floor_t` | Bodenstärke | 2,0 | 1,2–4,0 mm, Schritt 0,1 |
+| `wall` | Wall thickness of sides, front and back wall; at least 3.0 with stacking rim | 2.0 | 1.2–4.0 mm, step 0.1 |
+| `floor_t` | Floor thickness | 2.0 | 1.2–4.0 mm, step 0.1 |
 
-### Stapelrand
+### Stacking Rim
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `stackable` | Lippe oben und Aussparung unten | 0 | 0 = Aus, 1 = An |
-| `stack_lip_h` | Höhe der Lippe bzw. Tiefe der Aussparung | 3,0 | 1,0–8,0 mm, Schritt 0,1 |
-| `stack_clearance` | Spiel zwischen Lippe und Aussparung je Seite | 0,2 | 0,1–0,6 mm, Schritt 0,05 |
+| `stackable` | Lip on top and recess on the bottom | 0 | 0 = Off, 1 = On |
+| `stack_lip_h` | Height of the lip or depth of the recess | 3.0 | 1.0–8.0 mm, step 0.1 |
+| `stack_clearance` | Clearance between lip and recess per side | 0.2 | 0.1–0.6 mm, step 0.05 |
 
-### Kosmetik
+### Cosmetics
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `bottom_chamfer` | Fase an der äußeren Unterkante (gegen Elefantenfuß) | 0,6 | 0–2,0 mm, Schritt 0,1 |
+| `bottom_chamfer` | Chamfer on the outer bottom edge (against elephant's foot) | 0.6 | 0–2.0 mm, step 0.1 |
 
-### Relief / Textur
+### Relief / Texture
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `relief_enabled` | Senkrechte Rillen an den Außenwänden | 0 | 0 = Aus, 1 = An |
-| `relief_style` | Rillenprofil | 2 | 0 = Rechteck, 1 = V-Rille, 2 = Gerundet |
-| `relief_count` | Ungefähre Gesamtzahl der Rillen am gesamten Umfang | 240 | 4–500 |
-| `relief_depth` | Tiefe jeder Rille | 0,6 | 0,2–1,2 mm, Schritt 0,1 |
-| `relief_width` | Breite jeder Rille | 1,0 | 0,5–4,0 mm, Schritt 0,1 |
-| `relief_corner` | Mindestabstand der Rillen zu jeder Ecke | 1,0 | 1,0–15 mm, Schritt 0,5 |
-| `relief_walls` | Welche Wände Rillen bekommen | 0 | 0 = Alle, 1 = Nur Seiten, 2 = Nur Front und Rückwand |
+| `relief_enabled` | Vertical grooves on the outer walls | 0 | 0 = Off, 1 = On |
+| `relief_style` | Groove profile | 2 | 0 = Rectangle, 1 = V-groove, 2 = Rounded |
+| `relief_count` | Approximate total number of grooves around the entire perimeter | 240 | 4–500 |
+| `relief_depth` | Depth of each groove | 0.6 | 0.2–1.2 mm, step 0.1 |
+| `relief_width` | Width of each groove | 1.0 | 0.5–4.0 mm, step 0.1 |
+| `relief_corner` | Minimum distance of the grooves from each corner | 1.0 | 1.0–15 mm, step 0.5 |
+| `relief_walls` | Which walls get grooves | 0 | 0 = All, 1 = Sides only, 2 = Front and back wall only |
 
-### Qualität
+### Quality
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `$fn` | Render-Glätte (im aktuellen Modellstand werten die gerundeten Rillen ihn nicht aus; sie nutzen fest 24 Segmente) | 64 | 16–128, Schritt 8 |
+| `$fn` | Render smoothness (in the current model version, the rounded grooves do not use it; they use a fixed 24 segments) | 64 | 16–128, step 8 |
 
-![Einzelner Behälter mit feiner Rillenstruktur und schrägen Seitenwänden](images/07_vorschau-render.png)
+![Single bin with fine groove texture and angled side walls](images/07_vorschau-render.png)
 
-## Konstruktion
+## Design
 
-### OpenSCAD-Ansatz
+### OpenSCAD Approach
 
-Das Modell ist reines OpenSCAD ohne externe Bibliotheken und läuft im
-MakerWorld-Customizer. Der Behälter ist ein einzelner Körper: Eine Bodenplatte,
-eine Rückwand über die volle Höhe, eine niedrige Frontwand und zwei Seitenwände
-werden vereinigt; Fase, Stapelaussparungen und Rillen werden anschließend
-abgezogen.
+The model is pure OpenSCAD without external libraries and runs in the
+MakerWorld Customizer. The bin is a single body: a base plate, a full-height
+back wall, a low front wall and two side walls are united; chamfer, stacking
+recesses and grooves are then subtracted.
 
-### Parametrische Logik
+### Parametric Logic
 
-Alle Eingaben laufen zuerst durch eine Begrenzung. Daraus ergeben sich die
-internen Werte:
+All inputs first pass through a limiter. The internal values result from this:
 
-| Größe | Formel / Regel |
+| Quantity | Formula / Rule |
 |---|---|
-| Breite, Tiefe, Höhe | min(Eingabe, Bauvolumen des Druckers) je Achse |
-| Frontwandhöhe | min(`front_height`, Höhe − 5) |
-| Fasenlänge | zwischen 0 und `depth` − `wall` |
-| Wandstärke | min(`wall`, min(Breite, Tiefe) / 2 − 1); bei Stapelrand mindestens 3,0 |
-| Bodenstärke | min(`floor_t`, Höhe − 1) |
-| Lippenhöhe | min(`stack_lip_h`, Höhe − Frontwandhöhe − 1, Boden − 0,4) |
-| Rillentiefe | min(`relief_depth`, Wand − 0,4) |
-| Rillenabstand | Gesamtumfang 2 × (Breite + Tiefe) / `relief_count` |
+| Width, depth, height | min(input, printer build volume) per axis |
+| Front wall height | min(`front_height`, height − 5) |
+| Chamfer length | between 0 and `depth` − `wall` |
+| Wall thickness | min(`wall`, min(width, depth) / 2 − 1); at least 3.0 with stacking rim |
+| Floor thickness | min(`floor_t`, height − 1) |
+| Lip height | min(`stack_lip_h`, height − front wall height − 1, floor − 0.4) |
+| Groove depth | min(`relief_depth`, wall − 0.4) |
+| Groove spacing | total perimeter 2 × (width + depth) / `relief_count` |
 
-Mit den Voreinstellungen (120 × 100 × 70 mm, Frontwand 30 mm, Fase 35 mm,
-Wand 2,0 mm) ergeben sich: Innenbreite 116 mm; die Seitenwand steigt über 35 mm
-Tiefe um 40 mm an (rund 49° gegen die Waagerechte).
+With the default settings (120 × 100 × 70 mm, front wall 30 mm, chamfer 35 mm,
+wall 2.0 mm), this results in: inner width 116 mm; the side wall rises by 40 mm
+over a depth of 35 mm (about 49° from the horizontal).
 
-Die Werte sind aus den Formeln und den Standardwerten abgeleitet.
+The values are derived from the formulas and the default values.
 
-Hinweis zum Stapelrand: Weil die Lippenhöhe auch durch die Bodenstärke begrenzt
-ist (unter der Aussparung bleiben mindestens 0,4 mm Boden stehen), ergibt sich
-bei der Standard-Bodenstärke von 2,0 mm eine Lippe von höchstens 1,6 mm. Für die
-vollen 3 mm der Voreinstellung `stack_lip_h` brauchst du eine Bodenstärke von
-mindestens 3,4 mm.
+Note on the stacking rim: because the lip height is also limited by the floor
+thickness (at least 0.4 mm of floor remains below the recess), the default
+floor thickness of 2.0 mm results in a lip of at most 1.6 mm. For the full 3 mm
+of the `stack_lip_h` default, you need a floor thickness of at least 3.4 mm.
 
-### Besondere Algorithmen
+### Special Algorithms
 
-- **Seitenwand als Polygon:** Jede Seitenwand ist ein extrudiertes Fünfeck. Es
-  beginnt an der Front auf der Höhe der Frontwand und steigt über die
-  Fasenlänge schräg bis zur vollen Höhe an. Die rechte Wand ist die gespiegelte
-  linke.
-- **Stapelrand aus der inneren Wandhälfte:** Die äußere Hälfte der Wandstärke
-  wird an der Oberkante der Rückwand und der Seitenwände um die Lippenhöhe
-  abgetragen. Es bleibt die innere Hälfte als Lippe stehen; die Außenkontur
-  bleibt glatt. In der Fasenzone wird auch die innere Hälfte abgeflacht, damit
-  die Schräge nicht in den Boden des oberen Behälters ragt.
-- **Passende Aussparung:** Die Aussparung in der Bodenunterseite entspricht der
-  Lippenkontur plus `stack_clearance` je Seite und ist nur so lang wie die
-  Lippe (Rückwand und die hinteren Seitenabschnitte). Sie ist nie tiefer als
-  die Lippenhöhe.
-- **Rillen pro Wand symmetrisch:** Aus dem Gesamtumfang und `relief_count` folgt
-  ein Sollabstand. Pro Wand wird die nutzbare Länge (Wandlänge minus 2 ×
-  `relief_corner`) durch diesen Abstand geteilt und auf eine ganze Anzahl
-  gerundet. Die Rillen werden gleichmäßig verteilt und zentriert, daher fällt
-  nie eine Rille auf eine Ecke.
-- **Rillenprofile:** Rechteck, V-Rille (Dreieck) und gerundet (Ellipsenabschnitt
-  mit der Breite `relief_width` und der Tiefe `relief_depth`).
-- **Rillenhöhe je Wand:** Rillen an der Frontwand laufen vom Boden bis zur
-  Frontwandhöhe, an den übrigen Wänden vom Boden bis zur Gesamthöhe. In der
-  Fasenzone schneiden sie nur dort, wo Wand steht.
-- **Kleiner CSG-Baum:** Alle Rillen einer Wand werden zu einer einzigen
-  Extrusion zusammengefasst. Das vermeidet den OpenSCAD-Abbruch bei zu vielen
-  Elementen.
-- **Fase an der Unterkante:** Vier dreieckige Prismen schneiden die untere
-  Außenkante ab.
+- **Side wall as a polygon:** Each side wall is an extruded pentagon. It starts
+  at the front at the height of the front wall and rises diagonally over the
+  chamfer length to the full height. The right wall is the mirrored left one.
+- **Stacking rim from the inner half of the wall:** The outer half of the wall
+  thickness is removed by the lip height at the top edge of the back wall and
+  the side walls. The inner half remains as the lip; the outer contour stays
+  smooth. In the chamfer zone, the inner half is flattened too, so that the
+  slope does not protrude into the floor of the bin above.
+- **Matching recess:** The recess in the underside of the floor matches the lip
+  contour plus `stack_clearance` per side and is only as long as the lip (back
+  wall and the rear side sections). It is never deeper than the lip height.
+- **Grooves symmetric per wall:** A target spacing follows from the total
+  perimeter and `relief_count`. For each wall, the usable length (wall length
+  minus 2 × `relief_corner`) is divided by this spacing and rounded to a whole
+  number. The grooves are evenly distributed and centered, so a groove never
+  lands on a corner.
+- **Groove profiles:** rectangle, V-groove (triangle) and rounded (elliptical
+  segment with the width `relief_width` and the depth `relief_depth`).
+- **Groove height per wall:** Grooves on the front wall run from the floor to
+  the front wall height, on the other walls from the floor to the overall
+  height. In the chamfer zone, they only cut where wall exists.
+- **Small CSG tree:** All grooves of a wall are combined into a single
+  extrusion. This avoids the OpenSCAD abort caused by too many elements.
+- **Chamfer on the bottom edge:** Four triangular prisms cut off the lower
+  outer edge.
 
 ```mermaid
 flowchart LR
-    M[Maße + Druckerpreset] --> K[Begrenzung]
-    K --> B[Körper: Boden + Rückwand + Front + Seitenwände]
-    B --> C[Bodenkante: bottom_chamfer]
-    B --> S[Stapelrand: Lippe + Aussparung]
-    B --> R[Rillen pro Wand]
-    C --> O[Einteiliger Druckkörper]
+    M[Dimensions + printer preset] --> K[Limiting]
+    K --> B[Body: floor + back wall + front + side walls]
+    B --> C[Bottom edge: bottom_chamfer]
+    B --> S[Stacking rim: lip + recess]
+    B --> R[Grooves per wall]
+    C --> O[One-piece print body]
     S --> O
     R --> O
 ```
 
-### Modularität
+### Modularity
 
-Der Code trennt Körper, Seitenwand, Bodenfase, Lippen- und Aussparungs-Schnitte
-sowie Rillenprofil und Rillenverteilung. Die Optionen (Stapelrand, Rillen,
-Fase) sind unabhängig schaltbar. Hebt der Stapelrand eine zu dünne Wand auf
-3,0 mm an, schreibt das Modell einen Hinweis in die Konsole.
+The code separates body, side wall, bottom chamfer, lip and recess cuts, as
+well as groove profile and groove distribution. The options (stacking rim,
+grooves, chamfer) can be switched independently. If the stacking rim raises a
+wall that is too thin to 3.0 mm, the model writes a notice to the console.
 
-### Druckoptimierungen
+### Print Optimizations
 
-- **Flach auf dem Bett:** Der Boden liegt unten, Seitenwände und Rückwand
-  stehen senkrecht. Die Schrägfase ist nur eine Kontur in der Seitenansicht und
-  braucht keine Stützen.
-- **Fase unten** (`bottom_chamfer`) gegen Elefantenfuß.
-- **Mindestwand bei Rillen:** Die Rillentiefe lässt mindestens 0,4 mm Wand
-  stehen.
-- **Rechteckige Lippe:** Die Lippe ist rechteckig und passt flächenbündig in die
-  rechteckige Aussparung. Schrägen an der Lippe führten im Entwicklungsverlauf
-  immer zu Spalten oder Kollisionen.
-- **Ecken frei von Rillen:** `relief_corner` hält die Ecken als geschlossene
-  Wand stabil.
+- **Flat on the bed:** The floor is at the bottom, side walls and back wall
+  stand vertically. The angled chamfer is only a contour in the side view and
+  needs no supports.
+- **Chamfer at the bottom** (`bottom_chamfer`) against elephant's foot.
+- **Minimum wall with grooves:** The groove depth leaves at least 0.4 mm of
+  wall.
+- **Rectangular lip:** The lip is rectangular and fits flush into the
+  rectangular recess. Slopes on the lip always led to gaps or collisions during
+  development.
+- **Corners free of grooves:** `relief_corner` keeps the corners stable as a
+  closed wall.
 
-![Stapelbare Variante, Referenzansicht mit abgesetzten Kanten an den Seitenwänden](images/05_stapelbar-referenz.jpg)
+![Stackable variant, reference view with stepped edges on the side walls](images/05_stapelbar-referenz.jpg)
 
-## Varianten
+## Variants
 
-Zu dem Modell gehören sechs Referenzvarianten, die auf MakerWorld als
-Druckprofile verfügbar sind. Alle sind für den Bambu Lab P2S mit Bambu PETG
-Basic (0,4-mm-Düse), 0,20 mm Layerhöhe, 3 Wänden und 15 % Gyroid-Infill erstellt
-und im Bambu Studio testgeslict. Die Werte stammen aus der Variantenliste des
-Projekts.
+The model comes with six reference variants, available as print profiles on
+MakerWorld. All are created for the Bambu Lab P2S with Bambu PETG Basic
+(0.4 mm nozzle), 0.20 mm layer height, 3 walls and 15% gyroid infill, and
+test-sliced in Bambu Studio. The values come from the project's variant list.
 
-| Variante | Maße B × T × H | `front_height` | `chamfer_len` | Besonderheit |
+| Variant | Dimensions W × D × H | `front_height` | `chamfer_len` | Special feature |
 |---|---|---|---|---|
-| `b1_standard` | 120 × 100 × 70 | 30 | 35 | Grundform |
-| `b2_breit_flach` | 180 × 120 × 50 | 25 | 0 | Breit und flach, senkrechte Stufe statt Fase |
-| `b3_hoch_rillen` | 100 × 90 × 110 | 40 | 30 | Rillen gerundet, alle Wände, 200 Rillen |
+| `b1_standard` | 120 × 100 × 70 | 30 | 35 | Basic shape |
+| `b2_breit_flach` | 180 × 120 × 50 | 25 | 0 | Wide and flat, vertical step instead of chamfer |
+| `b3_hoch_rillen` | 100 × 90 × 110 | 40 | 30 | Rounded grooves, all walls, 200 grooves |
 | `b4_stapelbar` | 120 × 100 × 70 | 30 | 35 | `stackable` = 1 |
-| `b5_tief_vrille` | 90 × 140 × 90 | 35 | 40 | V-Rillen nur an Front und Rückwand, 40 Rillen |
-| `b6_klein_rillen` | 80 × 70 × 60 | 25 | 25 | Rillen gerundet, nur Seiten, 120 Rillen |
+| `b5_tief_vrille` | 90 × 140 × 90 | 35 | 40 | V-grooves on front and back wall only, 40 grooves |
+| `b6_klein_rillen` | 80 × 70 × 60 | 25 | 25 | Rounded grooves, sides only, 120 grooves |
 
-Alle Varianten sind Einstellungen desselben Modells; im Customizer stellst du
-beliebige andere Werte ein.
+All variants are settings of the same model; in the Customizer you can set any
+other values.
 
-![Hoher Behälter mit senkrechten Rillen auf dunklem Holztisch](images/03_hoch-rillen.jpg)
+![Tall bin with vertical grooves on a dark wooden table](images/03_hoch-rillen.jpg)
 
-## Druckempfehlungen
+## Print Recommendations
 
-Die Referenzprofile sind für den **Bambu Lab P2S** mit **Bambu PETG Basic**
-erstellt. Zusätzlich wurde das Modell mit Bambu PLA Basic auf dem H2D
-getestet. Es lässt sich auch auf P1S und H2C drucken; über die Presets begrenzt
-das Modell die Maße auf das Bauvolumen.
+The reference profiles are created for the **Bambu Lab P2S** with **Bambu PETG
+Basic**. The model was additionally tested with Bambu PLA Basic on the H2D. It
+can also be printed on the P1S and H2C; via the presets, the model limits the
+dimensions to the build volume.
 
-| Einstellung | Empfehlung |
+| Setting | Recommendation |
 |---|---|
-| Material | PETG (Profile) oder PLA |
-| Layerhöhe | 0,20 mm |
-| Wände | 3 |
-| Boden / Deckel | 4 Schichten |
-| Infill | 15 % Gyroid, mehr für höhere Steifigkeit |
-| Supports | keine |
-| Brim | optional, nur bei sehr hohen und schmalen Behältern |
-| Ausrichtung | flach auf dem Bett, Boden unten |
+| Material | PETG (profiles) or PLA |
+| Layer height | 0.20 mm |
+| Walls | 3 |
+| Bottom / top | 4 layers |
+| Infill | 15% gyroid, more for higher stiffness |
+| Supports | none |
+| Brim | optional, only for very tall and narrow bins |
+| Orientation | flat on the bed, floor down |
 
-**Besondere Hinweise**
+**Special notes**
 
-- Bei der Stapelvariante müssen alle Behälter dieselbe `width`, `depth`,
-  `wall` und `stack_lip_h` haben, sonst passt die Lippe nicht in die
-  Aussparung.
-- Das Spiel `stack_clearance` (0,2 mm je Seite) hängt vom Drucker ab: Sitzt der
-  Stapel zu locker, verringere es; klemmt er, erhöhe es.
-- Rillen bei 0,20 mm Layerhöhe drucken sauber ohne Stützen.
-- Die Bilder in diesem Repository zeigen teils Rillen mit dem Standardwert
-  `relief_count` = 240; bei kleinen Behältern wirkt eine geringere Anzahl oft
-  ruhiger.
+- For the stackable variant, all bins must have the same `width`, `depth`,
+  `wall` and `stack_lip_h`, otherwise the lip won't fit into the recess.
+- The clearance `stack_clearance` (0.2 mm per side) depends on the printer: if
+  the stack fits too loosely, reduce it; if it jams, increase it.
+- Grooves print cleanly at 0.20 mm layer height without supports.
+- The images in this repository partly show grooves with the default
+  `relief_count` = 240; on small bins, a lower count often looks calmer.
 
-![Breiter, flacher Behälter mit Rillen an der Frontwand](images/04_flach-breit-rillen.jpg)
+![Wide, flat bin with grooves on the front wall](images/04_flach-breit-rillen.jpg)
 
-## Anwendungsbeispiele
+## Use Cases
 
-- **Werkstatt-Regal:** Schrauben, Dübel und Bohrer in Behältern, die von vorne
-  zugänglich sind.
-- **Wohnmobil und Van:** Technikfächer, Kabel, Sicherungen und Kleinteile –
-  der Ursprung des Modells.
-- **Schublade und Regalfach:** Maßgenau über `width`, `depth` und `height`
-  passend zum Fach.
-- **Homelab und Elektronik:** Patchkabel, Netzteile, SSDs oder Kleinteile für
-  Projekte, geordnet nach Typ.
-- **Gestapelter Turm:** Mehrere Behälter mit `stackable` = 1 übereinander,
-  Inhalt bleibt von vorne erreichbar.
-- **Küche und Basteln:** Gewürze, Stifte, Perlen oder Nähzubehör.
-- **Farbcodierung:** Behälter in verschiedenen Farben für unterschiedliche
-  Inhalte.
+- **Workshop shelf:** Screws, wall plugs and drill bits in bins that are
+  accessible from the front.
+- **Motorhome and van:** Technical compartments, cables, fuses and small parts –
+  the origin of the model.
+- **Drawer and shelf compartment:** Made to measure via `width`, `depth` and
+  `height` to fit the compartment.
+- **Homelab and electronics:** Patch cables, power supplies, SSDs or small parts
+  for projects, sorted by type.
+- **Stacked tower:** Several bins with `stackable` = 1 on top of each other,
+  contents remain reachable from the front.
+- **Kitchen and crafts:** Spices, pens, beads or sewing supplies.
+- **Color coding:** Bins in different colors for different contents.
 
-![Werkstattszene mit mehreren gefüllten Behältern](images/02_werkstatt-szene.jpg)
+![Workshop scene with several filled bins](images/02_werkstatt-szene.jpg)
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-| Symptom | Ursache | Fix |
+| Symptom | Cause | Fix |
 |---|---|---|
-| Behälter ist kleiner als eingestellt | Maße werden auf das Bauvolumen des Presets begrenzt | Passendes Preset oder `Custom` mit größerem Bauvolumen wählen |
-| `front_height` wirkt nicht | Wert wird auf `height` − 5 begrenzt | `height` erhöhen oder `front_height` verringern |
-| Fase fehlt | `chamfer_len` ist 0 | `chamfer_len` erhöhen |
-| Fase wird kürzer als eingestellt | Wert wird auf `depth` − `wall` begrenzt | `depth` erhöhen |
-| Wand wird dicker als eingestellt | Stapelrand verlangt mindestens 3,0 mm Wand | Mit `stackable` = 1 ist 3,0 mm das Minimum; ein Hinweis steht in der Konsole |
-| Stapel sitzt nicht bündig | Behälter haben unterschiedliche Maße oder Wandstärken | `width`, `depth`, `wall` und `stack_lip_h` angleichen |
-| Lippe ist niedriger als `stack_lip_h` | Lippe ist durch Boden − 0,4 mm und die Wandhöhe begrenzt | `floor_t` erhöhen |
-| Stapel zu locker oder zu stramm | Spiel passt nicht zum Drucker | `stack_clearance` verringern bzw. erhöhen |
-| Rillen fehlen an einer Wand | `relief_walls` schließt diese Wand aus, oder die nutzbare Länge ist zu klein | `relief_walls` prüfen, `relief_corner` verkleinern |
-| Rillen sind flacher als eingestellt | Tiefe wird auf Wand − 0,4 mm begrenzt | `wall` erhöhen oder `relief_depth` verringern |
-| Rillen zu dicht oder zu weit | `relief_count` verteilt sich über den Gesamtumfang | `relief_count` anpassen |
-| Behälter löst sich vom Bett | Kleine Auflagefläche bei hohen, schmalen Behältern | Brim im Slicer aktivieren |
+| Bin is smaller than set | Dimensions are limited to the preset's build volume | Choose a suitable preset or `Custom` with a larger build volume |
+| `front_height` has no effect | Value is limited to `height` − 5 | Increase `height` or reduce `front_height` |
+| Chamfer is missing | `chamfer_len` is 0 | Increase `chamfer_len` |
+| Chamfer is shorter than set | Value is limited to `depth` − `wall` | Increase `depth` |
+| Wall is thicker than set | Stacking rim requires a wall of at least 3.0 mm | With `stackable` = 1, 3.0 mm is the minimum; a notice appears in the console |
+| Stack doesn't sit flush | Bins have different dimensions or wall thicknesses | Match `width`, `depth`, `wall` and `stack_lip_h` |
+| Lip is lower than `stack_lip_h` | Lip is limited by floor − 0.4 mm and the wall height | Increase `floor_t` |
+| Stack too loose or too tight | Clearance doesn't suit the printer | Reduce or increase `stack_clearance`, respectively |
+| Grooves missing on a wall | `relief_walls` excludes this wall, or the usable length is too small | Check `relief_walls`, reduce `relief_corner` |
+| Grooves are shallower than set | Depth is limited to wall − 0.4 mm | Increase `wall` or reduce `relief_depth` |
+| Grooves too dense or too sparse | `relief_count` is distributed over the entire perimeter | Adjust `relief_count` |
+| Bin detaches from the bed | Small contact area on tall, narrow bins | Enable brim in the slicer |
 
-## Entwicklungsgeschichte
+## Development History
 
-Das Projekt begann Ende Mai 2026 mit einem parametrischen offenen Behälter
-(Schrägfase, niedrige Front) und Bambu-Studio-Dateien für konkrete Einbauplätze
-im Wohnmobil. Am selben Tag kam die optionale Stapelfunktion dazu; die Lippe
-wurde mehrfach neu entworfen: Jede Schräge an der Lippe verschob das Problem nur
-an eine andere Stelle, bis die Lippe rein rechteckig wurde und die Aussparung
-auf die Lippenlänge verkürzt wurde. Anfang Juni 2026 folgten die Rillenstruktur
-mit drei Profilen sowie die Mindestwand von 3,0 mm für den Stapelrand. Anfang
-August 2026 entstanden die sechs Referenzvarianten mit Profilen für den P2S und
-die Studio- und Szenenbilder.
+The project began at the end of May 2026 with a parametric open bin (angled
+chamfer, low front) and Bambu Studio files for specific installation spots in
+the motorhome. The optional stacking feature was added on the same day; the lip
+was redesigned several times: every slope on the lip only shifted the problem to
+another spot, until the lip became purely rectangular and the recess was
+shortened to the lip length. In early June 2026, the groove texture with three
+profiles and the minimum wall of 3.0 mm for the stacking rim followed. In early
+August 2026, the six reference variants with profiles for the P2S and the studio
+and scene images were created.
 
-Die Bilder in diesem Repository sind Renderings der Modellgeometrie
-beziehungsweise daraus abgeleitete Szenenbilder; was in den Behältern liegt
-und die Werkstattumgebung sind illustrativ.
+The images in this repository are renderings of the model geometry or scene
+images derived from them; what lies in the bins and the workshop setting are
+illustrative.
 
-![Drei gestapelte Behälter mit Rillenstruktur in Gelb, Beige und Rot](images/08_gestapelt-rillen.jpg)
+![Three stacked bins with groove texture in yellow, beige and red](images/08_gestapelt-rillen.jpg)
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: https://makerworld.com/en/models/2867878-stackable-parametric-open-front-storage-bin
+👉 MakerWorld link: https://makerworld.com/en/models/2867878-stackable-parametric-open-front-storage-bin
 
-Profil: <https://makerworld.com/en/@BetaHydri>
+Profile: <https://makerworld.com/en/@BetaHydri>
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository: © BetaHydri. Das Modell (inkl.
-Quellcode) und alle Druckdateien werden ausschließlich über MakerWorld unter
-der dort angegebenen Lizenz verteilt. Dieses Repository enthält bewusst keine
-Modell-, Quellcode- oder Druckdateien.
+Documentation and images in this repository: © BetaHydri. The model (including
+source code) and all print files are distributed exclusively via MakerWorld
+under the license stated there. This repository intentionally contains no
+model, source code or print files.

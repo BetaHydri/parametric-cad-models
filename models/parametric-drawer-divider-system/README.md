@@ -1,288 +1,291 @@
-# Parametric Drawer Divider System – Steckbare Schubladenteiler für jede Schublade
+# Parametric Drawer Divider System – Plug-In Drawer Dividers for Any Drawer
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Parametrisches Teilersystem für Schubladen: Du gibst das Innenmaß deiner Schublade und die Anzahl der Fächer
-ein und druckst flache Teiler, die sich wie ein Eierkarton ineinanderstecken. Lange Teiler werden in
-Puzzleteile zerlegt, die aufs Druckbett passen – auch eine 600-mm-Küchen-, Werkstatt- oder Wohnmobilschublade
-ist kein Problem. Alles im MakerWorld-Customizer, flach und ohne Stützen.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/3437057-parametric-drawer-divider-system)
+Parametric divider system for drawers: you enter the inner dimensions of your drawer and the number of
+compartments, and print flat dividers that plug into each other like an egg carton. Long dividers are split
+into puzzle pieces that fit on the print bed – even a 600 mm kitchen, workshop or camper-van drawer is no
+problem. All in the MakerWorld Customizer, flat and without supports.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/3437057-parametric-drawer-divider-system)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-P1S%20%7C%20P2S%20%7C%20H2C-green)
-![Lizenz](https://img.shields.io/badge/Lizenz-CC%20BY--NC--SA%204.0-blue)
+![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue)
 
-> Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/3437057-parametric-drawer-divider-system](https://makerworld.com/en/models/3437057-parametric-drawer-divider-system)
+> The model with all print profiles is available exclusively on MakerWorld:
+> 👉 [MakerWorld link: https://makerworld.com/en/models/3437057-parametric-drawer-divider-system](https://makerworld.com/en/models/3437057-parametric-drawer-divider-system)
 
-![Sechs Schubladen mit orangefarbenen und blauen Teilern auf einem Holztisch, mit Titel und Funktionssymbolen](images/01_hero.jpg)
+![Six drawers with orange and blue dividers on a wooden table, with title and feature icons](images/01_hero.jpg)
 
-Das System ist für Küchen-, Besteck-, Schreibtisch-, Werkstatt- und Wohnmobilschubladen gedacht. Es kann das
-Innenmaß außerdem direkt aus dem **Stackable Parametric Drawer System** übernehmen
+The system is intended for kitchen, cutlery, desk, workshop and camper-van drawers. It can also take the
+inner dimensions directly from the **Stackable Parametric Drawer System**
 ([MakerWorld](https://makerworld.com/en/models/3024548-parametric-stackable-drawer-system),
-[Dokumentation auf GitHub](../stackable-drawer-organizer/README.md)).
+[documentation on GitHub](../stackable-drawer-organizer/README.md)).
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Konstruktion](#konstruktion)
-- [Varianten](#varianten)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Zusammenspiel mit dem Stackable Drawer System](#zusammenspiel-mit-dem-stackable-drawer-system)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Parametric Options](#parametric-options)
+- [Construction](#construction)
+- [Variants](#variants)
+- [Print Recommendations](#print-recommendations)
+- [Working with the Stackable Drawer System](#working-with-the-stackable-drawer-system)
+- [Application Examples](#application-examples)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Schubladen sind selten so groß wie die Einsätze aus dem Laden:
+Drawers are rarely the same size as the inserts from the store:
 
-- Fertige Besteckkästen und Organizer passen nicht exakt; es bleiben Spalten, in denen Dinge verrutschen.
-- Teiler ohne Halt klappern beim Öffnen und Schließen.
-- Lange Teiler passen nicht auf ein Druckbett.
-- In schmalen Schubladen kippen einzelne Teiler um.
-- Schubladen im Wohnmobil sind oft ungewöhnlich groß oder klein, und das Material muss Hitze vertragen.
+- Ready-made cutlery trays and organizers do not fit exactly; gaps remain in which things slide around.
+- Dividers without hold rattle when opening and closing.
+- Long dividers do not fit on a print bed.
+- In narrow drawers, individual dividers tip over.
+- Camper-van drawers are often unusually large or small, and the material has to withstand heat.
 
-## Die Idee
+## The Idea
 
-Ein Teilersystem nach Maß: Du misst Innenbreite, Innentiefe und Innenhöhe, wählst Spalten und Reihen und
-bekommst ein steckbares Raster. Lange Teiler stecken mit Schlitzen von unten, Quer-Teiler mit Schlitzen von
-oben ineinander – ohne Kleber, ohne Schrauben. Alle Maße sind Millimeter, alle Werte Customizer-Parameter.
+A made-to-measure divider system: you measure inner width, inner depth and inner height, choose columns and
+rows, and get a plug-in grid. Long dividers plug into each other with slots from below, cross dividers with
+slots from above – without glue, without screws. All dimensions are millimeters, all values are Customizer
+parameters.
 
 ## Highlights
 
-- **Jede Schubladengröße:** Innenbreite, -tiefe und -höhe sind Parameter (Breite und Tiefe 40–700 mm, Höhe 15–200 mm).
-- **Steckbarer Eierkarton:** Die Schlitze sind genau eine Teilerstärke plus kleines Spiel breit (`slot_clear`); die
-  Teiler halten, lassen sich aber zum Reinigen auseinandernehmen.
-- **Gleiche oder ungleiche Fächer:** 1–12 Spalten und 1–12 Reihen, jeweils gleich groß oder mit einem doppelt
-  breiten Fach (erstes, letztes oder mittleres).
-- **Puzzleverbindungen:** Teiler, die länger sind als die gewählte Stücklänge (`max_piece`), werden in Stücke
-  mit Puzzleverbindung zerlegt. Die Verbindungen liegen abseits der Schlitze.
-- **Keilende:** Kleine Quetschrippen an den Teilerenden (`grip`) klemmen den Teiler zwischen die Schubladenwände,
-  damit nichts klappert.
-- **Fingermulden:** optional eine runde Mulde an der Oberkante jedes Fachs.
-- **Randschienen für schmale Schubladen:** Gibt es nur eine Teilerrichtung (zum Beispiel 1 × 4), halten zwei
-  niedrige Schienen entlang der Seitenwände die Teiler aufrecht. Die Mitte der Schublade bleibt frei.
-- **Passt zum Stackable Drawer System:** Wähle die Quelle „Stackable Drawer System“ und gib dieselben
-  Einheitenwerte ein – das Raster passt dann zum Innenmaß dieser Schublade.
-- **Flach und ohne Stützen:** Jedes Teil liegt flach auf dem Bett. Das Modell verteilt die Teile auf so viele
-  Druckplatten wie nötig und zeigt die Anzahl an.
+- **Any drawer size:** Inner width, depth and height are parameters (width and depth 40–700 mm, height 15–200 mm).
+- **Plug-in egg carton:** The slots are exactly one divider thickness plus a small clearance wide (`slot_clear`);
+  the dividers hold, but can be taken apart for cleaning.
+- **Equal or unequal compartments:** 1–12 columns and 1–12 rows, each equally sized or with one double-width
+  compartment (first, last or middle).
+- **Puzzle joints:** Dividers that are longer than the selected piece length (`max_piece`) are split into pieces
+  with puzzle joints. The joints lie away from the slots.
+- **Wedge ends:** Small crush ribs at the divider ends (`grip`) clamp the divider between the drawer walls so
+  that nothing rattles.
+- **Finger scoops:** optionally a round scoop at the top edge of each compartment.
+- **Edge rails for narrow drawers:** If there is only one divider direction (for example 1 × 4), two low rails
+  along the side walls keep the dividers upright. The middle of the drawer stays free.
+- **Matches the Stackable Drawer System:** Choose the source "Stackable Drawer System" and enter the same unit
+  values – the grid then matches the inner dimensions of that drawer.
+- **Flat and without supports:** Every part lies flat on the bed. The model distributes the parts over as many
+  build plates as needed and shows the number.
 
-![Stapelbare Schublade mit Teilern 2 × 2](images/02_stapelbar-2x2.jpg)
+![Stackable drawer with 2 × 2 dividers](images/02_stapelbar-2x2.jpg)
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Namen entsprechen den Customizer-Parametern des Modells.
+The names correspond to the model's Customizer parameters.
 
-### Teileauswahl
+### Part Selection
 
-| Parameter | Beschreibung | Standard | Auswahl |
+| Parameter | Description | Default | Selection |
 |---|---|---|---|
-| part | Was erzeugt wird | plate | PRINT (alle Teile einer Platte), OVERVIEW (zeigt alle Platten zum Zählen, nicht zum Drucken), nur lange Teiler, nur Quer-Teiler (fortgeschritten), Vorschau in der Schublade (nicht zum Drucken) |
-| plate_no | Zu druckende Platte (1 = erste); jede Platte enthält Teiler und Schienen | 1 | 1–8 |
+| part | What is generated | plate | PRINT (all parts of one plate), OVERVIEW (shows all plates for counting, not for printing), long dividers only, cross dividers only (advanced), preview in the drawer (not for printing) |
+| plate_no | Plate to print (1 = first); each plate contains dividers and rails | 1 | 1–8 |
 
-### Schublade
+### Drawer
 
-| Parameter | Beschreibung | Standard | Bereich |
+| Parameter | Description | Default | Range |
 |---|---|---|---|
-| drawer_source | Eigene Schublade (Innenmaß eingeben) oder Stackable Drawer System (berechnet) | custom | Eigene Schublade, Stackable Drawer System |
-| inner_w | Innenbreite, links–rechts; nur bei eigener Schublade | 300 | 40–700 mm |
-| inner_d | Innentiefe, vorne–hinten; nur bei eigener Schublade | 400 | 40–700 mm |
-| inner_h | Innenhöhe; nur bei eigener Schublade | 60 | 15–200 mm |
+| drawer_source | Custom drawer (enter inner dimensions) or Stackable Drawer System (calculated) | custom | Custom drawer, Stackable Drawer System |
+| inner_w | Inner width, left–right; only for a custom drawer | 300 | 40–700 mm |
+| inner_d | Inner depth, front–back; only for a custom drawer | 400 | 40–700 mm |
+| inner_h | Inner height; only for a custom drawer | 60 | 15–200 mm |
 
-### Fächer
+### Compartments
 
-| Parameter | Beschreibung | Standard | Auswahl |
+| Parameter | Description | Default | Selection |
 |---|---|---|---|
-| cols | Anzahl der Fächer über die Breite (cols − 1 Quer-Teiler) | 3 | 1–12 |
-| rows | Anzahl der Fächer entlang der Tiefe (rows − 1 lange Teiler) | 4 | 1–12 |
-| col_layout | Breitenaufteilung | equal | Gleich breit, erste / letzte / mittlere Spalte doppelt so breit |
-| row_layout | Tiefenaufteilung | equal | Gleich tief, erste / letzte / mittlere Reihe doppelt so tief |
+| cols | Number of compartments across the width (cols − 1 cross dividers) | 3 | 1–12 |
+| rows | Number of compartments along the depth (rows − 1 long dividers) | 4 | 1–12 |
+| col_layout | Width distribution | equal | Equal width, first / last / middle column twice as wide |
+| row_layout | Depth distribution | equal | Equal depth, first / last / middle row twice as deep |
 
-### Teiler
+### Dividers
 
-| Parameter | Beschreibung | Standard | Bereich |
+| Parameter | Description | Default | Range |
 |---|---|---|---|
-| div_t | Teilerstärke, Vielfache von 0,4 mm | 2,0 | 1,2–4 mm, Schritt 0,4 |
-| div_h | Teilerhöhe, 0 = Schubladenhöhe minus 1 mm | 0 | 0–200 mm |
-| fit_gap | Gesamtspalt zwischen Teilerenden und Schubladenwänden | 0,4 | 0–2 mm, Schritt 0,1 |
-| grip | Höhe der Quetschrippen an den Enden, 0 = aus | 0,35 | 0–1 mm, Schritt 0,05 |
-| slot_clear | Zusätzliche Breite der Steckschlitze | 0,25 | 0,1–0,6 mm, Schritt 0,05 |
-| base_rail | Niedrige Schienen bei nur einer Teilerrichtung (1 Spalte oder 1 Reihe) | 1 | Aus, zwei Randschienen (empfohlen), eine Mittelschiene |
-| rail_h | Schienenhöhe | 16 | 12–40 mm |
-| finger_notch | Fingermulde an der Oberkante jedes Fachs | 1 | 0 = Aus, 1 = An |
-| notch_r | Radius der Fingermulde | 12 | 6–25 mm |
+| div_t | Divider thickness, multiples of 0.4 mm | 2.0 | 1.2–4 mm, step 0.4 |
+| div_h | Divider height, 0 = drawer height minus 1 mm | 0 | 0–200 mm |
+| fit_gap | Total gap between divider ends and drawer walls | 0.4 | 0–2 mm, step 0.1 |
+| grip | Height of the crush ribs at the ends, 0 = off | 0.35 | 0–1 mm, step 0.05 |
+| slot_clear | Additional width of the plug-in slots | 0.25 | 0.1–0.6 mm, step 0.05 |
+| base_rail | Low rails when there is only one divider direction (1 column or 1 row) | 1 | Off, two edge rails (recommended), one center rail |
+| rail_h | Rail height | 16 | 12–40 mm |
+| finger_notch | Finger scoop at the top edge of each compartment | 1 | 0 = off, 1 = on |
+| notch_r | Radius of the finger scoop | 12 | 6–25 mm |
 
-### Drucken
+### Printing
 
-| Parameter | Beschreibung | Standard | Bereich |
+| Parameter | Description | Default | Range |
 |---|---|---|---|
-| max_piece | Längstes Stück in einem Druck; längere Teiler werden mit Puzzleverbindung geteilt | 220 | 80–400 mm, Schritt 5 |
-| plate_w | Breite der Druckplatte für die Anordnung | 240 | 100–400 mm, Schritt 10 |
-| plate_d | Tiefe der Druckplatte | 240 | 100–400 mm, Schritt 10 |
-| plate_gap | Abstand zwischen den Teilen auf der Platte | 4 | 2–12 mm |
-| joint_clear | Spiel der Puzzleverbindung | 0,2 | 0,1–0,5 mm, Schritt 0,05 |
+| max_piece | Longest piece in one print; longer dividers are split with a puzzle joint | 220 | 80–400 mm, step 5 |
+| plate_w | Width of the build plate for the arrangement | 240 | 100–400 mm, step 10 |
+| plate_d | Depth of the build plate | 240 | 100–400 mm, step 10 |
+| plate_gap | Spacing between the parts on the plate | 4 | 2–12 mm |
+| joint_clear | Clearance of the puzzle joint | 0.2 | 0.1–0.5 mm, step 0.05 |
 
-### Stackable Drawer System (nur bei Quelle „Stackable Drawer System“)
+### Stackable Drawer System (only with the source "Stackable Drawer System")
 
-| Parameter | Beschreibung | Standard | Bereich |
+| Parameter | Description | Default | Range |
 |---|---|---|---|
-| sd_unit_width | Einheitenbreite | 120 | 70–250 mm |
-| sd_unit_depth | Einheitentiefe | 150 | 80–320 mm |
-| sd_shell_wall | Wandstärke des Gehäuses | 4,0 | 3,2–8 mm, Schritt 0,1 |
-| sd_side_gap | Seitenspalt | 1,0 | 0,4–3 mm, Schritt 0,1 |
-| sd_drawer_wall | Wandstärke der Schublade | 2,0 | 1,6–8 mm, Schritt 0,1 |
-| sd_rail_backstop | Anschlag der Schiene | 3,0 | 0–12 mm, Schritt 0,5 |
-| sd_front_t | Stärke der Front | 3,0 | 2–6 mm, Schritt 0,1 |
-| sd_inner_h | Innenhöhe der gewählten Schublade (h1 … h6 des Schubladensystems) | 50 | 18–160 mm |
+| sd_unit_width | Unit width | 120 | 70–250 mm |
+| sd_unit_depth | Unit depth | 150 | 80–320 mm |
+| sd_shell_wall | Wall thickness of the housing | 4.0 | 3.2–8 mm, step 0.1 |
+| sd_side_gap | Side gap | 1.0 | 0.4–3 mm, step 0.1 |
+| sd_drawer_wall | Wall thickness of the drawer | 2.0 | 1.6–8 mm, step 0.1 |
+| sd_rail_backstop | Stop of the rail | 3.0 | 0–12 mm, step 0.5 |
+| sd_front_t | Thickness of the front | 3.0 | 2–6 mm, step 0.1 |
+| sd_inner_h | Inner height of the chosen drawer (h1 … h6 of the drawer system) | 50 | 18–160 mm |
 
-## Konstruktion
+## Construction
 
-### OpenSCAD-Ansatz
+### OpenSCAD Approach
 
-Das Modell ist reines OpenSCAD ohne externe Bibliotheken und läuft im MakerWorld-Customizer. Die Teiler sind
-flache Platten, die extrudiert werden: Lange Teiler haben ihre Schlitze unten, Quer-Teiler oben, sodass sie sich
-in der Mitte kreuzen und bündig ineinanderstecken. Die Teile werden auf Druckplatten verteilt; das Modell
-nummeriert die Platten (`plate_no`) und zeigt in der Übersicht, wie viele du brauchst.
+The model is pure OpenSCAD without external libraries and runs in the MakerWorld Customizer. The dividers are
+flat plates that are extruded: Long dividers have their slots at the bottom, cross dividers at the top, so that
+they cross in the middle and plug into each other flush. The parts are distributed over build plates; the model
+numbers the plates (`plate_no`) and shows in the overview how many you need.
 
-### Parametrische Logik
+### Parametric Logic
 
-| Größe | Berechnung |
+| Value | Calculation |
 |---|---|
-| Teilerhöhe | `div_h`, bei 0 die Innenhöhe minus 1 mm |
-| Schlitzbreite | `div_t` + `slot_clear` |
-| Länge eines langen Teilers / Quer-Teilers | Innenmaß minus `fit_gap` |
-| Fachkanten | Innenmaß, anteilig nach Gewichtung (gleich oder ein doppelt breites Fach) |
-| Anzahl der Stücke | Teilerlänge / `max_piece`, aufgerundet |
-| Innenmaß aus dem Stackable Drawer System | Breite = `sd_unit_width` − 2 × `sd_shell_wall` − 2 × `sd_side_gap` − 2 × `sd_drawer_wall`; Tiefe = `sd_unit_depth` − `sd_shell_wall` − `sd_rail_backstop` − `sd_front_t` − 0,6 − 2 × `sd_drawer_wall`; Höhe = `sd_inner_h` |
+| Divider height | `div_h`, at 0 the inner height minus 1 mm |
+| Slot width | `div_t` + `slot_clear` |
+| Length of a long divider / cross divider | inner dimension minus `fit_gap` |
+| Compartment edges | inner dimension, proportionally by weighting (equal or one double-width compartment) |
+| Number of pieces | divider length / `max_piece`, rounded up |
+| Inner dimension from the Stackable Drawer System | Width = `sd_unit_width` − 2 × `sd_shell_wall` − 2 × `sd_side_gap` − 2 × `sd_drawer_wall`; depth = `sd_unit_depth` − `sd_shell_wall` − `sd_rail_backstop` − `sd_front_t` − 0.6 − 2 × `sd_drawer_wall`; height = `sd_inner_h` |
 
-Mit den Voreinstellungen des Stackable Drawer Systems ergibt sich ein Innenmaß von 106 × 135,4 mm bei 50 mm
-Höhe. Die Werte sind aus den Formeln und den Standardwerten abgeleitet.
+With the default settings of the Stackable Drawer System, this results in inner dimensions of 106 × 135.4 mm at
+50 mm height. The values are derived from the formulas and the default values.
 
-### Besondere Algorithmen
+### Special Algorithms
 
-- **Eierkarton:** Lange Teiler und Quer-Teiler haben gegenläufige Schlitze – unten und oben – und stecken so
-  ineinander.
-- **Puzzleverbindung:** Die Trennstellen werden automatisch so gewählt, dass sie mit Abstand zu den Schlitzen
-  liegen; Zapfen und Tasche haben das Spiel `joint_clear`.
-- **Randschienen:** Gibt es nur eine Teilerrichtung, werden niedrige Schienen entlang der Seitenwände (oder eine
-  in der Mitte) mit Schlitzen für jeden Teiler erzeugt. Sie halten die Teiler aufrecht.
-- **Fingermulden:** Eine Mulde pro Fach, nur wenn das Fach breit genug ist und die Mulde nicht auf eine
-  Verbindung trifft.
-- **Plattenverteilung:** Die Teile werden auf so viele Platten gepackt, wie die Druckfläche (`plate_w` ×
-  `plate_d`) verlangt.
+- **Egg carton:** Long dividers and cross dividers have opposing slots – at the bottom and at the top – and
+  thus plug into each other.
+- **Puzzle joint:** The separation points are chosen automatically so that they lie at a distance from the
+  slots; tongue and pocket have the clearance `joint_clear`.
+- **Edge rails:** If there is only one divider direction, low rails along the side walls (or one in the middle)
+  with slots for each divider are generated. They keep the dividers upright.
+- **Finger scoops:** One scoop per compartment, only if the compartment is wide enough and the scoop does not
+  hit a joint.
+- **Plate distribution:** The parts are packed onto as many plates as the print area (`plate_w` × `plate_d`)
+  requires.
 
-### Druckoptimierungen
+### Print Optimizations
 
-- Alle Teile liegen flach auf dem Bett, ohne Stützen und ohne Überhänge.
-- Quetschrippen an den Enden (`grip`) klemmen die Teiler zwischen die Schubladenwände.
-- Teilerstärke in Vielfachen von 0,4 mm, passend zur 0,4-mm-Düse.
+- All parts lie flat on the bed, without supports and without overhangs.
+- Crush ribs at the ends (`grip`) clamp the dividers between the drawer walls.
+- Divider thickness in multiples of 0.4 mm, matching the 0.4 mm nozzle.
 
-![Orangefarbenes und blaues Teilerstück mit Puzzleverbindung](images/07_puzzleverbindung.jpg)
+![Orange and blue divider piece with puzzle joint](images/07_puzzleverbindung.jpg)
 
-## Varianten
+## Variants
 
-Zum Modell gehören Referenzkonfigurationen. Alle sind Einstellungen desselben Modells; im Customizer stellst
-du beliebige andere Werte ein.
+Reference configurations belong to the model. All are settings of the same model; in the Customizer you set any
+other values you like.
 
-| Variante | Schublade | Fächer | Besonderheit |
+| Variant | Drawer | Compartments | Special feature |
 |---|---|---|---|
-| v1_stackable_2x2 | Stackable Drawer System (berechnet) | 2 × 2 | – |
-| v2_stackable_3x2_wide | Stackable Drawer System (berechnet) | 3 × 2 | erste Reihe doppelt so tief |
-| v3_utensil_200x280_3x2 | 200 × 280 mm, 45 mm hoch | 3 × 2 | Besteck und Utensilien |
-| v4_narrow_150x420_1x4 | 150 × 420 mm, 50 mm hoch | 1 × 4 | schmale Schublade, Randschienen |
-| v5_kitchen_300x400 | 300 × 400 mm, 60 mm hoch | 3 × 4 | `max_piece` 110 mm, drei Druckplatten |
+| v1_stackable_2x2 | Stackable Drawer System (calculated) | 2 × 2 | – |
+| v2_stackable_3x2_wide | Stackable Drawer System (calculated) | 3 × 2 | first row twice as deep |
+| v3_utensil_200x280_3x2 | 200 × 280 mm, 45 mm high | 3 × 2 | cutlery and utensils |
+| v4_narrow_150x420_1x4 | 150 × 420 mm, 50 mm high | 1 × 4 | narrow drawer, edge rails |
+| v5_kitchen_300x400 | 300 × 400 mm, 60 mm high | 3 × 4 | `max_piece` 110 mm, three build plates |
 
-![Schmale Schublade 150 × 420 mm mit Teilern 1 × 4](images/05_schmal-1x4.jpg)
+![Narrow drawer 150 × 420 mm with 1 × 4 dividers](images/05_schmal-1x4.jpg)
 
-## Druckempfehlungen
+## Print Recommendations
 
-| Einstellung | Empfehlung |
+| Setting | Recommendation |
 |---|---|
-| Material | **PETG empfohlen**; im Van oder Wohnmobil PETG oder ASA; PLA für normale Schubladen im Haus |
-| Layerhöhe | 0,20 mm |
-| Wände | 3 |
-| Infill | 15 % Gyroid |
-| Supports | keine |
-| Ausrichtung | alle Teile flach auf der Platte |
+| Material | **PETG recommended**; in a van or camper PETG or ASA; PLA for normal drawers in the house |
+| Layer height | 0.20 mm |
+| Walls | 3 |
+| Infill | 15% gyroid |
+| Supports | none |
+| Orientation | all parts flat on the plate |
 
-Besondere Hinweise
+Special notes
 
-- **Warum PETG:** Etwas flexibel, sodass Keilenden und Schlitze greifen, ohne zu brechen, und es hält Wärme aus.
-  Im Van oder Wohnmobil wird der Innenraum im Sommer heiß und PLA wird weich.
-- **Verzug:** Lange, dünne Teile können sich an den Ecken heben – Brim und ein sauberes Bett verwenden.
-- **Zusammenbau:** Lange Teiler haben die Schlitze unten, Quer-Teiler oben. An den Kreuzungen zusammenstecken,
-  dann das Raster in die Schublade setzen. Geteilte Teiler nebeneinanderlegen und den Zapfen von oben in die
-  Tasche drücken.
-- **Zu stramm oder zu locker in der Schublade:** `fit_gap` erhöhen (lockerer) oder `grip` erhöhen (fester) und
-  ein kurzes Probestück drucken.
-- **So bekommst du alle Teile:**
-  1. Schubladenmaß und Fächer einstellen.
-  2. `part` = OVERVIEW wählen; jede Platte ist mit „PLATE 1 OF N“ beschriftet.
-  3. `part` = PRINT wählen, Platte 1 laden, dann `plate_no` auf 2, 3 … bis N stellen und jede Platte laden.
-  Jede Platte enthält Teiler und Schienen; zusammen sind die Platten der komplette Satz.
+- **Why PETG:** Slightly flexible, so that wedge ends and slots grip without breaking, and it withstands heat.
+  In a van or camper, the interior gets hot in summer and PLA becomes soft.
+- **Warping:** Long, thin parts can lift at the corners – use a brim and a clean bed.
+- **Assembly:** Long dividers have the slots at the bottom, cross dividers at the top. Plug them together at
+  the crossings, then place the grid in the drawer. Lay split dividers next to each other and press the tongue
+  into the pocket from above.
+- **Too tight or too loose in the drawer:** Increase `fit_gap` (looser) or increase `grip` (firmer) and print a
+  short test piece.
+- **How to get all parts:**
+  1. Set the drawer dimensions and compartments.
+  2. Choose `part` = OVERVIEW; each plate is labeled "PLATE 1 OF N".
+  3. Choose `part` = PRINT, load plate 1, then set `plate_no` to 2, 3 … up to N and load each plate.
+  Each plate contains dividers and rails; together the plates are the complete set.
 
-![Küchenschublade 300 × 400 mm mit Teilern 3 × 4](images/06_kueche-3x4.jpg)
+![Kitchen drawer 300 × 400 mm with 3 × 4 dividers](images/06_kueche-3x4.jpg)
 
-## Zusammenspiel mit dem Stackable Drawer System
+## Working with the Stackable Drawer System
 
-Stelle `drawer_source` auf „Stackable Drawer System“ und gib dieselben Werte ein, die du für die Schublade
-verwendet hast: `sd_unit_width`, `sd_unit_depth`, `sd_shell_wall`, `sd_side_gap`, `sd_drawer_wall`,
-`sd_rail_backstop`, `sd_front_t` und die Innenhöhe der Schublade `sd_inner_h` (h1 … h6 des Schubladensystems).
-Die Teiler passen dann zum Innenmaß der gedruckten Schublade. Nutze sie statt oder zusammen mit den
-eingebauten flachen Einsätzen.
+Set `drawer_source` to "Stackable Drawer System" and enter the same values you used for the drawer:
+`sd_unit_width`, `sd_unit_depth`, `sd_shell_wall`, `sd_side_gap`, `sd_drawer_wall`, `sd_rail_backstop`,
+`sd_front_t` and the inner height of the drawer `sd_inner_h` (h1 … h6 of the drawer system). The dividers then
+match the inner dimensions of the printed drawer. Use them instead of or together with the built-in flat
+inserts.
 
-![Stapelbare Schublade mit Teilern 3 × 2](images/03_stapelbar-3x2.jpg)
+![Stackable drawer with 3 × 2 dividers](images/03_stapelbar-3x2.jpg)
 
-## Anwendungsbeispiele
+## Application Examples
 
-- **Küche:** Besteck, Utensilien und Küchenhelfer ordnen.
-- **Schreibtisch:** Stifte, Klebeband, Kabel und Kleinkram trennen.
-- **Werkstatt:** Schrauben, Bits und Werkzeug nach Typ sortieren.
-- **Van und Wohnmobil:** Schubladen nach Maß, Teiler aus PETG oder ASA.
-- **Mit dem Stackable Drawer System:** Teiler, die exakt zum Innenmaß der Schublade passen.
-- **Farbcodierung:** Teiler in zwei Farben für ein übersichtliches Raster.
+- **Kitchen:** Organize cutlery, utensils and kitchen helpers.
+- **Desk:** Separate pens, tape, cables and odds and ends.
+- **Workshop:** Sort screws, bits and tools by type.
+- **Van and camper:** Drawers made to measure, dividers in PETG or ASA.
+- **With the Stackable Drawer System:** Dividers that match the inner dimensions of the drawer exactly.
+- **Color coding:** Dividers in two colors for a clear grid.
 
-![Utensilienschublade 200 × 280 mm mit eingesetzten Teilern](images/04_besteck-3x2.jpg)
+![Utensil drawer 200 × 280 mm with dividers inserted](images/04_besteck-3x2.jpg)
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-| Problem | Ursache | Lösung |
+| Problem | Cause | Solution |
 |---|---|---|
-| Teiler klappern in der Schublade | Zu viel Spalt | `fit_gap` verringern oder `grip` erhöhen |
-| Teiler klemmen beim Einsetzen | Zu wenig Spalt | `fit_gap` erhöhen oder `grip` verringern |
-| Teiler lassen sich nicht ineinanderstecken | Schlitze zu eng für deinen Drucker | `slot_clear` erhöhen |
-| Puzzleteile sitzen zu stramm oder zu locker | Spiel passt nicht zum Drucker | `joint_clear` anpassen |
-| Teile fehlen im Druck | Nur eine Platte gedruckt | Mit `part` = OVERVIEW die Plattenzahl prüfen und `plate_no` durchstufen |
-| Teiler in schmaler Schublade kippen | Nur eine Teilerrichtung | `base_rail` = Randschienen (empfohlen) lassen |
-| Ecken heben sich beim Druck | Lange, dünne Teile | Brim verwenden, Bett reinigen |
-| Teiler zu hoch für die Schublade | Höhe passt nicht | `div_h` einstellen; 0 nimmt die Innenhöhe minus 1 mm |
+| Dividers rattle in the drawer | Too much gap | Decrease `fit_gap` or increase `grip` |
+| Dividers jam when inserting | Too little gap | Increase `fit_gap` or decrease `grip` |
+| Dividers cannot be plugged into each other | Slots too narrow for your printer | Increase `slot_clear` |
+| Puzzle pieces fit too tightly or too loosely | Clearance does not suit the printer | Adjust `joint_clear` |
+| Parts are missing from the print | Only one plate was printed | Check the plate count with `part` = OVERVIEW and step through `plate_no` |
+| Dividers tip over in a narrow drawer | Only one divider direction | Keep `base_rail` = edge rails (recommended) |
+| Corners lift during printing | Long, thin parts | Use a brim, clean the bed |
+| Dividers too tall for the drawer | Height does not fit | Set `div_h`; 0 takes the inner height minus 1 mm |
 
-## Entwicklungsgeschichte
+## Development History
 
-Das Modell entstand im Oktober 2026 als Teilersystem für beliebige Schubladen, auch für das Stackable
-Parametric Drawer System, und wurde im selben Monat auf MakerWorld veröffentlicht. Für Schubladen mit
-nur einer Teilerrichtung kamen Randschienen hinzu, die die Teiler aufrecht halten.
+The model came about in October 2026 as a divider system for any drawer, including the Stackable Parametric
+Drawer System, and was published on MakerWorld in the same month. For drawers with only one divider direction,
+edge rails were added that keep the dividers upright.
 
-Die Szenenbilder in diesem Repository wurden mit KI-Unterstützung aus gerenderter Modellgeometrie erzeugt
-(Umgebung, Licht und Materialwirkung); die Teiler entsprechen dem Modell. Schublade, Inhalt und Möbel sind
-illustrativ.
+The scene images in this repository were created with AI assistance from rendered model geometry (environment,
+lighting and material appearance); the dividers correspond to the model. Drawer, contents and furniture are
+illustrative.
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: [https://makerworld.com/en/models/3437057-parametric-drawer-divider-system](https://makerworld.com/en/models/3437057-parametric-drawer-divider-system)
+👉 MakerWorld link: [https://makerworld.com/en/models/3437057-parametric-drawer-divider-system](https://makerworld.com/en/models/3437057-parametric-drawer-divider-system)
 
-Profil: [https://makerworld.com/en/@BetaHydri](https://makerworld.com/en/@BetaHydri)
+Profile: [https://makerworld.com/en/@BetaHydri](https://makerworld.com/en/@BetaHydri)
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository: © BetaHydri. Das Modell (inkl. Quellcode) und alle
-Druckdateien werden ausschließlich über MakerWorld unter der dort angegebenen Lizenz
-(CC BY-NC-SA 4.0) verteilt. Dieses Repository enthält bewusst keine Modell-, Quellcode- oder Druckdateien.
+Documentation and images in this repository: © BetaHydri. The model (including source code) and all print
+files are distributed exclusively via MakerWorld under the license stated there (CC BY-NC-SA 4.0). This
+repository intentionally contains no model, source code or print files.

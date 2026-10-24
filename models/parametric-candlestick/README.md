@@ -1,345 +1,341 @@
-# Parametric Candlestick – Kerzenständer nach Maß: jede Form, jede Kerze, kippsicher
+# Parametric Candlestick – Custom-Fit Candle Holder: Any Shape, Any Candle, Tip-Resistant
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Parametrischer Kerzenständer für den FDM-Druck: sieben Grundformen von der
-schlanken Säule bis zur bauchigen Vase, sieben Oberflächenstile (Riefen,
-Spiralen, Wellen, Perlen, Kordel, Facetten), eine tiefe, stramm sitzende
-Kerzenaufnahme und optional Dorn, Tropfschale und mehrere Kerzen auf einem
-Kreis – alles im MakerWorld-Customizer.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/3077107-parametric-candlestick)
+Parametric candle holder for FDM printing: seven basic shapes from the slender
+column to the bulbous vase, seven surface styles (flutes, spirals, waves, beads,
+cord, facets), a deep, snug-fitting candle socket and, optionally, a spike, drip
+tray and several candles on a circle – all in the MakerWorld Customizer.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/3077107-parametric-candlestick)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-P1S%20%7C%20P2S%20%7C%20H2C-green)
 ![Print files](https://img.shields.io/badge/Print%20files-MakerWorld%20only-blue)
 
-> **Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:**
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/3077107-parametric-candlestick](https://makerworld.com/en/models/3077107-parametric-candlestick)
+> **The model with all print profiles is available exclusively on MakerWorld:**
+> 👉 [MakerWorld link: https://makerworld.com/en/models/3077107-parametric-candlestick](https://makerworld.com/en/models/3077107-parametric-candlestick)
 >
-> ![Parametric Candlestick – vier Kerzenständer in unterschiedlichen Formen und Oberflächen auf einem dunklen Holztisch](images/01_hero.jpg)
+> ![Parametric Candlestick – four candle holders in different shapes and surfaces on a dark wooden table](images/01_hero.jpg)
 
-Der **Parametric Candlestick** ist ein massiver Rotationskörper, dessen
-Silhouette aus drei Durchmessern (Fuß, Taille, Kopf), der Höhe und einer Form
-berechnet wird. Eine Verzierung wird als Radiusmodulation auf die Silhouette
-gelegt. In den Kopf bohrt das Modell ein senkrechtes Sackloch für die Kerze.
-Der Ständer steht aufrecht auf einer flachen Standfläche mit Fase gegen
-Elefantenfuß.
+The **Parametric Candlestick** is a solid body of revolution whose silhouette is
+calculated from three diameters (foot, waist, head), the height and a shape. A
+decoration is applied to the silhouette as a radius modulation. The model drills
+a vertical blind hole for the candle into the head. The holder stands upright on
+a flat base with a chamfer against elephant's foot.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Konstruktion](#konstruktion)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Parametric Options](#parametric-options)
+- [Design](#design)
+- [Print Recommendations](#print-recommendations)
+- [Use Cases](#use-cases)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Kerzenständer passen selten zu allem, was man hat:
+Candle holders rarely match everything you own:
 
-- Kerzen haben viele Durchmesser: Stabkerze (ca. 22 mm), Haushaltskerze
-  (20 mm), dünne Spitzkerze (13 mm), Teelicht (38 mm), Stumpen (50 und 68 mm).
-  Ein Halter für eine davon passt zu den anderen nicht.
-- Eine Kerze, die zu locker oder zu flach sitzt, kippt – und mit ihr der
-  Ständer, wenn die Standfläche zu schmal ist.
-- Die Form soll zum Raum passen: mal schlank, mal bauchig, mal glatt, mal
-  strukturiert – und jedes Mal ein neues Modell zu suchen, kostet Zeit.
-- Gedruckte Köpfe mit großem Überhang brauchen Stützen und werden dadurch
-  rau.
-- Kerzenflammen und Kunststoff vertragen sich nicht beliebig: PLA erweicht ab
-  etwa 50–60 °C.
+- Candles come in many diameters: stick candle (approx. 22 mm), household
+  candle (20 mm), thin pointed taper candle (13 mm), tealight (38 mm), pillar
+  candle (50 and 68 mm). A holder for one of them doesn't fit the others.
+- A candle that sits too loosely or too shallow tips over – and with it the
+  holder, if the base is too narrow.
+- The shape should suit the room: sometimes slender, sometimes bulbous,
+  sometimes smooth, sometimes textured – and searching for a new model every
+  time costs time.
+- Printed heads with a large overhang need supports and thus become rough.
+- Candle flames and plastic don't get along arbitrarily well: PLA softens from
+  about 50–60 °C.
 
-## Die Idee
+## The Idea
 
-Ein Rotationskörper, dessen Silhouette aus wenigen Zahlen entsteht, plus eine
-Kerzenaufnahme, die aus dem Kerzendurchmesser berechnet wird. Form und Dekor
-sind getrennte Entscheidungen: Du wählst ein Grundprofil (`shape_preset`) und
-einen Stil (`deco_style`) und bestimmst Höhe und Breite an drei Stellen.
-Kippsicherheit ist keine Eigenschaft eines Presets, sondern ergibt sich aus
-Bohrungstiefe, Passung und Standfläche – dafür warnt das Modell im
-OpenSCAD-Konsolenfenster, sobald einer der Werte kritisch wird. Alle Maße in
-Millimetern.
+A body of revolution whose silhouette results from a few numbers, plus a candle
+socket calculated from the candle diameter. Shape and decoration are separate
+decisions: you choose a base profile (`shape_preset`) and a style
+(`deco_style`) and define height and width at three points. Tip resistance is
+not a property of a preset but results from bore depth, fit and base – for this,
+the model warns in the OpenSCAD console window as soon as one of the values
+becomes critical. All dimensions in millimeters.
 
 ## Highlights
 
-- **Sieben Grundformen:** `Saeule`, `Kelch`, `Baluster`, `Sanduhr`, `Konisch`,
-  `Vase` und `Frei` (volle Kontrolle über Taillen- und Bauchlage).
-- **Sieben Oberflächenstile:** `Glatt`, `Riefen`, `Spiralriefen`, `Wellen`,
-  `Perlen`, `Kordel`, `Facetten`; Tiefe, Anzahl und Verdrehung einstellbar.
-- **Freie Maße:** Höhe, Fuß-, Taillen- und Kopfdurchmesser wirken bei jeder Form.
-- **Kerzentyp-Voreinstellungen:** sechs Typen oder `Frei` mit eigenem
-  Durchmesser.
-- **Kippsichere Aufnahme:** senkrechtes Sackloch mit Passung
-  (`socket_clearance`, Standard 0,6 mm), Bohrungstiefe und Einführfase.
-- **Optionen:** zentraler Dorn für dünne Kerzen, Tropfschale für Wachs,
-  mehrarmiger Leuchter (bis zu sieben Aufnahmen auf einem Kreis).
-- **Konsolenwarnungen:** zu flache Bohrung, zu dünne Wand, zu tiefe Bohrung,
-  zu schmale Standfläche.
-- **Druckfreundlich:** aufrecht auf flachem Boden, Bodenfase, Verzierung läuft
-  oben und unten sanft aus.
-- **Acht fertige Varianten** mit Bambu-Studio-Profilen für den P1S.
+- **Seven basic shapes:** `Saeule`, `Kelch`, `Baluster`, `Sanduhr`, `Konisch`,
+  `Vase` and `Frei` (full control over waist and belly position).
+- **Seven surface styles:** `Glatt`, `Riefen`, `Spiralriefen`, `Wellen`,
+  `Perlen`, `Kordel`, `Facetten`; depth, count and twist adjustable.
+- **Free dimensions:** height, foot, waist and head diameter take effect with
+  every shape.
+- **Candle type presets:** six types or `Frei` with your own diameter.
+- **Tip-resistant socket:** vertical blind hole with fit
+  (`socket_clearance`, default 0.6 mm), bore depth and lead-in chamfer.
+- **Options:** central spike for thin candles, drip tray for wax, multi-arm
+  candelabra (up to seven sockets on a circle).
+- **Console warnings:** bore too shallow, wall too thin, bore too deep, base too
+  narrow.
+- **Print-friendly:** upright on a flat floor, bottom chamfer, decoration fades
+  out smoothly at top and bottom.
+- **Eight ready-made variants** with Bambu Studio profiles for the P1S.
 
-![Lineup mehrerer Kerzenständer-Formen mit Kerzen](images/02_formen-lineup.jpg)
+![Lineup of several candle holder shapes with candles](images/02_formen-lineup.jpg)
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Namen entsprechen den Customizer-Parametern des Modells.
+The names correspond to the model's Customizer parameters.
 
-### Ausgabe
+### Output
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `part` | `Vorschau` (zusammengebaut mit Kerze) oder `DRUCK Kerzenstaender` (druckfertig, aufrecht) | `Vorschau` | Auswahl |
+| `part` | `Vorschau` (assembled with candle) or `DRUCK Kerzenstaender` (print-ready, upright) | `Vorschau` | Selection |
 
-### Grundform
+### Base Shape
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `shape_preset` | Grundform: `Saeule`, `Kelch`, `Baluster`, `Sanduhr`, `Konisch`, `Vase`, `Frei` | `Kelch` | Auswahl |
-| `total_height` | Gesamthöhe | 120 | 40–400 mm |
-| `foot_diameter` | Durchmesser der Standfläche (größer = kippsicherer) | 92 | 30–260 mm |
-| `waist_diameter` | Durchmesser der schmalsten Stelle (bei `Konisch` und `Vase` ohne Wirkung) | 34 | 12–200 mm |
-| `top_diameter` | Durchmesser am Kopf, direkt unter der Kerzenaufnahme | 70 | 20–220 mm |
-| `waist_position` | Höhenlage der Taille (nur `Frei`) | 0,42 | 0,10–0,90, Schritt 0,01 |
-| `belly_bulge` | zusätzliche Auswölbung (nur `Frei`) | 6 | 0–60 mm, Schritt 0,5 |
-| `belly_position` | Höhenlage des Bauchs (nur `Frei`) | 0,40 | 0,10–0,90, Schritt 0,01 |
-| `bottom_chamfer` | Fase an der unteren Außenkante (gegen Elefantenfuß) | 1,2 | 0–5 mm, Schritt 0,1 |
+| `shape_preset` | Base shape: `Saeule`, `Kelch`, `Baluster`, `Sanduhr`, `Konisch`, `Vase`, `Frei` | `Kelch` | Selection |
+| `total_height` | Overall height | 120 | 40–400 mm |
+| `foot_diameter` | Diameter of the base (larger = more tip-resistant) | 92 | 30–260 mm |
+| `waist_diameter` | Diameter of the narrowest point (no effect with `Konisch` and `Vase`) | 34 | 12–200 mm |
+| `top_diameter` | Diameter at the head, directly below the candle socket | 70 | 20–220 mm |
+| `waist_position` | Height position of the waist (`Frei` only) | 0.42 | 0.10–0.90, step 0.01 |
+| `belly_bulge` | additional bulge (`Frei` only) | 6 | 0–60 mm, step 0.5 |
+| `belly_position` | Height position of the belly (`Frei` only) | 0.40 | 0.10–0.90, step 0.01 |
+| `bottom_chamfer` | Chamfer on the lower outer edge (against elephant's foot) | 1.2 | 0–5 mm, step 0.1 |
 
-### Verzierung
+### Decoration
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `deco_style` | `Glatt`, `Riefen`, `Spiralriefen`, `Wellen`, `Perlen`, `Kordel`, `Facetten` | `Riefen` | Auswahl |
-| `deco_amp` | Tiefe bzw. Amplitude der Verzierung (0 = glatt) | 2,2 | 0–12 mm, Schritt 0,1 |
-| `deco_count` | Anzahl der Riefen am Umfang (bei `Facetten`: Zahl der Kanten) | 26 | 3–80 |
-| `deco_twist` | Verdrehung der Verzierung über die Höhe | 0 | 0–1080°, Schritt 5 |
-| `bead_rows` | Zahl der waagerechten Ringe bei `Wellen` und `Perlen` | 9 | 1–40 |
+| `deco_style` | `Glatt`, `Riefen`, `Spiralriefen`, `Wellen`, `Perlen`, `Kordel`, `Facetten` | `Riefen` | Selection |
+| `deco_amp` | Depth or amplitude of the decoration (0 = smooth) | 2.2 | 0–12 mm, step 0.1 |
+| `deco_count` | Number of flutes around the circumference (with `Facetten`: number of edges) | 26 | 3–80 |
+| `deco_twist` | Twist of the decoration over the height | 0 | 0–1080°, step 5 |
+| `bead_rows` | Number of horizontal rings with `Wellen` and `Perlen` | 9 | 1–40 |
 
-### Kerzenaufnahme
+### Candle Socket
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `candle_type` | `Stabkerze 22 mm`, `Haushaltskerze 20 mm`, `Spitzkerze 13 mm`, `Teelicht 38 mm`, `Stumpen 50 mm`, `Stumpen 68 mm`, `Frei` | `Stabkerze 22 mm` | Auswahl |
-| `candle_diameter` | eigener Kerzendurchmesser (nur bei `Frei`) | 22 | 8–100 mm, Schritt 0,5 |
-| `socket_clearance` | Passungsspiel gesamt (Loch = Kerze + Spiel); klein = stramm | 0,6 | 0,0–2,0 mm, Schritt 0,1 |
-| `socket_depth` | Tiefe der Bohrung; empfohlen mindestens 0,8 × Kerzendurchmesser | 22 | 5–80 mm |
-| `socket_mouth_chamfer` | Einführfase am Bohrungsmund | 1,2 | 0–5 mm, Schritt 0,1 |
-| `socket_count` | Zahl der Aufnahmen (> 1 = mehrarmiger Leuchter) | 1 | 1–7 |
-| `socket_ring_radius` | Radius des Kreises, auf dem die Aufnahmen sitzen | 20 | 0–120 mm |
-| `use_spike` | zentraler Dorn im Bohrungsboden | aus | an / aus |
-| `spike_height` | Höhe des Dorns (kleiner als die Bohrungstiefe) | 8 | 3–30 mm, Schritt 0,5 |
-| `spike_base` | Durchmesser an der Basis des Dorns | 4 | 2–10 mm, Schritt 0,5 |
-| `spike_tip` | Durchmesser an der Spitze des Dorns | 1,6 | 0,8–4 mm, Schritt 0,1 |
-| `drip_tray` | flache Tropfmulde rund um die Bohrung | aus | an / aus |
-| `drip_width` | Breite der Tropfmulde um die Bohrung | 6 | 2–20 mm, Schritt 0,5 |
-| `drip_depth` | Tiefe der Tropfmulde | 2,5 | 1–8 mm, Schritt 0,5 |
+| `candle_type` | `Stabkerze 22 mm`, `Haushaltskerze 20 mm`, `Spitzkerze 13 mm`, `Teelicht 38 mm`, `Stumpen 50 mm`, `Stumpen 68 mm`, `Frei` | `Stabkerze 22 mm` | Selection |
+| `candle_diameter` | custom candle diameter (`Frei` only) | 22 | 8–100 mm, step 0.5 |
+| `socket_clearance` | Total fit clearance (hole = candle + clearance); small = snug | 0.6 | 0.0–2.0 mm, step 0.1 |
+| `socket_depth` | Depth of the bore; recommended at least 0.8 × candle diameter | 22 | 5–80 mm |
+| `socket_mouth_chamfer` | Lead-in chamfer at the bore mouth | 1.2 | 0–5 mm, step 0.1 |
+| `socket_count` | Number of sockets (> 1 = multi-arm candelabra) | 1 | 1–7 |
+| `socket_ring_radius` | Radius of the circle on which the sockets sit | 20 | 0–120 mm |
+| `use_spike` | central spike in the bore floor | off | on / off |
+| `spike_height` | Height of the spike (smaller than the bore depth) | 8 | 3–30 mm, step 0.5 |
+| `spike_base` | Diameter at the base of the spike | 4 | 2–10 mm, step 0.5 |
+| `spike_tip` | Diameter at the tip of the spike | 1.6 | 0.8–4 mm, step 0.1 |
+| `drip_tray` | shallow drip dish around the bore | off | on / off |
+| `drip_width` | Width of the drip dish around the bore | 6 | 2–20 mm, step 0.5 |
+| `drip_depth` | Depth of the drip dish | 2.5 | 1–8 mm, step 0.5 |
 
-### Vorschau-Farben
+### Preview Colors
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `color_body` | Farbe des Ständers (nur Vorschau) | `#b98a4a` | Farbwert |
-| `color_candle` | Farbe der Kerze in der Vorschau | `#f2e9d8` | Farbwert |
-| `show_candle` | Kerze in der Vorschau anzeigen | an | an / aus |
-| `candle_show_height` | Höhe der Kerze über der Aufnahme in der Vorschau | 70 | 10–200 mm, Schritt 5 |
+| `color_body` | Color of the holder (preview only) | `#b98a4a` | Color value |
+| `color_candle` | Color of the candle in the preview | `#f2e9d8` | Color value |
+| `show_candle` | Show candle in the preview | on | on / off |
+| `candle_show_height` | Height of the candle above the socket in the preview | 70 | 10–200 mm, step 5 |
 
-### Qualität
+### Quality
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `body_res_a` | Winkelauflösung des Körpers (Segmente am Umfang) | 180 | 48–360, Schritt 6 |
-| `body_res_v` | Höhenauflösung des Körpers | 140 | 16–320, Schritt 2 |
-| `$fn` | Glätte runder Teile (Bohrung, Dorn, Tropfmulde, Kerze) | 96 | 48–200, Schritt 8 |
+| `body_res_a` | Angular resolution of the body (segments around the circumference) | 180 | 48–360, step 6 |
+| `body_res_v` | Height resolution of the body | 140 | 16–320, step 2 |
+| `$fn` | Smoothness of round parts (bore, spike, drip dish, candle) | 96 | 48–200, step 8 |
 
-![Kelch mit senkrechten Riefen](images/03_kelch-riefen.jpg)
+![Chalice with vertical flutes](images/03_kelch-riefen.jpg)
 
-## Konstruktion
+## Design
 
-### OpenSCAD-Ansatz
+### OpenSCAD Approach
 
-Das Modell ist reines OpenSCAD ohne externe Bibliotheken und läuft im
-MakerWorld-Customizer. Der Körper ist **ein einziges geschlossenes Polyhedron**,
-aufgebaut aus einem Gitter von Ringen über die Höhe und Punkten am Umfang. Das
-ist schnell und liefert bei jeder Einstellung ein geschlossenes, druckbares
-Volumen. Danach wird nur noch die Bohrung abgezogen.
+The model is pure OpenSCAD without external libraries and runs in the
+MakerWorld Customizer. The body is **a single closed polyhedron**, built from a
+grid of rings over the height and points around the circumference. This is fast
+and yields a closed, printable volume with any setting. After that, only the
+bore is subtracted.
 
-### Parametrische Logik
+### Parametric Logic
 
-| Größe | Formel / Regel |
+| Quantity | Formula / Rule |
 |---|---|
-| Silhouette | Zwei Cosinus-Übergänge Fuß → Taille → Kopf; die Taille liegt bei `waist_position` (je nach Preset fest) |
-| Bauch | zusätzlicher Cosinus-Höcker: 0 an den Enden, 1 an `belly_position`, skaliert mit der Wölbung |
-| Taille bei `Konisch` und `Vase` | Mittelwert aus Fuß- und Kopfradius (der Taillenregler ist dort inaktiv) |
-| Bodenfase | der Radius sinkt in den untersten `bottom_chamfer` mm linear (45°) |
-| Verzierung | auf den Radius addiert; läuft oben und unten über je 6 % der Höhe auf null aus |
-| Bohrungsradius | (Kerzendurchmesser + `socket_clearance`) / 2 |
-| Empfohlene Bohrungstiefe | mindestens 15 mm und 0,8 × Kerzendurchmesser |
-| Standfläche | `foot_diameter` mindestens ca. 0,35 × `total_height` |
-| Wand um die Bohrung | Kopfradius − Bohrungsradius (bei mehreren Aufnahmen: − Kreisradius − Bohrungsradius), mindestens 3 mm |
+| Silhouette | Two cosine transitions foot → waist → head; the waist sits at `waist_position` (fixed depending on the preset) |
+| Belly | additional cosine bump: 0 at the ends, 1 at `belly_position`, scaled by the bulge |
+| Waist with `Konisch` and `Vase` | Mean of foot and head radius (the waist control is inactive there) |
+| Bottom chamfer | the radius decreases linearly (45°) over the lowest `bottom_chamfer` mm |
+| Decoration | added to the radius; fades to zero over 6% of the height each at top and bottom |
+| Bore radius | (candle diameter + `socket_clearance`) / 2 |
+| Recommended bore depth | at least 15 mm and 0.8 × candle diameter |
+| Base | `foot_diameter` at least approx. 0.35 × `total_height` |
+| Wall around the bore | Head radius − bore radius (with several sockets: − circle radius − bore radius), at least 3 mm |
 
-Mit den Voreinstellungen (Kelch, 120 mm hoch, Fuß 92 mm, Kopf 70 mm, Stabkerze
-22 mm) ergeben sich: Bohrung Ø 22,6 mm und 22 mm tief (empfohlen mindestens
-17,6 mm), Wand um die Bohrung 23,7 mm, Standfläche 92 mm
-(Verhältnis Fuß zu Höhe ca. 0,77) und Verzierung, die in den obersten und
-untersten 7,2 mm ausläuft.
+With the default settings (chalice, 120 mm tall, foot 92 mm, head 70 mm, stick
+candle 22 mm), this results in: bore Ø 22.6 mm and 22 mm deep (recommended at
+least 17.6 mm), wall around the bore 23.7 mm, base 92 mm (ratio of foot to
+height approx. 0.77) and decoration that fades out over the top and bottom
+7.2 mm.
 
-Die Werte sind aus den Formeln und den Standardwerten abgeleitet.
+The values are derived from the formulas and the default values.
 
-### Besondere Algorithmen
+### Special Algorithms
 
-- **Silhouette aus zwei Cosinus-Segmenten:** Fuß und Kopf gehen mit waagerechter
-  Tangente in die Taille über, sodass die Form weich ohne Knick verläuft.
-  Die Presets legen nur die Taillenlage und den Bauch-Charakter fest (Kelch
-  ca. 0,42, Baluster ca. 0,62, Säule und Sanduhr 0,50).
-- **Dekor als Radiusmodulation:** Riefen sind ein Sinus am Umfang;
-  Spiralriefen ein verschobener Cosinus, dessen Phase mit der Höhe wandert;
-  Wellen kombinieren eine senkrechte und eine waagerechte Welle; Perlen sind
-  achsensymmetrische Ringe; Kordel ist ein Sinus mit einer vollen Umdrehung
-  über die Höhe.
-- **Facetten ohne Rundung:** Bei `Facetten` wird die Winkelauflösung auf
-  `deco_count` gesenkt, sodass die flachen Seiten als Polygon entstehen.
-- **Auslaufende Verzierung:** Der Dekor wird an Boden und Kopf mit einer
-  Cosinus-Hüllkurve auf null gedämpft, damit Fase, Standfläche und Kopfplatte
-  glatt bleiben und die Bohrung sauber durchstoßen werden kann.
-- **Mehrfachaufnahme auf einem Kreis:** Bei `socket_count > 1` verteilt das
-  Modell die Aufnahmen gleichmäßig auf dem Kreis `socket_ring_radius`; Dorn,
-  Fase und Tropfmulde entstehen für jede Aufnahme.
-- **Außen-Normalen für die Vorschau:** Das Polyhedron hat Flächen mit Normalen
-  nach außen. Mit nach innen gerichteten Normalen wäre nur die vollständig
-  berechnete Ansicht undurchsichtig, die schnelle Vorschau dagegen
-  durchsichtig.
-- **Convexity-Anpassung:** Bei tiefen Riefen und Verdrehung wächst der
-  Convexity-Wert mit `deco_count`, damit die Vorschau keine Löcher zeigt.
+- **Silhouette from two cosine segments:** Foot and head transition into the
+  waist with a horizontal tangent, so the shape runs softly without a kink. The
+  presets only define the waist position and the belly character (chalice approx.
+  0.42, baluster approx. 0.62, column and hourglass 0.50).
+- **Decoration as radius modulation:** Flutes are a sine around the
+  circumference; spiral flutes a shifted cosine whose phase migrates with the
+  height; waves combine a vertical and a horizontal wave; beads are
+  axially symmetric rings; cord is a sine with one full turn over the height.
+- **Facets without rounding:** With `Facetten`, the angular resolution is
+  reduced to `deco_count`, so the flat sides result as a polygon.
+- **Fading decoration:** The decor is damped to zero at base and head with a
+  cosine envelope, so that chamfer, base and head plate stay smooth and the bore
+  can be cut cleanly through.
+- **Multiple sockets on a circle:** With `socket_count > 1`, the model
+  distributes the sockets evenly on the circle `socket_ring_radius`; spike,
+  chamfer and drip dish are created for each socket.
+- **Outward normals for the preview:** The polyhedron has faces with normals
+  pointing outward. With normals pointing inward, only the fully computed view
+  would be opaque, while the quick preview would be see-through.
+- **Convexity adjustment:** With deep flutes and twist, the convexity value
+  grows with `deco_count` so that the preview shows no holes.
 
 ```mermaid
 flowchart LR
-    P[shape_preset + Durchmesser + Höhe] --> S[Silhouette]
-    D[deco_style + amp + count + twist] --> M[Radiusmodulation]
-    S --> K[Körper: geschlossenes Polyhedron]
+    P[shape_preset + diameter + height] --> S[Silhouette]
+    D[deco_style + amp + count + twist] --> M[Radius modulation]
+    S --> K[Body: closed polyhedron]
     M --> K
-    C[candle_type + clearance + depth] --> B[Bohrung + Fase]
-    O[Dorn / Tropfmulde / socket_count] --> B
-    K --> H[Halter]
+    C[candle_type + clearance + depth] --> B[Bore + chamfer]
+    O[Spike / drip dish / socket_count] --> B
+    K --> H[Holder]
     B --> H
-    H --> W[Konsolenwarnungen]
+    H --> W[Console warnings]
     H --> O2[part: Vorschau / DRUCK]
 ```
 
-### Modularität
+### Modularity
 
-Der Code trennt Silhouette, Dekorfunktion, Körper-Generator, Bohrung mit Fase
-und Tropfmulde, Dorn, Vorschaukerze und die Prüfhinweise. Der Selektor gibt
-entweder die Vorschau mit Kerze oder das druckfertige Teil aus; die
-Start-Kamera zeigt das Objekt ganz im Bild.
+The code separates silhouette, decoration function, body generator, bore with
+chamfer and drip dish, spike, preview candle and the check notices. The selector
+outputs either the preview with candle or the print-ready part; the start camera
+shows the object fully in frame.
 
-### Druckoptimierungen
+### Print Optimizations
 
-- **Aufrecht auf flachem Boden:** Die Standfläche ist die größte Auflage.
-- **Bodenfase:** gegen Elefantenfuß und für saubere erste Schichten.
-- **Dekor läuft aus:** keine scharfen Kanten an Boden und Kopf.
-- **Tiefe, stramme Aufnahme:** hält die Kerze ohne Zusatzteile.
-- **Wandwarnung:** Die Konsole meldet, wenn die Wand um die Bohrung dünner als
-  3 mm wird.
+- **Upright on a flat floor:** The base is the largest contact surface.
+- **Bottom chamfer:** against elephant's foot and for clean first layers.
+- **Decor fades out:** no sharp edges at base and head.
+- **Deep, snug socket:** holds the candle without additional parts.
+- **Wall warning:** The console reports when the wall around the bore becomes
+  thinner than 3 mm.
 
-![Säule mit gedrehten Riefen](images/04_saeule-spirale.jpg)
+![Column with twisted flutes](images/04_saeule-spirale.jpg)
 
-## Druckempfehlungen
+## Print Recommendations
 
-Die Profile sind für **Bambu Lab P1S** mit PLA gebaut (Gyroid 15 %). Mit der
-Standardhöhe von 120 mm passt der Ständer auf alle drei Drucker; die Höhe ist
-bis 400 mm einstellbar und braucht dann entsprechend Druckhöhe.
+The profiles are built for the **Bambu Lab P1S** with PLA (gyroid 15%). With the
+default height of 120 mm, the holder fits on all three printers; the height is
+adjustable up to 400 mm and then needs a correspondingly tall build volume.
 
-| Einstellung | Empfehlung |
+| Setting | Recommendation |
 |---|---|
-| Material | PLA für Deko; PETG, ASA oder PA für mehr Hitzefestigkeit |
-| Layerhöhe | 0,16–0,20 mm |
-| Wände | 3–4 |
-| Infill | 15–40 % (mehr Infill = schwerer = kippsicherer) |
-| Supports | schlanke Formen keine; stark auskragende Köpfe: Stützen oder Schnitt |
-| Ausrichtung | aufrecht, flacher Boden auf dem Bett |
+| Material | PLA for decoration; PETG, ASA or PA for more heat resistance |
+| Layer height | 0.16–0.20 mm |
+| Walls | 3–4 |
+| Infill | 15–40% (more infill = heavier = more tip-resistant) |
+| Supports | slender shapes none; heavily overhanging heads: supports or cut |
+| Orientation | upright, flat floor on the bed |
 
-**Besondere Hinweise**
+**Special notes**
 
-- **Schlanke Formen** (`Saeule`, `Konisch`, dünner `Kelch`) drucken ohne
-  Stützen.
-- **Breite Köpfe** (`Kelch`, `Vase`, großer Bauch) erzeugen Überhänge. Entweder
-  Baumstützen im Slicer aktivieren, oder den Ständer im Bambu Studio mit dem
-  Schneidwerkzeug senkrecht mittig teilen, beide Hälften mit der Schnittfläche
-  nach unten drucken und danach verkleben.
-- **Sicherheit:** Brennende Kerzen nie unbeaufsichtigt lassen. Die Flamme muss
-  genug Abstand zum Kunststoff haben, und die Kerze sollte gelöscht sein, bevor
-  sie bis zum Halter herunterbrennt.
-- **Kippsicherheit in vier Punkten:** (1) `socket_depth` mindestens
-  0,8 × Kerzendurchmesser, (2) `socket_clearance` klein halten, (3) bei
-  dünnen Kerzen `use_spike` aktivieren, (4) `foot_diameter` mindestens ca.
-  0,35 × `total_height` und genug Infill.
-- **Varianten der Profile:** Kelch mit Riefen, Säule mit Spiralriefen,
-  Baluster mit Perlen, Vase mit Kordel, Konisch mit Facetten, Kelch mit drei
-  Aufnahmen, Sanduhr mit Wellen und glatte Säule.
+- **Slender shapes** (`Saeule`, `Konisch`, thin `Kelch`) print without
+  supports.
+- **Wide heads** (`Kelch`, `Vase`, large belly) create overhangs. Either enable
+  tree supports in the slicer, or split the holder vertically through the middle
+  in Bambu Studio with the cut tool, print both halves with the cut face down
+  and glue them together afterwards.
+- **Safety:** Never leave burning candles unattended. The flame must have enough
+  distance from the plastic, and the candle should be extinguished before it
+  burns down to the holder.
+- **Tip resistance in four points:** (1) `socket_depth` at least
+  0.8 × candle diameter, (2) keep `socket_clearance` small, (3) enable
+  `use_spike` for thin candles, (4) `foot_diameter` at least approx.
+  0.35 × `total_height` and enough infill.
+- **Profile variants:** Chalice with flutes, column with spiral flutes,
+  baluster with beads, vase with cord, conical with facets, chalice with three
+  sockets, hourglass with waves and smooth column.
 
-![Kelch mit drei Kerzenaufnahmen auf einem Kreis](images/05_kelch-dreifach.jpg)
+![Chalice with three candle sockets on a circle](images/05_kelch-dreifach.jpg)
 
-## Anwendungsbeispiele
+## Use Cases
 
-- **Esstisch:** Stabkerzen in Säule oder Kelch, passend zur Einrichtung.
-- **Dreiarmiger Leuchter:** Kelch mit `socket_count = 3`.
-- **Teelichter:** `candle_type = Teelicht 38 mm` mit flacher Mulde.
-- **Stumpenkerzen:** `Stumpen 50 mm` oder `Stumpen 68 mm` in einer Vase.
-- **Spitzkerzen:** `Spitzkerze 13 mm` mit Dorn.
-- **Deko-Serie:** dieselbe Form in verschiedenen Farben und Stilen drucken.
-- **Fassung für LED-Kerzen:** Der Halter nimmt jede Kerze auf, deren
-  Durchmesser du einstellst.
+- **Dining table:** Stick candles in a column or chalice, matching your decor.
+- **Three-arm candelabra:** Chalice with `socket_count = 3`.
+- **Tealights:** `candle_type = Teelicht 38 mm` with a shallow dish.
+- **Pillar candles:** `Stumpen 50 mm` or `Stumpen 68 mm` in a vase.
+- **Pointed taper candles:** `Spitzkerze 13 mm` with a spike.
+- **Decor series:** print the same shape in different colors and styles.
+- **Holder for LED candles:** The holder accepts any candle whose diameter you
+  set.
 
-![Baluster mit Perlen-Verzierung](images/06_baluster-perlen.jpg)
+![Baluster with bead decoration](images/06_baluster-perlen.jpg)
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-| Symptom | Ursache | Fix |
+| Symptom | Cause | Fix |
 |---|---|---|
-| Kerze kippt | Bohrung zu flach oder zu locker | `socket_depth` erhöhen, `socket_clearance` verringern |
-| Kerze lässt sich nicht einsetzen | Druck fällt etwas kleiner aus | `socket_clearance` erhöhen oder `socket_mouth_chamfer` vergrößern |
-| Dünne Kerze wackelt | Bohrung weit größer als die Kerze | `candle_type` oder `candle_diameter` prüfen, `use_spike` aktivieren |
-| Konsole meldet „Bohrungstiefe < empfohlen“ | Bohrung weniger als 0,8 × Kerzendurchmesser | `socket_depth` erhöhen |
-| Konsole meldet „Wand um die Bohrung nur … mm“ | Kopf zu schmal für die Aufnahme(n) | `top_diameter` erhöhen, `socket_ring_radius` verkleinern |
-| Konsole meldet „Standfläche evtl. schmal“ | Fuß schmaler als 0,35 × Höhe | `foot_diameter` erhöhen |
-| Taillenregler wirkt nicht | `Konisch` und `Vase` haben keine Taille | `shape_preset = Frei` wählen |
-| Die Facetten sind nicht eckig | `deco_style` steht nicht auf `Facetten` | `Facetten` wählen, `deco_count` ist die Kantenzahl |
-| Der Kopf druckt rau | Überhang am breiten Kopf | Stützen oder Schnittmethode im Slicer |
-| Verzierung fehlt | `deco_amp = 0` oder `Glatt` | `deco_style` und `deco_amp` prüfen |
-| Das Rendern dauert lange | Hohe Körperauflösung | `body_res_a` und `body_res_v` für die Vorschau senken |
+| Candle tips over | Bore too shallow or too loose | Increase `socket_depth`, decrease `socket_clearance` |
+| Candle can't be inserted | Print comes out slightly smaller | Increase `socket_clearance` or enlarge `socket_mouth_chamfer` |
+| Thin candle wobbles | Bore much larger than the candle | Check `candle_type` or `candle_diameter`, enable `use_spike` |
+| Console reports "Bohrungstiefe < empfohlen" | Bore less than 0.8 × candle diameter | Increase `socket_depth` |
+| Console reports "Wand um die Bohrung nur … mm" | Head too narrow for the socket(s) | Increase `top_diameter`, decrease `socket_ring_radius` |
+| Console reports "Standfläche evtl. schmal" | Foot narrower than 0.35 × height | Increase `foot_diameter` |
+| Waist control has no effect | `Konisch` and `Vase` have no waist | Choose `shape_preset = Frei` |
+| The facets aren't angular | `deco_style` is not set to `Facetten` | Choose `Facetten`, `deco_count` is the number of edges |
+| The head prints rough | Overhang on the wide head | Supports or the cut method in the slicer |
+| Decoration is missing | `deco_amp = 0` or `Glatt` | Check `deco_style` and `deco_amp` |
+| Rendering takes a long time | High body resolution | Lower `body_res_a` and `body_res_v` for the preview |
 
-## Entwicklungsgeschichte
+## Development History
 
-Die ersten Dateien des Modells stammen vom 21. Juli 2026: der erste
-Beschreibungstext und die ersten Titelbilder. Am 2. und 3. August 2026
-entstanden die Titelbilder mit mehreren Formen. Am 3. August 2026 wurde auch ein
-Fehler in der Vorschau behoben: Die Flächenreihenfolge des Polyhedrons ergab
-Normalen nach innen. Die vollständig berechnete Ansicht war deshalb opak, die
-schnelle Vorschau aber durchsichtig. Zusammen mit der Convexity-Anpassung für
-tiefe Riefen ist die Vorschau seither opak. Am 4. August 2026 folgten die acht
-Referenzvarianten mit Profilen für den P1S. Die letzte Änderung der Modelldatei
-stammt vom 3. August 2026.
+The first files of the model date from 21 July 2026: the first description text
+and the first cover images. On 2 and 3 August 2026, the cover images with
+several shapes were created. On 3 August 2026, a preview bug was also fixed: the
+face order of the polyhedron resulted in normals pointing inward. The fully
+computed view was therefore opaque, but the quick preview see-through. Together
+with the convexity adjustment for deep flutes, the preview has been opaque ever
+since. On 4 August 2026, the eight reference variants with profiles for the P1S
+followed. The last change to the model file dates from 3 August 2026.
 
-Die Bilder in diesem Repository sind Renderings der Modellgeometrie
-beziehungsweise daraus abgeleitete Szenenbilder; Druckfotos sind nicht dabei.
+The images in this repository are renderings of the model geometry or scene
+images derived from them; no photos of prints are included.
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: https://makerworld.com/en/models/3077107-parametric-candlestick
+👉 MakerWorld link: https://makerworld.com/en/models/3077107-parametric-candlestick
 
-Profil: <https://makerworld.com/en/@BetaHydri>
+Profile: <https://makerworld.com/en/@BetaHydri>
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository: © BetaHydri. Das Modell (inkl.
-Quellcode) und alle Druckdateien werden ausschließlich über MakerWorld unter
-der dort angegebenen Lizenz verteilt. Dieses Repository enthält bewusst keine
-Modell-, Quellcode- oder Druckdateien.
+Documentation and images in this repository: © BetaHydri. The model (including
+source code) and all print files are distributed exclusively via MakerWorld
+under the license stated there. This repository intentionally contains no
+model, source code or print files.

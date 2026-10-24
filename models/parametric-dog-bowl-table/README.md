@@ -1,293 +1,289 @@
-# Parametric Dog & Cat Bowl Stand – Napfständer mit Schwalbenschwanz-Teilung für jedes Druckbett
+# Parametric Dog & Cat Bowl Stand – Bowl Stand with Dovetail Split for Any Print Bed
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Parametrischer, erhöhter Futterständer für Hund und Katze: ein oder zwei weich
-gerundete Napfmulden, schräg gestellte Beine mit 120° Innenwinkel und eine
-Schwalbenschwanz-Verbindung, die den Ständer bei Bedarf in zwei Hälften teilt,
-damit er auch auf kleine Druckbetten passt – alles im MakerWorld-Customizer.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/3136049-parametric-dog-and-cat-bowl-stand)
+Parametric raised feeding stand for dogs and cats: one or two softly rounded
+bowl recesses, angled legs with a 120° interior angle, and a dovetail joint that
+splits the stand into two halves when needed so that it also fits small print
+beds – all in the MakerWorld Customizer.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/3136049-parametric-dog-and-cat-bowl-stand)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-P1S%20%7C%20P2S%20%7C%20H2C%20%7C%20H2D-green)
 ![Print files](https://img.shields.io/badge/Print%20files-MakerWorld%20only-blue)
 
-> **Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:**
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/3136049-parametric-dog-and-cat-bowl-stand](https://makerworld.com/en/models/3136049-parametric-dog-and-cat-bowl-stand)
+> **The model with all print profiles is available exclusively on MakerWorld:**
+> 👉 [MakerWorld link: https://makerworld.com/en/models/3136049-parametric-dog-and-cat-bowl-stand](https://makerworld.com/en/models/3136049-parametric-dog-and-cat-bowl-stand)
 >
-> ![Raised Pet Feeder – Zwei-Napf- und Ein-Napf-Ständer auf einem Küchenboden](images/01_hero.png)
+> ![Raised Pet Feeder – two-bowl and one-bowl stands on a kitchen floor](images/01_hero.png)
 
-Der **Parametric Dog & Cat Bowl Stand** erzeugt einen Ständer aus einer
-Deckplatte mit Napfmulden und zwei nach außen gespreizten Beinen. Du stellst
-Plattenlänge und -breite, Gesamthöhe, Beinspreizung, Napfdurchmesser und
-Schwalbenschwanz-Maße ein. Das Modell kennt dein Druckbett (P1S/P2S, H2C oder
-H2D) und entscheidet selbst, ob der Ständer in einem Stück oder in zwei
-Hälften gedruckt wird. Alle Hälften liegen auf der Stirnseite und brauchen
-keine Stützen.
+The **Parametric Dog & Cat Bowl Stand** produces a stand made of a top plate
+with bowl recesses and two outward-splayed legs. You set plate length and
+width, overall height, leg splay, bowl diameter and dovetail dimensions. The
+model knows your print bed (P1S/P2S, H2C or H2D) and decides on its own whether
+the stand is printed in one piece or in two halves. All halves lie on their end
+face and need no supports.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Konstruktion](#konstruktion)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Parametric Options](#parametric-options)
+- [Construction](#construction)
+- [Print Recommendations](#print-recommendations)
+- [Application Examples](#application-examples)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Erhöhte Futterständer gibt es im Handel, aber selten in dem Maß, das zu Tier,
-Napf und Küche passt:
+Raised feeding stands are available in stores, but rarely in the size that suits
+the animal, the bowl and the kitchen:
 
-- Ein Napf mit 166 mm Randdurchmesser passt nicht in eine Mulde für 150 mm –
-  und umgekehrt wackelt er in einer zu großen.
-- Eine Katze braucht eine niedrige Auflage, ein großer Hund eine deutlich
-  höhere. Ein Ständer in einer festen Höhe passt zu keinem von beiden perfekt.
-- Ein Ständer für zwei Näpfe ist breiter als die meisten Druckbetten. Teilen
-  muss man ihn trotzdem so, dass er stabil bleibt – ohne Schrauben und Kleber.
-- Beim Teilen kann die Trennnaht mitten durch eine Napfmulde laufen und die
-  Verbindung zerstören. Das merkt man erst nach dem Druck.
+- A bowl with a 166 mm rim diameter does not fit into a recess for 150 mm – and
+  conversely, it wobbles in one that is too large.
+- A cat needs a low support, a large dog a considerably higher one. A stand at a
+  fixed height fits neither of them perfectly.
+- A stand for two bowls is wider than most print beds. You still have to split
+  it in such a way that it stays stable – without screws and glue.
+- When splitting, the seam can run right through a bowl recess and destroy the
+  joint. You only notice after printing.
 
-## Die Idee
+## The Idea
 
-Der Entwurf ist ein Nachbau eines eigenen Fusion-360-Entwurfs („Hund-Tisch
-2026“), dessen Geometrie ich mit OCP (OpenCascade) vermessen habe: Deckplatte
-18 mm dick, Beine mit 30° Neigung zur Senkrechten (120° Innenwinkel), Mulden mit
-45°-Wand und abgerundetem Rand. Diese Werte sind die Voreinstellungen.
+The design is a rebuild of my own Fusion 360 design ("Hund-Tisch 2026"), whose
+geometry I measured with OCP (OpenCascade): top plate 18 mm thick, legs inclined
+30° from the vertical (120° interior angle), recesses with a 45° wall and a
+rounded rim. These values are the defaults.
 
-Darauf setzt der Customizer: Plattenlänge, Breite, Höhe, Napfdurchmesser und
--anzahl sind frei wählbar. Ein Schwalbenschwanz-Gelenk teilt den Ständer in der
-Mitte, wenn er nicht auf dein Druckbett passt. Eine Prüfung im Modell sorgt
-dafür, dass nur druckbare Kombinationen entstehen und bei einem Konflikt eine
-klare Meldung erscheint. Alle Maße in Millimetern, alle Werte als
-Customizer-Parameter.
+The Customizer builds on this: plate length, width, height, bowl diameter and
+bowl count can be freely chosen. A dovetail joint splits the stand in the middle
+if it does not fit your print bed. A check in the model ensures that only
+printable combinations are produced and that a clear message appears in case of
+a conflict. All dimensions are in millimeters, all values are Customizer
+parameters.
 
 ## Highlights
 
-- **Ein oder zwei Näpfe:** `bowl_count` wählt zwischen Einzelnapf und
-  Doppelständer.
-- **Zwei verschiedene Napfgrößen:** `bowl2_diameter` setzt die zweite Mulde
-  unabhängig – etwa ein großer Futternapf neben einem kleinen Wassernapf.
-- **Passt auf jedes Druckbett:** `printer` und `split_mode` steuern, ob der
-  Ständer in einem Stück oder in zwei Hälften mit Schwalbenschwanz gedruckt
-  wird.
-- **Schwalbenschwanz mit einstellbarem Spiel:** `dovetail_play` (Standard
-  0,15 mm je Seite); die Zunge hat hinten eine 45°-Einführfase, die Vorderseite
-  bleibt bündig.
-- **Stützfreie 45°-Mulden:** abgerundeter Rand, abgerundete Bodenkante und ein
-  flacher Boden ohne Mittelzapfen.
-- **Auto-Länge:** `auto_board_length` leitet die Plattenlänge aus Napfdurchmesser,
-  Abstand und Randzugabe ab.
-- **Prüfung der Trennnaht:** Läuft die Naht durch eine Mulde, bricht das Modell
-  mit einer klaren Meldung und Lösungsvorschlägen ab.
-- **Validierte Eingaben:** Wanddicke, Muldentiefe, Beinüberlappung und
-  Napfplatz werden geprüft, bevor Geometrie entsteht.
-- **Vorschau-Modi:** zusammengebaut und gespreizt, mit rotem
-  „NOT FOR PRINTING“-Banner.
-- **Acht fertige Varianten** (Katze, kleiner, mittlerer und großer Hund – je
-  mit einem oder zwei Näpfen) mit Bambu-Studio-Profilen.
+- **One or two bowls:** `bowl_count` selects between a single bowl and a double
+  stand.
+- **Two different bowl sizes:** `bowl2_diameter` sets the second recess
+  independently – for example a large food bowl next to a small water bowl.
+- **Fits any print bed:** `printer` and `split_mode` control whether the stand
+  is printed in one piece or in two halves with a dovetail.
+- **Dovetail with adjustable clearance:** `dovetail_play` (default 0.15 mm per
+  side); the tongue has a 45° lead-in chamfer at the back, the front stays
+  flush.
+- **Support-free 45° recesses:** rounded rim, rounded bottom edge and a flat
+  bottom without a center peg.
+- **Auto length:** `auto_board_length` derives the plate length from bowl
+  diameter, spacing and rim allowance.
+- **Seam check:** If the seam runs through a recess, the model aborts with a
+  clear message and suggested solutions.
+- **Validated inputs:** Wall thickness, recess depth, leg overlap and bowl space
+  are checked before geometry is created.
+- **Preview modes:** assembled and splayed apart, with a red "NOT FOR PRINTING"
+  banner.
+- **Eight ready-made variants** (cat, small, medium and large dog – each with
+  one or two bowls) with Bambu Studio profiles.
 
-![Ein- und Zwei-Napf-Ständer im Vergleich](images/04_ein-und-zwei-napf-variante.png)
+![One-bowl and two-bowl stands compared](images/04_ein-und-zwei-napf-variante.png)
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Namen entsprechen den Customizer-Parametern des Modells.
+The names correspond to the model's Customizer parameters.
 
-### Ausgabe
+### Output
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `part` | Ausgabe: `assembled preview` (zusammengebaut auf den Füßen, nicht druckbar), `split preview` (Hälften auseinander, nicht druckbar), `assembled clean` (Studio-Render ohne Banner), `both halves` (beide Hälften druckfertig), `right half`, `left half` | `assembled preview` | Auswahl |
-| `preview_gap` | Abstand der Hälften in der Split-Vorschau | 45 | 0–150 mm |
+| `part` | Output: `assembled preview` (assembled on the feet, not printable), `split preview` (halves apart, not printable), `assembled clean` (studio render without banner), `both halves` (both halves print-ready), `right half`, `left half` | `assembled preview` | Selection |
+| `preview_gap` | Spacing of the halves in the split preview | 45 | 0–150 mm |
 
-### Drucker und Teilung
+### Printer and Split
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `printer` | Druckbett: P1S/P2S (256 × 256), H2C (325 × 320), H2D (350 × 320) | `P1S` | Auswahl |
-| `split_mode` | `auto` (nur teilen, wenn es nicht passt), `always`, `never` | `auto` | Auswahl |
+| `printer` | Print bed: P1S/P2S (256 × 256), H2C (325 × 320), H2D (350 × 320) | `P1S` | Selection |
+| `split_mode` | `auto` (only split if it does not fit), `always`, `never` | `auto` | Selection |
 
-### Plattengröße
+### Plate Size
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `auto_board_length` | Plattenlänge automatisch aus den Näpfen berechnen | an | an / aus |
-| `board_length` | Plattenlänge X, nur wenn Auto aus ist | 397 | 140–900 mm |
-| `board_width` | Plattenbreite / -tiefe Y | 220 | 90–400 mm |
-| `board_thick` | Plattendicke | 18 | 10–35 mm, Schritt 0,5 |
-| `total_height` | Gesamthöhe inklusive Platte (Höhe, auf die der Ständer die Näpfe hebt) | 65 | 35–160 mm |
+| `auto_board_length` | Calculate plate length automatically from the bowls | on | on / off |
+| `board_length` | Plate length X, only when auto is off | 397 | 140–900 mm |
+| `board_width` | Plate width / depth Y | 220 | 90–400 mm |
+| `board_thick` | Plate thickness | 18 | 10–35 mm, step 0.5 |
+| `total_height` | Overall height including plate (height to which the stand lifts the bowls) | 65 | 35–160 mm |
 
-### Beine
+### Legs
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `leg_splay` | Beinspreizung von der Senkrechten; 30° ergibt 120° Innenwinkel | 30 | 0–45° |
-| `foot_length` | Länge der Fußauflage in X | 14 | 6–50 mm, Schritt 0,5 |
-| `edge_round` | Rundung von Knick und Füßen im Seitenprofil | 4 | 0–10 mm, Schritt 0,2 |
+| `leg_splay` | Leg splay from the vertical; 30° gives a 120° interior angle | 30 | 0–45° |
+| `foot_length` | Length of the foot contact area in X | 14 | 6–50 mm, step 0.5 |
+| `edge_round` | Rounding of the bend and feet in the side profile | 4 | 0–10 mm, step 0.2 |
 
-### Napfmulden
+### Bowl Recesses
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `bowl_count` | Anzahl der Mulden | 2 | 1–2 |
-| `bowl_diameter` | Öffnungsdurchmesser an der Plattenoberfläche (Rand) | 166 | 50–280 mm |
-| `bowl2_diameter` | Durchmesser der zweiten Mulde, 0 = wie die erste | 0 | 0–280 mm |
-| `bowl_depth` | Tiefe der Mulde | 10 | 3–35 mm, Schritt 0,5 |
-| `bowl_wall_angle` | Wandwinkel der Mulde; 45° druckt sauber | 45 | 30–65° |
-| `bowl_rim_round` | Rundung, wo die Oberfläche in die Mulde übergeht | 3 | 0,5–12 mm, Schritt 0,5 |
-| `bowl_fillet` | Rundung der Bodenkante der Mulde | 4 | 0,5–12 mm, Schritt 0,5 |
-| `bowl_spacing` | Abstand der Muldenmitten in X (bei einer Mulde ohne Wirkung) | 200 | 70–500 mm |
+| `bowl_count` | Number of recesses | 2 | 1–2 |
+| `bowl_diameter` | Opening diameter at the plate surface (rim) | 166 | 50–280 mm |
+| `bowl2_diameter` | Diameter of the second recess, 0 = same as the first | 0 | 0–280 mm |
+| `bowl_depth` | Depth of the recess | 10 | 3–35 mm, step 0.5 |
+| `bowl_wall_angle` | Wall angle of the recess; 45° prints cleanly | 45 | 30–65° |
+| `bowl_rim_round` | Rounding where the surface transitions into the recess | 3 | 0.5–12 mm, step 0.5 |
+| `bowl_fillet` | Rounding of the recess's bottom edge | 4 | 0.5–12 mm, step 0.5 |
+| `bowl_spacing` | Distance between recess centers in X (no effect with one recess) | 200 | 70–500 mm |
 
-### Schwalbenschwanz
+### Dovetail
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `dovetail_depth` | Tiefe der Zunge in die andere Hälfte | 8 | 5–35 mm, Schritt 0,5 |
-| `dovetail_neck` | Zungenhöhe an der Naht (schmale Seite) | 8 | 3–28 mm, Schritt 0,5 |
-| `dovetail_tip` | Zungenhöhe an der Spitze (breite Seite, sperrt die Verbindung) | 13 | 4–32 mm, Schritt 0,5 |
-| `dovetail_play` | Spiel je Seite zwischen Zunge und Nut | 0,15 | 0–0,5 mm, Schritt 0,05 |
+| `dovetail_depth` | Depth of the tongue into the other half | 8 | 5–35 mm, step 0.5 |
+| `dovetail_neck` | Tongue height at the seam (narrow side) | 8 | 3–28 mm, step 0.5 |
+| `dovetail_tip` | Tongue height at the tip (wide side, locks the joint) | 13 | 4–32 mm, step 0.5 |
+| `dovetail_play` | Clearance per side between tongue and groove | 0.15 | 0–0.5 mm, step 0.05 |
 
-### Qualität
+### Quality
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `quality_fn` | Glätte der runden Flächen (`$fn`) | 96 | 32–160, Schritt 8 |
+| `quality_fn` | Smoothness of round surfaces (`$fn`) | 96 | 32–160, step 8 |
 
-![Split-Vorschau: zwei Hälften mit Schwalbenschwanz-Nut und -Zunge](images/05_split-vorschau-schwalbenschwanz.png)
+![Split preview: two halves with dovetail groove and tongue](images/05_split-vorschau-schwalbenschwanz.png)
 
-## Konstruktion
+## Construction
 
-### OpenSCAD-Ansatz
+### OpenSCAD Approach
 
-Das Modell ist reines OpenSCAD ohne externe Bibliotheken und läuft im
-MakerWorld-Customizer. Das Seitenprofil (Platte plus zwei gespreizte Beine) ist
-ein 2D-Polygon, das in Y-Richtung auf die Plattenbreite extrudiert wird. Die
-Mulden werden als Drehkörper davon abgezogen. Ein `part`-Selektor wählt
-Vorschau, Studio-Render oder Druckteil.
+The model is pure OpenSCAD without external libraries and runs in the
+MakerWorld Customizer. The side profile (plate plus two splayed legs) is a 2D
+polygon extruded in the Y direction to the plate width. The recesses are
+subtracted from it as solids of revolution. A `part` selector chooses preview,
+studio render or print part.
 
-### Parametrische Logik
+### Parametric Logic
 
-| Größe | Formel / Regel |
+| Value | Formula / Rule |
 |---|---|
-| Plattenunterseite | `total_height` − `board_thick` |
-| Beinspreizung | `tan(leg_splay)`; äußere Fußkante = halbe Plattenlänge + `total_height` · `tan(leg_splay)` |
-| Innere Fußkante | äußere Fußkante − `foot_length` |
-| Auto-Plattenlänge | 1 Napf: Durchmesser + 2 · 25 mm; 2 Näpfe: Abstand + größerer Durchmesser + 2 · 25 mm |
-| Muldentiefe | min(`bowl_depth`, 0,8 · Radius / tan(Wandwinkel)) – so bleibt mindestens 20 % des Radius als flacher Boden |
-| Rundungen | auf 80 % der Tiefe und 35 % des Radius begrenzt |
-| Schwalbenschwanz-Mitte | Mitte der Plattendicke |
-| Trennnaht | liegt immer bei X = 0 |
+| Underside of the plate | `total_height` − `board_thick` |
+| Leg splay | `tan(leg_splay)`; outer foot edge = half plate length + `total_height` · `tan(leg_splay)` |
+| Inner foot edge | outer foot edge − `foot_length` |
+| Auto plate length | 1 bowl: diameter + 2 · 25 mm; 2 bowls: spacing + larger diameter + 2 · 25 mm |
+| Recess depth | min(`bowl_depth`, 0.8 · radius / tan(wall angle)) – so that at least 20% of the radius remains as a flat bottom |
+| Roundings | limited to 80% of the depth and 35% of the radius |
+| Dovetail center | middle of the plate thickness |
+| Seam | always at X = 0 |
 
-Mit den Voreinstellungen (zwei Näpfe Ø 166 mm, Abstand 200 mm, Höhe 65 mm)
-ergibt sich eine Plattenlänge von 416 mm und eine Grundfläche von rund
-491 × 220 mm. Der flache Muldenboden hat dann einen Durchmesser von rund
-140 mm. Bei einem Napf (Ø 166 mm) sind es 216 mm Plattenlänge und rund 291 mm
-Grundfläche.
+With the default settings (two bowls Ø 166 mm, spacing 200 mm, height 65 mm),
+this results in a plate length of 416 mm and a footprint of about 491 × 220 mm.
+The flat recess bottom then has a diameter of about 140 mm. With one bowl
+(Ø 166 mm), it is 216 mm plate length and about 291 mm footprint.
 
-Die Werte sind aus den Formeln und den Standardwerten abgeleitet.
+The values are derived from the formulas and the default values.
 
-### Besondere Algorithmen
+### Special Algorithms
 
-- **Mulde aus tangentialen Bögen:** Das Muldenprofil besteht aus einem
-  Rundungsbogen am Rand (tangential zur Oberfläche), einem geraden Kegel mit
-  dem Wandwinkel und einem Bogen an der Bodenkante. Der Boden bleibt über die
-  Achse hinaus flach; das Profil wird oben und an der Achse beschnitten. So gibt
-  es keinen Mittelzapfen, und die Geometrie bleibt ein sauberer, geschlossener
-  Körper.
-- **Schwalbenschwanz:** Der Querschnitt ist ein Trapez, das an der Naht schmal
-  (`dovetail_neck`) und an der Spitze breit (`dovetail_tip`) ist. Die Zunge
-  gehört zur rechten Hälfte, die Nut wird aus der linken um `dovetail_play`
-  vergrößert herausgeschnitten. Die Kanten des Trapezes sind abgerundet, damit
-  sie nicht ausbrechen.
-- **Einführfase nur hinten:** Die Zunge verjüngt sich an der hinteren
-  Einführseite unter 45°. Die Vorderseite bleibt voll und bündig, damit keine
-  Tasche sichtbar ist.
-- **Automatische Teilung:** Aus Druckbett und Fußabdruck berechnet das Modell,
-  ob der Ständer flach auf den Füßen oder auf der Stirnseite passt. Passt keins
-  von beiden, wird geteilt.
-- **Prüfung der Naht gegen die Mulde:** Unter einer Mulde ist die Platte nur
-  `board_thick` − `bowl_depth` dick – zu wenig für den Schwalbenschwanz. Die
-  Naht muss daher mindestens Muldenradius + `dovetail_depth` + 3 mm von jeder
-  Muldenmitte entfernt liegen. Sonst stoppt das Modell mit einer Meldung
-  (größeren Drucker wählen, `bowl_spacing` erhöhen oder `split_mode` auf
-  `never` setzen).
-- **Zwei Napfgrößen:** Die Muldengeometrie ist eine Funktion des Durchmessers;
-  die zweite Mulde bekommt ihre eigenen Rundungen und Tiefe. Die symmetrische
-  Platte fasst den größeren Napf.
+- **Recess from tangential arcs:** The recess profile consists of a rounding arc
+  at the rim (tangent to the surface), a straight cone with the wall angle and
+  an arc at the bottom edge. The bottom stays flat beyond the axis; the profile
+  is trimmed at the top and at the axis. This way there is no center peg, and
+  the geometry remains a clean, closed body.
+- **Dovetail:** The cross-section is a trapezoid that is narrow at the seam
+  (`dovetail_neck`) and wide at the tip (`dovetail_tip`). The tongue belongs to
+  the right half; the groove is cut out of the left half enlarged by
+  `dovetail_play`. The edges of the trapezoid are rounded so that they do not
+  break out.
+- **Lead-in chamfer only at the back:** The tongue tapers at the rear insertion
+  side at 45°. The front stays full and flush so that no pocket is visible.
+- **Automatic split:** From print bed and footprint, the model calculates
+  whether the stand fits flat on its feet or on its end face. If neither fits,
+  it is split.
+- **Checking the seam against the recess:** Under a recess, the plate is only
+  `board_thick` − `bowl_depth` thick – too little for the dovetail. The seam
+  must therefore lie at least recess radius + `dovetail_depth` + 3 mm away from
+  each recess center. Otherwise the model stops with a message (choose a larger
+  printer, increase `bowl_spacing` or set `split_mode` to `never`).
+- **Two bowl sizes:** The recess geometry is a function of the diameter; the
+  second recess gets its own roundings and depth. The symmetric plate
+  accommodates the larger bowl.
 
 ```mermaid
 flowchart LR
-    P[board / total_height / leg_splay] --> S[Seitenprofil + Extrusion]
-    S --> T[Ständer ohne Mulden]
-    B[bowl_* Parameter] --> M[Mulden aus tangentialen Bögen]
-    T --> D[Ständer mit Mulden]
+    P[board / total_height / leg_splay] --> S[Side profile + extrusion]
+    S --> T[Stand without recesses]
+    B[bowl_* parameters] --> M[Recesses from tangential arcs]
+    T --> D[Stand with recesses]
     M --> D
-    D --> C{passt aufs Druckbett?}
-    C -- ja --> W[ein Stück]
-    C -- nein --> V{Naht trifft Mulde?}
-    V -- ja --> E[Abbruch mit Hinweis]
-    V -- nein --> H[zwei Hälften + Schwalbenschwanz]
+    D --> C{fits on the print bed?}
+    C -- yes --> W[one piece]
+    C -- no --> V{seam hits a recess?}
+    V -- yes --> E[abort with message]
+    V -- no --> H[two halves + dovetail]
 ```
 
-### Modularität
+### Modularity
 
-Der Code trennt Profil, Körper, Muldenprofil, Schwalbenschwanz (Zunge und Nut),
-Halbraum-Schnitt, Vorschau-Farben und Banner sowie die Ausgabemodi. Eine
-Start-Kamera rahmt je nach Modus den ganzen Ständer ein, und das Modell gibt
-Grundfläche, Muldenmaße und Hinweise zum Druckbett in der Konsole aus.
+The code separates profile, body, recess profile, dovetail (tongue and groove),
+half-space cut, preview colors and banner, and the output modes. Depending on
+the mode, a start camera frames the whole stand, and the model prints footprint,
+recess dimensions and print-bed notes to the console.
 
-### Druckoptimierungen
+### Print Optimizations
 
-- **Druck auf der Stirnseite:** Die Hälften liegen auf der Stirnfläche. Der
-  Schwalbenschwanz steht dabei senkrecht, die große Plattenunterseite ist
-  keine Brücke, und es werden keine Stützen benötigt.
-- **45°-Mulden:** Die Muldenwand bleibt selbsttragend.
-- **Flacher Muldenboden** ohne Mittelzapfen.
-- **Mindestplattendicke:** `board_thick` mindestens 8 mm; die Muldentiefe
-  muss kleiner als `board_thick` − 2 mm sein.
-- **Gerundete Kanten** am Schwalbenschwanz und an der Zunge gegen Ausbrechen.
+- **Printing on the end face:** The halves lie on the end face. The dovetail
+  then stands vertically, the large underside of the plate is not a bridge, and
+  no supports are needed.
+- **45° recesses:** The recess wall stays self-supporting.
+- **Flat recess bottom** without a center peg.
+- **Minimum plate thickness:** `board_thick` at least 8 mm; the recess depth
+  must be smaller than `board_thick` − 2 mm.
+- **Rounded edges** on the dovetail and the tongue against breaking out.
 
-## Druckempfehlungen
+## Print Recommendations
 
-Die mitgelieferten Profile sind für **Bambu Lab** mit **Bambu PLA Basic**
-erstellt und im Bambu Studio testgeslict. Je nach Variante sind es P1S oder
-H2C (siehe Tabelle unten). Alle Profile nutzen 0,20 mm Layerhöhe und Gyroid
-15 % in den Wandstärken 2, 3 und 4.
+The supplied profiles are created for **Bambu Lab** with **Bambu PLA Basic** and
+test-sliced in Bambu Studio. Depending on the variant, they are for the P1S or
+H2C (see table below). All profiles use 0.20 mm layer height and gyroid 15% in
+wall counts 2, 3 and 4.
 
-| Einstellung | Empfehlung |
+| Setting | Recommendation |
 |---|---|
-| Material | PLA; PETG für mehr Zähigkeit (dann `dovetail_play` auf rund 0,20 mm erhöhen) |
-| Layerhöhe | 0,20 mm |
-| Wände | 3–4 empfohlen (tragendes Teil); die Profile liegen in 2, 3 und 4 vor |
-| Infill | 20–40 % Gyroid; bei großen, schweren Hunden mehr (die Profile nutzen 15 %) |
-| Supports | keine |
-| Ausrichtung | Hälften auf der Stirnseite (so werden sie geliefert) |
-| Spiel (`dovetail_play`) | Standard 0,15 mm je Seite; bei zu strammem Sitz erhöhen |
+| Material | PLA; PETG for more toughness (then increase `dovetail_play` to around 0.20 mm) |
+| Layer height | 0.20 mm |
+| Walls | 3–4 recommended (load-bearing part); the profiles are available in 2, 3 and 4 |
+| Infill | 20–40% gyroid; more for large, heavy dogs (the profiles use 15%) |
+| Supports | none |
+| Orientation | halves on the end face (as they are delivered) |
+| Clearance (`dovetail_play`) | Default 0.15 mm per side; increase if the fit is too tight |
 
-**Besondere Hinweise**
+**Special notes**
 
-- Kommen beide Hälften als ein Objekt, im Bambu Studio oder OrcaSlicer per
-  Rechtsklick **Teilen → In Objekte** trennen, damit jede Hälfte einzeln
-  ausgerichtet werden kann.
-- **Zusammenbau:** Die Hälften in Y-Richtung zusammenschieben, von der
-  Rückseite her beginnen. Die Fase an der Zunge führt sie in die Nut. Der nach
-  außen breiter werdende Schwalbenschwanz sperrt das Auseinanderziehen; für eine
-  dauerhafte Verbindung genügt ein Tropfen Kleber.
-- **Teilungslogik:** Ein einzelner Napf sitzt genau auf der Naht. Passt der
-  Ständer nicht in einem Stück aufs Bett, meldet das Modell das (siehe FAQ).
-- Die Vorschau-Modi sind absichtlich nicht druckbar (rotes
-  „NOT FOR PRINTING“-Banner).
+- If both halves come as one object, in Bambu Studio or OrcaSlicer right-click
+  and use **Split → To Objects** to separate them so that each half can be
+  oriented individually.
+- **Assembly:** Slide the halves together in the Y direction, starting from the
+  back. The chamfer on the tongue guides it into the groove. The dovetail,
+  which widens outward, blocks pulling apart; for a permanent connection, a drop
+  of glue is enough.
+- **Split logic:** A single bowl sits exactly on the seam. If the stand does not
+  fit on the bed in one piece, the model reports this (see FAQ).
+- The preview modes are intentionally not printable (red "NOT FOR PRINTING"
+  banner).
 
-### Fertige Varianten
+### Ready-Made Variants
 
-Alle Varianten nutzen `auto_board_length`; abweichend vom Standard sind:
+All variants use `auto_board_length`; the deviations from the default are:
 
-| Variante | Drucker | Napf Ø | Tiefe | Breite | Höhe | Spreizung | Abstand |
+| Variant | Printer | Bowl Ø | Depth | Width | Height | Splay | Spacing |
 |---|---|---|---|---|---|---|---|
 | `1bowl_katze` | P1S | 120 | 6 | 160 | 45 | 30° | – |
 | `1bowl_kleiner_hund` | H2C | 150 | 9 | 185 | 70 | 30° | – |
@@ -298,79 +294,78 @@ Alle Varianten nutzen `auto_board_length`; abweichend vom Standard sind:
 | `2bowl_mittlerer_hund` | H2C | 166 | 10 | 220 | 95 | 30° | 210 |
 | `2bowl_grosser_hund` | H2C | 210 | 12 | 250 | 120 | 20° | 245 |
 
-Maße in Millimetern.
+Dimensions in millimeters.
 
-![Studio-Render des Zwei-Napf-Ständers mit zwei Näpfen in den Mulden](images/02_studio-zwei-naepfe.png)
+![Studio render of the two-bowl stand with two bowls in the recesses](images/02_studio-zwei-naepfe.png)
 
-## Anwendungsbeispiele
+## Application Examples
 
-- **Katzenständer:** niedrige Höhe (45 mm) und kleine Mulde (Ø 120 mm) als
-  Variante `1bowl_katze` oder `2bowl_katze`.
-- **Hund nach Größe:** Höhe, Breite und Napfdurchmesser an die Schulterhöhe
-  anpassen – von kleinem bis großem Hund.
-- **Futter- und Wassernapf in zwei Größen:** `bowl_diameter` für den Futternapf,
-  `bowl2_diameter` für den Wassernapf.
-- **Ständer für den eigenen Napf:** Randdurchmesser deines Napfs messen und als
-  `bowl_diameter` eintragen.
-- **Kleines Druckbett:** P1S/P2S mit 256 mm Bett; der Doppelständer wird
-  automatisch geteilt.
-- **Großer Drucker:** H2C oder H2D drucken den Einzelnapfständer je nach Maß in
-  einem Stück, ohne Schwalbenschwanz.
-- **Geschenk oder Möbelstück:** Holzfarbenes PLA ergibt einen Ständer in
-  Eichen- oder Nussbaum-Optik.
+- **Cat stand:** low height (45 mm) and small recess (Ø 120 mm) as the variant
+  `1bowl_katze` or `2bowl_katze`.
+- **Dog by size:** Adapt height, width and bowl diameter to the shoulder height
+  – from small to large dog.
+- **Food and water bowl in two sizes:** `bowl_diameter` for the food bowl,
+  `bowl2_diameter` for the water bowl.
+- **Stand for your own bowl:** Measure the rim diameter of your bowl and enter
+  it as `bowl_diameter`.
+- **Small print bed:** P1S/P2S with a 256 mm bed; the double stand is split
+  automatically.
+- **Large printer:** H2C or H2D print the single-bowl stand in one piece,
+  depending on the dimensions, without a dovetail.
+- **Gift or piece of furniture:** Wood-colored PLA gives a stand with an oak or
+  walnut look.
 
-![Studio-Render des Ein-Napf-Ständers](images/03_studio-ein-napf.png)
+![Studio render of the one-bowl stand](images/03_studio-ein-napf.png)
 
-Die Näpfe in den Bildern sind Renderings weißer Keramiknäpfe zur Veranschaulichung;
-sie gehören nicht zum Modell. Die MakerWorld-Beschreibung nennt runde
-Edelstahlnäpfe. Entscheidend ist der Randdurchmesser.
+The bowls in the images are renderings of white ceramic bowls for illustration;
+they are not part of the model. The MakerWorld description mentions round
+stainless-steel bowls. What matters is the rim diameter.
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-| Symptom | Ursache | Fix |
+| Symptom | Cause | Fix |
 |---|---|---|
-| Meldung „The stand must be SPLIT … seam would run through a bowl recess“ | Der Ständer muss geteilt werden, die Naht läge aber in einer Mulde | größeren Drucker (H2C/H2D) wählen, `bowl_spacing` erhöhen (zwei Näpfe), `total_height` oder `leg_splay` verringern oder `split_mode` auf `never` setzen |
-| Meldung zum Doppelständer („centre split would run too close to a bowl“) | `bowl_spacing` zu klein | `bowl_spacing` erhöhen, größeren Drucker wählen oder nicht teilen |
-| Meldung „Bowls do not fit on the board“ | Näpfe größer als die Platte | `auto_board_length` einschalten, Napfdurchmesser verringern oder `board_length` erhöhen |
-| Meldung „Legs overlap in the middle“ | Platte zu kurz für Höhe und Spreizung | `board_length` erhöhen oder `total_height`/`leg_splay` verringern |
-| Meldung zu `bowl_depth` | Mulde würde die Platte durchstoßen | `bowl_depth` verringern oder `board_thick` erhöhen |
-| Hälften lassen sich nicht zusammenschieben | Spiel zu klein für deinen Drucker oder PETG | `dovetail_play` erhöhen (z. B. 0,20 mm) |
-| Verbindung wackelt | Spiel zu groß | `dovetail_play` verringern; alternativ Tropfen Kleber |
-| Napf sitzt locker oder klemmt | Randdurchmesser nicht getroffen | Rand des Napfs messen und `bowl_diameter` anpassen |
-| Muldentiefe weicht von der Eingabe ab | Tiefe wird auf einen flachen Boden begrenzt | Konsolen-Hinweis beachten; `bowl_diameter` erhöhen oder `bowl_wall_angle` verringern |
-| Vorschau zeigt „NOT FOR PRINTING“ | Vorschau-Modus aktiv | `part` auf `both halves`, `right half` oder `left half` setzen |
+| Message "The stand must be SPLIT … seam would run through a bowl recess" | The stand has to be split, but the seam would lie in a recess | choose a larger printer (H2C/H2D), increase `bowl_spacing` (two bowls), decrease `total_height` or `leg_splay`, or set `split_mode` to `never` |
+| Message about the double stand ("centre split would run too close to a bowl") | `bowl_spacing` too small | increase `bowl_spacing`, choose a larger printer or do not split |
+| Message "Bowls do not fit on the board" | Bowls larger than the plate | enable `auto_board_length`, decrease the bowl diameter or increase `board_length` |
+| Message "Legs overlap in the middle" | Plate too short for height and splay | increase `board_length` or decrease `total_height`/`leg_splay` |
+| Message about `bowl_depth` | Recess would break through the plate | decrease `bowl_depth` or increase `board_thick` |
+| Halves cannot be slid together | Clearance too small for your printer or PETG | increase `dovetail_play` (e.g. 0.20 mm) |
+| Joint wobbles | Clearance too large | decrease `dovetail_play`; alternatively a drop of glue |
+| Bowl sits loosely or jams | Rim diameter not matched | measure the bowl's rim and adjust `bowl_diameter` |
+| Recess depth deviates from the input | Depth is limited to preserve a flat bottom | Note the console message; increase `bowl_diameter` or decrease `bowl_wall_angle` |
+| Preview shows "NOT FOR PRINTING" | Preview mode active | set `part` to `both halves`, `right half` or `left half` |
 
-## Entwicklungsgeschichte
+## Development History
 
-Anfang August 2026 (die ersten Dateien tragen das Datum 5. August) entstand das
-Modell als parametrischer Nachbau des eigenen Fusion-360-Entwurfs, den ich mit
-OCP vermessen hatte: Plattendicke, Muldengeometrie, Beinwinkel und Radien. Am
-selben Tag kamen die automatische Teilung nach Druckbett, die Prüfung der
-Trennnaht gegen die Mulde und der zweite Napfdurchmesser (`bowl2_diameter`)
-dazu, nachdem sich gezeigt hatte, dass bei einem Einzelnapf die Naht mitten
-durch die Mulde laufen würde.
+At the beginning of August 2026 (the first files are dated August 5), the model
+came about as a parametric rebuild of my own Fusion 360 design, which I had
+measured with OCP: plate thickness, recess geometry, leg angle and radii. On the
+same day, the automatic split by print bed, the check of the seam against the
+recess and the second bowl diameter (`bowl2_diameter`) were added, after it had
+turned out that with a single bowl the seam would run right through the recess.
 
-Ebenfalls am 5. August entstanden die ersten Studio-Renderings. Eine
-KI-gestützte Bildvariante hatte eine Mulde als Loch erfunden und wurde
-verworfen; die Bilder werden seitdem aus der echten Modellgeometrie berechnet.
-Am 6. August kam das Titelbild mit Ein- und Zwei-Napf-Variante dazu. Die
-letzte Änderung der Modelldatei stammt vom 31. August 2026.
+The first studio renderings were also created on August 5. An AI-assisted image
+variant had invented a recess as a hole and was discarded; since then, the
+images are computed from the real model geometry. On August 6, the title image
+with the one-bowl and two-bowl variants was added. The last change to the model
+file dates from August 31, 2026.
 
-Die Bilder in diesem Repository sind Renderings der Modellgeometrie
-beziehungsweise daraus abgeleitete Szenenbilder; Druckfotos sind nicht dabei.
+The images in this repository are renderings of the model geometry or scene
+images derived from it; there are no photos of prints.
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: https://makerworld.com/en/models/3136049-parametric-dog-and-cat-bowl-stand
+👉 MakerWorld link: https://makerworld.com/en/models/3136049-parametric-dog-and-cat-bowl-stand
 
-Profil: <https://makerworld.com/en/@BetaHydri>
+Profile: <https://makerworld.com/en/@BetaHydri>
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository: © BetaHydri. Das Modell (inkl.
-Quellcode) und alle Druckdateien werden ausschließlich über MakerWorld unter
-der dort angegebenen Lizenz verteilt. Dieses Repository enthält bewusst keine
-Modell-, Quellcode- oder Druckdateien. Modell- und Druckdateien werden
-ausschließlich über MakerWorld verteilt.
+Documentation and images in this repository: © BetaHydri. The model (including
+source code) and all print files are distributed exclusively via MakerWorld
+under the license stated there. This repository intentionally contains no
+model, source code or print files. Model and print files are distributed
+exclusively via MakerWorld.

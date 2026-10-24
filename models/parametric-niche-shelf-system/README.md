@@ -1,349 +1,345 @@
-# Parametric Niche Shelf System – Regal für schmale Nischen mit Eckpfosten, Schraubfüßen und Schlauchabdeckung
+# Parametric Niche Shelf System – Shelf for Narrow Niches with Corner Posts, Screw Feet and Hose Cover
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Parametrisches, vollständig druckbares Regalsystem für eine schmale Nische –
-entstanden für die Lücke neben einer Camper-Toilette, nutzbar für jede Nische
-(Vorratsspalt, Bad, Van, Werkstatt). Die Schalen haben vorne und seitlich einen
-Rand gegen Herausrutschen, eine gedruckte Rückwand mit Schraubenlöchern,
-stapelbare Eckpfosten, höhenverstellbare **gedruckte** Schraubfüße und optional
-eine eigenständige Abdeckung für einen Lüftungsschlauch.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/3464475-parametric-niche-shelf-system)
+A parametric, fully printable shelf system for a narrow niche – created for
+the gap next to a camper toilet, usable for any niche (storage gap, bathroom,
+van, workshop). The trays have a rim at the front and on the sides to keep
+things from sliding out, a printed back wall with screw holes, stackable corner
+posts, height-adjustable **printed** screw feet and, optionally, a standalone
+cover for a ventilation hose.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/3464475-parametric-niche-shelf-system)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-H2C%20%7C%20P2S%20%7C%20P1S-green)
 ![Print files](https://img.shields.io/badge/Print%20files-MakerWorld%20only-blue)
 
-> **Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:**
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/3464475-parametric-niche-shelf-system](https://makerworld.com/en/models/3464475-parametric-niche-shelf-system)
+> **The model with all print profiles is available exclusively on MakerWorld:**
+> 👉 [MakerWorld link: https://makerworld.com/en/models/3464475-parametric-niche-shelf-system](https://makerworld.com/en/models/3464475-parametric-niche-shelf-system)
 >
-> ![Camper Niche Shelf System – Set A mit Schraubfüßen und Set B mit Wabenfront](images/01_hero.jpg)
+> ![Camper Niche Shelf System – Set A with screw feet and Set B with honeycomb front](images/01_hero.jpg)
 
-Du gibst im MakerWorld-Customizer die Maße deiner Nische ein (Tiefe, Breite
-hinten und vorn, Höhe, optional die Lage eines Schlauchs), und das Modell
-berechnet Schalen, Pfosten, Füße, Wandplatten und Abdeckung dazu. Das System
-funktioniert in **geraden und schrägen Nischen** und kennt **fünf
-Befestigungsarten** – vom freistehenden Regal bis zur Wandmontage.
+In the MakerWorld Customizer you enter the dimensions of your niche (depth,
+width at the back and front, height, optionally the position of a hose), and
+the model calculates the trays, posts, feet, wall plates and cover to match.
+The system works in **straight and sloped niches** and offers **five mounting
+options** – from a free-standing shelf to wall mounting.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Fertige Sets](#fertige-sets)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Schräge Nische](#schräge-nische)
-- [Befestigungsarten](#befestigungsarten)
-- [Konstruktion](#konstruktion)
-- [Was muss ich kaufen?](#was-muss-ich-kaufen)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Montage](#montage)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Ready-Made Sets](#ready-made-sets)
+- [Parametric Options](#parametric-options)
+- [Sloped Niche](#sloped-niche)
+- [Mounting Options](#mounting-options)
+- [Design](#design)
+- [What Do I Need to Buy?](#what-do-i-need-to-buy)
+- [Print Recommendations](#print-recommendations)
+- [Assembly](#assembly)
+- [Use Cases](#use-cases)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Schmale Nischen sind schwer zu nutzen: Fertige Regale passen selten in ein Maß
-wie 160 × 300 mm, und in einem fahrenden Camper müssen Flaschen, Sprühdosen und
-Toilettenpapier beim Bremsen und Anfahren an Ort und Stelle bleiben. Dazu
-kommen Besonderheiten der Nische:
+Narrow niches are hard to use: ready-made shelves rarely fit a size like
+160 × 300 mm, and in a moving camper, bottles, spray cans and toilet paper
+have to stay in place during braking and starting. In addition, there are
+peculiarities of the niche:
 
-- Wände, die nicht parallel laufen, etwa eine schräge Seite zur Toilette hin.
-- Ein Lüftungsschlauch, der oben durch die Nische läuft und Platz braucht.
-- Ein Boden, der nicht eben ist.
-- Eine Wand, in die man nicht überall bohren möchte.
+- Walls that are not parallel, for example a sloped side toward the toilet.
+- A ventilation hose that runs across the top of the niche and needs space.
+- A floor that is not level.
+- A wall you do not want to drill into everywhere.
 
-## Die Idee
+## The Idea
 
-Statt eines starren Regals gibt es einen Baukasten aus wenigen Teilen:
+Instead of a rigid shelf, there is a kit made of a few parts:
 
-- **Schalen** mit Rand vorne und seitlich, die sich der Nische anpassen.
-- **Eckpfosten**, auf denen die nächste Schale steht – ohne Schrauben im
-  unteren Ende, mit Zentriertasche.
-- **Gedruckte Schraubfüße**, die den Boden ausgleichen. Es muss nichts gekauft
-  werden.
-- **Rückwandplatten** oder **Wandwinkel**, wenn das Regal an die Wand soll.
-- Eine **Schlauchabdeckung**, die von vorne eingeschoben wird.
+- **Trays** with a rim at the front and on the sides that adapt to the niche.
+- **Corner posts** on which the next tray stands – with no screws in the lower
+  end, with a centering pocket.
+- **Printed screw feet** that level out the floor. Nothing has to be bought.
+- **Back wall plates** or **wall brackets** if the shelf is to be mounted on the
+  wall.
+- A **hose cover** that is slid in from the front.
 
-Alles wird aus denselben Maßen berechnet. Passen die Werte nicht zusammen
-(Schalen zu dicht, Rand zu niedrig, Schraubenlöcher zu nah), stoppt das Modell
-mit einer klaren Meldung, statt stillschweigend schlechte Geometrie zu liefern.
+Everything is calculated from the same dimensions. If the values do not fit
+together (trays too close, rim too low, screw holes too near), the model stops
+with a clear message instead of silently delivering bad geometry.
 
-![Vorschau der montierten Regale in der Nische](images/04_vorschau-montiert.jpg)
+![Preview of the assembled shelves in the niche](images/04_vorschau-montiert.jpg)
 
 ## Highlights
 
-- **1 bis 4 Schalen** übereinander, jede mit eigener Höhe und eigener
-  Tiefenbegrenzung (zum Beispiel obere Schale kürzer, damit ein Riegel
-  erreichbar bleibt).
-- **Gerade oder schräge Nische:** Breite hinten und vorn getrennt einstellbar.
-- **Fünf Befestigungsarten**, von „freistehend, nichts in der Wand“ bis „nur
-  Wandwinkel ohne Pfosten“.
-- **Gedruckte Schraubfüße** (Trapezgewinde, Höhenverstellung per Hand) – oder
-  gekaufte M8-Stellfüße, oder ganz ohne Füße.
-- **Vorderrand massiv oder als Wabengitter** (leichter, weniger Filament).
-- **Optionale Schlauchabdeckung** mit Wandarmen, Lüftungsschlitzen und
-  Versteifungsrippen, getestet auf Einschiebbarkeit.
-- **Passungstest-Platte** (5 Minuten Druck), um die Nische vor dem großen Druck
-  zu prüfen.
-- **Zwei Verbindungsarten:** selbstschneidende Schraubenlöcher oder
-  Gewindeeinsätze (Heat-Set-Inserts) mit Gewindestiften.
-- **Schraubenkopf wählbar:** Senkkopf oder Innensechskant; M2 bis M5 für alle
-  Wandschrauben.
-- **Lastabschätzung** für Wandwinkel (Gewicht je Schale, Faktor für Fahrbetrieb).
-- **Prüfungen und Hinweise** in der Konsole: Höhenreserve je Fach,
-  Pfostenlängen, Einkaufsliste für genau deine Einstellungen.
+- **1 to 4 trays** stacked, each with its own height and its own depth limit
+  (for example, a shorter upper tray so that a latch remains reachable).
+- **Straight or sloped niche:** width at the back and front can be set
+  separately.
+- **Five mounting options**, from "free-standing, nothing in the wall" to
+  "wall brackets only, without posts".
+- **Printed screw feet** (trapezoidal thread, height adjustment by hand) – or
+  purchased M8 leveling feet, or no feet at all.
+- **Front rim solid or as a honeycomb grid** (lighter, less filament).
+- **Optional hose cover** with wall arms, ventilation slots and stiffening
+  ribs, tested for slide-in feasibility.
+- **Fit-test plate** (5 minutes of printing) to check the niche before the big
+  print.
+- **Two joint types:** self-tapping screw holes or threaded inserts (heat-set
+  inserts) with threaded studs.
+- **Selectable screw head:** countersunk or socket head hex; M2 to M5 for all
+  wall screws.
+- **Load estimate** for wall brackets (weight per tray, factor for driving).
+- **Checks and hints** in the console: height reserve per compartment, post
+  lengths, shopping list for exactly your settings.
 
-## Fertige Sets
+## Ready-Made Sets
 
-Zwei vollständige Sets für meine eigene Nische (160 × 300 × 380 mm, Bambu Lab
-H2C, ASA) liegen auf MakerWorld bereit. Jedes Set ist ein 3MF mit vier Platten.
+Two complete sets for my own niche (160 × 300 × 380 mm, Bambu Lab H2C, ASA) are
+available on MakerWorld. Each set is a 3MF with four plates.
 
-| | Set A „Schraubfüße“ | Set B „Flach + Wabenfront“ |
+| | Set A "Screw Feet" | Set B "Flat + Honeycomb Front" |
 |---|---|---|
-| Vorderrand | massiv | **Wabengitter** |
-| Untere Schale | auf vier **gedruckten Schraubfüßen** (gleicht Unebenheiten aus) | **direkt auf dem Boden** (spart 37 mm Höhe) |
-| Pfosten | 4 × 115 mm | 4 × 152 mm |
-| Geeignet für | unebenen Boden, einfaches Ausrichten | niedrige Nischen, wenige Teile, luftige Optik |
+| Front rim | solid | **honeycomb grid** |
+| Lower tray | on four **printed screw feet** (compensates for unevenness) | **directly on the floor** (saves 37 mm of height) |
+| Posts | 4 × 115 mm | 4 × 152 mm |
+| Suitable for | uneven floors, easy leveling | low niches, few parts, airy look |
 
-![Set A mit gedruckten Schraubfüßen](images/02_set-a-schraubfuesse.jpg)
+![Set A with printed screw feet](images/02_set-a-schraubfuesse.jpg)
 
-![Set B mit Wabenfront, direkt auf dem Boden](images/03_set-b-wabenfront.jpg)
+![Set B with honeycomb front, directly on the floor](images/03_set-b-wabenfront.jpg)
 
-Eigene Maße und andere Befestigungsarten exportierst du aus dem Customizer.
+You export your own dimensions and other mounting options from the Customizer.
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Optionen im Customizer sind in Gruppen geordnet:
+The options in the Customizer are arranged in groups:
 
-| Gruppe | Was du einstellst |
+| Group | What you set |
 |---|---|
-| Teileauswahl (`part`) | Vorschau montiert / explodiert, alle Teile einfarbig oder mehrfarbig, einzelne Schale, Wandwinkel, Pfosten und Füße, Schlauchabdeckung, Passungstest |
-| Schnelleinstellung | Anzahl Schalen (`tray_count`), Füße (`feet`), Schlauchabdeckung an/aus (`hose_enable`) |
-| Nischenmaße | Tiefe, Breite hinten und vorn, Höhe, maximale Schalenbreite |
-| Schlauch | Höhe links und rechts, Durchmesser, Abstand zur Rückwand, Luft ums Rohr, Anschlussstück |
-| Spiele | Abstand links und rechts zur Wand, Abstand vorne, Passungsspiel der Wandwinkel |
-| Schalen | Höhe jeder Schale, Tiefenbegrenzung je Schale, Bodendicke, Randstärke, Randhöhen, Eckenradius, Trennwände, Abflussschlitze, Vorderrand massiv oder Wabe |
-| Befestigung | `mounting`, Schraubengröße, Kopfform, Anzahl Wandlöcher, Rückwanddicke und -höhe, Wandabstand |
-| Wandwinkel | Anzahl, Dicke, Länge, Stegmaße, Verriegelung der Schale |
-| Lastprüfung | Gewicht je Schale, Faktor für Fahrbetrieb, zulässige Spannung und Auszugskraft |
-| Pfosten, Füße, Verbindungen | Pfostendurchmesser, Verbindungsart, Einsatzmaße, M8-Stellfüße |
-| Gedruckte Schraubfüße | Gewindedurchmesser und -steigung, Verstellbereich, Fußscheibe, Gewindespiel |
-| Schlauchabdeckung | Dicke, Höhe, Luft zum Schlauch, Anzahl und Maße der Wandarme, Lüftung, Rippen |
-| Farben, Druckbett, Qualität | Farben der Schalen und Teile, Druckbettgröße (nur für Warnungen), Glättung |
+| Part selection (`part`) | preview assembled / exploded, all parts single-color or multicolor, single tray, wall bracket, posts and feet, hose cover, fit test |
+| Quick settings | number of trays (`tray_count`), feet (`feet`), hose cover on/off (`hose_enable`) |
+| Niche dimensions | depth, width at the back and front, height, maximum tray width |
+| Hose | height left and right, diameter, distance to the back wall, air around the pipe, connector piece |
+| Clearances | distance to the wall on the left and right, distance at the front, fit clearance of the wall brackets |
+| Trays | height of each tray, depth limit per tray, floor thickness, rim thickness, rim heights, corner radius, dividers, drain slots, front rim solid or honeycomb |
+| Mounting | `mounting`, screw size, head shape, number of wall holes, back wall thickness and height, wall gap |
+| Wall brackets | number, thickness, length, web dimensions, locking of the tray |
+| Load check | weight per tray, factor for driving, permissible stress and pull-out force |
+| Posts, feet, joints | post diameter, joint type, insert dimensions, M8 leveling feet |
+| Printed screw feet | thread diameter and pitch, adjustment range, foot disc, thread clearance |
+| Hose cover | thickness, height, air to the hose, number and dimensions of the wall arms, ventilation, ribs |
+| Colors, print bed, quality | colors of the trays and parts, print bed size (for warnings only), smoothing |
 
-Listen wie `tray_z` (Höhe jeder Schale) und `tray_depth_limit` (Tiefe jeder
-Schale) bestehen aus einem Wert pro Schale.
+Lists such as `tray_z` (height of each tray) and `tray_depth_limit` (depth of
+each tray) consist of one value per tray.
 
-![Explodierte Vorschau](images/05_vorschau-explodiert.jpg)
+![Exploded preview](images/05_vorschau-explodiert.jpg)
 
-## Schräge Nische
+## Sloped Niche
 
-Nicht jede Nische hat parallele Wände. Läuft die rechte Seite (oder ein
-Hindernis wie die Toilette) schräg, trägst du die freie Breite **an der
-Rückwand** (`niche_w_back`) und **an der Öffnung** (`niche_w_front`)
-getrennt ein, zum Beispiel 160 mm hinten und 110 mm vorn. Die rechte Kante jeder
-Schale, die Ränder, die Rückwandplatten, die Pfosten und die Wandwinkel folgen
-dann der schrägen Wand; der Abstand bleibt `side_gap_right`. Die Schale wird zum
-Keil statt zum Rechteck.
+Not every niche has parallel walls. If the right side (or an obstacle such as
+the toilet) runs at an angle, you enter the free width **at the back wall**
+(`niche_w_back`) and **at the opening** (`niche_w_front`) separately, for
+example 160 mm at the back and 110 mm at the front. The right edge of each
+tray, the rims, the back wall plates, the posts and the wall brackets then
+follow the sloped wall; the gap stays `side_gap_right`. The tray becomes a
+wedge instead of a rectangle.
 
-- Funktioniert mit allen fünf Befestigungsarten und mit 1 bis 4 Schalen
-  (in der Konstruktion für 160 → 110 mm geprüft).
-- Die Schalenbreite ist durch `tray_max_w` (Standard 170 mm) begrenzt und muss
-  mindestens 40 mm betragen, sonst erscheint eine Meldung.
-- Ragt etwas nur an einer Stelle vor, nimmst du den **kleineren** Wert oder
-  vergrößerst `side_gap_right`.
-- Keilförmige Schalen sind nicht rechteckig: Drucke zuerst den
-  **Passungstest**, er zeigt die genaue Kontur.
+- Works with all five mounting options and with 1 to 4 trays
+  (verified in the design for 160 → 110 mm).
+- The tray width is limited by `tray_max_w` (default 170 mm) and must be at
+  least 40 mm, otherwise a message appears.
+- If something protrudes at only one spot, use the **smaller** value or
+  increase `side_gap_right`.
+- Wedge-shaped trays are not rectangular: print the **fit test** first, it
+  shows the exact contour.
 
-![Schräge Nische: 160 mm hinten, 110 mm vorn](images/06_schraege-nische.jpg)
+![Sloped niche: 160 mm at the back, 110 mm at the front](images/06_schraege-nische.jpg)
 
-## Befestigungsarten
+## Mounting Options
 
-Eine Einstellung (`mounting`), keine widersprüchlichen Kombinationen:
+One setting (`mounting`), no contradictory combinations:
 
-| Option | Haltung | Zusätzlich nötig | Geeignet für |
+| Option | Support | Additionally required | Suitable for |
 |---|---|---|---|
-| **Posts and feet + back wall screws** (Standard) | Pfosten und Füße tragen; die gedruckte Rückwand jeder Schale wird an die Wand geschraubt | Wandschrauben (`wall_holes` je Schale) | Camper, jede Nutzung mit Bewegung |
-| **Posts and feet + wall brackets** | wie oben, zusätzlich gedruckte Wandwinkel unter den Schalen | je Winkel 4 Wandschrauben, 1 × M3 × 8 als Schalenverriegelung | schwerere Lasten, mehr Steifigkeit |
-| **Posts and feet only** | freistehend, **nichts in der Wand** | nur die M4-Schrauben | Mietwohnung, Fliesen, ortsfeste Nutzung |
-| **Wall brackets only without posts** | keine Pfosten oder Füße, jede Schale hängt an Wandwinkeln (Schale 1 steht auf dem Boden) | je Winkel 4 Wandschrauben (`bracket_count` 2–3) | maximale Freiheit zwischen den Fächern |
-| **Back wall screws only without posts** | Schalen hängen nur an den Wandschrauben (Konsole warnt) | Wandschrauben | leichte Lasten, feste Wand |
+| **Posts and feet + back wall screws** (default) | posts and feet carry the load; the printed back wall of each tray is screwed to the wall | wall screws (`wall_holes` per tray) | camper, any use involving movement |
+| **Posts and feet + wall brackets** | as above, plus printed wall brackets under the trays | 4 wall screws per bracket, 1 × M3 × 8 as tray lock | heavier loads, more rigidity |
+| **Posts and feet only** | free-standing, **nothing in the wall** | only the M4 screws | rental apartment, tiles, stationary use |
+| **Wall brackets only without posts** | no posts or feet, each tray hangs on wall brackets (tray 1 stands on the floor) | 4 wall screws per bracket (`bracket_count` 2–3) | maximum freedom between the compartments |
+| **Back wall screws only without posts** | trays hang only on the wall screws (console warns) | wall screws | light loads, solid wall |
 
-Weitere Einstellungen dazu:
+Further settings for this:
 
-- **Füße** (`feet`, nur mit Pfosten): gedruckte Schraubfüße, gekaufte
-  M8-Stellfüße oder keine (Schale steht auf dem Boden, spart etwa 37 mm).
-- **Wandabstand** (`wall_gap`, 0 bis 30 mm): gedruckte Abstandshülsen hinter
-  den Rückwandplatten für unebene Wände.
-- **Wandwinkel:** `bracket_count`, `br_len`, `br_inset`, `lock_tray`. Die
-  Konsole gibt eine Lastabschätzung aus; sie ist nur ein Richtwert, prüfe deine
-  Wand.
+- **Feet** (`feet`, only with posts): printed screw feet, purchased M8 leveling
+  feet, or none (tray stands on the floor, saves about 37 mm).
+- **Wall gap** (`wall_gap`, 0 to 30 mm): printed spacer sleeves behind the back
+  wall plates for uneven walls.
+- **Wall brackets:** `bracket_count`, `br_len`, `br_inset`, `lock_tray`. The
+  console outputs a load estimate; it is only a guideline, check your wall.
 
-![Wandwinkel-Variante](images/07_wandwinkel.jpg)
+![Wall bracket variant](images/07_wandwinkel.jpg)
 
-## Konstruktion
+## Design
 
-- **Schalen** haben einen Rand vorne und an beiden Seiten, abgerundete vordere
-  Ecken und vier Eckbohrungen für die Pfosten. Auf der Rückseite sitzt eine
-  Platte mit Senkungen für die Wandschrauben.
-- **Pfosten** stehen in Zentriertaschen (8 mm tief) auf der Schale darunter und
-  werden nur oben mit einer M4-Schraube durch die nächste Schale fixiert. Hat
-  eine obere Schale eine kleinere Tiefe, rücken die Pfosten automatisch nach
-  hinten.
-- **Gedruckte Schraubfüße:** Fußblock und Fuß haben ein grobes Trapezgewinde
-  (Ø 18 mm, Steigung 3,5 mm, geprüfte Kombination). Der Fuß lässt sich von Hand
-  drehen; der Verstellbereich beträgt 8 mm.
-- **Schlauchabdeckung:** kein geschlossenes „U“ (das ließe sich um einen an
-  beiden Enden befestigten Schlauch nicht montieren), sondern ein **L**, das von
-  vorne eingeschoben und an kleinen Wandarmen unterhalb des Schlauchs
-  festgeschraubt wird, wo ein Schraubendreher hinkommt. Eine Pfadsimulation
-  bestätigte, dass sich die Abdeckung einschieben lässt und Schlauch, Anschluss
-  und Schalen freibleiben.
-- **Passungstest:** dünne Umrissplatte der Schale in der Größe deiner
-  Eingaben.
+- **Trays** have a rim at the front and on both sides, rounded front corners
+  and four corner holes for the posts. On the back there is a plate with
+  countersinks for the wall screws.
+- **Posts** stand in centering pockets (8 mm deep) on the tray below and are
+  fixed only at the top with an M4 screw through the next tray. If an upper
+  tray has a smaller depth, the posts automatically move toward the back.
+- **Printed screw feet:** the foot block and foot have a coarse trapezoidal
+  thread (Ø 18 mm, pitch 3.5 mm, verified combination). The foot can be turned
+  by hand; the adjustment range is 8 mm.
+- **Hose cover:** not a closed "U" (which could not be mounted around a hose
+  that is fixed at both ends), but an **L** that is slid in from the front and
+  screwed to small wall arms below the hose, where a screwdriver can reach. A
+  path simulation confirmed that the cover can be slid in and that the hose,
+  connector and trays remain clear.
+- **Fit test:** thin outline plate of the tray in the size of your inputs.
 
-![Obere Schale mit Pfosten, Füßen und Fußblöcken](images/08_obere-schale-pfosten-fuesse.jpg)
+![Upper tray with posts, feet and foot blocks](images/08_obere-schale-pfosten-fuesse.jpg)
 
-![Schlauchabdeckung mit Wandarmen](images/09_schlauchabdeckung.jpg)
+![Hose cover with wall arms](images/09_schlauchabdeckung.jpg)
 
-## Was muss ich kaufen?
+## What Do I Need to Buy?
 
-Fast nichts: Pfosten, Füße und Rückwandplatten sind gedruckt. Es fehlen nur
-Schrauben.
+Almost nothing: posts, feet and back wall plates are printed. Only screws are
+missing.
 
-Standardaufbau (2 Schalen, Rückwandschrauben, gedruckte Füße, Schlauchabdeckung):
+Standard setup (2 trays, back wall screws, printed feet, hose cover):
 
-| Menge | Schraube | Wofür |
+| Quantity | Screw | Purpose |
 |---|---|---|
-| **8** (Set A) / **4** (Set B) | **M4 × 10 Senkkopf** (ISO 10642 / DIN 7991) | Schale → Füße / Pfosten; sie schneiden ihr Gewinde selbst in die gedruckten 3,3-mm-Löcher |
-| **6** | **Wandschrauben, Senkkopf**, Größe M3 (Standard), M2 bis M5 möglich | 2 je Schalen-Rückwand plus 1 je Wandarm der Abdeckung; Art und Länge hängen von **deiner** Wand ab |
-| **2** | **M3 × 8 Senkkopf** | Schlauchabdeckung → Wandarme |
-| 4, optional | Filz- oder Gummischeiben Ø 26 mm, selbstklebend | unter den Schraubfüßen (Set A) |
+| **8** (Set A) / **4** (Set B) | **M4 × 10 countersunk** (ISO 10642 / DIN 7991) | tray → feet / posts; they cut their own thread into the printed 3.3 mm holes |
+| **6** | **Wall screws, countersunk**, size M3 (default), M2 to M5 possible | 2 per tray back wall plus 1 per wall arm of the cover; type and length depend on **your** wall |
+| **2** | **M3 × 8 countersunk** | hose cover → wall arms |
+| 4, optional | felt or rubber discs Ø 26 mm, self-adhesive | under the screw feet (Set A) |
 
-- **Innensechskant statt Senkkopf:** `screw_head = Socket head hex screw`, dann
-  M4 × 8 für Schale → Pfosten und M3 × 6 für die Abdeckung.
-- **Gewindeeinsätze:** `joint = Heat-set inserts`, dann M4-Einsätze (Bohrung
-  Ø 5,6 mm, einstellbar), M4-Gewindestifte und M4 × 10 Senkschrauben für die
-  oberste Schale. Die Schalen werden dabei zwischen Fußblock und Pfosten
-  geklemmt.
-- Die Konsole in OpenSCAD gibt die genaue Liste für deine Einstellungen aus.
+- **Socket head hex instead of countersunk:** `screw_head = Socket head hex
+  screw`, then M4 × 8 for tray → post and M3 × 6 for the cover.
+- **Threaded inserts:** `joint = Heat-set inserts`, then M4 inserts (bore
+  Ø 5.6 mm, adjustable), M4 threaded studs and M4 × 10 countersunk screws for
+  the top tray. The trays are clamped between the foot block and the post.
+- The console in OpenSCAD outputs the exact list for your settings.
 
-## Druckempfehlungen
+## Print Recommendations
 
-- **Material:** **ASA** oder PETG. Ein geparkter Camper wird heiß, PLA wird ab
-  etwa 50 °C weich.
-- **Schalen und Abdeckung:** 0,4-mm-Düse, 0,2 mm Schichthöhe, 2 bis 4 Wände,
-  15 % Infill.
-- **Fußblöcke und Schraubfüße (Set A):** 0,16 mm Schichthöhe, 4 Wände, 40 %
-  Infill, langsame Außenwände – ein Gewinde besteht fast nur aus Perimetern.
-- **Pfosten und Wandarme:** 3 bis 4 Wände, 25 bis 40 % Infill.
-- **Stützen:** nicht nötig; alle Teile liegen druckfertig.
-- **Drucker:** Die Sets sind für den **Bambu Lab H2C** geslict (die untere
-  Schale ist 297 mm tief). Auf einem 256-mm-Drucker verkürzt du die Schalen im
-  Customizer (`front_setback`, `wall_gap`); das Modell warnt, wenn etwas nicht
-  aufs Druckbett passt (`bed_xy`).
-- **Gewindetest:** Druck einen Fußblock und einen Schraubfuß und schraube sie
-  zusammen. Zu streng: `thread_clear` von 0,35 auf 0,45; zu locker: 0,25.
+- **Material:** **ASA** or PETG. A parked camper gets hot; PLA softens from
+  about 50 °C.
+- **Trays and cover:** 0.4 mm nozzle, 0.2 mm layer height, 2 to 4 walls, 15 %
+  infill.
+- **Foot blocks and screw feet (Set A):** 0.16 mm layer height, 4 walls, 40 %
+  infill, slow outer walls – a thread consists almost entirely of perimeters.
+- **Posts and wall arms:** 3 to 4 walls, 25 to 40 % infill.
+- **Supports:** not needed; all parts lie print-ready.
+- **Printer:** The sets are sliced for the **Bambu Lab H2C** (the lower tray is
+  297 mm deep). On a 256 mm printer, you shorten the trays in the Customizer
+  (`front_setback`, `wall_gap`); the model warns if something does not fit on
+  the print bed (`bed_xy`).
+- **Thread test:** Print one foot block and one screw foot and screw them
+  together. Too tight: `thread_clear` from 0.35 to 0.45; too loose: 0.25.
 
-Die geschätzten Werte der Sets (Bambu Studio) betragen etwa 15,5 h und 455 g
-für Set A sowie 14,75 h und 420 g für Set B.
+The estimated values of the sets (Bambu Studio) are about 15.5 h and 455 g for
+Set A and 14.75 h and 420 g for Set B.
 
-![Passungstest-Platte](images/10_passungstest.jpg)
+![Fit-test plate](images/10_passungstest.jpg)
 
-## Montage
+## Assembly
 
-1. **Füße (Set A):** Jeden Schraubfuß von unten in den Fußblock drehen, etwa
-   4 mm Abstand zwischen Scheibe und Block lassen (eine Umdrehung = 3,5 mm).
-   Alle vier gleich einstellen, die hinteren sind später schwer erreichbar.
-2. **Untere Schale:** Set A auf die vier Fußblöcke setzen und je eine M4 × 10
-   von oben durch die Eckbohrung schrauben; Set B einfach auf den Boden stellen.
-3. **Pfosten** in die vier Zentriertaschen stellen (unten nicht verschraubt).
-4. **Obere Schale** auf die Pfosten setzen und je eine M4 × 10 von oben in den
-   Pfosten schrauben. Für 3 bis 4 Schalen Schritt 3 und 4 wiederholen.
-5. **Ausrichten** mit der Wasserwaage (Set A: vordere Füße von Hand drehen).
-6. **Wand:** Löcher anzeichnen, vorbohren, jede Schale anschrauben. Mit
-   Wandabstand zuerst die Hülsen in die Taschen drücken.
-7. **Schlauchabdeckung (optional):** Wandarme unterhalb des Schlauchs
-   anschrauben, die Abdeckung von vorne einschieben und mit je einer M3 × 8
-   an den Armen fixieren.
+1. **Feet (Set A):** Turn each screw foot into the foot block from below, leaving
+   about 4 mm between disc and block (one turn = 3.5 mm). Set all four the same;
+   the rear ones are hard to reach later.
+2. **Lower tray:** For Set A, place it on the four foot blocks and screw one
+   M4 × 10 from above through each corner hole; for Set B, simply place it on
+   the floor.
+3. **Posts:** Stand them in the four centering pockets (not screwed at the
+   bottom).
+4. **Upper tray:** Place it on the posts and screw one M4 × 10 from above into
+   each post. For 3 to 4 trays, repeat steps 3 and 4.
+5. **Align** with a spirit level (Set A: turn the front feet by hand).
+6. **Wall:** Mark the holes, pre-drill, screw each tray to the wall. With a wall
+   gap, first press the sleeves into the pockets.
+7. **Hose cover (optional):** Screw the wall arms on below the hose, slide the
+   cover in from the front and fix it to the arms with one M3 × 8 each.
 
-## Anwendungsbeispiele
+## Use Cases
 
-- **Camper-Nische neben der Toilette** (das Original): zwei Schalen, obere
-  Schale kürzer, Schlauchabdeckung darüber.
-- **Einzelne Schale unter einer Schublade:** `tray_count` = 1, keine Pfosten,
-  zum Beispiel 85 × 290 mm.
-- **Schräge Nische im Bad oder Van:** `niche_w_back` und `niche_w_front`
-  unterschiedlich.
-- **Mietwohnung:** `mounting = Posts and feet only`, nichts in der Wand.
-- **Wenig Platz zwischen den Fächern:** Wandwinkel ohne Pfosten.
+- **Camper niche next to the toilet** (the original): two trays, shorter upper
+  tray, hose cover above.
+- **Single tray under a drawer:** `tray_count` = 1, no posts, for example
+  85 × 290 mm.
+- **Sloped niche in a bathroom or van:** different `niche_w_back` and
+  `niche_w_front`.
+- **Rental apartment:** `mounting = Posts and feet only`, nothing in the wall.
+- **Little space between the compartments:** wall brackets without posts.
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-**Kann ich es auch außerhalb eines Campers nutzen?**
-Ja, getestet für Nischen von 90 bis 300 mm Breite, 180 bis 420 mm Tiefe und
-250 bis 900 mm Höhe.
+**Can I also use it outside of a camper?**
+Yes, tested for niches from 90 to 300 mm in width, 180 to 420 mm in depth and
+250 to 900 mm in height.
 
-**Auf welcher Seite liegt der Schlauch?**
-Rechts, wenn man in die Nische schaut. Für eine gespiegelte Nische tauscht du
-die seitlichen Abstände.
+**Which side is the hose on?**
+On the right when looking into the niche. For a mirrored niche, swap the side
+gaps.
 
-**Breite Schalen biegen sich durch.**
-Schalen über 200 mm Breite ruhen nur auf vier Pfosten: `tray_t` auf 4 bis
-5 mm erhöhen und Trennwände (`tray_dividers`) einsetzen.
+**Wide trays sag.**
+Trays wider than 200 mm rest on only four posts: increase `tray_t` to 4 to
+5 mm and add dividers (`tray_dividers`).
 
-**Warum ist die obere Schale mit Abdeckung nur etwa 187 mm hoch?**
-Die Wandarme der Abdeckung brauchen Platz; die Konsole zeigt die Grenze.
+**Why is the upper tray with cover only about 187 mm high?**
+The wall arms of the cover need space; the console shows the limit.
 
-**Ein rotes Schild sagt „NO POSTS“, „NO BRACKETS“ oder „NO HOSE COVER“.**
-Der gewählte Eintrag wird mit deinen Einstellungen nicht benutzt. Wähle einen
-anderen Eintrag oder ändere `mounting`, `hose_enable` oder `cover_enable`.
+**A red sign says "NO POSTS", "NO BRACKETS" or "NO HOSE COVER".**
+The selected entry is not used with your settings. Choose a different entry or
+change `mounting`, `hose_enable` or `cover_enable`.
 
-**Die Vorschau lässt sich nicht drucken.**
-Richtig: Die beiden Vorschau-Einträge dienen nur zum Ansehen und zeigen ein
-rotes „NOT FOR PRINTING“-Schild. Zum Drucken wählst du einen Druckeintrag.
+**The preview cannot be printed.**
+Correct: the two preview entries are for viewing only and show a red "NOT FOR
+PRINTING" sign. To print, choose a print entry.
 
-**Grenzen:** 1 bis 4 Schalen; Schalen und Abdeckung werden nicht automatisch
-geteilt.
+**Limits:** 1 to 4 trays; trays and cover are not split automatically.
 
-> ⚠️ **Status:** in der Konstruktion geprüft (alle Befestigungsarten, 1 bis 4
-> Schalen, viele Nischengrößen, jeder Eintrag des `part`-Menüs) und für alle
-> mitgelieferten 3MF-Dateien probegeslict. **Noch nicht von mir gedruckt.**
-> Drucke bitte zuerst den Passungstest und berichte in den Kommentaren, wie es
-> bei dir funktioniert hat.
+> ⚠️ **Status:** verified in the design (all mounting options, 1 to 4 trays,
+> many niche sizes, every entry of the `part` menu) and test-sliced for all
+> supplied 3MF files. **Not yet printed by me.** Please print the fit test first
+> and report in the comments how it worked for you.
 
-## Entwicklungsgeschichte
+## Development History
 
-Am Anfang stand ein Maßband in der Camper-Nische (siehe Foto): Tiefe, Breite
-hinten und vorn, Höhe und die Lage des Lüftungsschlauchs. Diese Maße sind die
-Grundlage des Modells. Weil jede Nische anders ist, sind sie als Parameter
-umgesetzt, und ein Prüfpaket im Modell (Schalen, Pfosten, Abdeckung,
-Befestigung) stoppt falsche Eingaben mit einer klaren Meldung, statt schlechte
-Geometrie zu erzeugen. Dazu kamen die gedruckten Schraubfüße, die schräge Nische
-und die fünf Befestigungsarten, damit das Regal auch dort passt, wo meine
-Nische nicht ist.
+It started with a tape measure in the camper niche (see photo): depth, width at
+the back and front, height and the position of the ventilation hose. These
+dimensions are the foundation of the model. Because every niche is different,
+they are implemented as parameters, and a checking package in the model (trays,
+posts, cover, mounting) stops wrong inputs with a clear message instead of
+producing bad geometry. On top of that came the printed screw feet, the sloped
+niche and the five mounting options, so that the shelf also fits where my niche
+is not.
 
-![Nische mit Maßband und Lüftungsschlauch vermessen](images/11_nische-vermessen.jpg)
+![Niche measured with a tape measure and ventilation hose](images/11_nische-vermessen.jpg)
 
-Die Bilder in diesem Ordner sind Renderings der Modellgeometrie beziehungsweise
-daraus abgeleitete Szenenbilder; das Nischenfoto ist eine echte Aufnahme.
+The images in this folder are renderings of the model geometry or scene images
+derived from it; the niche photo is a real photograph.
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: https://makerworld.com/en/models/3464475-parametric-niche-shelf-system
+👉 MakerWorld link: https://makerworld.com/en/models/3464475-parametric-niche-shelf-system
 
-Profil: <https://makerworld.com/en/@BetaHydri>
+Profile: <https://makerworld.com/en/@BetaHydri>
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository: © BetaHydri. Das Modell (inkl.
-Quellcode) und alle Druckdateien werden ausschließlich über MakerWorld unter
-der dort angegebenen Lizenz verteilt. Dieses Repository enthält bewusst keine
-Modell-, Quellcode- oder Druckdateien. Modell- und Druckdateien werden
-ausschließlich über MakerWorld verteilt.
+Documentation and images in this repository: © BetaHydri. The model (including
+source code) and all print files are distributed exclusively via MakerWorld
+under the license stated there. This repository intentionally contains no
+model, source code or print files. Model and print files are distributed
+exclusively via MakerWorld.

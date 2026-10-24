@@ -1,398 +1,402 @@
-# Parametric Spring Generator – Vier Federtypen mit flexiblen Befestigungen
+# Parametric Spring Generator – Four Spring Types with Flexible Mounting Options
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Parametrischer Generator für funktionale 3D-gedruckte Federn: Serpentinenfeder,
-Druckfeder (Kompressionsspirale), Blattfeder und flache Spiral-/Torsionsfeder in
-einem Modell. Jeder Typ ist so orientiert, dass die Biegung entlang der
-Druckschichten läuft – einstellbar im MakerWorld-Customizer.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/3188130-parametric-springs-with-flexible-mounting-options)
+Parametric generator for functional 3D-printed springs: serpentine spring,
+compression spring (helical coil), leaf spring and flat spiral/torsion spring in
+a single model. Each type is oriented so that the bending runs along the print
+layers – adjustable in the MakerWorld Customizer.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/3188130-parametric-springs-with-flexible-mounting-options)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-P2S-green)
 ![Print files](https://img.shields.io/badge/Print%20files-MakerWorld%20only-blue)
 
-> **Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:**
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/3188130-parametric-springs-with-flexible-mounting-options](https://makerworld.com/en/models/3188130-parametric-springs-with-flexible-mounting-options)
+> **The model with all print profiles is available exclusively on MakerWorld:**
+> 👉 [MakerWorld link: https://makerworld.com/en/models/3188130-parametric-springs-with-flexible-mounting-options](https://makerworld.com/en/models/3188130-parametric-springs-with-flexible-mounting-options)
 >
-> ![Parametric Spring Generator – Serpentin-, Druck-, Blatt- und Spiralfeder](images/01_hero.png)
+> ![Parametric Spring Generator – serpentine, compression, leaf and spiral spring](images/01_hero.png)
 
-Der **Parametric Spring Generator** erzeugt vier Federfamilien aus einem
-Parametersatz. Du wählst zuerst den Federtyp (`spring_type`), stellst dann nur die
-Gruppe des gewählten Typs ein und legst fest, ob Befestigungslöcher glatt oder als
-gedrucktes metrisches Gewinde (M2–M6) ausgeführt werden. Die Druckmodi legen jedes
-Teil bereits in die passende Druckorientierung. Die Druckfeder bringt eine
-entfernbare Print-in-Place-Stützrippe mit, sodass kein Slicer-Support nötig ist.
+The **Parametric Spring Generator** creates four spring families from a single
+parameter set. You first choose the spring type (`spring_type`), then adjust only
+the group for the selected type, and decide whether mounting holes are made
+plain or as printed metric threads (M2–M6). The print modes already place each
+part in the appropriate print orientation. The compression spring comes with a
+removable print-in-place support rib, so no slicer support is needed.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Konstruktion](#konstruktion)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Parametric Options](#parametric-options)
+- [Design](#design)
+- [Print Recommendations](#print-recommendations)
+- [Use Cases](#use-cases)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Gedruckte Federn sind ein Thema für sich:
+Printed springs are a topic of their own:
 
-- Kunststoff ist **entlang** der Druckschichten stabil und **quer** dazu schwach.
-  Eine Feder, die Schichten auseinanderzieht, bricht nach wenigen Zyklen.
-- Fertige Modelle gibt es meist nur für einen Typ und mit festen Anschlüssen. Wer
-  eine Feder mit **bestimmter Befestigung** braucht (Zapfen, Schraubauge,
-  Montageplatte, Verankerungsring), findet selten etwas Parametrisches.
-- Eine stehend gedruckte Spiralfeder hängt in den Lücken durch, normaler Support
-  verschmilzt mit den Windungen und lässt sich nicht mehr entfernen.
-- Löcher und Gewinde, die waagerecht liegen, werden rau oder sacken ein.
+- Plastic is strong **along** the print layers and weak **across** them. A spring
+  that pulls layers apart breaks after a few cycles.
+- Ready-made models usually exist for only one type and with fixed connections.
+  If you need a spring with a **specific mounting method** (peg, screw eye,
+  mounting plate, anchor ring), you will rarely find anything parametric.
+- A coil spring printed upright sags in the gaps, and normal support fuses with
+  the coils and can no longer be removed.
+- Holes and threads that lie horizontally come out rough or sag.
 
-Der Ausgangspunkt war schlicht: Ich brauchte Federn mit mehreren verschiedenen
-Befestigungsarten und habe kein flexibles parametrisches Modell dafür gefunden.
+The starting point was simply this: I needed springs with several different
+mounting methods and could not find a flexible parametric model for them.
 
-## Die Idee
+## The Idea
 
-Vier Federtypen teilen sich eine Parameterstruktur, eine Gruppe für
-Befestigungslöcher und eine Ausgabe-Auswahl. Die Orientierung im Druck war von
-Anfang an Teil des Entwurfs:
+Four spring types share one parameter structure, one group for mounting holes and
+one output selection. Print orientation was part of the design from the start:
 
-- Serpentine und Blattfeder liegen flach und biegen sich in der Druckebene.
-- Die Druckfeder steht aufrecht, die Last läuft entlang der Helixachse und damit
-  entlang der Schichten. Eine separate, 0,4 mm abgesetzte Stützrippe füllt die
-  Lücken und wird nach dem Druck entfernt.
-- Die Spiralfeder wickelt sich flach und speichert die Drehenergie in der Ebene.
+- The serpentine and leaf springs lie flat and bend in the print plane.
+- The compression spring stands upright, and the load runs along the helix axis
+  and therefore along the layers. A separate support rib, offset by 0.4 mm, fills
+  the gaps and is removed after printing.
+- The spiral spring winds flat and stores the rotational energy in the plane.
 
-Bei waagerechten Bohrungen (Zapfenloch der Serpentine) setzt das Modell auf
-**tropfenförmige Löcher** statt auf gedruckte Gewinde; bei senkrechten Bohrungen
-(Blattfeder-Auge, Druckfeder-Platte, Spiral-Nabe) sind echte gedruckte Gewinde
-möglich.
+For horizontal bores (the serpentine's peg hole), the model relies on
+**teardrop-shaped holes** instead of printed threads; for vertical bores (leaf
+spring eye, compression spring plate, spiral hub), true printed threads are
+possible.
 
 ## Highlights
 
-- **Vier Federtypen:** `serpentine`, `compression`, `leaf` und `spiral`.
-- **Serpentinenfeder:** runde oder eckige Windungen, Endkappen, Schwalbenschwanz-Zapfen
-  an beiden Enden, optional mit Bohrung im Zapfen.
-- **Druckfeder mit Print-in-Place-Stütze:** stehend ohne Slicer-Support druckbar, die
-  Stützrippe wird nach dem Druck herausgedreht oder -gezogen.
-- **Enden der Druckfeder:** plan geschliffen (`flat`), offen (`open`) oder mit
-  Montageplatte unten (`plate`) und offenem oder geschlossenem Deckel oben.
-- **Blattfeder:** gewölbte Klinge mit massiven Befestigungsaugen.
-- **Spiralfeder:** flache archimedische Spirale mit Nabe und Verankerungsring,
-  Stiftlasche oder Haken am äußeren Ende.
-- **Befestigungslöcher überall wählbar:** glatt oder gedrucktes metrisches Gewinde
-  M2 bis M6 (`hole_type`, `hole_screw`).
-- **Zwei-Material-Trick:** Feder, Stützrippe und Abreißnadeln sind getrennte
-  Farbgruppen, die Stütze kann in einem anderen Filament gedruckt werden.
-- **Montagehilfe (Jig)** für die Serpentine: ein geschlitzter Halter, der die flache
-  Feder beim Einstecken der Zapfen führt.
-- **Zehn Referenzvarianten** mit Bambu-Studio-Profilen für den P2S (PETG).
+- **Four spring types:** `serpentine`, `compression`, `leaf` and `spiral`.
+- **Serpentine spring:** round or square coils, end caps, dovetail pegs at both
+  ends, optionally with a bore in the peg.
+- **Compression spring with print-in-place support:** printable upright without
+  slicer support; the support rib is unscrewed or pulled out after printing.
+- **Compression spring ends:** ground flat (`flat`), open (`open`) or with a
+  mounting plate at the bottom (`plate`) and an open or closed cap at the top.
+- **Leaf spring:** curved blade with solid mounting eyes.
+- **Spiral spring:** flat Archimedean spiral with hub and anchor ring, pin tab or
+  hook at the outer end.
+- **Mounting holes selectable everywhere:** plain or printed metric thread M2 to M6
+  (`hole_type`, `hole_screw`).
+- **Two-material trick:** spring, support rib and tear-off needles are separate
+  color groups; the support can be printed in a different filament.
+- **Assembly aid (jig)** for the serpentine: a slotted holder that guides the flat
+  spring while the pegs are inserted.
+- **Ten reference variants** with Bambu Studio profiles for the P2S (PETG).
 
-![Serpentinenfeder mit runden Windungen und Schwalbenschwanz-Zapfen](images/02_serpentinfeder.jpg)
+![Serpentine spring with round coils and dovetail pegs](images/02_serpentinfeder.jpg)
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Namen entsprechen den Customizer-Parametern des Modells. Nur die Gruppe des
-gewählten Federtyps wird ausgewertet.
+The names correspond to the model's Customizer parameters. Only the group of the
+selected spring type is evaluated.
 
-### Schritt 1 – Federtyp
+### Step 1 – Spring Type
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `spring_type` | Federtyp: `serpentine`, `compression`, `leaf`, `spiral` | `serpentine` | Auswahl |
+| `spring_type` | Spring type: `serpentine`, `compression`, `leaf`, `spiral` | `serpentine` | Selection |
 
-### Serpentinenfeder
+### Serpentine Spring
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `ser_coils` | Anzahl der Windungen; mehr = weicher, längerer Federweg | 8 | 3–24 |
-| `ser_style` | Windungsform: `round` (halbkreisförmig) oder `square` (eckiger Mäander) | `round` | Auswahl |
-| `ser_wire` | Drahtstärke; der wichtigste Härte-Regler | 0,8 | 0,6–2,0 mm, Schritt 0,1 |
-| `ser_depth` | Tiefe (Z, gedruckte Höhe); tiefer = steifer | 6 | 3–12 mm, Schritt 0,5 |
-| `ser_width` | Breite (X); breiter = steifer | 16 | 10–40 mm |
-| `ser_cap_h` | Höhe der massiven Endkappen, 0 = keine | 1,6 | 0–8 mm, Schritt 0,2 |
-| `ser_cap_ext` | Überstand der Endkappen seitlich über die Windungen | 1,6 | 0–4 mm, Schritt 0,2 |
-| `ser_pegs` | Schwalbenschwanz-Zapfen an beiden Enden | 1 | 0 = keine, 1 = ja |
-| `ser_peg_w` | Zapfenquerschnitt (quadratisch) | 5 | 3–8 mm, Schritt 0,2 |
-| `ser_peg_l` | Zapfenlänge | 4 | 2–8 mm, Schritt 0,2 |
-| `ser_peg_hole` | Bohrung in der Zapfenachse (glatt oder nach Schritt 2) | 0 | 0 = massiv, 1 = Bohrung |
-| `ser_tool_grip` | Zusatzlänge je Ende der Montagehilfe | 0 | 0–40 mm |
+| `ser_coils` | Number of coils; more = softer, longer spring travel | 8 | 3–24 |
+| `ser_style` | Coil shape: `round` (semicircular) or `square` (angular meander) | `round` | Selection |
+| `ser_wire` | Wire thickness; the most important stiffness control | 0.8 | 0.6–2.0 mm, step 0.1 |
+| `ser_depth` | Depth (Z, printed height); deeper = stiffer | 6 | 3–12 mm, step 0.5 |
+| `ser_width` | Width (X); wider = stiffer | 16 | 10–40 mm |
+| `ser_cap_h` | Height of the solid end caps, 0 = none | 1.6 | 0–8 mm, step 0.2 |
+| `ser_cap_ext` | Lateral overhang of the end caps beyond the coils | 1.6 | 0–4 mm, step 0.2 |
+| `ser_pegs` | Dovetail pegs at both ends | 1 | 0 = none, 1 = yes |
+| `ser_peg_w` | Peg cross-section (square) | 5 | 3–8 mm, step 0.2 |
+| `ser_peg_l` | Peg length | 4 | 2–8 mm, step 0.2 |
+| `ser_peg_hole` | Bore along the peg axis (plain or as per Step 2) | 0 | 0 = solid, 1 = bore |
+| `ser_tool_grip` | Additional length per end of the assembly aid | 0 | 0–40 mm |
 
-### Druckfeder (Kompressionsspirale)
+### Compression Spring (Helical Coil)
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `coil_dia` | Mittlerer Windungsdurchmesser (Drahtmitte); Außendurchmesser = Wert + Drahtbreite | 18 | 8–60 mm |
-| `coil_wire` | Radiale Drahtbreite; dicker = steifer | 3,0 | 1,5–6 mm, Schritt 0,1 |
-| `coil_wire_h` | Axiale Drahthöhe des rechteckigen Bands; klein = weiches Flachband | 3,0 | 1,0–6 mm, Schritt 0,1 |
-| `coil_turns` | Aktive Windungen (wird ignoriert, wenn `coil_len` gesetzt ist) | 6 | 2–20, Schritt 0,5 |
-| `coil_len` | Ziel-Freilänge, 0 = Windungszahl verwenden | 0 | 0–150 mm |
-| `coil_gap` | Abstand zwischen den Windungen | 3,0 | 0,4–12 mm, Schritt 0,1 |
-| `coil_support` | Print-in-Place-Stützrippe an/aus | `on` | `on`, `off` |
-| `coil_clearance` | Abstand zwischen Feder und Stützrippe je Fläche; größer = lockerer | 0,4 | 0,2–0,8 mm, Schritt 0,05 |
-| `coil_chamfer` | Fase an den Drahtkanten, 0 = keine | 0,5 | 0–2 mm, Schritt 0,1 |
-| `coil_support_tabs` | Abreißnadeln je Windung, die die Stütze beim Druck halten | 3 | 0–8 |
-| `coil_ends` | Enden: `flat` (plan, steht gerade), `open` (offen), `plate` (Montageplatte unten) | `flat` | Auswahl |
-| `coil_plate_t` | Dicke der Montageplatte | 2,0 | 1,2–4 mm, Schritt 0,2 |
-| `coil_plate_d` | Plattendurchmesser, 0 = Federaußendurchmesser | 0 | 0–90 mm |
-| `coil_top` | Oberes Ende bei `plate`: `closed` (überbrückter Deckel) oder `open` | `closed` | Auswahl |
-| `coil_screw_len` | Länge des Schraubkanals, 0 = automatisch | 0 | 0–40 mm |
+| `coil_dia` | Mean coil diameter (wire center); outer diameter = value + wire width | 18 | 8–60 mm |
+| `coil_wire` | Radial wire width; thicker = stiffer | 3.0 | 1.5–6 mm, step 0.1 |
+| `coil_wire_h` | Axial wire height of the rectangular band; small = soft flat band | 3.0 | 1.0–6 mm, step 0.1 |
+| `coil_turns` | Active turns (ignored if `coil_len` is set) | 6 | 2–20, step 0.5 |
+| `coil_len` | Target free length, 0 = use the number of turns | 0 | 0–150 mm |
+| `coil_gap` | Gap between the turns | 3.0 | 0.4–12 mm, step 0.1 |
+| `coil_support` | Print-in-place support rib on/off | `on` | `on`, `off` |
+| `coil_clearance` | Gap between spring and support rib per surface; larger = looser | 0.4 | 0.2–0.8 mm, step 0.05 |
+| `coil_chamfer` | Chamfer on the wire edges, 0 = none | 0.5 | 0–2 mm, step 0.1 |
+| `coil_support_tabs` | Tear-off needles per turn that hold the support during printing | 3 | 0–8 |
+| `coil_ends` | Ends: `flat` (flat, stands straight), `open` (open), `plate` (mounting plate at the bottom) | `flat` | Selection |
+| `coil_plate_t` | Thickness of the mounting plate | 2.0 | 1.2–4 mm, step 0.2 |
+| `coil_plate_d` | Plate diameter, 0 = spring outer diameter | 0 | 0–90 mm |
+| `coil_top` | Top end with `plate`: `closed` (bridged cap) or `open` | `closed` | Selection |
+| `coil_screw_len` | Length of the screw channel, 0 = automatic | 0 | 0–40 mm |
 
-![Druckfeder mit Montageplatte und Stützrippe](images/03_druckfeder.jpg)
+![Compression spring with mounting plate and support rib](images/03_druckfeder.jpg)
 
-### Blattfeder
+### Leaf Spring
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `leaf_len` | Sehnenlänge zwischen den Enden | 80 | 30–200 mm |
-| `leaf_w` | Breite (Y) | 18 | 8–50 mm |
-| `leaf_t` | Klingendicke; bestimmt die Steifigkeit | 3,0 | 1,5–8 mm, Schritt 0,1 |
-| `leaf_rise` | Bogenhöhe; bestimmt den Federweg bis zum Flachdrücken | 10 | 2–40 mm |
-| `leaf_hole` | Durchmesser der Befestigungsaugen, 0 = keine | 5 | 0–12 mm, Schritt 0,5 |
+| `leaf_len` | Chord length between the ends | 80 | 30–200 mm |
+| `leaf_w` | Width (Y) | 18 | 8–50 mm |
+| `leaf_t` | Blade thickness; determines the stiffness | 3.0 | 1.5–8 mm, step 0.1 |
+| `leaf_rise` | Arch height; determines the spring travel until flattened | 10 | 2–40 mm |
+| `leaf_hole` | Diameter of the mounting eyes, 0 = none | 5 | 0–12 mm, step 0.5 |
 
-### Spiral-/Torsionsfeder
+### Spiral/Torsion Spring
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `spiral_hub` | Nabendurchmesser | 12 | 4–40 mm |
-| `spiral_bore` | Bohrung der Nabe, 0 = massiv | 4 | 0–20 mm, Schritt 0,5 |
-| `spiral_wire` | Bandbreite der Spirale | 2,0 | 1,0–5 mm, Schritt 0,1 |
-| `spiral_gap` | Abstand zwischen den Windungen (bleibt offen, damit Schichten nicht verschmelzen) | 1,2 | 0,4–4 mm, Schritt 0,1 |
-| `spiral_turns` | Anzahl der Windungen | 4 | 2–12, Schritt 0,5 |
-| `spiral_h` | Flache Dicke (Z) | 5 | 2–14 mm, Schritt 0,5 |
-| `spiral_outer` | Äußeres Ende: `ring` (Verankerungsring), `tab` (Stiftlasche mit Loch), `hook` (Haken) | `ring` | Auswahl |
-| `spiral_ring_wall` | Wandstärke des Rings | 2,5 | 1,2–6 mm, Schritt 0,1 |
-| `spiral_ring_holes` | Montagelöcher im Ring, 0 = keine | 0 | 0–8 |
-| `spiral_tab` | Durchmesser der Stiftlasche | 8 | 4–16 mm, Schritt 0,5 |
+| `spiral_hub` | Hub diameter | 12 | 4–40 mm |
+| `spiral_bore` | Bore of the hub, 0 = solid | 4 | 0–20 mm, step 0.5 |
+| `spiral_wire` | Band width of the spiral | 2.0 | 1.0–5 mm, step 0.1 |
+| `spiral_gap` | Gap between the turns (stays open so layers do not fuse) | 1.2 | 0.4–4 mm, step 0.1 |
+| `spiral_turns` | Number of turns | 4 | 2–12, step 0.5 |
+| `spiral_h` | Flat thickness (Z) | 5 | 2–14 mm, step 0.5 |
+| `spiral_outer` | Outer end: `ring` (anchor ring), `tab` (pin tab with hole), `hook` (hook) | `ring` | Selection |
+| `spiral_ring_wall` | Wall thickness of the ring | 2.5 | 1.2–6 mm, step 0.1 |
+| `spiral_ring_holes` | Mounting holes in the ring, 0 = none | 0 | 0–8 |
+| `spiral_tab` | Diameter of the pin tab | 8 | 4–16 mm, step 0.5 |
 
-### Schritt 2 – Befestigungslöcher
+### Step 2 – Mounting Holes
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `hole_type` | Lochart für alle Montagelöcher: `plain` (glatt) oder `threaded` (gedrucktes Gewinde) | `plain` | Auswahl |
-| `hole_screw` | Schraubengröße für Gewinde bzw. Durchgangsloch | `M3` | M2, M2.5, M3, M4, M5, M6 |
+| `hole_type` | Hole type for all mounting holes: `plain` (plain) or `threaded` (printed thread) | `plain` | Selection |
+| `hole_screw` | Screw size for thread or clearance hole | `M3` | M2, M2.5, M3, M4, M5, M6 |
 
-### Schritt 3 – Vorschau und Export
+### Step 3 – Preview and Export
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `part` | Ausgabe: `preview` (farbige Anzeige), `print` (ein Material), `print_multicolor` (Feder, Stütze, Nadeln getrennt), `print_with_tool` (Serpentine plus Jig), `tool_only` (nur Jig) | `preview` | Auswahl |
-| `col_part` | Vorschaufarbe der Feder | `RoyalBlue` | 13 Farben |
-| `col_support` | Farbe der Stützrippe (Vorschau und Mehrfarb-Export) | `Gainsboro` | 13 Farben |
-| `col_needle` | Farbe der Abreißnadeln | `Crimson` | 13 Farben |
+| `part` | Output: `preview` (colored display), `print` (single material), `print_multicolor` (spring, support, needles separate), `print_with_tool` (serpentine plus jig), `tool_only` (jig only) | `preview` | Selection |
+| `col_part` | Preview color of the spring | `RoyalBlue` | 13 colors |
+| `col_support` | Color of the support rib (preview and multicolor export) | `Gainsboro` | 13 colors |
+| `col_needle` | Color of the tear-off needles | `Crimson` | 13 colors |
 
-### Schritt 4 – Qualität
+### Step 4 – Quality
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `round_res` | Glätte der Rundungen (`$fn`); für den Export erhöhen | 96 | 32–200, Schritt 8 |
+| `round_res` | Smoothness of curves (`$fn`); increase for export | 96 | 32–200, step 8 |
 
-![Blattfeder mit gewölbter Klinge und Befestigungsaugen](images/04_blattfeder.jpg)
+![Leaf spring with curved blade and mounting eyes](images/04_blattfeder.jpg)
 
-## Konstruktion
+## Design
 
-### OpenSCAD-Ansatz
+### OpenSCAD Approach
 
-Das Modell ist reines OpenSCAD ohne externe Bibliotheken und läuft im
-MakerWorld-Customizer. Ein Dispatcher wählt anhand von `spring_type` die passende
-Feder und anhand von `part` die Ausgabe (Vorschau oder bettfertige Druckpose).
-Alle Maße sind in Millimetern.
+The model is pure OpenSCAD without external libraries and runs in the MakerWorld
+Customizer. A dispatcher selects the matching spring based on `spring_type` and
+the output (preview or bed-ready print pose) based on `part`. All dimensions are
+in millimeters.
 
-### Parametrische Logik
+### Parametric Logic
 
-Abgeleitete Größen aus den Formeln im Modell:
+Derived values from the formulas in the model:
 
-| Größe | Formel / Regel |
+| Quantity | Formula / Rule |
 |---|---|
-| Serpentine: Zeilenabstand | 2 × `ser_wire` (die Lücke ist so breit wie der Draht) |
-| Serpentine: Wendekreis (rund) | halber Zeilenabstand |
-| Serpentine: Höhe der Windungen | (`ser_coils` − 1) × Zeilenabstand + `ser_wire` |
-| Druckfeder: Steigung | max(`coil_gap` + `coil_wire_h`, `coil_wire_h` + 0,4) – die Windungen können nie verschmelzen |
-| Druckfeder: Windungszahl bei Länge | (`coil_len` − `coil_wire_h`) / Steigung, plus 1 bei geschlossenen Enden |
-| Druckfeder: Stützrippe aktiv | wenn `coil_gap` − 2 × `coil_clearance` ≥ 0,4 mm |
-| Druckfeder: Stützrippen-Höhe | lokale Lücke − 2 × `coil_clearance` |
-| Blattfeder: Bogenradius | R = (Länge² / 4 + Höhe²) / (2 × Höhe) |
-| Blattfeder: Auge | Pad = Lochdurchmesser + 4 mm, damit die Bohrung die Klinge nicht durchtrennt |
-| Spirale: Wachstum je Windung | `spiral_wire` + `spiral_gap` |
-| Spirale: Außenradius der Mittellinie | Nabenradius + Wachstum × Windungen |
+| Serpentine: row spacing | 2 × `ser_wire` (the gap is as wide as the wire) |
+| Serpentine: turning radius (round) | half the row spacing |
+| Serpentine: height of the coils | (`ser_coils` − 1) × row spacing + `ser_wire` |
+| Compression spring: pitch | max(`coil_gap` + `coil_wire_h`, `coil_wire_h` + 0.4) – the turns can never fuse |
+| Compression spring: number of turns for a given length | (`coil_len` − `coil_wire_h`) / pitch, plus 1 for closed ends |
+| Compression spring: support rib active | if `coil_gap` − 2 × `coil_clearance` ≥ 0.4 mm |
+| Compression spring: support rib height | local gap − 2 × `coil_clearance` |
+| Leaf spring: arc radius | R = (length² / 4 + height²) / (2 × height) |
+| Leaf spring: eye | pad = hole diameter + 4 mm, so the bore does not sever the blade |
+| Spiral: growth per turn | `spiral_wire` + `spiral_gap` |
+| Spiral: outer radius of the centerline | hub radius + growth × turns |
 
-Mit den Voreinstellungen ergeben sich zum Beispiel:
+With the default settings, this results in, for example:
 
-- **Serpentine** (8 Windungen, Draht 0,8 mm): Zeilenabstand 1,6 mm, Windungshöhe
-  12,0 mm, Breite mit Endkappen 19,2 mm.
-- **Druckfeder** (Ø 18 mm, Band 3 × 3 mm, 6 Windungen, Lücke 3 mm): Steigung 6 mm,
-  Außendurchmesser 21 mm, Freihöhe 33 mm vor dem Schleifen der Enden (rund 31 mm
-  danach). Die Stützrippe ist 2,2 mm hoch und hält 0,4 mm Abstand zum Band.
-- **Blattfeder** (80 mm Sehne, 10 mm Bogenhöhe): Bogenradius 85 mm.
-- **Spirale** (Nabe 12 mm, Band 2 mm, Lücke 1,2 mm, 4 Windungen, Ring 2,5 mm):
-  3,2 mm Wachstum je Windung, Ringaußendurchmesser rund 44,6 mm.
+- **Serpentine** (8 coils, 0.8 mm wire): row spacing 1.6 mm, coil height
+  12.0 mm, width with end caps 19.2 mm.
+- **Compression spring** (Ø 18 mm, 3 × 3 mm band, 6 turns, 3 mm gap): pitch 6 mm,
+  outer diameter 21 mm, free height 33 mm before grinding the ends (around 31 mm
+  afterwards). The support rib is 2.2 mm high and keeps a 0.4 mm gap to the band.
+- **Leaf spring** (80 mm chord, 10 mm arch height): arc radius 85 mm.
+- **Spiral** (12 mm hub, 2 mm band, 1.2 mm gap, 4 turns, 2.5 mm ring):
+  3.2 mm growth per turn, ring outer diameter around 44.6 mm.
 
-Die Werte sind aus den Formeln und den Standardwerten abgeleitet.
+The values are derived from the formulas and the default values.
 
-### Besondere Algorithmen
+### Special Algorithms
 
-- **Serpentine als Hull-Kette:** Die Mittellinie wird als Punktfolge aus Zeilen und
-  Halbkreis-Wendungen erzeugt, benachbarte Punkte werden mit Kreisprofilen
-  „verhüllt“ (Hull) und einmal extrudiert. Das Ergebnis ist ein einziges Band.
-- **Rechteckige Helix für die Druckfeder:** Das Drahtprofil ist ein gefastes
-  Rechteck mit senkrechten Innen- und Außenwänden. Die Helix entsteht aus vielen
-  dünnen Schnitten, die paarweise verhüllt werden. Die Steigung wird über ein
-  Integral der Steigungsfunktion gerampt, sodass die Endwindungen flach auslaufen.
-- **Print-in-Place-Stützrippe:** Eine zweite, in die Lücken eingefügte Helix füllt jede
-  Lücke bis auf `coil_clearance`. Ihre Höhe folgt der lokalen Steigung, sie läuft
-  also in die flachen Enden aus und verschmilzt dort nicht. Zu enge Lücken
-  überspringt das Modell automatisch.
-- **Abreißnadeln:** Dünne Pfeiler (0,6 mm) überbrücken den Abstand zwischen Feder und
-  Stütze, damit die Rippe beim Druck nicht schwimmt. Sie brechen beim Entfernen ab.
-- **Geschliffene Enden:** Bei `flat` und `plate` werden Ober- und Unterseite
-  abgeschnitten, damit echte ebene Auflageflächen entstehen. Feder, Stütze und
-  Nadeln werden identisch behandelt und bleiben deckungsgleich.
-- **Tropfenloch im Zapfen:** Ein waagerechtes Loch bekommt ein 45°-Dach (Tropfenform),
-  damit es ohne Support rund bleibt. Durchmesser und Dach sind so begrenzt, dass
-  mindestens rund 0,8 mm Seitenwand und 0,4 mm Dach bleiben. Bei „threaded“ wird hier
-  statt eines Gewindes ein **Kernloch für selbstschneidende Schrauben** gebohrt.
-- **Gedrucktes Innengewinde:** Der Gewindeschneider ist ein verdrehter, extrudierter
-  Zahnquerschnitt mit Einlaufkonus; die Steigung folgt der gewählten
-  Schraubengröße (M2–M6).
-- **Spiralenden:** Der Verankerungsring verschmilzt das freie Ende der Spirale mit
-  einem konzentrischen Ring. Der Haken ist ein „Zuckerstangen“-Bogen aus geraden
-  Abschnitt und 180°-Kurve mit gleicher Bandbreite.
+- **Serpentine as a hull chain:** The centerline is generated as a point sequence
+  of rows and semicircular turns; adjacent points are "wrapped" (hull) with
+  circular profiles and extruded once. The result is a single band.
+- **Rectangular helix for the compression spring:** The wire profile is a
+  chamfered rectangle with vertical inner and outer walls. The helix is built from
+  many thin slices that are hulled in pairs. The pitch is ramped via an integral
+  of the pitch function, so that the end turns run out flat.
+- **Print-in-place support rib:** A second helix inserted into the gaps fills each
+  gap down to `coil_clearance`. Its height follows the local pitch, so it runs out
+  into the flat ends and does not fuse there. The model automatically skips gaps
+  that are too narrow.
+- **Tear-off needles:** Thin pillars (0.6 mm) bridge the gap between spring and
+  support so that the rib does not float during printing. They break off when
+  removed.
+- **Ground ends:** With `flat` and `plate`, the top and bottom are cut off to
+  create truly flat bearing surfaces. Spring, support and needles are treated
+  identically and remain congruent.
+- **Teardrop hole in the peg:** A horizontal hole gets a 45° roof (teardrop shape)
+  so that it stays round without support. Diameter and roof are limited so that at
+  least around 0.8 mm of side wall and 0.4 mm of roof remain. With "threaded", a
+  **pilot hole for self-tapping screws** is drilled here instead of a thread.
+- **Printed internal thread:** The thread cutter is a twisted, extruded tooth
+  cross-section with a lead-in cone; the pitch follows the selected screw size
+  (M2–M6).
+- **Spiral ends:** The anchor ring fuses the free end of the spiral with a
+  concentric ring. The hook is a "candy cane" arc made of a straight section and
+  a 180° curve with the same band width.
 
 ```mermaid
 flowchart LR
     T[spring_type] --> S[Serpentine]
-    T --> C[Druckfeder + Stützrippe]
-    T --> L[Blattfeder]
-    T --> P[Spirale]
+    T --> C[Compression spring + support rib]
+    T --> L[Leaf spring]
+    T --> P[Spiral]
     H[hole_type / hole_screw] --> C
     H --> L
     H --> P
     H --> S
-    S --> O[part: preview / print / print_multicolor / Jig]
+    S --> O[part: preview / print / print_multicolor / jig]
     C --> O
     L --> O
     P --> O
 ```
 
-### Modularität
+### Modularity
 
-Der Code trennt Serpentine, Zapfen und Zapfenloch, Montagehilfe, Helix-Bausteine
-(Profil, Segment, Stützrippe, Nadel, Endring), Gewinde- und Lochgenerator,
-Blattprofil, Spiralen-Generator und die Druckposen. Die Gewindemaße (M2–M6) und
-Kernloch-Durchmesser sind zentral hinterlegt und gelten für alle Montagelöcher.
+The code separates the serpentine, peg and peg hole, assembly aid, helix building
+blocks (profile, segment, support rib, needle, end ring), thread and hole
+generator, leaf profile, spiral generator and the print poses. The thread
+dimensions (M2–M6) and pilot hole diameters are stored centrally and apply to all
+mounting holes.
 
-### Druckoptimierungen
+### Print Optimizations
 
-- **Biegung entlang der Schichten:** Serpentine und Blattfeder liegen flach, die
-  Blattfeder mit dem Bogen in der Ebene und der Breite nach oben.
-- **Druckfeder stehend, ohne Slicer-Support:** Die eigene Stützrippe ersetzt ihn.
-- **Fasen** an den Drahtkanten für saubere erste und letzte Layer.
-- **Gesicherte Löcher:** Das Augen-Pad und die Zapfenbegrenzung verhindern, dass
-  Bohrungen das Bauteil durchtrennen.
-- **Offene Windungsabstände** bei der Spirale, damit Layer nicht verschmelzen.
+- **Bending along the layers:** The serpentine and leaf springs lie flat, with the
+  leaf spring's arch in the plane and its width facing up.
+- **Compression spring upright, without slicer support:** Its own support rib
+  replaces it.
+- **Chamfers** on the wire edges for clean first and last layers.
+- **Secured holes:** The eye pad and the peg limit prevent bores from severing the
+  part.
+- **Open turn gaps** on the spiral so that layers do not fuse.
 
-![Spiralfeder mit Nabe und äußerem Verankerungsring](images/05_spiralfeder.jpg)
+![Spiral spring with hub and outer anchor ring](images/05_spiralfeder.jpg)
 
-## Druckempfehlungen
+## Print Recommendations
 
-Die mitgelieferten Profile sind für den **Bambu Lab P2S** mit PETG erstellt (4 Wände,
-Gyroid 40 %). Das Modell lässt sich auch auf anderen Bambu-Lab-Druckern fertigen.
+The supplied profiles are created for the **Bambu Lab P2S** with PETG (4 walls,
+gyroid 40 %). The model can also be produced on other Bambu Lab printers.
 
-| Federtyp | Ausrichtung | Material | Layerhöhe | Wände / Infill |
+| Spring type | Orientation | Material | Layer height | Walls / Infill |
 |---|---|---|---|---|
-| Serpentine | flach (wie modelliert) | PETG / TPU | 0,15–0,20 mm | 3–4 Wände |
-| Druckfeder | stehend | TPU / PETG | 0,10–0,20 mm | hoher Infill (70–100 %), langsam |
-| Blattfeder | flach, Bogen in der Ebene (Breite nach oben) | PETG | 0,15–0,20 mm | 3–4 Wände |
-| Spirale | flach | TPU / PETG | 0,10–0,15 mm | 3–4 Wände, langsam |
+| Serpentine | flat (as modeled) | PETG / TPU | 0.15–0.20 mm | 3–4 walls |
+| Compression spring | upright | TPU / PETG | 0.10–0.20 mm | high infill (70–100 %), slow |
+| Leaf spring | flat, arch in the plane (width facing up) | PETG | 0.15–0.20 mm | 3–4 walls |
+| Spiral | flat | TPU / PETG | 0.10–0.15 mm | 3–4 walls, slow |
 
-**Besondere Hinweise**
+**Special notes**
 
-- **Kein PLA** für arbeitende Federn: PLA ist zu spröde. PETG ist federnd und zäh,
-  TPU weich mit hohem Rückfederungsvermögen.
-- **Kunststoff kriecht:** Eine Feder nicht dauerhaft voll zusammengedrückt lagern;
-  im Zweifel eine dickere Drahtstärke wählen.
-- **Supports:** keine vom Slicer. Bei der Druckfeder niemals Baum- oder
-  Normal-Support aktivieren – er verschmilzt mit den Windungen. Die Feder auch nie
-  liegend drucken, sonst läuft die Last quer zu den Schichten und sie delaminiert.
-- **Brim:** Ein Brim von 5–8 mm hilft der Druckfeder (kleine Standfläche).
-- **Stützrippe entfernen:** Bei offenen Enden herausdrehen; bei Platte oder Deckel
-  seitlich durch die Nut herausziehen. Die Abreißnadeln brechen ab, ein stumpfes
-  Messer hilft.
-- **Zwei Materialien:** Im Modus `print_multicolor` kommen Feder, Stütze und Nadeln
-  als drei Objekte in den Slicer. Feder in PETG oder TPU, Stütze und Nadeln in PLA:
-  PLA haftet schlecht an PETG über den 0,4-mm-Abstand und löst sich leichter.
-  Dafür den STL **direkt aus der OpenSCAD-Vorschau** exportieren, ohne F6/Render
-  und ohne Kommandozeile – sonst werden die Gruppen vereinigt.
-- **Gewinde:** Gedruckte Gewinde mit 0,10–0,15 mm Layerhöhe und mindestens 3 Wänden
-  drucken und mit Gewindebohrer oder Schraube nacharbeiten. Der Customizer warnt,
-  wenn Nabe oder Zapfen für das Gewinde zu klein sind.
-- **Federrate messen:** Die Formel für Metallfedern passt nicht auf ein gedrucktes
-  Band. Mit bekannten Gewichten belasten (F = m · 9,81 N), Federweg x ablesen,
-  k = F / x.
-- Im Modus `preview` ist das Modell nur Anzeige. Zum Drucken auf einen Druckmodus
-  umstellen; diese legen das Teil in die vorgesehene Orientierung.
+- **No PLA** for working springs: PLA is too brittle. PETG is resilient and
+  tough; TPU is soft with high rebound.
+- **Plastic creeps:** Do not store a spring permanently fully compressed; if in
+  doubt, choose a thicker wire.
+- **Supports:** none from the slicer. For the compression spring, never enable
+  tree or normal support – it fuses with the turns. Also never print the spring
+  lying down, otherwise the load runs across the layers and it delaminates.
+- **Brim:** A brim of 5–8 mm helps the compression spring (small footprint).
+- **Removing the support rib:** With open ends, unscrew it; with a plate or cap,
+  pull it out sideways through the groove. The tear-off needles break off; a
+  blunt knife helps.
+- **Two materials:** In `print_multicolor` mode, spring, support and needles
+  arrive in the slicer as three objects. Spring in PETG or TPU, support and
+  needles in PLA: PLA adheres poorly to PETG across the 0.4 mm gap and comes off
+  more easily. For this, export the STL **directly from the OpenSCAD preview**,
+  without F6/Render and without the command line – otherwise the groups are
+  merged.
+- **Threads:** Print printed threads with 0.10–0.15 mm layer height and at least
+  3 walls, and rework them with a tap or screw. The Customizer warns if the hub
+  or peg is too small for the thread.
+- **Measuring the spring rate:** The formula for metal springs does not fit a
+  printed band. Load it with known weights (F = m · 9.81 N), read off the spring
+  travel x, k = F / x.
+- In `preview` mode, the model is for display only. To print, switch to a print
+  mode; these place the part in the intended orientation.
 
-## Anwendungsbeispiele
+## Use Cases
 
-- **Serpentinenfeder als Rückstellelement** in Klappen und Gehäusen, mit den
-  Zapfen in passende Schlitze gesteckt.
-- **Druckfeder für Taster und Stößel:** Montageplatte unten, geschlossener Deckel
-  oben als Auflage.
-- **Blattfeder als Klemme oder Andruckelement:** Bogenhöhe und Dicke bestimmen
-  Kraft und Weg, die Augen nehmen Schrauben auf.
-- **Spiralfeder als Torsionsrückstellung:** Ring fixieren, Nabe auf eine Achse
-  setzen; mit Stiftlasche oder Haken als freies Ende.
-- **Prototypen im Homelab:** Rack-Blenden, Gehäuseklappen oder Kabelhalter mit
-  federnder Rückstellung.
-- **Zwei-Material-Druck:** Feder in PETG, Stützrippe in PLA zum leichten Entfernen.
+- **Serpentine spring as a return element** in flaps and enclosures, with the
+  pegs inserted into matching slots.
+- **Compression spring for buttons and plungers:** mounting plate at the bottom,
+  closed cap at the top as a bearing surface.
+- **Leaf spring as a clamp or pressure element:** arch height and thickness
+  determine force and travel; the eyes accept screws.
+- **Spiral spring as a torsion return:** fix the ring, place the hub on an axle;
+  with a pin tab or hook as the free end.
+- **Homelab prototypes:** rack panels, enclosure flaps or cable holders with
+  spring-loaded return.
+- **Two-material printing:** spring in PETG, support rib in PLA for easy removal.
 
-![Praxisfoto: Druckfeder mit herausgedrehter Stützrippe](images/06_praxisfoto-support.jpg)
+![Real-life photo: compression spring with the support rib unscrewed](images/06_praxisfoto-support.jpg)
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-| Symptom | Ursache | Fix |
+| Symptom | Cause | Fix |
 |---|---|---|
-| Feder bricht nach wenigen Zyklen | PLA oder Last quer zu den Schichten | PETG oder TPU verwenden; Druckpose des Modus nicht ändern |
-| Feder ist zu hart oder zu weich | Drahtstärke / Tiefe / Windungen passen nicht | Serpentine: `ser_wire`, `ser_depth`, `ser_coils`; Druckfeder: `coil_wire`, `coil_wire_h`, `coil_gap`, `coil_turns` |
-| Stützrippe lässt sich nicht lösen | `coil_clearance` zu klein für den Drucker | `coil_clearance` erhöhen (bis 0,8 mm) |
-| Stützrippe schwimmt beim Druck | zu wenige Abreißnadeln | `coil_support_tabs` erhöhen |
-| Keine Stützrippe im Modell | Lücke zu klein | `coil_gap` erhöhen: nötig ist `coil_gap` − 2 × `coil_clearance` ≥ 0,4 mm |
-| Feder verschmilzt zu einem Block | Support im Slicer aktiv | Slicer-Support ausschalten |
-| Gewinde im Zapfen rau oder fehlt | waagerechtes Loch | `plain` für Durchgangsloch oder selbstschneidende Schraube ins Kernloch drehen |
-| Mehrfarb-STL hat nur eine Farbe | Export über F6/Render oder Kommandozeile | STL direkt aus der Vorschau exportieren |
-| Spirale wirkt verschmolzen | `spiral_gap` zu klein | `spiral_gap` erhöhen |
+| Spring breaks after a few cycles | PLA or load across the layers | Use PETG or TPU; do not change the print pose of the mode |
+| Spring is too hard or too soft | Wire thickness / depth / turns do not fit | Serpentine: `ser_wire`, `ser_depth`, `ser_coils`; compression spring: `coil_wire`, `coil_wire_h`, `coil_gap`, `coil_turns` |
+| Support rib cannot be released | `coil_clearance` too small for the printer | Increase `coil_clearance` (up to 0.8 mm) |
+| Support rib floats during printing | too few tear-off needles | Increase `coil_support_tabs` |
+| No support rib in the model | Gap too small | Increase `coil_gap`: `coil_gap` − 2 × `coil_clearance` ≥ 0.4 mm is required |
+| Spring fuses into a block | Slicer support active | Turn off slicer support |
+| Thread in the peg is rough or missing | horizontal hole | `plain` for a clearance hole, or drive a self-tapping screw into the pilot hole |
+| Multicolor STL has only one color | Export via F6/Render or command line | Export the STL directly from the preview |
+| Spiral looks fused | `spiral_gap` too small | Increase `spiral_gap` |
 
-## Entwicklungsgeschichte
+## Development History
 
-Die Dateien des Modells stammen vom 18. August 2026. Ausgangspunkt war ein
-bewährtes flaches Serpentinen-Muster; dazu kamen Druckfeder, Blattfeder und
-Spiralfeder sowie die gemeinsame Gruppe für Befestigungslöcher. Die Geometrie der
-Druckfeder (Bandbreite, rund 0,4 mm Trennabstand der Stützrippe, Einrückung der
-Stütze von den Enden) wurde an einer gedruckten Probe abgeleitet; die Stütze ließ
-sich im Test mit einem stumpfen Messer entfernen, ohne die Feder zu beschädigen.
-Auf Gewindekanäle für waagerechte Bohrungen habe ich bewusst verzichtet und
-stattdessen Tropfenlöcher mit Kernloch verwendet, weil die Druckorientierung für
-mich wichtig war.
+The model's files date from August 18, 2026. The starting point was a proven flat
+serpentine pattern; the compression spring, leaf spring and spiral spring were
+added, along with the shared group for mounting holes. The compression spring's
+geometry (band width, roughly 0.4 mm separation gap of the support rib, inset of
+the support from the ends) was derived from a printed sample; in testing, the
+support could be removed with a blunt knife without damaging the spring. I
+deliberately dispensed with thread channels for horizontal bores and used
+teardrop holes with a pilot hole instead, because print orientation was important
+to me.
 
-Die Bilder in diesem Repository sind Renderings der Modellgeometrie
-beziehungsweise daraus abgeleitete Szenenbilder; das letzte Bild ist ein
-Praxisfoto.
+The images in this repository are renderings of the model geometry or scene
+images derived from it; the last image is a real-life photo.
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: https://makerworld.com/en/models/3188130-parametric-springs-with-flexible-mounting-options
+👉 MakerWorld link: https://makerworld.com/en/models/3188130-parametric-springs-with-flexible-mounting-options
 
-Profil: <https://makerworld.com/en/@BetaHydri>
+Profile: <https://makerworld.com/en/@BetaHydri>
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository; Modell- und Druckdateien werden
-ausschließlich über MakerWorld verteilt. Dokumentation und Bilder: © BetaHydri.
-Das Modell (inkl. Quellcode) und alle Druckdateien stehen unter der auf
-MakerWorld angegebenen Lizenz. Dieses Repository enthält bewusst keine Modell-,
-Quellcode- oder Druckdateien.
+Documentation and images in this repository; model and print files are distributed
+exclusively via MakerWorld. Documentation and images: © BetaHydri.
+The model (including source code) and all print files are under the license
+stated on MakerWorld. This repository intentionally contains no model, source
+code or print files.

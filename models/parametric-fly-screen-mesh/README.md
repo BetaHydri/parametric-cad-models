@@ -1,370 +1,368 @@
 # Parametric Fly Screen Mesh + Join Clips
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Fliegengitter aus dem 3D-Drucker: Strandbreite, Schichthöhe und Raster richten
-sich nach deiner Düse, dazu optionale flache Kamm-Clips, die zwei Gitterstücke
-Kante an Kante verbinden.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/2915026-parametric-fly-screen-mesh-filter-net)
+Fly screen from the 3D printer: strand width, layer height and grid are
+determined by your nozzle, plus optional flat comb clips that join two mesh
+pieces edge to edge.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/2915026-parametric-fly-screen-mesh-filter-net)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-P1S%20%7C%20P2S%20%7C%20H2C-green)
 ![Print files](https://img.shields.io/badge/Print%20files-MakerWorld%20only-blue)
 
-> **Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:**
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/2915026-parametric-fly-screen-mesh-filter-net](https://makerworld.com/en/models/2915026-parametric-fly-screen-mesh-filter-net)
+> **The model with all print profiles is available exclusively on MakerWorld:**
+> 👉 [MakerWorld link: https://makerworld.com/en/models/2915026-parametric-fly-screen-mesh-filter-net](https://makerworld.com/en/models/2915026-parametric-fly-screen-mesh-filter-net)
 >
-> ![Zwei Fliegengitter-Stücke (blau und grün), an der Naht durch eine Reihe grauer Kamm-Clips verbunden](images/01_hero.png)
+> ![Two fly screen pieces (blue and green), joined at the seam by a row of grey comb clips](images/01_hero.png)
 
-Der **Parametric Fly Screen Mesh** erzeugt ein einlagiges Gitter, das als
-Einzelstrang-Struktur gedruckt wird: eine Wand breit, wenige Schichten hoch,
-ohne Boden-, Deckschichten und Infill. Form (rund oder quadratisch), Größe,
-Maschenweite und Dicke stellst du im MakerWorld-Customizer ein. Wer größere
-Flächen braucht, druckt mehrere Stücke und verbindet sie mit den flachen
-**Kamm-Clips** (`liegender Kamm`), die ebenfalls ohne Stützen auf dem Bett
-entstehen.
+The **Parametric Fly Screen Mesh** generates a single-layer mesh that is printed
+as a single-strand structure: one wall wide, a few layers high, without bottom
+and top layers and without infill. You set the shape (round or square), size,
+mesh opening and thickness in the MakerWorld Customizer. If you need larger
+areas, print several pieces and join them with the flat **comb clips**
+(`liegender Kamm`, "flat-lying comb"), which are also printed on the bed without
+supports.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Konstruktion](#konstruktion)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Parametric Options](#parametric-options)
+- [Construction](#construction)
+- [Print Recommendations](#print-recommendations)
+- [Usage Examples](#usage-examples)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Ein gedrucktes Gitter ist ein Grenzfall für den Slicer. Die Stege sind nur
-eine Düsenbreite dick, die Maschen oft kaum größer als ein paar Millimeter.
-Das scheitert an handfesten Dingen:
+A printed mesh is a borderline case for the slicer. The bars are only one nozzle
+width thick, and the openings are often barely larger than a few millimetres.
+That fails on very practical things:
 
-- Stegbreite und Schichthöhe müssen zur Düse passen, sonst erkennt der Slicer
-  die Stege nicht als zusammenhängende Wand oder füllt sie mit Infill.
-- Die Maschenweite soll einstellbar sein: feiner für kleine Insekten,
-  gröber für Luftdurchsatz und kürzere Druckzeit.
-- Große Gitter sprengen schnell den Bauraum, und ein Gitter aus vielen
-  einzelnen Quadern macht Vorschau und Export zäh.
-- Einzelne Stücke sollen sich ohne Kleber zu größeren Flächen verbinden
-  lassen. Dafür muss ein Clip die Kanten flach in der Gitterebene greifen;
-  ein Klemmprofil, das eine hochkant stehende Platte erwartet, passt nicht.
+- Bar width and layer height must match the nozzle, otherwise the slicer does
+  not recognise the bars as a continuous wall or fills them with infill.
+- The mesh opening should be adjustable: finer for small insects, coarser for
+  airflow and shorter print time.
+- Large meshes quickly exceed the build volume, and a mesh made of many
+  individual cuboids makes preview and export sluggish.
+- Individual pieces should be joinable into larger areas without glue. For that,
+  a clip has to grip the edges flat in the mesh plane; a clamping profile that
+  expects an upright plate does not fit.
 
-## Die Idee
+## The Idea
 
-Das Modell leitet alles aus der **Düse** ab. Wählst du 0,2, 0,4 oder 0,6 mm,
-ergeben sich Strandbreite (Düse + 0,05 mm) und Schichthöhe (0,10 / 0,20 /
-0,28 mm) automatisch; die Gesamtdicke ist Schichtzahl × Schichthöhe. Aus der
-Ziel-Maschenweite berechnet das Modell die Zahl der Rasterintervalle und
-verteilt sie gleichmäßig über die gewählte Größe, sodass das Gitter an beiden
-Rändern sauber mit einem Steg abschließt.
+The model derives everything from the **nozzle**. If you choose 0.2, 0.4 or
+0.6 mm, the strand width (nozzle + 0.05 mm) and layer height (0.10 / 0.20 /
+0.28 mm) follow automatically; the total thickness is number of layers × layer
+height. From the target mesh opening, the model calculates the number of grid
+intervals and distributes them evenly over the chosen size, so that the mesh
+ends cleanly with a bar at both edges.
 
-Das Gitter wird als 2D-Raster aufgebaut und mit **einem** `linear_extrude`
-in 3D überführt. Das hält Vorschau und Export auch bei einem vollen
-Druckbett-Gitter schnell. Die Clips sind ein eigenes Modul in derselben Datei;
-ihr Schlitz wird aus der Dicke des Gitters abgeleitet, damit Clip und Gitter
-zusammenpassen.
+The mesh is built as a 2D grid and converted to 3D with **a single**
+`linear_extrude`. This keeps preview and export fast even for a full-bed mesh.
+The clips are a separate module in the same file; their slot is derived from the
+thickness of the mesh so that clip and mesh fit together.
 
 ## Highlights
 
-- **Düsengetrieben:** Auswahl 0,2 / 0,4 / 0,6 mm – Stegbreite, Schichthöhe und
-  Teilung passen sich an, sodass der Slicer druckbare Einzelstrang-Wände sieht.
-- **Rund oder quadratisch:** freie Größe von 20 bis 300 mm oder fertige
-  Presets (80 mm und 100 mm rund, 100 mm und 200 mm quadratisch, volle
-  Betten mit 256 mm und 300 mm).
-- **Einstellbare Maschenweite:** 0,8 bis 5,0 mm Abstand zwischen den Stegen.
-- **Wählbare Dicke:** 2 bis 6 Schichten (ultradünn bis steifer).
-- **Schneller Export:** 2D-Raster plus ein einziger `linear_extrude`.
-- **Slicer-Hinweise im Modell:** Die Konsole gibt die passende Schichthöhe,
-  Wandzahl, Infill und Dünnwand-Erkennung aus.
-- **Kamm-Clip „liegender Kamm“:** flach in der Gitterebene, zwei Gitterkanten
-  stoßen an einen Mittelsteg und werden zwischen Boden und Fingerreihen
-  geklemmt. Ohne Stützen druckbar.
-- **Geprüfte Passung:** Interferenz und Spiel zwischen Clip und Gitter wurden
-  mit einer OpenCascade-Prüfung belegt (siehe
-  [Konstruktion](#konstruktion)).
-- **Demo-Modus:** Zwei Gitterstücke mit einer Reihe von Clips, auch als
-  Explosionsdarstellung.
+- **Nozzle-driven:** choice of 0.2 / 0.4 / 0.6 mm – bar width, layer height and
+  pitch adapt, so that the slicer sees printable single-strand walls.
+- **Round or square:** free size from 20 to 300 mm or ready-made presets (80 mm
+  and 100 mm round, 100 mm and 200 mm square, full beds at 256 mm and 300 mm).
+- **Adjustable mesh opening:** 0.8 to 5.0 mm spacing between the bars.
+- **Selectable thickness:** 2 to 6 layers (ultra-thin to stiffer).
+- **Fast export:** 2D grid plus a single `linear_extrude`.
+- **Slicer hints in the model:** The console outputs the matching layer height,
+  wall count, infill and thin-wall detection.
+- **Comb clip "flat-lying comb":** flat in the mesh plane, two mesh edges butt
+  against a centre spine and are clamped between the floor and the rows of
+  fingers. Printable without supports.
+- **Verified fit:** Interference and clearance between clip and mesh were
+  verified with an OpenCascade check (see
+  [Construction](#construction)).
+- **Demo mode:** Two mesh pieces with a row of clips, also as an exploded view.
 
-![Zwei Gitterstücke mit Clip-Reihe, Clips über der Naht angehoben (Explosionsdarstellung)](images/02_clips-explosion.png)
+![Two mesh pieces with a row of clips, clips lifted above the seam (exploded view)](images/02_clips-explosion.png)
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Namen entsprechen den Customizer-Parametern des Modells.
+The names correspond to the model's Customizer parameters.
 
-### Ausgabe und Vorschau
+### Output and Preview
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `output_mode` | Was ausgegeben wird: Gitter, Clip-Reihe, beides, Prüfaufbau oder Demo | `mesh` | `mesh`, `clip`, `both`, `verify`, `demo` |
-| `clip_style` | Clip-Bauform | `comb` | `comb`, `tiny_snap`, `side_slide` |
-| `verify_part` | Teil im Prüfmodus (`output_mode = verify`) | `assembly` | `assembly`, `comb`, `mesh_left`, `mesh_right`, `isect_left`, `isect_right` |
+| `output_mode` | What is output: mesh, clip row, both, verification setup or demo | `mesh` | `mesh`, `clip`, `both`, `verify`, `demo` |
+| `clip_style` | Clip design | `comb` | `comb`, `tiny_snap`, `side_slide` |
+| `verify_part` | Part in verification mode (`output_mode = verify`) | `assembly` | `assembly`, `comb`, `mesh_left`, `mesh_right`, `isect_left`, `isect_right` |
 
-Der Modus `both` gibt das Gitter aus und legt die Clip-Reihe daneben (gedreht
-um 90°). Der Modus `verify` dient der Prüfung und ist nicht zum Drucken
-gedacht.
+The `both` mode outputs the mesh and places the clip row next to it (rotated by
+90°). The `verify` mode is for verification and is not intended for printing.
 
-### Größe, Form und Düse
+### Size, Shape and Nozzle
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `preset` | Schnellauswahl, überschreibt `shape` und `custom_size` | `Custom` | `Custom`, `80mm Round`, `100mm Round`, `100mm Square`, `200mm Square`, `Full Bed 256mm`, `Full Bed 300mm` |
-| `nozzle` | Düsendurchmesser, bestimmt Strandbreite und Schichthöhe | 0,4 | 0,2 / 0,4 / 0,6 mm |
-| `shape` | Form (nur bei `preset = Custom`) | `square` | `square`, `round` |
-| `custom_size` | Kantenlänge bzw. Durchmesser (nur bei `Custom`) | 100 | 20–300, Schritt 10, mm |
-| `mesh_opening` | Abstand zwischen den Stegen (kleiner = feiner) | 1,6 | 0,8–5,0, Schritt 0,2, mm |
-| `num_layers` | Schichtzahl (2 = ultradünn, 6 = steifer) | 3 | 2–6 |
+| `preset` | Quick selection, overrides `shape` and `custom_size` | `Custom` | `Custom`, `80mm Round`, `100mm Round`, `100mm Square`, `200mm Square`, `Full Bed 256mm`, `Full Bed 300mm` |
+| `nozzle` | Nozzle diameter, determines strand width and layer height | 0.4 | 0.2 / 0.4 / 0.6 mm |
+| `shape` | Shape (only with `preset = Custom`) | `square` | `square`, `round` |
+| `custom_size` | Edge length or diameter (only with `Custom`) | 100 | 20–300, step 10, mm |
+| `mesh_opening` | Spacing between the bars (smaller = finer) | 1.6 | 0.8–5.0, step 0.2, mm |
+| `num_layers` | Number of layers (2 = ultra-thin, 6 = stiffer) | 3 | 2–6 |
 
-### Clip – allgemein
+### Clip – General
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `clip_count` | Anzahl Clips in der Clip-Reihe | 6 | 1–40 |
-| `clip_array_spacing` | Abstand zwischen den Clips auf dem Bett | 3,0 | 0–20 mm |
-| `fit_clearance` | Spiel der älteren Clip-Stile `tiny_snap` und `side_slide` | 0,20 | 0,10–0,40 mm |
-| `seam_gap` | Nahtspalt bei den älteren Clip-Stilen | 0,30 | 0–1,2 mm |
-| `clip_height_mode` | Höhenvorgabe der älteren Clip-Stile | `match_mesh` | `match_mesh`, `custom` |
-| `clip_height_custom` | Clip-Höhe bei `custom` | 1,6 | 0,4–6,0 mm |
+| `clip_count` | Number of clips in the clip row | 6 | 1–40 |
+| `clip_array_spacing` | Spacing between the clips on the bed | 3.0 | 0–20 mm |
+| `fit_clearance` | Clearance of the older clip styles `tiny_snap` and `side_slide` | 0.20 | 0.10–0.40 mm |
+| `seam_gap` | Seam gap for the older clip styles | 0.30 | 0–1.2 mm |
+| `clip_height_mode` | Height setting of the older clip styles | `match_mesh` | `match_mesh`, `custom` |
+| `clip_height_custom` | Clip height for `custom` | 1.6 | 0.4–6.0 mm |
 
-### Clip – Kamm (`clip_style = comb`)
+### Clip – Comb (`clip_style = comb`)
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `comb_floor_t` | Bodenlippe unter dem Gitter | 0,40 | 0,20–1,20 mm |
-| `comb_lip_t` | Fingerdicke über dem Gitter | 0,40 | 0,20–1,20 mm |
-| `comb_slot_clear` | Zusatzhöhe des Schlitzes über der Gitterdicke (kleiner = fester Griff) | 0,10 | 0,00–0,40 mm |
-| `comb_chan_depth` | Wie weit jedes Gitter unter die Finger reicht | 1,5 | 0,8–6,0 mm |
-| `comb_spine_w` | Breite des Mittelstegs (Anschlag zwischen beiden Gittern) | 1,0 | 0,4–3,0 mm |
-| `comb_grid_lock` | Länge rastet auf ganze Gitterteilungen ein | `true` | an/aus |
-| `comb_cells` | Länge in Gitterteilungen (bei `comb_grid_lock`) | 6 | 2–30 |
-| `comb_len_custom` | Länge in mm (ohne `comb_grid_lock`) | 14 | 8–60 mm |
-| `comb_finger_w` | Fingerbreite entlang der Naht | 1,6 | 0,8–4,0 mm |
-| `comb_finger_gap` | Lücke zwischen den Fingern (die „Zähne“) | 1,4 | 0,6–4,0 mm |
-| `comb_lead_in` | Fase an den Fingerspitzen zum leichteren Einschieben | `true` | an/aus |
-| `comb_grip_nubs` | Bodennoppen, die in die Maschen greifen | `false` | an/aus |
-| `comb_nub_h` | Höhe der Noppen | 0,20 | 0,10–0,60 mm |
+| `comb_floor_t` | Floor lip under the mesh | 0.40 | 0.20–1.20 mm |
+| `comb_lip_t` | Finger thickness above the mesh | 0.40 | 0.20–1.20 mm |
+| `comb_slot_clear` | Extra slot height above the mesh thickness (smaller = firmer grip) | 0.10 | 0.00–0.40 mm |
+| `comb_chan_depth` | How far each mesh reaches under the fingers | 1.5 | 0.8–6.0 mm |
+| `comb_spine_w` | Width of the centre spine (stop between the two meshes) | 1.0 | 0.4–3.0 mm |
+| `comb_grid_lock` | Length snaps to whole mesh pitches | `true` | on/off |
+| `comb_cells` | Length in mesh pitches (with `comb_grid_lock`) | 6 | 2–30 |
+| `comb_len_custom` | Length in mm (without `comb_grid_lock`) | 14 | 8–60 mm |
+| `comb_finger_w` | Finger width along the seam | 1.6 | 0.8–4.0 mm |
+| `comb_finger_gap` | Gap between the fingers (the "teeth") | 1.4 | 0.6–4.0 mm |
+| `comb_lead_in` | Chamfer on the fingertips for easier insertion | `true` | on/off |
+| `comb_grip_nubs` | Floor nubs that engage in the openings | `false` | on/off |
+| `comb_nub_h` | Height of the nubs | 0.20 | 0.10–0.60 mm |
 
-### Clip – ältere Stile (`tiny_snap`, `side_slide`)
+### Clip – Older Styles (`tiny_snap`, `side_slide`)
 
-Beide Stile sind weiterhin in der Datei enthalten; der Standard ist `comb`.
+Both styles are still included in the file; the default is `comb`.
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `tiny_wall` | Außenwand des Snap-Clips | 0,90 | 0,6–2,0 mm |
-| `tiny_lip` | Lippe des Snap-Clips | 0,35 | 0,15–1,0 mm |
-| `tiny_grid_lock`, `tiny_cells`, `tiny_clip_len_custom` | Längenrasterung wie beim Kamm | `true`, 4, 10 | 1–20 Teilungen, 6–40 mm |
-| `tiny_notch_enable`, `tiny_notch_target`, `tiny_notch_width`, `tiny_notch_depth`, `tiny_notch_phase`, `tiny_end_margin` | Rasterkerben am Snap-Clip | `true`, `opening`, 0,45, 0,28, 0,00, 0,8 | siehe Customizer |
-| `slide_clip_len`, `slide_wall`, `slide_slot_depth`, `slide_flex_slit` | Maße des Schiebe-Clips | 18, 1,2, 5,0, `true` | siehe Customizer |
+| `tiny_wall` | Outer wall of the snap clip | 0.90 | 0.6–2.0 mm |
+| `tiny_lip` | Lip of the snap clip | 0.35 | 0.15–1.0 mm |
+| `tiny_grid_lock`, `tiny_cells`, `tiny_clip_len_custom` | Length snapping as with the comb | `true`, 4, 10 | 1–20 pitches, 6–40 mm |
+| `tiny_notch_enable`, `tiny_notch_target`, `tiny_notch_width`, `tiny_notch_depth`, `tiny_notch_phase`, `tiny_end_margin` | Grid notches on the snap clip | `true`, `opening`, 0.45, 0.28, 0.00, 0.8 | see Customizer |
+| `slide_clip_len`, `slide_wall`, `slide_slot_depth`, `slide_flex_slit` | Dimensions of the slide clip | 18, 1.2, 5.0, `true` | see Customizer |
 
 ### Demo
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `demo_panel_w` | Breite jedes Gitterstücks | 40 | 20–80 mm |
-| `demo_panel_len` | Länge entlang der Naht | 60 | 30–120 mm |
-| `demo_clips` | Anzahl Clips entlang der Naht | 4 | 1–10 |
-| `demo_explode` | Clips über der Naht anheben (Explosionsansicht) | 0 | 0–20 mm |
+| `demo_panel_w` | Width of each mesh piece | 40 | 20–80 mm |
+| `demo_panel_len` | Length along the seam | 60 | 30–120 mm |
+| `demo_clips` | Number of clips along the seam | 4 | 1–10 |
+| `demo_explode` | Lift clips above the seam (exploded view) | 0 | 0–20 mm |
 
-![Gitter-Nahaufnahme: 40-mm-Quadrat mit 0,4-mm-Düse und 1,6 mm Maschenweite, Draufsicht](images/05_netz-nahaufnahme.png)
+![Mesh close-up: 40 mm square with 0.4 mm nozzle and 1.6 mm mesh opening, top view](images/05_netz-nahaufnahme.png)
 
-## Konstruktion
+## Construction
 
-### OpenSCAD-Ansatz
+### OpenSCAD Approach
 
-Eine einzige OpenSCAD-Datei erzeugt Gitter, Clips, Demo- und Prüfmodus. Alle
-Maße sind benannte Parameter mit Customizer-Gruppen. Der Selektor
-`output_mode` entscheidet am Ende der Datei, welches Teil ausgegeben wird.
+A single OpenSCAD file generates the mesh, clips, and the demo and verification
+modes. All dimensions are named parameters with Customizer groups. The
+`output_mode` selector decides at the end of the file which part is output.
 
-### Parametrische Logik
+### Parametric Logic
 
-| Größe | Formel / Regel |
+| Size | Formula / Rule |
 |---|---|
-| Strandbreite | `max(nozzle + 0,02; nozzle + 0,05)`, also Düse + 0,05 mm |
-| Schichthöhe | 0,10 mm bei 0,2-mm-Düse, 0,28 mm bei 0,6 mm, sonst 0,20 mm |
-| Gesamtdicke | Schichthöhe × `num_layers` (mindestens 2 Schichten) |
-| Ziel-Teilung | `mesh_opening` + Strandbreite (Maschenweite mindestens eine Strandbreite) |
-| Innere Spannweite | Größe − Strandbreite (Größe auf 20–300 mm begrenzt) |
-| Intervalle | `round(Spannweite / Ziel-Teilung)`, mindestens 1 |
-| Tatsächliche Teilung | Spannweite / Intervalle |
-| Tatsächliche Maschenweite | Teilung − Strandbreite |
-| Stegzahl je Achse | Intervalle + 1 |
+| Strand width | `max(nozzle + 0.02; nozzle + 0.05)`, i.e. nozzle + 0.05 mm |
+| Layer height | 0.10 mm for the 0.2 mm nozzle, 0.28 mm for 0.6 mm, otherwise 0.20 mm |
+| Total thickness | layer height × `num_layers` (at least 2 layers) |
+| Target pitch | `mesh_opening` + strand width (mesh opening at least one strand width) |
+| Inner span | size − strand width (size limited to 20–300 mm) |
+| Intervals | `round(span / target pitch)`, at least 1 |
+| Actual pitch | span / intervals |
+| Actual mesh opening | pitch − strand width |
+| Bar count per axis | intervals + 1 |
 
-Bei der Standard-Düse (0,4 mm), 3 Schichten und `mesh_opening` = 1,6 mm ergibt
-sich:
+With the default nozzle (0.4 mm), 3 layers and `mesh_opening` = 1.6 mm this
+gives:
 
-| Größe | Intervalle | Teilung | Maschenweite | Stege je Achse | Dicke |
+| Size | Intervals | Pitch | Mesh opening | Bars per axis | Thickness |
 |---|---|---|---|---|---|
-| 100 mm | 49 | ca. 2,03 mm | ca. 1,58 mm | 50 | 0,6 mm |
-| 80 mm | 39 | ca. 2,04 mm | ca. 1,59 mm | 40 | 0,6 mm |
+| 100 mm | 49 | approx. 2.03 mm | approx. 1.58 mm | 50 | 0.6 mm |
+| 80 mm | 39 | approx. 2.04 mm | approx. 1.59 mm | 40 | 0.6 mm |
 
-Die Werte sind aus den Formeln abgeleitet. Bei der runden Form wird das
-quadratische Raster mit einem Kreis geschnitten und ein umlaufender Rand von
-einer Strandbreite hinzugefügt.
+The values are derived from the formulas. For the round shape, the square grid
+is intersected with a circle and a surrounding border of one strand width is
+added.
 
-Für die Clips gilt:
+For the clips, the following applies:
 
-| Größe | Formel / Regel |
+| Size | Formula / Rule |
 |---|---|
-| Schlitzhöhe | Gitterdicke + `comb_slot_clear` |
-| Clip-Höhe | `comb_floor_t` + Schlitzhöhe + `comb_lip_t` |
-| Halbbreite | `comb_spine_w / 2` + `comb_chan_depth` |
-| Länge | bei `comb_grid_lock`: Strandbreite + `comb_cells` × Teilung, mindestens 6 mm |
-| Fingerzahl | `floor((Länge + comb_finger_gap) / (comb_finger_w + comb_finger_gap))`, mindestens 1 |
+| Slot height | mesh thickness + `comb_slot_clear` |
+| Clip height | `comb_floor_t` + slot height + `comb_lip_t` |
+| Half width | `comb_spine_w / 2` + `comb_chan_depth` |
+| Length | with `comb_grid_lock`: strand width + `comb_cells` × pitch, at least 6 mm |
+| Finger count | `floor((length + comb_finger_gap) / (comb_finger_w + comb_finger_gap))`, at least 1 |
 
-Mit den Standardwerten ist der Schlitz 0,7 mm hoch, der Clip 1,5 mm hoch und
-4,0 mm breit. Das Gitter liegt mittig im Schlitz, sodass oben und unten je
-0,05 mm Luft bleiben.
+With the default values, the slot is 0.7 mm high, and the clip is 1.5 mm high
+and 4.0 mm wide. The mesh sits centred in the slot, leaving 0.05 mm of air at
+the top and bottom each.
 
-### Besondere Algorithmen
+### Special Algorithms
 
-- **Raster als 2D-Vereinigung:** Horizontale und vertikale Stege sind
-  Rechtecke in 2D, die vereinigt und mit Kreis bzw. Quadrat geschnitten werden.
-  Ein `linear_extrude` macht daraus das Teil. Das ist deutlich schneller als
-  viele einzelne 3D-Quader.
-- **Liegender Kamm:** Der Clip liegt in der Gitterebene. Ein durchgehender
-  Boden trägt beide Gitterkanten, ein hoher Mittelsteg ist Anschlag und
-  Fingerträger, und die Finger ragen vom Steg über beide Seiten. Jedes Gitter
-  wird unter den Fingern zwischen Boden und Finger geklemmt.
-- **Nicht der Dickenschlitz:** Frühere Bauformen dimensionierten den Schlitz
-  nach der Gitterdicke in Querrichtung und waren unten offen. Das funktioniert
-  nur, wenn das Gitter senkrecht steht. Der Kamm löst das für flache,
-  koplanare Gitter.
-- **Kurze Finger:** Der Finger ist ein Kragarm vom Steg. Die Eindringtiefe
-  `comb_chan_depth` soll höchstens etwa 2,0 mm betragen, sonst hängt der
-  Finger beim Druck durch.
-- **Prüfaufbau:** `output_mode = verify` gibt Clip und beide Gitterstücke in
-  einem gemeinsamen Koordinatensystem aus, damit sie in einer externen
-  Prüfung zusammen bewertet werden können.
+- **Grid as a 2D union:** Horizontal and vertical bars are rectangles in 2D that
+  are united and intersected with a circle or square. A `linear_extrude` turns
+  this into the part. This is considerably faster than many individual 3D
+  cuboids.
+- **Flat-lying comb:** The clip lies in the mesh plane. A continuous floor
+  carries both mesh edges, a tall centre spine acts as a stop and finger
+  carrier, and the fingers project from the spine over both sides. Each mesh is
+  clamped between the floor and the fingers under the fingers.
+- **Not the thickness slot:** Earlier designs sized the slot according to the
+  mesh thickness in the transverse direction and were open at the bottom. That
+  only works if the mesh stands upright. The comb solves this for flat,
+  coplanar meshes.
+- **Short fingers:** The finger is a cantilever from the spine. The insertion
+  depth `comb_chan_depth` should be at most about 2.0 mm, otherwise the finger
+  sags during printing.
+- **Verification setup:** `output_mode = verify` outputs the clip and both mesh
+  pieces in a common coordinate system so that they can be evaluated together in
+  an external check.
 
 ```mermaid
 flowchart LR
-    N[nozzle] --> S[Strandbreite und Schichthöhe]
-    S --> T[Dicke = Schichten x Schichthöhe]
-    O[mesh_opening + Größe] --> I[Intervalle und Teilung]
+    N[nozzle] --> S[Strand width and layer height]
+    S --> T[Thickness = layers x layer height]
+    O[mesh_opening + size] --> I[Intervals and pitch]
     S --> I
-    I --> G[2D-Raster: Stege X und Y]
-    G --> B[Begrenzung rund / quadratisch]
-    B --> E[ein linear_extrude]
+    I --> G[2D grid: bars X and Y]
+    G --> B[Boundary round / square]
+    B --> E[one linear_extrude]
     T --> E
-    T --> C[Clip: Schlitzhöhe = Dicke + comb_slot_clear]
+    T --> C[Clip: slot height = thickness + comb_slot_clear]
     I --> C
 ```
 
-### Modularität
+### Modularity
 
-Gitter (`mesh_2d`, `mesh_3d`), Begrenzung (`bound_2d`, Randring), die drei
-Clip-Stile, die Demo-Anordnung und der Prüfaufbau sind getrennte Module. Der
-Kamm-Clip und ein Gitter-Ausschnitt werden im Prüfmodus im selben Koordinatensystem
-ausgegeben, sodass beide Teile exakt zueinander liegen.
+Mesh (`mesh_2d`, `mesh_3d`), boundary (`bound_2d`, edge ring), the three clip
+styles, the demo arrangement and the verification setup are separate modules.
+In verification mode, the comb clip and a mesh cut-out are output in the same
+coordinate system, so that both parts lie exactly relative to each other.
 
-### Druckoptimierungen
+### Print Optimizations
 
-- **Flach und stützenfrei:** Gitter und Kamm-Clip werden flach gedruckt, beide
-  ohne Stützen.
-- **Einzelstrang-Wände:** Stegbreite = Düse + 0,05 mm, Schichthöhe passend zur
-  Düse; die Konsole gibt die Slicer-Werte aus.
-- **Geprüft:** Für die Standardkonfiguration des Kamm-Clips bestätigte eine
-  OpenCascade-Prüfung ein Spiel von 0,05 mm, kein Überlappungsvolumen und
-  Druckbarkeit gegenüber der Düse (Wände, Boden/Lippe, Schlitz, Fingerlänge).
+- **Flat and support-free:** Mesh and comb clip are printed flat, both without
+  supports.
+- **Single-strand walls:** Bar width = nozzle + 0.05 mm, layer height matched to
+  the nozzle; the console outputs the slicer values.
+- **Verified:** For the default configuration of the comb clip, an OpenCascade
+  check confirmed a clearance of 0.05 mm, no overlap volume, and printability
+  with respect to the nozzle (walls, floor/lip, slot, finger length).
 
-![Kamm-Clip an der Naht im Detail, Finger über dem Gitter](images/03_kamm-clip-detail.png)
+![Comb clip at the seam in detail, fingers above the mesh](images/03_kamm-clip-detail.png)
 
-## Druckempfehlungen
+## Print Recommendations
 
-Die mitgelieferten Profile sind für **Bambu Lab P2S** mit **Bambu PETG Basic**
-(0,4-mm-Düse) erstellt und im Bambu Studio testgeslict. Die Parameter lassen
-sich auch für P1S und H2C verwenden.
+The included profiles are created for the **Bambu Lab P2S** with **Bambu PETG
+Basic** (0.4 mm nozzle) and test-sliced in Bambu Studio. The parameters can also
+be used for the P1S and H2C.
 
-| Einstellung | Empfehlung |
+| Setting | Recommendation |
 |---|---|
-| Material | PETG empfohlen (flexibel und haltbar); PLA ist ebenfalls druckbar |
-| Layerhöhe | gleich der Anfangsschichthöhe: 0,10 mm (0,2-mm-Düse), 0,20 mm (0,4-mm-Düse), 0,28 mm (0,6-mm-Düse) |
-| Wände | 1 Wandlinie |
-| Infill | 0 %, keine Boden- und Deckschichten |
-| Dünnwand-Erkennung | an (Detect thin wall) |
-| Supports | keine |
-| Ausrichtung | flach auf dem Bett, Gitter und Clips |
+| Material | PETG recommended (flexible and durable); PLA is also printable |
+| Layer height | equal to the initial layer height: 0.10 mm (0.2 mm nozzle), 0.20 mm (0.4 mm nozzle), 0.28 mm (0.6 mm nozzle) |
+| Walls | 1 wall loop |
+| Infill | 0 %, no bottom and top layers |
+| Thin-wall detection | on (Detect thin wall) |
+| Supports | none |
+| Orientation | flat on the bed, mesh and clips |
 
-**Besondere Hinweise**
+**Special notes**
 
-- **Anfangsschichthöhe = Schichthöhe:** Das Modell weist ausdrücklich darauf hin,
-  beide gleich zu setzen.
-- Die Clips müssen mit denselben Werten für `nozzle` und `num_layers`
-  erzeugt werden wie das Gitter, weil der Schlitz aus der Gitterdicke
-  berechnet wird.
-- **Gitter verbinden:** Beide Gitterkanten mit dem Abstand der Stegbreite
-  (`comb_spine_w`) nebeneinanderlegen und den Clip in Abständen entlang der
-  Naht aufdrücken. Jede Kante gleitet unter eine Fingerreihe, der Mittelsteg
-  hält die Naht in Position.
+- **Initial layer height = layer height:** The model explicitly advises setting
+  both to the same value.
+- The clips must be generated with the same values for `nozzle` and
+  `num_layers` as the mesh, because the slot is calculated from the mesh
+  thickness.
+- **Joining meshes:** Place both mesh edges next to each other with a spacing of
+  the spine width (`comb_spine_w`) and press the clip on at intervals along the
+  seam. Each edge slides under a row of fingers, and the centre spine holds the
+  seam in position.
 
-![Gitter rund, 80 mm, Draufsicht](images/06_netz-rund-80mm.png)
+![Round mesh, 80 mm, top view](images/06_netz-rund-80mm.png)
 
-## Anwendungsbeispiele
+## Usage Examples
 
-Die Beispiele sind Einsatzideen; die konkrete Eignung hängt von Material,
-Maschenweite und Einsatzort ab.
+The examples are application ideas; the actual suitability depends on the
+material, mesh opening and place of use.
 
-- **Insektenschutz für kleine Öffnungen:** Lüftungsöffnungen, Kellerfenster
-  oder Kabeldurchführungen, mit dem Preset `100mm Round` oder `80mm Round`.
-- **Fliegengitter für Gehäuse (Homelab):** Staub- und Insektenschutz an
-  Lüfteröffnungen eines Racks oder Mini-PC-Gehäuses; `mesh_opening` und
-  `num_layers` steuern Luftdurchsatz und Steifigkeit.
-- **Filter- und Sieb-Einsätze:** Gitter für Pflanztöpfe, Abflüsse oder
-  Staubfänger; Maschenweite per `mesh_opening` (0,8–5,0 mm).
-- **Große Flächen aus Kacheln:** Mehrere Quadrate (z. B. `100mm Square`) drucken
-  und mit Kamm-Clips verbinden.
-- **Volles Druckbett:** `Full Bed 256mm` oder `Full Bed 300mm` für ein
-  einzelnes großes Stück.
-- **Prototyp zuerst:** Kleines `custom_size` mit 20 mm drucken, um Maschenweite
-  und Haftung vor einem großen Druck zu prüfen.
-- **Zuschneiden:** Das Gitter lässt sich bei Bedarf mit einer Schere kürzen
-  (Hinweis aus der Modellbeschreibung).
+- **Insect protection for small openings:** Ventilation openings, cellar windows
+  or cable entries, using the preset `100mm Round` or `80mm Round`.
+- **Fly screen for enclosures (homelab):** Dust and insect protection on the fan
+  openings of a rack or mini-PC case; `mesh_opening` and `num_layers` control
+  airflow and stiffness.
+- **Filter and strainer inserts:** Mesh for plant pots, drains or dust
+  catchers; mesh opening via `mesh_opening` (0.8–5.0 mm).
+- **Large areas from tiles:** Print several squares (e.g. `100mm Square`) and
+  join them with comb clips.
+- **Full print bed:** `Full Bed 256mm` or `Full Bed 300mm` for a single large
+  piece.
+- **Prototype first:** Print a small `custom_size` of 20 mm to check the mesh
+  opening and adhesion before a large print.
+- **Trimming:** If needed, the mesh can be shortened with scissors (note from
+  the model description).
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-| Symptom | Ursache | Fix |
+| Symptom | Cause | Fix |
 |---|---|---|
-| Slicer füllt Stege mit Infill oder erkennt sie nicht | Schichthöhe, Wandzahl oder Infill passen nicht zum Einzelstrang-Gitter | Werte aus der Modell-Konsole übernehmen: 1 Wand, 0 % Infill, Dünnwand-Erkennung an |
-| Erste Schicht und Folgeschichten uneinheitlich | Anfangsschichthöhe ≠ Schichthöhe | beide auf den Wert der Konsole setzen (0,10 / 0,20 / 0,28 mm) |
-| Maschenweite weicht vom Eingabewert ab | Gitter wird auf ganze Intervalle gerundet | `custom_size` oder `mesh_opening` leicht ändern; tatsächliche Weite steht in der Konsole |
-| Clip sitzt zu locker | Schlitz im Verhältnis zur Gitterdicke zu hoch | `comb_slot_clear` verkleinern (Standard 0,10 mm) |
-| Gitter lässt sich nicht unter die Finger schieben | Schlitz zu eng für den Drucker | `comb_slot_clear` erhöhen; `comb_lead_in` an lassen |
-| Clip passt nicht zum Gitter | Clip mit anderer Düse oder Schichtzahl erzeugt | `nozzle` und `num_layers` wie beim Gitter wählen |
-| Finger hängen beim Druck durch | Eindringtiefe zu groß (Kragarm) | `comb_chan_depth` auf höchstens ca. 2,0 mm halten |
-| Clip länger oder kürzer als gewünscht | Länge rastet auf Gitterteilungen | `comb_cells` ändern oder `comb_grid_lock` aus und `comb_len_custom` setzen |
-| Naht klafft | Gitterstücke zu weit auseinander | Kanten mit dem Abstand `comb_spine_w` aneinanderlegen |
+| Slicer fills the bars with infill or does not recognise them | Layer height, wall count or infill do not match the single-strand mesh | Adopt the values from the model console: 1 wall, 0 % infill, thin-wall detection on |
+| First layer and following layers inconsistent | Initial layer height ≠ layer height | Set both to the value from the console (0.10 / 0.20 / 0.28 mm) |
+| Mesh opening differs from the input value | The mesh is rounded to whole intervals | Change `custom_size` or `mesh_opening` slightly; the actual opening is shown in the console |
+| Clip sits too loosely | Slot too high relative to the mesh thickness | Reduce `comb_slot_clear` (default 0.10 mm) |
+| Mesh cannot be pushed under the fingers | Slot too tight for the printer | Increase `comb_slot_clear`; keep `comb_lead_in` on |
+| Clip does not fit the mesh | Clip generated with a different nozzle or layer count | Choose `nozzle` and `num_layers` as for the mesh |
+| Fingers sag during printing | Insertion depth too large (cantilever) | Keep `comb_chan_depth` at most approx. 2.0 mm |
+| Clip longer or shorter than desired | Length snaps to mesh pitches | Change `comb_cells`, or turn `comb_grid_lock` off and set `comb_len_custom` |
+| Seam gaps open | Mesh pieces too far apart | Place the edges together with a spacing of `comb_spine_w` |
 
-## Entwicklungsgeschichte
+## Development History
 
-Das Gitter entstand im Juni 2026 als Düsen-getriebenes Modell, das für
-MakerWorld schnell exportierbar sein sollte; deshalb die Konstruktion als
-2D-Raster mit nur einem `linear_extrude`. Die Clips kamen im August 2026
-dazu. Die ersten Bauformen (`tiny_snap`, `side_slide`) erwiesen sich bei
-flachen Gittern als geometrisch ungeeignet: Der Schlitz war nach der Dicke des
-Gitters dimensioniert und unten offen, das funktioniert nur bei senkrecht
-stehender Platte. Daraus entstand der **liegende Kamm**. Seine Passung wurde
-mit einer kleinen Prüfumgebung (OpenCascade) belegt: Überlappungsvolumen als
-Interferenzmaß, Mindestabstand der Oberflächen als Spiel und eine
-Druckbarkeitsprüfung gegenüber der Düse. Die Profile für P2S mit PETG
-(Rund 80 mm und Rund 100 mm) entstanden Anfang August 2026.
+The mesh was created in June 2026 as a nozzle-driven model that was meant to be
+quickly exportable for MakerWorld; hence the construction as a 2D grid with just
+one `linear_extrude`. The clips were added in August 2026. The first designs
+(`tiny_snap`, `side_slide`) turned out to be geometrically unsuitable for flat
+meshes: the slot was sized according to the thickness of the mesh and open at
+the bottom, which only works with an upright plate. This led to the **flat-lying
+comb**. Its fit was verified with a small verification environment
+(OpenCascade): overlap volume as the interference measure, minimum surface
+distance as the clearance, and a printability check with respect to the nozzle.
+The profiles for the P2S with PETG (Round 80 mm and Round 100 mm) were created
+in early August 2026.
 
-![Prüfaufbau: Kamm-Clip mit zwei Gitterstücken](images/04_kamm-clip-pruefaufbau.png)
+![Verification setup: comb clip with two mesh pieces](images/04_kamm-clip-pruefaufbau.png)
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: https://makerworld.com/en/models/2915026-parametric-fly-screen-mesh-filter-net
+👉 MakerWorld link: https://makerworld.com/en/models/2915026-parametric-fly-screen-mesh-filter-net
 
-Profil: <https://makerworld.com/en/@BetaHydri>
+Profile: <https://makerworld.com/en/@BetaHydri>
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository: © BetaHydri. Das Modell (inkl.
-Quellcode) und alle Druckdateien werden ausschließlich über MakerWorld unter
-der dort angegebenen Lizenz verteilt. Dieses Repository enthält bewusst keine
-Modell-, Quellcode- oder Druckdateien.
+Documentation and images in this repository: © BetaHydri. The model (including
+source code) and all print files are distributed exclusively via MakerWorld
+under the licence stated there. This repository deliberately contains no model,
+source code or print files.

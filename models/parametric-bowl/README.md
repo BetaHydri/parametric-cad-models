@@ -1,363 +1,358 @@
-# Parametric Bowl – Deckelschale mit Reibsitz-Deckel, Gitterwand und Einklebe-Knauf
+# Parametric Bowl – Lidded Bowl with Friction-Fit Lid, Lattice Wall and Glue-In Knob
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Parametrische Deckelschale für den FDM-Druck: gewölbter Körper mit
-einstellbarer Wandstruktur (offenes Raster oder Relief), Reibsitz-Deckel mit
-Muster und ein separater Knauf zum Einkleben – alles im MakerWorld-Customizer
-einstellbar.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/3006569-parametric-bowl-with-friction-fit-lid)
+Parametric lidded bowl for FDM printing: curved body with an adjustable wall
+structure (open lattice or relief), a friction-fit lid with a pattern and a
+separate glue-in knob – all adjustable in the MakerWorld Customizer.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/3006569-parametric-bowl-with-friction-fit-lid)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-P1S%20%7C%20P2S%20%7C%20H2C-green)
 ![Print files](https://img.shields.io/badge/Print%20files-MakerWorld%20only-blue)
 
-> **Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:**
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/3006569-parametric-bowl-with-friction-fit-lid](https://makerworld.com/en/models/3006569-parametric-bowl-with-friction-fit-lid)
+> **The model with all print profiles is available exclusively on MakerWorld:**
+> 👉 [MakerWorld link: https://makerworld.com/en/models/3006569-parametric-bowl-with-friction-fit-lid](https://makerworld.com/en/models/3006569-parametric-bowl-with-friction-fit-lid)
 >
-> ![Parametric Bowl – Schale mit offenem Rautengitter, geriffeltem Deckel und Tropfenknauf](images/01_hero.jpg)
+> ![Parametric Bowl – bowl with open diamond lattice, ribbed lid and teardrop knob](images/01_hero.jpg)
 
-Die **Parametric Bowl** besteht aus drei getrennten Körpern: Schale, Deckel
-und Knauf. Du stellst Höhe, Boden- und Öffnungsdurchmesser, die Wölbung
-(„Belly“), Wandstärke und eine von sechs Wandstrukturen ein. Der Deckel sitzt
-per Reibschluss in der Öffnung, trägt ein eigenes Muster und kann einen
-Knauf in vier Formen bekommen. Jedes Teil liegt in seiner idealen Druckrichtung
-auf dem Bett, ohne Stützen.
+The **Parametric Bowl** consists of three separate bodies: bowl, lid and knob.
+You set the height, base and opening diameter, the curvature ("belly"), wall
+thickness and one of six wall structures. The lid sits in the opening by
+friction fit, carries its own pattern and can get a knob in four shapes. Each
+part lies on the bed in its ideal print orientation, without supports.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Konstruktion](#konstruktion)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Parametric Options](#parametric-options)
+- [Design](#design)
+- [Print Recommendations](#print-recommendations)
+- [Use Cases](#use-cases)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Dekorative Schalen mit Deckel gibt es fertig – aber selten so, wie man sie
-haben will:
+Decorative bowls with lids are available ready-made – but rarely the way you
+want them:
 
-- Eine durchbrochene Gitterschale ist hübsch, lässt sich aber im Modellbau
-  nur mühsam an eine andere Größe anpassen.
-- Durchbrochene Wände und Deckel passen oft nicht zusammen: Der Deckel
-  rutscht, klemmt oder liegt auf den Löchern auf.
-- Ein Knauf, der mitgedruckt wird, braucht Stützen oder zwingt den Deckel in
-  eine ungünstige Druckrichtung.
-- Wer mehrere Farben nutzt, will Schale, Deckel und Knauf getrennt färben
-  können, ohne das Modell in einem CAD-Programm zu zerlegen.
+- A perforated lattice bowl is pretty, but hard to adapt to a different size in
+  model making.
+- Perforated walls and lids often don't fit together: the lid slips, jams or
+  rests on the holes.
+- A knob that is printed along with the lid needs supports or forces the lid
+  into an unfavorable print orientation.
+- Anyone using multiple colors wants to color bowl, lid and knob separately
+  without splitting the model in a CAD program.
 
-## Die Idee
+## The Idea
 
-Ein einziges Modell erzeugt Schale, Deckel und Knauf aus denselben
-Maßen. Die Schale wird als Rotationskörper aus einem Profil berechnet: Boden,
-Wölbung und Öffnung sind Parameter. Der Deckel leitet seinen Rand (Skirt)
-aus der **engsten** Innenweite der Schale ab und sitzt deshalb auch dann
-richtig, wenn die Wand unterhalb der Öffnung enger wird. Der Knauf ist ein
-eigenes Teil mit Zapfen, das in eine Aussparung der Deckelmitte geklebt wird.
-So liegt der Deckel mit der flachen Oberseite auf dem Bett und braucht keine
-Stützen. Alle Maße in Millimetern, alle Werte als Customizer-Parameter.
+A single model produces bowl, lid and knob from the same dimensions. The bowl is
+calculated as a body of revolution from a profile: base, curvature and opening
+are parameters. The lid derives its rim (skirt) from the **narrowest** inner
+width of the bowl and therefore sits correctly even when the wall narrows below
+the opening. The knob is a separate part with a peg that is glued into a recess
+in the center of the lid. This way, the lid lies on the bed with its flat top
+side and needs no supports. All dimensions in millimeters, all values as
+Customizer parameters.
 
 ## Highlights
 
-- **Drei getrennte Teile:** Schale, Deckel und Knauf in der jeweils besten
-  Druckrichtung; im Slicer „In Objekte aufteilen“ oder über `part` einzeln
-  exportieren.
-- **Frei formbare Schale:** `bowl_height`, `base_diameter`, `top_diameter`
-  sowie `belly_bulge` und `belly_position` für eine runde Wölbung.
-- **Sechs Wandstrukturen:** `none`, `diamond_grid` und `hex_grid` (offen, mit
-  Durchbrüchen) sowie `diamond_relief`, `vertical_ribs` und
-  `horizontal_ribs` (Vertiefungen, die Wand bleibt geschlossen).
-- **Reibsitz-Deckel:** Spiel `fit_play` (Standard 0,15 mm je Seite), Rand
-  `skirt_depth`, `skirt_thickness` und Einführfase `skirt_tip_chamfer`.
-- **Deckelmuster:** `concentric`, `radial`, `diamond_relief` oder `none`.
-- **Knauf in vier Formen:** `teardrop`, `dome`, `sphere`, `cylinder`; mit
-  Zapfen (`peg_diameter`, `peg_clearance`) zum Einkleben oder fest
-  angeformt (`knob_separate`).
-- **Mehrfarbmodus:** `Multicolor Export` legt Schale, Deckel und Knauf flach
-  nebeneinander, jedes Teil als eigene Farbgruppe.
-- **Vorschau-Modi:** zusammengebaut oder auseinandergezogen in drei Farben,
-  mit rotem „NOT FOR PRINTING“-Banner.
-- **Druckfreundlich:** flacher Boden mit Fase, Deckel mit flacher Oberseite,
-  Reliefmuster folgen der Wand in konstanter Tiefe.
-- **Zehn Referenzvarianten** in drei Größen mit Bambu-Studio-Profilen für den
+- **Three separate parts:** bowl, lid and knob, each in the best print
+  orientation; use "Split to Objects" in the slicer or export individually via
+  `part`.
+- **Freely shapeable bowl:** `bowl_height`, `base_diameter`, `top_diameter`,
+  plus `belly_bulge` and `belly_position` for a round curvature.
+- **Six wall structures:** `none`, `diamond_grid` and `hex_grid` (open, with
+  through-holes) as well as `diamond_relief`, `vertical_ribs` and
+  `horizontal_ribs` (recesses, the wall stays closed).
+- **Friction-fit lid:** clearance `fit_play` (default 0.15 mm per side), rim
+  `skirt_depth`, `skirt_thickness` and lead-in chamfer `skirt_tip_chamfer`.
+- **Lid patterns:** `concentric`, `radial`, `diamond_relief` or `none`.
+- **Knob in four shapes:** `teardrop`, `dome`, `sphere`, `cylinder`; with a peg
+  (`peg_diameter`, `peg_clearance`) for gluing in, or molded on fixed
+  (`knob_separate`).
+- **Multicolor mode:** `Multicolor Export` lays bowl, lid and knob flat next to
+  each other, each part as its own color group.
+- **Preview modes:** assembled or exploded in three colors, with a red "NOT FOR
+  PRINTING" banner.
+- **Print-friendly:** flat base with chamfer, lid with flat top, relief
+  patterns follow the wall at constant depth.
+- **Ten reference variants** in three sizes with Bambu Studio profiles for the
   P1S.
 
-![Schale mit vertikalen Rippen, radialem Deckelmuster und Kugelknauf](images/02_vertikale-rippen.jpg)
+![Bowl with vertical ribs, radial lid pattern and ball knob](images/02_vertikale-rippen.jpg)
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Namen entsprechen den Customizer-Parametern des Modells.
+The names correspond to the model's Customizer parameters.
 
-### Ausgabe
+### Output
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `part` | Ausgabe: `both` (auseinandergezogene Vorschau, 3 Farben, nicht druckbar), `assembled` (zusammengebaute Vorschau, nicht druckbar), `Multicolor Export` (alle Teile flach, 3 Farben), `bowl`, `lid`, `knob` | `both` | Auswahl |
-| `assembly_gap` | Vertikaler Abstand der Teile in der auseinandergezogenen Vorschau | 18 | 0–60 mm |
+| `part` | Output: `both` (exploded preview, 3 colors, not printable), `assembled` (assembled preview, not printable), `Multicolor Export` (all parts flat, 3 colors), `bowl`, `lid`, `knob` | `both` | Selection |
+| `assembly_gap` | Vertical spacing of the parts in the exploded preview | 18 | 0–60 mm |
 
-### Schalenform
+### Bowl Shape
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `bowl_height` | Gesamte Außenhöhe der Schale | 45 | 20–150 mm |
-| `base_diameter` | Durchmesser der flachen Standfläche | 72 | 30–250 mm |
-| `top_diameter` | Außendurchmesser an der Öffnung | 112 | 40–290 mm |
-| `belly_bulge` | Zusätzlicher Radius auf mittlerer Höhe, 0 = gerade Verjüngung | 10 | 0–50 mm, Schritt 0,5 |
-| `belly_position` | Höhe der größten Wölbung (0 = unten, 1 = oben) | 0,42 | 0,10–0,90, Schritt 0,01 |
-| `wall_thickness` | Wandstärke | 2,0 | 1,2–6 mm, Schritt 0,1 |
-| `floor_thickness` | Bodenstärke | 2,2 | 1,2–8 mm, Schritt 0,1 |
-| `bottom_chamfer` | Fase an der unteren Außenkante (Haftung der ersten Schicht) | 1,2 | 0–5 mm, Schritt 0,1 |
+| `bowl_height` | Overall outer height of the bowl | 45 | 20–150 mm |
+| `base_diameter` | Diameter of the flat base | 72 | 30–250 mm |
+| `top_diameter` | Outer diameter at the opening | 112 | 40–290 mm |
+| `belly_bulge` | Additional radius at mid-height, 0 = straight taper | 10 | 0–50 mm, step 0.5 |
+| `belly_position` | Height of the greatest curvature (0 = bottom, 1 = top) | 0.42 | 0.10–0.90, step 0.01 |
+| `wall_thickness` | Wall thickness | 2.0 | 1.2–6 mm, step 0.1 |
+| `floor_thickness` | Floor thickness | 2.2 | 1.2–8 mm, step 0.1 |
+| `bottom_chamfer` | Chamfer on the lower outer edge (first-layer adhesion) | 1.2 | 0–5 mm, step 0.1 |
 
-### Wandstruktur
+### Wall Structure
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `wall_pattern` | Struktur: `none`, `diamond_grid`, `hex_grid`, `diamond_relief`, `vertical_ribs`, `horizontal_ribs` | `diamond_grid` | Auswahl |
-| `grid_cell` | Rastermaß (Mitte zu Mitte); kleiner = feiner | 5,0 | 3–20 mm, Schritt 0,5 |
-| `grid_bar` | Stegbreite, die zwischen Löchern bzw. Rillen stehen bleibt | 1,3 | 0,6–6 mm, Schritt 0,1 |
-| `relief_depth` | Tiefe der Vertiefungen bei Relief und Rippen | 0,9 | 0,2–3 mm, Schritt 0,1 |
-| `rib_count` | Anzahl der Rippen; 0 = automatisch aus `grid_cell` (senkrecht: Rillen rund um die Schale, waagerecht: Rillen an der Wand) | 0 | 0–120 |
-| `pattern_margin_bottom` | Glattes Band über dem Boden, bevor das Muster beginnt | 4 | 0–25 mm, Schritt 0,5 |
+| `wall_pattern` | Structure: `none`, `diamond_grid`, `hex_grid`, `diamond_relief`, `vertical_ribs`, `horizontal_ribs` | `diamond_grid` | Selection |
+| `grid_cell` | Grid pitch (center to center); smaller = finer | 5.0 | 3–20 mm, step 0.5 |
+| `grid_bar` | Bar width that remains between holes or grooves | 1.3 | 0.6–6 mm, step 0.1 |
+| `relief_depth` | Depth of the recesses for relief and ribs | 0.9 | 0.2–3 mm, step 0.1 |
+| `rib_count` | Number of ribs; 0 = automatic from `grid_cell` (vertical: grooves around the bowl, horizontal: grooves along the wall) | 0 | 0–120 |
+| `pattern_margin_bottom` | Smooth band above the floor before the pattern begins | 4 | 0–25 mm, step 0.5 |
 
-Das glatte Band am oberen Rand ergibt sich automatisch aus der Rand-Tiefe des
-Deckels (`skirt_depth` + 1,5 mm).
+The smooth band at the top edge results automatically from the rim depth of the
+lid (`skirt_depth` + 1.5 mm).
 
-### Deckel
+### Lid
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `lid_dome_height` | Höhe der flachen Wölbung auf der Deckeloberseite; 0 = flach (ideal zum Drucken auf der Oberseite) | 0 | 0–30 mm, Schritt 0,5 |
-| `lid_thickness` | Dicke der Deckelplatte am Rand | 2,2 | 1,2–6 mm, Schritt 0,1 |
-| `lid_overhang` | Überstand des Deckelrands über die Schalenöffnung | 1,2 | 0–8 mm, Schritt 0,1 |
-| `fit_play` | Reibsitz-Spiel; der Rand ist je Seite um diesen Wert kleiner | 0,15 | 0–0,60 mm, Schritt 0,05 |
-| `skirt_depth` | Wie tief der Rand in die Schale reicht; legt auch das glatte obere Band fest | 4 | 3–25 mm, Schritt 0,5 |
-| `skirt_thickness` | Wandstärke des Deckelrands | 1,8 | 1,0–5 mm, Schritt 0,1 |
-| `skirt_tip_chamfer` | Fase an der Spitze des Rands zum leichten Einführen | 1,0 | 0–3 mm, Schritt 0,1 |
+| `lid_dome_height` | Height of the shallow dome on the lid top; 0 = flat (ideal for printing on the top side) | 0 | 0–30 mm, step 0.5 |
+| `lid_thickness` | Thickness of the lid plate at the edge | 2.2 | 1.2–6 mm, step 0.1 |
+| `lid_overhang` | Overhang of the lid edge beyond the bowl opening | 1.2 | 0–8 mm, step 0.1 |
+| `fit_play` | Friction-fit clearance; the rim is smaller by this value per side | 0.15 | 0–0.60 mm, step 0.05 |
+| `skirt_depth` | How deep the rim reaches into the bowl; also sets the smooth upper band | 4 | 3–25 mm, step 0.5 |
+| `skirt_thickness` | Wall thickness of the lid rim | 1.8 | 1.0–5 mm, step 0.1 |
+| `skirt_tip_chamfer` | Chamfer at the tip of the rim for easy insertion | 1.0 | 0–3 mm, step 0.1 |
 
-### Deckelmuster
+### Lid Pattern
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `lid_pattern` | Muster: `none`, `concentric`, `radial`, `diamond_relief` | `concentric` | Auswahl |
-| `lid_pattern_count` | Anzahl der Ringe, Speichen bzw. Rautenteilungen | 18 | 4–80 |
-| `lid_relief_depth` | Tiefe der Vertiefung im Deckelmuster | 0,8 | 0,2–3 mm, Schritt 0,1 |
+| `lid_pattern` | Pattern: `none`, `concentric`, `radial`, `diamond_relief` | `concentric` | Selection |
+| `lid_pattern_count` | Number of rings, spokes or diamond divisions | 18 | 4–80 |
+| `lid_relief_depth` | Depth of the recess in the lid pattern | 0.8 | 0.2–3 mm, step 0.1 |
 
-### Knauf
+### Knob
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `knob_type` | Form: `none`, `dome`, `sphere`, `teardrop`, `cylinder` | `teardrop` | Auswahl |
-| `knob_diameter` | Durchmesser des Knaufs | 16 | 4–50 mm, Schritt 0,5 |
-| `knob_height` | Höhe des Knaufs | 20 | 4–60 mm, Schritt 0,5 |
-| `knob_separate` | Knauf als eigenes Einklebe-Teil drucken; der Deckel bekommt dann eine Aussparung | `true` | `true` / `false` |
-| `peg_diameter` | Durchmesser von Zapfen und Aussparung | 6 | 2–20 mm, Schritt 0,5 |
-| `peg_clearance` | Spiel zwischen Zapfen und Aussparung (Platz für Kleber) | 0,15 | 0–0,5 mm, Schritt 0,05 |
-| `peg_tip_chamfer` | Fase an der Zapfenspitze | 0,8 | 0–3 mm, Schritt 0,1 |
+| `knob_type` | Shape: `none`, `dome`, `sphere`, `teardrop`, `cylinder` | `teardrop` | Selection |
+| `knob_diameter` | Diameter of the knob | 16 | 4–50 mm, step 0.5 |
+| `knob_height` | Height of the knob | 20 | 4–60 mm, step 0.5 |
+| `knob_separate` | Print the knob as a separate glue-in part; the lid then gets a recess | `true` | `true` / `false` |
+| `peg_diameter` | Diameter of peg and recess | 6 | 2–20 mm, step 0.5 |
+| `peg_clearance` | Clearance between peg and recess (room for glue) | 0.15 | 0–0.5 mm, step 0.05 |
+| `peg_tip_chamfer` | Chamfer at the peg tip | 0.8 | 0–3 mm, step 0.1 |
 
-### Qualität
+### Quality
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `$fn` | Glätte der runden Flächen; höher = glatter, aber langsamer | 120 | 48–360, Schritt 8 |
+| `$fn` | Smoothness of the round surfaces; higher = smoother, but slower | 120 | 48–360, step 8 |
 
-![Schale mit Relief-Raute an Wand und Deckel sowie Kugelknauf](images/04_diamant-relief.jpg)
+![Bowl with relief diamonds on wall and lid and a ball knob](images/04_diamant-relief.jpg)
 
-## Konstruktion
+## Design
 
-### OpenSCAD-Ansatz
+### OpenSCAD Approach
 
-Das Modell ist reines OpenSCAD ohne externe Bibliotheken und läuft im
-MakerWorld-Customizer. Ein `part`-Selektor entscheidet, ob eine Vorschau, das
-flache Mehrfarb-Layout oder ein Einzelteil ausgegeben wird. Einzelteile
-kommen bereits in Druckrichtung heraus: Schale aufrecht auf dem Boden, Deckel
-umgedreht auf der Oberseite, Knauf auf dem Zapfen stehend.
+The model is pure OpenSCAD without external libraries and runs in the
+MakerWorld Customizer. A `part` selector decides whether a preview, the flat
+multicolor layout or an individual part is output. Individual parts already come
+out in print orientation: bowl upright on its base, lid upside down on its top
+side, knob standing on the peg.
 
-### Parametrische Logik
+### Parametric Logic
 
-| Größe | Formel / Regel |
+| Quantity | Formula / Rule |
 |---|---|
-| Außenradius der Schale | Linearer Verlauf von Boden- zu Öffnungsradius plus `belly_bulge` mal einer Kosinus-Glockenkurve, die bei `belly_position` ihr Maximum hat und an Boden und Rand 0 ist |
-| Innenradius | Außenradius − `wall_thickness` |
-| Deckelradius | Öffnungsradius + `lid_overhang` |
-| Rand-Außenradius | engster Innenradius im Bereich der Einstecktiefe − `fit_play` |
-| Rand-Innenradius | Rand-Außenradius − `skirt_thickness` |
-| Glattes Band oben | `skirt_depth` + 1,5 mm |
-| Glattes Band unten | `floor_thickness` + `pattern_margin_bottom` |
-| Zapfenlänge | `lid_thickness` + `lid_dome_height` (Knauf sitzt bündig) |
-| Aussparungsradius im Deckel | `peg_diameter` / 2 + `peg_clearance` |
+| Outer radius of the bowl | Linear progression from base to opening radius plus `belly_bulge` times a cosine bell curve that peaks at `belly_position` and is 0 at base and rim |
+| Inner radius | Outer radius − `wall_thickness` |
+| Lid radius | Opening radius + `lid_overhang` |
+| Rim outer radius | Narrowest inner radius over the insertion depth − `fit_play` |
+| Rim inner radius | Rim outer radius − `skirt_thickness` |
+| Smooth band at top | `skirt_depth` + 1.5 mm |
+| Smooth band at bottom | `floor_thickness` + `pattern_margin_bottom` |
+| Peg length | `lid_thickness` + `lid_dome_height` (knob sits flush) |
+| Recess radius in lid | `peg_diameter` / 2 + `peg_clearance` |
 
-Mit den Voreinstellungen (Ø 72 unten, Ø 112 oben, Höhe 45 mm, Wölbung 10 mm
-bei 42 % Höhe) ergeben sich ein Deckelradius von 57,2 mm und ein Muster-
-bereich zwischen 6,2 mm und 39,5 mm Höhe. Das Rautengitter besteht dort
-rechnerisch aus 6 Reihen mit je 70 Zellen, also 420 Durchbrüchen.
+With the default settings (Ø 72 at the bottom, Ø 112 at the top, height 45 mm,
+curvature 10 mm at 42% height), this results in a lid radius of 57.2 mm and a
+pattern area between 6.2 mm and 39.5 mm height. The diamond lattice there
+consists, by calculation, of 6 rows with 70 cells each, i.e. 420 through-holes.
 
-Die Werte sind aus den Formeln und den Standardwerten abgeleitet.
+The values are derived from the formulas and the default values.
 
-### Besondere Algorithmen
+### Special Algorithms
 
-- **Schale als Rotationsprofil:** Außen- und Innenkontur werden als Polygon
-  aus 64 Stützstellen berechnet und rotiert. Die Fase am Boden schließt am
-  echten Wandradius an, damit das Profil monoton bleibt und sich nicht selbst
-  schneidet.
-- **Rand nach der engsten Stelle:** Der Deckelrand wird nicht an der Öffnung
-  bemessen, sondern am kleinsten Innenradius über die gesamte Einstecktiefe.
-  So klemmt er nicht an einer Wand, die unterhalb der Öffnung enger wird, und
-  greift an der engsten Stelle.
-- **Raster mit fester Spaltenzahl:** Für alle Reihen gilt dieselbe
-  Spaltenzahl (Umfang am größten Radius / `grid_cell`). Die versetzten Zellen
-  reihen sich dadurch zu durchgehenden Diagonalen. Die Lochgröße wird je
-  Reihe am lokalen Umfang begrenzt, damit sich Löcher auf den engeren
-  Abschnitten nicht überlappen. Rauten sind um 45° gedrehte Quader, Waben
-  sind Sechskant-Zylinder.
-- **Oberflächen-Schale für Reliefs:** Relief und Rippen werden mit einer
-  dünnen Hülle geschnitten, die der Außenwand mit konstanter Tiefe folgt.
-  Das Muster kann dadurch weder einen Hohlraum in der Wand erzeugen noch
-  durchschneiden.
-- **Senkrechte und waagerechte Rippen:** Die automatische Anzahl ergibt sich
-  aus Umfang bzw. Musterhöhe geteilt durch `grid_cell`; die Rillenbreite ist
-  Teilung minus `grid_bar`.
-- **Deckelmuster am Deckel-Profil:** Konzentrische Ringe entstehen mit einem
-  einzigen Rotationsschnitt, der einer eventuellen Wölbung exakt folgt.
-  Radiale und Rauten-Muster werden als flache Maske auf die Oberflächen-
-  Schale des Deckels geschnitten.
-- **Knauf mit Zapfen:** Der Zapfen ist so lang wie die Deckelmitte dick. Die
-  Aussparung geht durch den ganzen Deckel und hat oben eine kleine
-  Einführfase, damit beim Drucken der Oberseite nichts überbrückt werden muss.
+- **Bowl as a revolution profile:** Outer and inner contour are calculated as a
+  polygon from 64 sample points and rotated. The chamfer at the base joins at
+  the true wall radius so that the profile stays monotonic and doesn't
+  intersect itself.
+- **Rim sized to the narrowest point:** The lid rim is not sized at the opening
+  but at the smallest inner radius over the entire insertion depth. This way it
+  doesn't jam on a wall that narrows below the opening, and it grips at the
+  narrowest point.
+- **Grid with a fixed column count:** All rows use the same column count
+  (circumference at the largest radius / `grid_cell`). The staggered cells thus
+  line up into continuous diagonals. The hole size is limited per row by the
+  local circumference so that holes don't overlap in the narrower sections.
+  Diamonds are cuboids rotated by 45°, honeycombs are hexagonal cylinders.
+- **Surface shell for reliefs:** Relief and ribs are cut with a thin shell that
+  follows the outer wall at constant depth. The pattern can thus neither create
+  a cavity in the wall nor cut through it.
+- **Vertical and horizontal ribs:** The automatic count results from the
+  circumference or pattern height divided by `grid_cell`; the groove width is
+  the pitch minus `grid_bar`.
+- **Lid pattern on the lid profile:** Concentric rings are created with a single
+  rotational cut that exactly follows any dome. Radial and diamond patterns are
+  cut as a flat mask onto the surface shell of the lid.
+- **Knob with peg:** The peg is as long as the lid center is thick. The recess
+  goes through the entire lid and has a small lead-in chamfer at the top, so
+  nothing has to be bridged when printing the top side.
 
 ```mermaid
 flowchart LR
-    M[Maße + Wölbung] --> B[Schale: Rotationsprofil]
+    M[Dimensions + curvature] --> B[Bowl: revolution profile]
     W[wall_pattern] --> B
-    B --> E[engster Innenradius]
-    E --> L[Deckel: Platte + Rand mit fit_play]
+    B --> E[narrowest inner radius]
+    E --> L[Lid: plate + rim with fit_play]
     P[lid_pattern] --> L
-    K[Knauf + Zapfen] --> L
-    B --> O[part: Vorschau / Multicolor / bowl / lid / knob]
+    K[Knob + peg] --> L
+    B --> O[part: preview / multicolor / bowl / lid / knob]
     L --> O
     K --> O
 ```
 
-### Modularität
+### Modularity
 
-Der Code trennt das Schalenprofil, die Wandgeneratoren (Raster, senkrechte
-und waagerechte Rippen), die Oberflächen-Hülle, die Deckelplatte mit Muster
-und Aussparung, den Deckelrand sowie die Knaufform samt Zapfen. Für die
-Vorschau gibt es ein Banner-Modul und eine Start-Kamera, die alle Teile
-zentriert zeigt.
+The code separates the bowl profile, the wall generators (grid, vertical and
+horizontal ribs), the surface shell, the lid plate with pattern and recess, the
+lid rim, and the knob shape including peg. For the preview there is a banner
+module and a start camera that shows all parts centered.
 
-### Druckoptimierungen
+### Print Optimizations
 
-- **Schale aufrecht:** Die Löcher des Rautengitters sind selbsttragend; es
-  sind keine Stützen nötig.
-- **Deckel auf der flachen Oberseite:** Der Rand zeigt nach oben. Mit
-  `lid_dome_height = 0` entsteht eine saubere Oberseite ohne Stützen.
-- **Knauf auf dem Zapfen:** Die Aussparung im Deckel geht durch, sodass nichts
-  überbrückt wird.
-- **Fase unten** (`bottom_chamfer`) für die Haftung der ersten Schicht.
-- **Relief statt Loch** (`diamond_relief`, Rippen): geschlossene Wand mit
-  Vertiefungen in konstanter Tiefe.
+- **Bowl upright:** The holes of the diamond lattice are self-supporting; no
+  supports are needed.
+- **Lid on the flat top side:** The rim points upward. With
+  `lid_dome_height = 0`, this produces a clean top surface without supports.
+- **Knob on the peg:** The recess in the lid goes all the way through, so
+  nothing is bridged.
+- **Chamfer at the bottom** (`bottom_chamfer`) for first-layer adhesion.
+- **Relief instead of holes** (`diamond_relief`, ribs): closed wall with
+  recesses at constant depth.
 
-![Schale mit Wabengitter, radialem Deckelmuster und Zylinderknauf](images/05_hexgitter.jpg)
+![Bowl with honeycomb lattice, radial lid pattern and cylinder knob](images/05_hexgitter.jpg)
 
-## Druckempfehlungen
+## Print Recommendations
 
-Die mitgelieferten Profile sind für **Bambu Lab P1S** mit Bambu PLA Basic
-erstellt und im Bambu Studio testgeslict (0,20 mm Layerhöhe, 3 Wände, Gyroid
-15 %). Das Modell lässt sich auch auf P2S und H2C drucken.
+The supplied profiles are created for the **Bambu Lab P1S** with Bambu PLA Basic
+and test-sliced in Bambu Studio (0.20 mm layer height, 3 walls, gyroid 15%). The
+model can also be printed on the P2S and H2C.
 
-| Einstellung | Empfehlung |
+| Setting | Recommendation |
 |---|---|
-| Material | PLA oder PETG |
-| Layerhöhe | 0,20 mm (0,12–0,16 mm für ein besonders sauberes Gitter) |
-| Wände | 3–4 |
-| Infill | 10–15 % (wirkt sich nur auf Rand und Boden aus) |
-| Supports | keine |
-| Schale | aufrecht, Boden auf dem Bett |
-| Deckel | umgedreht auf der flachen Oberseite, Rand nach oben |
-| Knauf | auf dem Zapfen stehend; alternativ liegend oder mit leichter Stütze an der Schulter |
-| Spiel (`fit_play`) | 0,15 mm bei PLA; bei PETG etwa 0,20 mm |
+| Material | PLA or PETG |
+| Layer height | 0.20 mm (0.12–0.16 mm for an especially clean lattice) |
+| Walls | 3–4 |
+| Infill | 10–15% (only affects rim and floor) |
+| Supports | none |
+| Bowl | upright, base on the bed |
+| Lid | upside down on the flat top side, rim pointing up |
+| Knob | standing on the peg; alternatively lying down or with light support at the shoulder |
+| Clearance (`fit_play`) | 0.15 mm for PLA; about 0.20 mm for PETG |
 
-**Besondere Hinweise**
+**Special notes**
 
-- **Modell in drei Objekte teilen:** Schale, Deckel und Knauf sind getrennte
-  Körper. Im Bambu Studio bzw. OrcaSlicer: Rechtsklick auf das Objekt, dann
-  „Teilen“ → „In Objekte“. Alternativ im Customizer über `part` jedes Teil
-  einzeln exportieren.
-- **Zusammenbau:** Knauf-Zapfen in die Deckelmitte kleben (Sekundenkleber
-  oder Epoxid), danach den Deckel per Reibsitz auf die Schale drücken.
-- **Mehrfarbig:** Die Vorschau-Modi sind absichtlich nicht druckbar (rotes
-  „NOT FOR PRINTING“-Banner). `Multicolor Export` exportierst du
-  **direkt aus der OpenSCAD-Vorschau**, ohne F6/Render und ohne
-  Kommandozeile; sonst werden die Farbgruppen zu einem Körper vereinigt.
-  Alternativ weist du Deckel und Knauf im Slicer ein zweites Filament zu.
-- Ein angehobener Deckel (`lid_dome_height` > 0) braucht in
-  umgedrehter Druckrichtung Stützen oder einen Brim.
+- **Split the model into three objects:** Bowl, lid and knob are separate
+  bodies. In Bambu Studio or OrcaSlicer: right-click the object, then "Split" →
+  "To Objects". Alternatively, export each part individually in the Customizer
+  via `part`.
+- **Assembly:** Glue the knob peg into the center of the lid (super glue or
+  epoxy), then press the lid onto the bowl with a friction fit.
+- **Multicolor:** The preview modes are intentionally not printable (red "NOT
+  FOR PRINTING" banner). You export `Multicolor Export` **directly from the
+  OpenSCAD preview**, without F6/Render and without the command line; otherwise
+  the color groups are merged into a single body. Alternatively, assign a second
+  filament to lid and knob in the slicer.
+- A raised lid (`lid_dome_height` > 0) needs supports or a brim in the upside-down
+  print orientation.
 
-## Anwendungsbeispiele
+## Use Cases
 
-- **Schmuck- und Kleinteileschale:** Ringe, Ohrringe oder Schrauben unter
-  dem Reibsitz-Deckel.
-- **Durchbrochene Dekoschale:** Schale mit Wabengitter (`hex_grid`) oder
-  Rautengitter (`diamond_grid`) als sichtbares Gestaltungselement.
-- **Gewürz- und Vorratsschale:** Schale mit `none` oder Relief als glatte,
-  dichte Variante mit Deckel.
-- **Homelab-Schale:** Schrauben, Käfigmuttern oder Patchkabel-Stecker mit
-  Deckel auf dem Schreibtisch.
-- **Geschenk:** Schale in drei Farben (Körper, Deckel, Knauf) per
-  `Multicolor Export`.
-- **Passend zur Einrichtung:** kleine (Höhe 32 mm, Ø 52/82) oder große
-  Schale (Höhe 60 mm, Ø 95/150) mit denselben Mustern.
-- **Serie:** mehrere Schalen mit unterschiedlichem Wand- und Deckelmuster.
+- **Jewelry and small-parts bowl:** Rings, earrings or screws under the
+  friction-fit lid.
+- **Perforated decorative bowl:** Bowl with honeycomb lattice (`hex_grid`) or
+  diamond lattice (`diamond_grid`) as a visible design element.
+- **Spice and storage bowl:** Bowl with `none` or relief as a smooth, tight
+  variant with a lid.
+- **Homelab bowl:** Screws, cage nuts or patch cable connectors with a lid on
+  the desk.
+- **Gift:** Bowl in three colors (body, lid, knob) via `Multicolor Export`.
+- **To match your decor:** small (height 32 mm, Ø 52/82) or large bowl
+  (height 60 mm, Ø 95/150) with the same patterns.
+- **Series:** several bowls with different wall and lid patterns.
 
-![Kleine glatte Schale mit konzentrischem Deckel und Tropfenknauf](images/06_klein-glatt.jpg)
+![Small smooth bowl with concentric lid and teardrop knob](images/06_klein-glatt.jpg)
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-| Symptom | Ursache | Fix |
+| Symptom | Cause | Fix |
 |---|---|---|
-| Deckel sitzt zu locker | `fit_play` zu groß für den Drucker | `fit_play` verringern (z. B. 0,10 mm) und den Deckel neu drucken |
-| Deckel klemmt | Spiel zu klein oder PETG | `fit_play` auf 0,20–0,25 mm erhöhen |
-| Deckel lässt sich schlecht einführen | Einführfase zu klein | `skirt_tip_chamfer` erhöhen |
-| Knauf sitzt nicht oder wackelt | Zapfenspiel passt nicht | `peg_clearance` anpassen |
-| Gitter reicht bis an den Rand | Glattes Band oben ergibt sich aus `skirt_depth` | `skirt_depth` erhöhen |
-| Muster beginnt zu nah am Boden | Band unten zu schmal | `pattern_margin_bottom` erhöhen |
-| Reliefs wirken zu flach | `relief_depth` zu klein | `relief_depth` erhöhen (Wand beachten) |
-| Gitter hat zu große oder zu kleine Löcher | Rastermaß | `grid_cell` und `grid_bar` anpassen |
-| Mehrfarb-Export hat nur eine Farbe | Export über F6/Render oder Kommandozeile | STL direkt aus der Vorschau exportieren |
-| Vorschau zeigt „NOT FOR PRINTING“ | Vorschau-Modus aktiv | `part` auf `Multicolor Export`, `bowl`, `lid` oder `knob` setzen |
+| Lid sits too loosely | `fit_play` too large for the printer | Decrease `fit_play` (e.g. 0.10 mm) and reprint the lid |
+| Lid jams | Clearance too small or PETG | Increase `fit_play` to 0.20–0.25 mm |
+| Lid is hard to insert | Lead-in chamfer too small | Increase `skirt_tip_chamfer` |
+| Knob doesn't fit or wobbles | Peg clearance doesn't suit | Adjust `peg_clearance` |
+| Lattice reaches all the way to the edge | The smooth band at the top results from `skirt_depth` | Increase `skirt_depth` |
+| Pattern starts too close to the floor | Band at the bottom too narrow | Increase `pattern_margin_bottom` |
+| Reliefs look too shallow | `relief_depth` too small | Increase `relief_depth` (mind the wall) |
+| Lattice has holes that are too large or too small | Grid pitch | Adjust `grid_cell` and `grid_bar` |
+| Multicolor export has only one color | Export via F6/Render or command line | Export the STL directly from the preview |
+| Preview shows "NOT FOR PRINTING" | Preview mode active | Set `part` to `Multicolor Export`, `bowl`, `lid` or `knob` |
 
-## Entwicklungsgeschichte
+## Development History
 
-Die ersten Dateien und die Beschreibung des Modells stammen vom 3. Juli 2026:
-eine Schale mit offenem Rautengitter, Reibsitz-Deckel und separatem Knauf,
-dazu erste Renderings der Wandstrukturen (senkrechte und waagerechte Rippen,
-Relief). Anfang August 2026 kamen zehn Referenzvarianten in drei Größen mit
-Bambu-Studio-Profilen für den P1S dazu, außerdem Renderings je Variante.
-Am 6. August 2026 entstanden Szenenbilder der drei Deckelmuster; die
-Modelldatei wurde zuletzt am 5. August 2026 geändert.
+The first files and the description of the model date from 3 July 2026: a bowl
+with open diamond lattice, friction-fit lid and separate knob, plus first
+renderings of the wall structures (vertical and horizontal ribs, relief). In
+early August 2026, ten reference variants in three sizes with Bambu Studio
+profiles for the P1S were added, along with renderings for each variant. On 6
+August 2026, scene images of the three lid patterns were created; the model file
+was last changed on 5 August 2026.
 
-Die Bilder in diesem Repository sind Szenenbilder, die aus den Renderings der
-Modellgeometrie abgeleitet wurden; Druckfotos sind nicht dabei.
+The images in this repository are scene images derived from the renderings of
+the model geometry; no photos of prints are included.
 
-![Glatte Schale mit flachem Deckel und Knauf, Szenenbild der Variante mit Domknauf](images/03_horizontale-rippen.jpg)
+![Smooth bowl with flat lid and knob, scene image of the variant with dome knob](images/03_horizontale-rippen.jpg)
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: https://makerworld.com/en/models/3006569-parametric-bowl-with-friction-fit-lid
+👉 MakerWorld link: https://makerworld.com/en/models/3006569-parametric-bowl-with-friction-fit-lid
 
-Profil: <https://makerworld.com/en/@BetaHydri>
+Profile: <https://makerworld.com/en/@BetaHydri>
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository: © BetaHydri. Das Modell (inkl.
-Quellcode) und alle Druckdateien werden ausschließlich über MakerWorld unter
-der dort angegebenen Lizenz verteilt. Dieses Repository enthält bewusst keine
-Modell-, Quellcode- oder Druckdateien.
+Documentation and images in this repository: © BetaHydri. The model (including
+source code) and all print files are distributed exclusively via MakerWorld
+under the license stated there. This repository intentionally contains no
+model, source code or print files.

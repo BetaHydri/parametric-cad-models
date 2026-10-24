@@ -1,405 +1,400 @@
 # Parametric Furniture Handle Generator
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Parametrischer Möbelgriff-Generator: sechs Bauformen, jede übliche Schraubverbindung
-und eine zweifarbige Clip-Abdeckung – ohne AMS-Wechsel und ohne Purge-Turm.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/3181516-ultimate-parametric-furniture-handles)
+Parametric furniture handle generator: six designs, every common screw
+connection and a two-colour clip-on cover – without AMS changes and without a
+purge tower.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/3181516-ultimate-parametric-furniture-handles)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-P1S%20Profile-green)
 ![Print files](https://img.shields.io/badge/Print%20files-MakerWorld%20only-blue)
 
-> **Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:**
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/3181516-ultimate-parametric-furniture-handles](https://makerworld.com/en/models/3181516-ultimate-parametric-furniture-handles)
+> **The model with all print profiles is available exclusively on MakerWorld:**
+> 👉 [MakerWorld link: https://makerworld.com/en/models/3181516-ultimate-parametric-furniture-handles](https://makerworld.com/en/models/3181516-ultimate-parametric-furniture-handles)
 >
-> ![Parametric Furniture Handle Generator – verschiedene Griffformen in mehreren Farben, montiert an Schubladenfronten](images/01_hero.jpg)
+> ![Parametric Furniture Handle Generator – various handle shapes in several colours, mounted on drawer fronts](images/01_hero.jpg)
 
-Der **Parametric Furniture Handle Generator** erzeugt Griffe für Schubladen,
-Schranktüren und Klappen aus einer einzigen parametrischen Datei. Bauform,
-Lochabstand, Griffquerschnitt, Schraubenaufnahme (M2 bis M8), Oberflächenrelief
-und eine optionale zweite Farbe stellst du im MakerWorld-Customizer ein. Zehn
-fertige Beispielvarianten dienen als Startpunkt.
+The **Parametric Furniture Handle Generator** creates handles for drawers,
+cabinet doors and flaps from a single parametric file. You set the design, hole
+spacing, handle cross-section, screw mount (M2 to M8), surface relief and an
+optional second colour in the MakerWorld Customizer. Ten ready-made example
+variants serve as a starting point.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Konstruktion](#konstruktion)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Parametric Options](#parametric-options)
+- [Construction](#construction)
+- [Print Recommendations](#print-recommendations)
+- [Usage Examples](#usage-examples)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Möbelgriffe sind Verschleißteile mit erstaunlich vielen Variablen. Der
-Lochabstand muss zu den vorhandenen Bohrungen passen (96 mm, 128 mm, 160 mm …),
-die Schraube zur Aufnahme im Griff, und der Griff soll im Alltag dauerhaft
-sitzen. Im FDM-Druck kommen weitere Fragen dazu:
+Furniture handles are wear parts with a surprising number of variables. The
+hole spacing has to match the existing holes (96 mm, 128 mm, 160 mm …), the
+screw has to match the mount in the handle, and the handle should stay firmly in
+place in everyday use. In FDM printing, further questions arise:
 
-- **Befestigung:** Ein gedrucktes Gewinde, ein Heat-Set-Einsatz, eine Mutter
-  oder eine selbstschneidende Kunststoffschraube? Jede Variante braucht andere
-  Aussparungen und Maße.
-- **Zweifarbigkeit:** Ein zweifarbiger Griff bedeutet normalerweise
-  Multimaterialdruck mit Farbwechseln, Purge-Abfall und AMS.
-- **Orientierung:** Griffe mit Standfüßen haben Überhänge, die ohne passende
-  Ausrichtung Stützen brauchen.
-- **Passung im Alltag:** Ein Griff mit sichtbarem Spalt oder überstehender
-  Kante fühlt sich schnell billig an.
+- **Fastening:** A printed thread, a heat-set insert, a nut or a self-tapping
+  plastic screw? Each variant needs different recesses and dimensions.
+- **Two-colour:** A two-colour handle normally means multi-material printing
+  with colour changes, purge waste and an AMS.
+- **Orientation:** Handles with standoff feet have overhangs that need supports
+  without a suitable orientation.
+- **Fit in everyday use:** A handle with a visible gap or a protruding edge
+  quickly feels cheap.
 
-## Die Idee
+## The Idea
 
-Der Generator trennt **Struktur** und **Dekor**. Die Basis trägt die
-Schraubaufnahmen und ist das tragende Teil. Die dekorierte Front ist optional
-ein **eigenes Teil in einer zweiten Farbe**, das auf die Basis geclipst wird.
-Beide Teile werden einfarbig und stützenfrei gedruckt; zusammengesetzt wirken
-sie wie ein Stück. Das Relief (Rillen, Rauten, Ringe, Facetten) liegt auf der
-Abdeckung, das Gewinde in der Basis – dieselbe Basis lässt sich so mit
-verschiedenen Fronten kombinieren.
+The generator separates **structure** and **decor**. The base carries the screw
+mounts and is the load-bearing part. The decorated front is optionally a
+**separate part in a second colour** that is clipped onto the base. Both parts
+are printed in a single colour and without supports; assembled, they look like
+one piece. The relief (grooves, diamonds, rings, facets) is on the cover, the
+thread in the base – so the same base can be combined with different fronts.
 
-Die Schraubaufnahme wird aus einer eingebauten Maßtabelle für M2, M2,5, M3, M4,
-M5, M6 und M8 abgeleitet (Gewindesteigung, Durchgangsloch, Mutter- und
-Einsatzmaße). Den Lochabstand wählst du aus gängigen Normwerten oder gibst
-einen eigenen Wert vor.
+The screw mount is derived from a built-in dimension table for M2, M2.5, M3, M4,
+M5, M6 and M8 (thread pitch, clearance hole, nut and insert dimensions). You
+choose the hole spacing from common standard values or specify your own value.
 
 ## Highlights
 
-- **Sechs Bauformen in einer Datei:** Bügelgriff mit Standfüßen (`bar_handle`),
-  D-Griff (`bow_handle`), schlanker Rundgriff auf Füßen (`bar_pull`), T-Griff
-  (`t_bar`), Knopf (`knob`) und Kantengriff mit Fingermulde (`edge_pull`).
-- **Sechs Schraubaufnahmen:** gedrucktes metrisches Gewinde, glattes Loch für
-  selbstschneidende Kunststoffschrauben, eingelegte Sechskant- oder
-  Vierkantmutter, Heat-Set-Messingeinsatz oder reines Durchgangsloch.
-- **Zehn Lochabstände als Voreinstellung** (16 bis 320 mm) plus freier Wert.
-- **Zweifarbig per Clip-Abdeckung:** Kein Multimaterialdruck nötig. Standard
-  ist ein bündiger Inlay-Sitz mit Schnapp-Nut, alternativ eine aufschiebbare
-  Kappe.
-- **Oberflächenrelief:** Längsrillen, Diamant-Rändelung, Umlaufringe oder
-  Facetten, mit rundem, rechteckigem oder V-förmigem Rillenprofil.
-- **Dreierlei Griffquerschnitt:** rund, abgerundetes Rechteck, Rechteck.
-- **Schutz vor Fehlkonfiguration:** Der Generator warnt in der Konsole, wenn die
-  Schraubenaufnahme breiter ist als der Fuß oder die Abdeckung für die gewählte
-  Bauform nicht verfügbar ist.
-- **Zehn fertige Varianten** mit Bambu-Studio-Profilen für P1S und PLA.
+- **Six designs in one file:** bar handle with standoff feet (`bar_handle`),
+  D-handle (`bow_handle`), slim round handle on feet (`bar_pull`), T-handle
+  (`t_bar`), knob (`knob`) and edge pull with finger recess (`edge_pull`).
+- **Six screw mounts:** printed metric thread, plain hole for self-tapping
+  plastic screws, inserted hex or square nut, heat-set brass insert or a plain
+  clearance hole.
+- **Ten hole spacings as presets** (16 to 320 mm) plus a free value.
+- **Two-colour via clip-on cover:** No multi-material printing needed. The
+  default is a flush inlay fit with a snap groove, alternatively a slide-on cap.
+- **Surface relief:** longitudinal grooves, diamond knurling, circumferential
+  rings or facets, with a round, rectangular or V-shaped groove profile.
+- **Three handle cross-sections:** round, rounded rectangle, rectangle.
+- **Protection against misconfiguration:** The generator warns in the console if
+  the screw mount is wider than the foot or the cover is not available for the
+  selected design.
+- **Ten ready-made variants** with Bambu Studio profiles for P1S and PLA.
 
-![Bügelgriff mit Längsrillen in Salbeigrün an einer Holzschublade](images/02_bar-handle-flutes.jpg)
+![Bar handle with longitudinal grooves in sage green on a wooden drawer](images/02_bar-handle-flutes.jpg)
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Namen entsprechen den Customizer-Parametern des Modells. Der Customizer ist
-als nummerierter Ablauf in neun Schritten aufgebaut.
+The names correspond to the model's Customizer parameters. The Customizer is
+structured as a numbered workflow in nine steps.
 
-### Schritt 1 und 2: Bauform und Lochabstand
+### Steps 1 and 2: Design and Hole Spacing
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `design` | Griff-Bauform | `bar_handle` | `bar_handle`, `bow_handle`, `bar_pull`, `t_bar`, `knob`, `edge_pull` |
-| `hole_center` | Schraubenabstand von Mitte zu Mitte (Bügel, D-Griff, Rundgriff) | 128 | 16, 32, 64, 96, 128, 160, 192, 224, 256, 320 mm |
-| `hole_center_custom` | Eigener Lochabstand; 0 = Voreinstellung oben | 0 | 0–400 mm |
+| `design` | Handle design | `bar_handle` | `bar_handle`, `bow_handle`, `bar_pull`, `t_bar`, `knob`, `edge_pull` |
+| `hole_center` | Screw spacing centre to centre (bar, D-handle, round handle) | 128 | 16, 32, 64, 96, 128, 160, 192, 224, 256, 320 mm |
+| `hole_center_custom` | Custom hole spacing; 0 = preset above | 0 | 0–400 mm |
 
-T-Griff und Knopf verwenden eine mittige Schraube, der Kantengriff berechnet
-seine Schraubenpositionen selbst.
+The T-handle and knob use a central screw; the edge pull calculates its own
+screw positions.
 
-### Schritt 3 und 4: Griff und bauformspezifische Details
+### Steps 3 and 4: Handle and Design-Specific Details
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `bar_shape` | Griffquerschnitt (Bügel, Rundgriff, T-Griff) | `rounded` | `round`, `rounded`, `rect` |
-| `bar_thick` | Griffhöhe bzw. Durchmesser bei `round` | 16 | 6–40 mm |
-| `bar_width` | Griffbreite (bei `rounded` und `rect`) | 25 | 6–50 mm |
-| `standoff` | Abstand zwischen Montagefläche und Griffunterseite | 26 | 10–70 mm |
-| `end_overhang` | Überstand des Griffs über jeden äußeren Fuß | 12 | 0–60 mm |
-| `grip_length_custom` | Gesamtlänge des Griffs; 0 = Lochabstand + 2 × Überstand | 0 | 0–500 mm |
-| `foot_size` | Fuß- bzw. Pfostendurchmesser | 18 | 8–40 mm |
-| `post_taper` | Konizität der Pfosten (nur Bügelgriff; 1,0 = gerade) | 0,85 | 0,5–1,0 |
-| `post_mode` | Pfosten mit dem Griff gedruckt oder als separate Schraubpfosten | `integrated` | `integrated`, `separate` |
-| `post_spigot` | Einstecktiefe des Zapfens in den Griff (nur `separate`) | 6 | 3–14 mm |
-| `post_fit` | Passungsspiel Zapfen/Sockel je Seite (nur `separate`) | 0,2 | 0,1–0,5 mm |
-| `knob_style` | Knopfform | `dome` | `dome`, `cylinder`, `faceted`, `square` |
-| `knob_dia` | Knopfdurchmesser bzw. -breite | 32 | 16–70 mm |
-| `knob_height` | Knopfhöhe | 26 | 12–60 mm |
-| `knob_facets` | Anzahl der Seitenflächen bei `faceted` | 8 | 4–16 |
-| `edge_len` | Gesamtlänge des Kantengriffs | 140 | 60–300 mm |
-| `edge_depth` | Tiefe der Fingermulde | 24 | 14–50 mm |
-| `edge_height` | Profilhöhe des Kantengriffs | 22 | 14–50 mm |
-| `edge_relief` | Frontstruktur des Kantengriffs | `none` | `none`, `diagonal`, `crosshatch` |
+| `bar_shape` | Handle cross-section (bar, round handle, T-handle) | `rounded` | `round`, `rounded`, `rect` |
+| `bar_thick` | Handle height, or diameter for `round` | 16 | 6–40 mm |
+| `bar_width` | Handle width (for `rounded` and `rect`) | 25 | 6–50 mm |
+| `standoff` | Distance between mounting surface and underside of the handle | 26 | 10–70 mm |
+| `end_overhang` | Overhang of the handle beyond each outer foot | 12 | 0–60 mm |
+| `grip_length_custom` | Total length of the handle; 0 = hole spacing + 2 × overhang | 0 | 0–500 mm |
+| `foot_size` | Foot or post diameter | 18 | 8–40 mm |
+| `post_taper` | Taper of the posts (bar handle only; 1.0 = straight) | 0.85 | 0.5–1.0 |
+| `post_mode` | Posts printed with the handle or as separate screw posts | `integrated` | `integrated`, `separate` |
+| `post_spigot` | Insertion depth of the spigot into the handle (`separate` only) | 6 | 3–14 mm |
+| `post_fit` | Fit clearance spigot/socket per side (`separate` only) | 0.2 | 0.1–0.5 mm |
+| `knob_style` | Knob shape | `dome` | `dome`, `cylinder`, `faceted`, `square` |
+| `knob_dia` | Knob diameter or width | 32 | 16–70 mm |
+| `knob_height` | Knob height | 26 | 12–60 mm |
+| `knob_facets` | Number of side faces for `faceted` | 8 | 4–16 |
+| `edge_len` | Total length of the edge pull | 140 | 60–300 mm |
+| `edge_depth` | Depth of the finger recess | 24 | 14–50 mm |
+| `edge_height` | Profile height of the edge pull | 22 | 14–50 mm |
+| `edge_relief` | Front texture of the edge pull | `none` | `none`, `diagonal`, `crosshatch` |
 
-### Schritt 5: Schraubenaufnahme
+### Step 5: Screw Mount
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `screw_size` | Nenngröße der Schraube | `M4` | `M2`, `M2.5`, `M3`, `M4`, `M5`, `M6`, `M8` |
-| `mount_type` | Aufnahme im Griff | `printed_thread` | `printed_thread`, `self_tap`, `hex_nut`, `square_nut`, `heatset`, `clearance` |
-| `engage_len` | Einschraub- bzw. Einsatztiefe | 10 | 4–30 mm |
-| `tip_clear` | Zusatztiefe für die Schraubenspitze (Sackloch) | 1,5 | 0–8 mm |
-| `thread_clear` | Zusätzliches Durchmesserspiel (nur gedrucktes Gewinde) | 0,25 | 0–0,6 mm |
-| `nut_clear` | Zusätzliches Schlüsselweiten-Spiel (nur Mutterntaschen) | 0,3 | 0–0,8 mm |
-| `nut_recess` | Abstand der Mutterntasche zur Montagefläche | 2,0 | 0–12 mm |
-| `mount_chamfer` | Einführfase an jeder Aufnahme | 0,8 | 0–2,0 mm |
+| `screw_size` | Nominal screw size | `M4` | `M2`, `M2.5`, `M3`, `M4`, `M5`, `M6`, `M8` |
+| `mount_type` | Mount in the handle | `printed_thread` | `printed_thread`, `self_tap`, `hex_nut`, `square_nut`, `heatset`, `clearance` |
+| `engage_len` | Screw engagement or insert depth | 10 | 4–30 mm |
+| `tip_clear` | Extra depth for the screw tip (blind hole) | 1.5 | 0–8 mm |
+| `thread_clear` | Additional diameter clearance (printed thread only) | 0.25 | 0–0.6 mm |
+| `nut_clear` | Additional across-flats clearance (nut pockets only) | 0.3 | 0–0.8 mm |
+| `nut_recess` | Distance of the nut pocket from the mounting surface | 2.0 | 0–12 mm |
+| `mount_chamfer` | Lead-in chamfer on each mount | 0.8 | 0–2.0 mm |
 
-Die eingebaute Maßtabelle liefert je Schraubengröße:
+The built-in dimension table provides for each screw size:
 
-| Größe | Steigung | Durchgangsloch | Mutter SW | Mutterdicke | Heat-Set-Ø | Heat-Set-Länge |
+| Size | Pitch | Clearance hole | Nut AF | Nut thickness | Heat-set Ø | Heat-set length |
 |---|---|---|---|---|---|---|
-| M2 | 0,4 | 2,4 | 4,0 | 1,6 | 3,2 | 4,0 |
-| M2.5 | 0,45 | 2,9 | 5,0 | 2,0 | 3,5 | 5,0 |
-| M3 | 0,5 | 3,4 | 5,5 | 2,4 | 4,0 | 5,7 |
-| M4 | 0,7 | 4,5 | 7,0 | 3,2 | 5,6 | 8,1 |
-| M5 | 0,8 | 5,5 | 8,0 | 4,7 | 6,4 | 9,5 |
-| M6 | 1,0 | 6,6 | 10,0 | 5,2 | 8,0 | 12,7 |
-| M8 | 1,25 | 9,0 | 13,0 | 6,8 | 9,6 | 12,7 |
+| M2 | 0.4 | 2.4 | 4.0 | 1.6 | 3.2 | 4.0 |
+| M2.5 | 0.45 | 2.9 | 5.0 | 2.0 | 3.5 | 5.0 |
+| M3 | 0.5 | 3.4 | 5.5 | 2.4 | 4.0 | 5.7 |
+| M4 | 0.7 | 4.5 | 7.0 | 3.2 | 5.6 | 8.1 |
+| M5 | 0.8 | 5.5 | 8.0 | 4.7 | 6.4 | 9.5 |
+| M6 | 1.0 | 6.6 | 10.0 | 5.2 | 8.0 | 12.7 |
+| M8 | 1.25 | 9.0 | 13.0 | 6.8 | 9.6 | 12.7 |
 
-Alle Maße in mm. Die Vierkantmutter hat dieselbe Schlüsselweite wie die
-Sechskantmutter; die Dicke der Vierkantmutter weicht ab M5 ab (M5 4,0 mm, M6 5,0 mm,
-M8 6,5 mm).
+All dimensions in mm. The square nut has the same across-flats size as the hex
+nut; the thickness of the square nut differs from M5 onwards (M5 4.0 mm, M6
+5.0 mm, M8 6.5 mm).
 
-### Schritt 6: Zweifarbige Clip-Abdeckung
+### Step 6: Two-Colour Clip-On Cover
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `cover_enabled` | Abdeckung als separates Zweitfarben-Teil | 1 | 0 = einfarbig, 1 = Abdeckung |
-| `cover_style` | Befestigungsart | `inlay` | `inlay` (bündig, Schnapp-Nut), `clip_over` (aufschiebbare Kappe) |
-| `cover_wall` | Wandstärke der Abdeckung | 2,0 | 1,2–4,0 mm |
-| `cover_gap` | Passungsspiel Abdeckung/Basis je Seite | 0,3 | 0,1–0,6 mm |
-| `cover_drop` | Wie weit die Abdeckung seitlich unter die Griffmitte reicht | 5,0 | 1–14 mm |
-| `cover_snap` | Tiefe der 45°-Schnappnut; 0 = reiner Reibsitz | 0,5 | 0–1,2 mm |
-| `cover_endlock` | Axiale Endrastung (nur `clip_over`) | 1 | 0 = aus, 1 = an |
-| `cover_end` | Unbedeckter Rand an jedem Griffende (nur `inlay`); 0 = volle Länge | 0 | 0–20 mm |
+| `cover_enabled` | Cover as a separate second-colour part | 1 | 0 = single colour, 1 = cover |
+| `cover_style` | Fastening method | `inlay` | `inlay` (flush, snap groove), `clip_over` (slide-on cap) |
+| `cover_wall` | Wall thickness of the cover | 2.0 | 1.2–4.0 mm |
+| `cover_gap` | Fit clearance cover/base per side | 0.3 | 0.1–0.6 mm |
+| `cover_drop` | How far the cover reaches sideways below the handle centre | 5.0 | 1–14 mm |
+| `cover_snap` | Depth of the 45° snap groove; 0 = pure friction fit | 0.5 | 0–1.2 mm |
+| `cover_endlock` | Axial end latching (`clip_over` only) | 1 | 0 = off, 1 = on |
+| `cover_end` | Uncovered margin at each handle end (`inlay` only); 0 = full length | 0 | 0–20 mm |
 
-Die Abdeckung gibt es für `bar_handle`, `bar_pull` und `t_bar`.
+The cover is available for `bar_handle`, `bar_pull` and `t_bar`.
 
-### Schritt 7: Oberflächenrelief
+### Step 7: Surface Relief
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `relief_style` | Strukturart | `flutes` | `none`, `flutes` (Längsrillen), `knurl` (Diamant), `rings` (Umlaufringe), `facets` (Flächen) |
-| `groove_profile` | Rillenprofil (Längsrillen und Ringe) | `rounded` | `rounded`, `rect`, `vgroove` |
-| `relief_count` | Anzahl der Strukturelemente | 20 | 4–80 |
-| `relief_depth` | Tiefe der Struktur | 0,7 | 0,2–1,5 mm |
-| `relief_width` | Breite einer Rille bzw. eines Elements | 1,6 | 0,5–5,0 mm |
-| `relief_margin` | Glatter Rand an jedem Ende; 0 = Struktur bis zur Kante | 5 | 0–40 mm |
+| `relief_style` | Texture type | `flutes` | `none`, `flutes` (longitudinal grooves), `knurl` (diamond), `rings` (circumferential rings), `facets` (flat faces) |
+| `groove_profile` | Groove profile (longitudinal grooves and rings) | `rounded` | `rounded`, `rect`, `vgroove` |
+| `relief_count` | Number of texture elements | 20 | 4–80 |
+| `relief_depth` | Depth of the texture | 0.7 | 0.2–1.5 mm |
+| `relief_width` | Width of a groove or element | 1.6 | 0.5–5.0 mm |
+| `relief_margin` | Smooth margin at each end; 0 = texture up to the edge | 5 | 0–40 mm |
 
-Das Relief wirkt nur auf die geraden Griffe (`bar_handle`, `bar_pull`,
-`t_bar`); für Kantengriffe gibt es stattdessen `edge_relief`.
+The relief only applies to the straight handles (`bar_handle`, `bar_pull`,
+`t_bar`); for edge pulls there is `edge_relief` instead.
 
-### Schritt 8 und 9: Ausgabe und Qualität
+### Steps 8 and 9: Output and Quality
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `part` | Ausgabe: Vorschau (nicht druckbar), nur Basis, nur Abdeckung, beide auf einer Platte, kompletter Griff ohne Abdeckung, separate Pfosten | `preview` | `preview`, `print_base`, `print_cover`, `print_both`, `print_single`, `print_posts` |
-| `col_base` | Farbe der Basis in der Vorschau | `Gainsboro` | benannte Farbauswahl |
-| `col_cover` | Farbe der Abdeckung in der Vorschau | `Crimson` | benannte Farbauswahl |
-| `round_res` | Kurvenauflösung (`$fn`) | 96 | 32–200, Schritt 8 |
+| `part` | Output: preview (not printable), base only, cover only, both on one plate, complete handle without cover, separate posts | `preview` | `preview`, `print_base`, `print_cover`, `print_both`, `print_single`, `print_posts` |
+| `col_base` | Colour of the base in the preview | `Gainsboro` | named colour selection |
+| `col_cover` | Colour of the cover in the preview | `Crimson` | named colour selection |
+| `round_res` | Curve resolution (`$fn`) | 96 | 32–200, step 8 |
 
-![D-Griff in Salbeigrün an einer Holzschublade](images/03_d-handle.jpg)
+![D-handle in sage green on a wooden drawer](images/03_d-handle.jpg)
 
-## Konstruktion
+## Construction
 
-### OpenSCAD-Ansatz
+### OpenSCAD Approach
 
-Das Modell ist eine reine OpenSCAD-Konstruktion ohne externe Bibliotheken. Alle
-Maße stehen als benannte Parameter am Anfang der Datei. Ein
-`part`-Selektor am Ende entscheidet, ob eine Vorschau, die Basis, die
-Abdeckung oder ein komplettes einfarbiges Teil in seiner Druckorientierung
-ausgegeben wird.
+The model is a pure OpenSCAD construction without external libraries. All
+dimensions are named parameters at the top of the file. A `part` selector at the
+end decides whether a preview, the base, the cover or a complete single-colour
+part is output in its print orientation.
 
-### Parametrische Logik
+### Parametric Logic
 
-| Größe | Regel |
+| Size | Rule |
 |---|---|
-| Lochabstand | `hole_center_custom`, wenn größer als 0, sonst `hole_center` |
-| Griffbreite | bei `round` gleich `bar_thick`, sonst mindestens 0,6 × `bar_thick` |
-| Grifflänge | `grip_length_custom`, sonst Lochabstand + 2 × `end_overhang` |
-| Griffmittelhöhe | `standoff` + `bar_thick` / 2 |
-| Abdeckung verfügbar | `cover_enabled = 1`, gerade Bauform, und nicht bei `print_single` |
-| Schraubenpassung | Aufnahme-Umkreis + 1 mm Restwand muss in den Fuß passen, sonst Konsolenwarnung |
-| D-Griff Schraubtiefe | auf den geraden Schenkelabschnitt begrenzt, damit die Bohrung nicht seitlich ausbricht |
+| Hole spacing | `hole_center_custom` if greater than 0, otherwise `hole_center` |
+| Handle width | for `round` equal to `bar_thick`, otherwise at least 0.6 × `bar_thick` |
+| Handle length | `grip_length_custom`, otherwise hole spacing + 2 × `end_overhang` |
+| Handle centre height | `standoff` + `bar_thick` / 2 |
+| Cover available | `cover_enabled = 1`, straight design, and not with `print_single` |
+| Screw fit | Mount circumscribed circle + 1 mm residual wall must fit in the foot, otherwise console warning |
+| D-handle screw depth | limited to the straight leg section so that the bore does not break out sideways |
 
-Zum Beispiel ergeben die Standardwerte (`hole_center` = 128, `end_overhang` = 12)
-eine Griffgesamtlänge von 152 mm und eine Griffmittelhöhe von 34 mm über der
-Montagefläche.
+For example, the default values (`hole_center` = 128, `end_overhang` = 12) give a
+total handle length of 152 mm and a handle centre height of 34 mm above the
+mounting surface.
 
-### Besondere Algorithmen
+### Special Algorithms
 
-- **Gedrucktes Gewinde:** Der Gewindeschneider ist ein einzelner,
-  dreieckiger Gewindegang, per Verdrehextrusion erzeugt. Er wird von der
-  Pfostenmasse abgezogen und hinterlässt ein Innengewinde. Das Verfahren bleibt
-  bei der Vorschau schnell und liefert geschlossene Körper.
-- **Querschnittsbasierte Abdeckung:** Basis und Abdeckung werden aus
-  2D-Querschnitten mit Offset gebildet (Außenkontur, Sitz = Kontur minus
-  Wand minus Spiel, Innenkontur der Kappe). Dadurch funktioniert dieselbe
-  Logik für runde, abgerundet-rechteckige und rechteckige Querschnitte.
-- **Bündiger Inlay-Sitz:** Die Griffoberseite wird um die Abdeckungsdicke
-  ausgespart, sodass die Abdeckung auf gleicher Höhe wie die Basis
-  abschließt. Die Schnapp-Nut folgt der Kontur als Offset-Ring in einem dünnen
-  Z-Band, nicht als feste Keilform – das hält Rund-, Abgerundet- und
-  Rechteckprofile manifold.
-- **Relief ohne Hohlräume:** Rillen, Rändelung, Ringe und Facetten werden an der
-  Griffachse ausgerichtet geschnitten; der glatte Randbereich ist
-  parametrisch. Auf gekrümmten Konturen (D-Griff, Knopf, Kantengriff) ist das
-  Relief bewusst abgeschaltet, weil es dort Reststücke erzeugt.
-- **Flache Füße beim D-Griff:** Die Schenkel sind Kapseln; ein
-  Subtraktionsquader bei Z = 0 schneidet flache Aufstandsflächen ab. Das
-  vermeidet Darstellungsartefakte, die ein Schnitt per `intersection()` in der
-  Vorschau erzeugt.
-- **Getrennte Schraubpfosten:** Optional werden die Standfüße als eigene
-  Schraubpfosten gedruckt, die mit einem langen Durchgangsbolzen im Griff
-  verschraubt werden. Der Zapfen ist mit einer Abflachung gegen Verdrehen
-  gesichert.
+- **Printed thread:** The thread cutter is a single triangular thread turn,
+  generated by twist extrusion. It is subtracted from the post mass and leaves
+  an internal thread. The method stays fast in the preview and yields closed
+  bodies.
+- **Cross-section-based cover:** Base and cover are formed from 2D
+  cross-sections with offset (outer contour, seat = contour minus wall minus
+  clearance, inner contour of the cap). This way the same logic works for
+  round, rounded-rectangular and rectangular cross-sections.
+- **Flush inlay fit:** The top of the handle is recessed by the cover thickness
+  so that the cover ends flush with the base. The snap groove follows the
+  contour as an offset ring in a thin Z band, not as a fixed wedge shape – this
+  keeps round, rounded and rectangular profiles manifold.
+- **Relief without cavities:** Grooves, knurling, rings and facets are cut
+  aligned to the handle axis; the smooth margin area is parametric. On curved
+  contours (D-handle, knob, edge pull) the relief is deliberately disabled
+  because it creates stray fragments there.
+- **Flat feet on the D-handle:** The legs are capsules; a subtraction cuboid at
+  Z = 0 cuts off flat contact surfaces. This avoids rendering artefacts that a
+  cut via `intersection()` produces in the preview.
+- **Separate screw posts:** Optionally the standoff feet are printed as separate
+  screw posts that are screwed to the handle with a long through-bolt. The
+  spigot is secured against rotation with a flat.
 
 ```mermaid
 flowchart LR
-    D[design + Lochabstand] --> G[Griff-Geometrie]
-    Q[bar_shape + Maße] --> G
-    S[screw_size + mount_type] --> M[Schraubaufnahme]
-    M --> B[Basis - Farbe A]
+    D[design + hole spacing] --> G[Handle geometry]
+    Q[bar_shape + dimensions] --> G
+    S[screw_size + mount_type] --> M[Screw mount]
+    M --> B[Base - colour A]
     G --> B
-    C[cover_style + relief_style] --> A[Abdeckung - Farbe B]
+    C[cover_style + relief_style] --> A[Cover - colour B]
     G --> A
-    B --> P[part: Vorschau / Basis / Abdeckung / beide / einfarbig]
+    B --> P[part: Preview / Base / Cover / both / single-colour]
     A --> P
 ```
 
-### Modularität
+### Modularity
 
-Die Datei ist in kleine Module gegliedert: Extrusion eines Querschnitts
-entlang der Griffachse, Gewindeschneider, Aufnahme-Empfänger, Pfostenformen je
-Bauform, Reliefschneider, Abdeckungs-Schale, Sitzaussparung, Schnapp-Nut und
--Wulst sowie Druckposen für Basis und Abdeckung. Jede Bauform hat ein eigenes
-Körper-Modul; alle teilen sich dieselben Aufnahmen.
+The file is organised into small modules: extrusion of a cross-section along the
+handle axis, thread cutter, mount receiver, post shapes per design, relief
+cutter, cover shell, seat recess, snap groove and bead, as well as print poses
+for base and cover. Each design has its own body module; all share the same
+mounts.
 
-### Druckoptimierungen
+### Print Optimizations
 
-- **Druckorientierung je Teil eingebaut:** Griff mit der Grifffläche zum Bett,
-  Schraubpfosten nach oben; die Abdeckung kopfüber bzw. auf der Stirnseite
-  stehend (Inlay), mit Hinweis auf Brim oder Raft.
-- **Flache Standflächen:** Der D-Griff wird bei Z = 0 abgeflacht, der
-  Knopf mit quadratischer Form liegt als gerundetes Quadrat auf dem Bett.
-- **Konsolenhinweise je Bauform:** Zu Stützen, Brim und Orientierung gibt die
-  Datei in jedem Druckmodus passende Hinweise aus.
-- **Blind-Löcher:** Die Aufnahme ist ein Sackloch (Einschraubtiefe + Spitzenzugabe),
-  sodass die Griffoberseite geschlossen bleibt.
+- **Print orientation built in per part:** Handle with the grip surface towards
+  the bed, screw posts upwards; the cover upside down or standing on its end
+  face (inlay), with a note on brim or raft.
+- **Flat contact surfaces:** The D-handle is flattened at Z = 0, the knob with a
+  square shape lies on the bed as a rounded square.
+- **Console notes per design:** The file outputs suitable notes on supports,
+  brim and orientation in every print mode.
+- **Blind holes:** The mount is a blind hole (engagement depth + tip allowance),
+  so that the top of the handle stays closed.
 
-![Knopf mit Facetten in Schwarz an einer Holzschublade](images/04_knob-faceted.jpg)
+![Faceted knob in black on a wooden drawer](images/04_knob-faceted.jpg)
 
-## Druckempfehlungen
+## Print Recommendations
 
-Die Beispielprofile sind für **Bambu Lab P1S** mit **Bambu PLA Basic** erstellt
-und im Bambu Studio test-geslict (Return-Code 0). Die Parameter lassen sich
-auch für andere Drucker verwenden.
+The example profiles are created for the **Bambu Lab P1S** with **Bambu PLA
+Basic** and test-sliced in Bambu Studio (return code 0). The parameters can also
+be used for other printers.
 
-| Einstellung | Empfehlung |
+| Setting | Recommendation |
 |---|---|
-| Material | PLA; PETG für Küche und Bad |
-| Layerhöhe | 0,2 mm (0,16 mm für feines Relief) |
-| Wände | 3–4 (die Profile nutzen 3) |
-| Infill | Gyroid 30 % (die Profile) |
-| Supports | je nach Bauform, siehe Tabelle |
-| Haftung | 5–8 mm Brim bei runden Profilen sowie langen, schmalen Griffen |
+| Material | PLA; PETG for kitchen and bathroom |
+| Layer height | 0.2 mm (0.16 mm for fine relief) |
+| Walls | 3–4 (the profiles use 3) |
+| Infill | Gyroid 30 % (the profiles) |
+| Supports | depending on design, see table |
+| Adhesion | 5–8 mm brim for round profiles as well as long, narrow handles |
 
-### Ausrichtung und Stützen
+### Orientation and Supports
 
-| Bauform oder Teil | Ausrichtung | Stützen |
+| Design or part | Orientation | Supports |
 |---|---|---|
-| Gerade Basis, `rounded` oder `rect` | Griffseite unten, Schraubpfosten oben | normalerweise keine |
-| Abdeckung, `rounded` oder `rect` | Dekorseite unten, Öffnung oben | normalerweise keine |
-| Runde Basis oder Abdeckung | gekrümmte Seite zum Bett | erforderlich: nur vom Druckbett aus, plus Brim |
-| D-Griff | flache Füße unten | erforderlich: unter der langen oberen Spanne |
-| Knopf | ebene Montagefläche unten | keine |
-| Kantengriff | ebene Rück- bzw. Basisflächen unten | laut Modellbeschreibung erforderlich unter Fingerlippe und Mulde |
+| Straight base, `rounded` or `rect` | grip side down, screw posts up | normally none |
+| Cover, `rounded` or `rect` | decor side down, opening up | normally none |
+| Round base or cover | curved side towards the bed | required: from the print bed only, plus brim |
+| D-handle | flat feet down | required: under the long upper span |
+| Knob | flat mounting surface down | none |
+| Edge pull | flat back or base surfaces down | required under finger lip and recess according to the model description |
 
-**Besondere Hinweise**
+**Special notes**
 
-- Stützen nie in Gewinde und Hardwaretaschen drucken lassen.
-- Die Vorschau („Preview assembled“) ist nur zur Anzeige. Die Druckmodi legen
-  die Teile bereits in der vorgesehenen Orientierung ab.
-- Bei extremen eigenen Maßen den Slicer-Preview prüfen; Brücken und Überhänge
-  verändern sich mit den Abmessungen.
-- Der Griff ist ein Lastteil: Gyroid 30 % und 3–4 Wände sind sinnvoller als die
-  15 % anderer Dekomodelle.
+- Never let supports be printed in threads and hardware pockets.
+- The preview ("Preview assembled") is for display only. The print modes already
+  place the parts in the intended orientation.
+- With extreme custom dimensions, check the slicer preview; bridges and
+  overhangs change with the dimensions.
+- The handle is a load-bearing part: gyroid 30 % and 3–4 walls make more sense
+  than the 15 % of other decorative models.
 
-## Anwendungsbeispiele
+## Usage Examples
 
-Die Beispiele sind Einsatzideen; die Auslegung hängt von Last, Material und
-Montage ab.
+The examples are application ideas; the design depends on load, material and
+mounting.
 
-- **Werkbank und Werkstattschränke:** Bügelgriffe mit 128 oder 160 mm
-  Lochabstand, gedrucktes M4-Gewinde, ohne Zukaufteile.
-- **Homelab-Rack und Gerätekisten:** Griffe an Frontklappen und
-  Aufbewahrungskisten; Heat-Set-Einsatz für häufig bewegte Teile.
-- **Nachrüsten alter Möbel:** Passende Lochabstände (32 bis 320 mm) sparen das
-  Neubohren; `hole_center_custom` deckt Sonderfälle ab.
-- **Einheitliche Optik über mehrere Möbel:** Dieselbe Basis mit
-  unterschiedlichen Abdeckfarben, z. B. nach Schrankinhalt.
-- **Kleinteilmagazine:** Knöpfe oder T-Griffe mit einer einzigen Schraube.
-- **Klappen und Schubladen ohne vorstehenden Griff:** Der Kantengriff
-  bietet eine Fingermulde an der Kante.
-- **Küche und Bad:** PETG statt PLA, gedrucktes Gewinde oder Mutter
-  statt Heat-Set-Einsatz, wenn Feuchtigkeit und Wärme eine Rolle spielen.
-- **Prototyping von Griffen:** Mit dem einfarbigen Modus `print_single` ein
-  Muster drucken, bevor die Serie in Zweifarbigkeit folgt.
+- **Workbench and workshop cabinets:** Bar handles with 128 or 160 mm hole
+  spacing, printed M4 thread, without purchased parts.
+- **Homelab rack and equipment boxes:** Handles on front flaps and storage
+  boxes; heat-set insert for frequently moved parts.
+- **Retrofitting old furniture:** Matching hole spacings (32 to 320 mm) save
+  re-drilling; `hole_center_custom` covers special cases.
+- **Uniform look across several pieces of furniture:** The same base with
+  different cover colours, e.g. by cabinet contents.
+- **Small-parts drawer units:** Knobs or T-handles with a single screw.
+- **Flaps and drawers without a protruding handle:** The edge pull offers a
+  finger recess at the edge.
+- **Kitchen and bathroom:** PETG instead of PLA, printed thread or nut instead
+  of a heat-set insert, when moisture and heat play a role.
+- **Prototyping handles:** Print a sample with the single-colour mode
+  `print_single` before the series follows in two colours.
 
-![Kantengriff in Blau an einer Holzschublade](images/05_edge-pull.jpg)
+![Edge pull in blue on a wooden drawer](images/05_edge-pull.jpg)
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-| Symptom | Ursache | Fix |
+| Symptom | Cause | Fix |
 |---|---|---|
-| Konsole meldet „SCREW TOO LARGE“ | Schraubenaufnahme ist breiter als der Fuß bzw. Knopf | kleinere `screw_size` oder größerer `foot_size` bzw. `knob_dia` |
-| Keine Abdeckung bei D-Griff, Knopf oder Kantengriff | Die Abdeckung gibt es nur für `bar_handle`, `bar_pull`, `t_bar` | Bauform wechseln oder den Griff einfarbig drucken |
-| Relief fehlt bei D-Griff, Knopf oder Kantengriff | Das Relief gilt nur für gerade Griffe | `edge_relief` beim Kantengriff nutzen oder Bauform wechseln |
-| Abdeckung sitzt mit überstehender Kante | Runder Griff erzwingt automatisch die `clip_over`-Kappe | `bar_shape` auf `rounded` oder `rect` stellen |
-| Abdeckung lässt sich nicht aufdrücken oder sitzt locker | Passungsspiel passt nicht zum Drucker | `cover_gap` und `cover_snap` abstimmen; Probeteil drucken |
-| Gewinde zu streng oder zu locker | Spiel passt nicht zu Drucker und Material | `thread_clear` anpassen (Standard 0,25 mm) |
-| Mutterntasche am D-Griff seitlich offen | Beim runden Schenkel öffnet die Tasche zu einer Seite | `printed_thread`, `heatset` oder `self_tap` verwenden |
-| Konsole: Durchgangsloch braucht Mutter oben | `mount_type = clearance` führt die Schraube durch den Griff | `printed_thread`, `hex_nut` oder `heatset` für eine geschlossene Aufnahme |
-| Meldung „GRIP TOO THIN“ bei separaten Pfosten | Griff zu dünn für Sockel und Bolzen | `bar_thick`/`bar_width` erhöhen oder kleinere Schraube bzw. kürzeren Zapfen |
-| Dunkle Löcher links und rechts im Bild | Die Schraubaufnahmen sind sichtbar, wenn die Basis in Druckpose gezeigt wird | kein Fehler, die Teile sind in der Druckorientierung gerendert |
-| Orange und graue Streifen in der Vorschau | Die Abdeckung liegt mit 0,3 mm Spiel nahezu bündig zur Basis | nur ein Vorschau-Artefakt; Render (F6) und die exportierten Teile sind sauber |
+| Console reports "SCREW TOO LARGE" | Screw mount is wider than the foot or knob | Smaller `screw_size` or larger `foot_size` or `knob_dia` |
+| No cover for D-handle, knob or edge pull | The cover is only available for `bar_handle`, `bar_pull`, `t_bar` | Change the design or print the handle in a single colour |
+| Relief missing on D-handle, knob or edge pull | The relief only applies to straight handles | Use `edge_relief` for the edge pull or change the design |
+| Cover sits with a protruding edge | A round handle automatically forces the `clip_over` cap | Set `bar_shape` to `rounded` or `rect` |
+| Cover cannot be pressed on or sits loosely | Fit clearance does not match the printer | Tune `cover_gap` and `cover_snap`; print a test part |
+| Thread too tight or too loose | Clearance does not match printer and material | Adjust `thread_clear` (default 0.25 mm) |
+| Nut pocket on the D-handle open at the side | On the round leg the pocket opens to one side | Use `printed_thread`, `heatset` or `self_tap` |
+| Console: clearance hole needs nut on top | `mount_type = clearance` passes the screw through the handle | `printed_thread`, `hex_nut` or `heatset` for a closed mount |
+| "GRIP TOO THIN" message with separate posts | Handle too thin for socket and bolt | Increase `bar_thick`/`bar_width`, or use a smaller screw or shorter spigot |
+| Dark holes left and right in the image | The screw mounts are visible when the base is shown in print pose | Not an error, the parts are rendered in print orientation |
+| Orange and grey stripes in the preview | The cover sits almost flush with the base with 0.3 mm clearance | Only a preview artefact; render (F6) and the exported parts are clean |
 
-## Entwicklungsgeschichte
+## Development History
 
-Das Modell entstand im August 2026 als Erweiterung der Familie parametrischer
-OpenSCAD-Designs. Die Rillenprofile (rund, rechteckig, V-förmig) und der
-Gedanke eines Relief-Dekors stammen vom parametrischen Gefäß derselben Reihe.
+The model was created in August 2026 as an extension of the family of parametric
+OpenSCAD designs. The groove profiles (round, rectangular, V-shaped) and the
+idea of a relief decor come from the parametric vessel of the same series.
 
-Anfangs war die zweite Farbe als Clip-over-Kappe ausgelegt, die außen um den
-Bügel greift. Diese Lösung wurde verworfen: Die Kante stand sichtbar auf dem
-Griff, der täglich in der Hand liegt. Seither ist das bündige **Inlay**
-Standard, bei dem Basis und Abdeckung wie ein Teil wirken; die Kappe blieb als
-Alternative erhalten. Weitere Stationen:
+Initially the second colour was designed as a clip-over cap that grips around
+the bar on the outside. This solution was discarded: the edge visibly protruded
+on the handle that lies in the hand every day. Since then, the flush **inlay**
+has been the default, where base and cover look like one part; the cap remained
+as an alternative. Further milestones:
 
-- Eine Schnapp-Nut mit festen Y-Keilen riss runde Basen auf (nicht manifold).
-  Die Lösung sind Offset-Ringe entlang der Kontur.
-- Die Reliefschnitte durchstießen D-Griff, Knopf und Kantengriff. Das Relief
-  ist deshalb auf gerade Griffe beschränkt.
-- Beim D-Griff brach die Schraubbohrung seitlich aus dem Schenkel. Seitdem sind
-  Tiefe und Durchmesser durch Schutzprüfungen begrenzt.
-- `relief_margin` = 0 lässt die Struktur bis zur Kante laufen.
-- Die Druckorientierung wurde je Bauform geprüft; alle Teile liegen mit
-  Z = 0 auf dem Bett und haben messbare Aufstandsfläche.
+- A snap groove with fixed Y wedges tore round bases open (non-manifold). The
+  solution is offset rings along the contour.
+- The relief cuts pierced through the D-handle, knob and edge pull. The relief
+  is therefore restricted to straight handles.
+- On the D-handle, the screw bore broke out sideways from the leg. Since then,
+  depth and diameter have been limited by safety checks.
+- `relief_margin` = 0 lets the texture run up to the edge.
+- The print orientation was checked for each design; all parts lie on the bed
+  with Z = 0 and have a measurable contact surface.
 
-Die zehn Beispielvarianten wurden am 17. August 2026 neu gebaut (Gyroid 30 %,
-3 Wände, P1S, PLA) und mit Bambu Studio test-geslict.
+The ten example variants were rebuilt on 17 August 2026 (gyroid 30 %, 3 walls,
+P1S, PLA) and test-sliced with Bambu Studio.
 
-![Rundgriff mit Umlaufringen in Blau an einer Holzschublade](images/06_bar-pull-rings.jpg)
+![Round handle with circumferential rings in blue on a wooden drawer](images/06_bar-pull-rings.jpg)
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: https://makerworld.com/en/models/3181516-ultimate-parametric-furniture-handles
+👉 MakerWorld link: https://makerworld.com/en/models/3181516-ultimate-parametric-furniture-handles
 
-Profil: <https://makerworld.com/en/@BetaHydri>
+Profile: <https://makerworld.com/en/@BetaHydri>
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository: © BetaHydri. Das Modell (inkl.
-Quellcode) und alle Druckdateien werden ausschließlich über MakerWorld unter
-der dort angegebenen Lizenz verteilt. Dieses Repository enthält bewusst keine
-Modell-, Quellcode- oder Druckdateien.
+Documentation and images in this repository: © BetaHydri. The model (including
+source code) and all print files are distributed exclusively via MakerWorld
+under the licence stated there. This repository deliberately contains no model,
+source code or print files.

@@ -1,293 +1,316 @@
-# Parametric Gridfinity Screw-Top Jar – Schraubglas für jede Gridfinity-Grundplatte
+# Parametric Gridfinity Screw-Top Jar – Screw-Top Jar for Every Gridfinity Baseplate
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Parametrisches Schraubglas, das in jede Standard-Gridfinity-Grundplatte passt: Raster von
-1×1 bis 4×4 Zellen, Höhe in Gridfinity-Einheiten, optionale Magnettaschen und beschriftbare
-Kappe – alles im MakerWorld-Customizer, druckbar ohne Stützen.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/3434732-parametric-gridfinity-screw-top-jar)
+Parametric screw-top jar that fits any standard Gridfinity baseplate: grid from
+1×1 to 4×4 cells, height in Gridfinity units, optional magnet pockets and a
+labelable cap – all in the MakerWorld Customizer, printable without supports.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/3434732-parametric-gridfinity-screw-top-jar)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-P1S%20%7C%20P2S%20%7C%20H2C-green)
-![Lizenz](https://img.shields.io/badge/Lizenz-CC%20BY--NC--SA%204.0-blue)
+![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue)
 
-> Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/3434732-parametric-gridfinity-screw-top-jar](https://makerworld.com/en/models/3434732-parametric-gridfinity-screw-top-jar)
+> The model with all print profiles is available exclusively on MakerWorld:
+> 👉 [MakerWorld link: https://makerworld.com/en/models/3434732-parametric-gridfinity-screw-top-jar](https://makerworld.com/en/models/3434732-parametric-gridfinity-screw-top-jar)
 
-![Mehrere Schraubgläser in verschiedenen Größen und Farben auf einer Gridfinity-Grundplatte, daneben Schrauben](images/01_hero.jpg)
+![Several screw-top jars in different sizes and colours on a Gridfinity baseplate, with screws beside them](images/01_hero.jpg)
 
-Das Glas ist ein richtiger Schraubbehälter im Gridfinity-System: Du wählst die Grundfläche
-(1×1 bis 4×4 Zellen), die Höhe in Einheiten zu 7 mm und optional einen Kappentext – und druckst
-ein verschließbares Glas, das mit jedem anderen Gridfinity-Bin in der Schublade bündig steht.
-Schrauben, Perlen, Gewürze, SD-Karten und Bastelkram bleiben, wo sie hingehören.
+The jar is a proper screw-top container in the Gridfinity system: you choose the
+footprint (1×1 to 4×4 cells), the height in units of 7 mm and optionally a cap
+text – and print a closable jar that sits flush with every other Gridfinity bin
+in the drawer. Screws, beads, spices, SD cards and craft supplies stay where
+they belong.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Konstruktion](#konstruktion)
-- [Varianten](#varianten)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Was du sonst brauchst](#was-du-sonst-brauchst)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Parametric Options](#parametric-options)
+- [Construction](#construction)
+- [Variants](#variants)
+- [Print Recommendations](#print-recommendations)
+- [What Else You Need](#what-else-you-need)
+- [Usage Examples](#usage-examples)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Gridfinity ordnet Werkstatt, Schublade und Regal im 42-mm-Raster – aber für Kleinteile fehlt oft
-der verschließbare Behälter:
+Gridfinity organises workshop, drawer and shelf in a 42 mm grid – but for small
+parts, a closable container is often missing:
 
-- Offene Bins lassen Schrauben und Perlen herausspringen, sobald du die Schublade ruckartig öffnest.
-- Fertige Schraubdosen haben nicht die Gridfinity-Füße und passen nicht in die Grundplatte.
-- Gedruckte Schraubgewinde haben Überhänge, klemmen oder sitzen zu locker.
-- Ein Glas, das höher oder niedriger ist als die Nachbar-Bins, bricht die saubere Optik und die Stapelhöhe.
+- Open bins let screws and beads jump out as soon as you open the drawer
+  abruptly.
+- Ready-made screw-top tins do not have the Gridfinity feet and do not fit in
+  the baseplate.
+- Printed screw threads have overhangs, jam or fit too loosely.
+- A jar that is taller or shorter than the neighbouring bins breaks the clean
+  look and the stacking height.
 
-## Die Idee
+## The Idea
 
-Das Glas steht auf einem echten Gridfinity-Fuß nach der öffentlichen Spezifikation und bekommt ein
-grobes trapezförmiges Gewinde mit 45°-Flanken, das ohne Stützen druckt. Die Kappe schraubt von außen
-auf und bleibt innerhalb der Grundfläche des Bins. Die geschlossene Höhe ist immer exakt
-**Einheiten × 7 mm**, genau wie bei normalen Gridfinity-Bins. Alle Maße sind Millimeter, alle Werte
-Customizer-Parameter.
+The jar stands on a genuine Gridfinity foot according to the public
+specification and gets a coarse trapezoidal thread with 45° flanks that prints
+without supports. The cap screws on from the outside and stays within the
+footprint of the bin. The closed height is always exactly
+**units × 7 mm**, just like with normal Gridfinity bins. All dimensions are
+millimetres, all values are Customizer parameters.
 
 ## Highlights
 
-- **Echter Gridfinity-Fuß:** 42-mm-Raster, Fußprofil 0,8 / 1,8 / 2,15 mm, 0,5 mm Spalt zwischen Bins
-  (`base_gap`). Passt in Standard-Grundplatten.
-- **Selbsttragendes Gewinde:** Trapez 90° mit 45°-Flanken – kein Überhang im Gewinde. Optional das
-  ISO-60°-Gewinde.
-- **Höhe in Gridfinity-Einheiten:** geschlossene Höhe = `height_units` × 7 mm. Ist das Glas für das
-  Gewinde zu niedrig, hebt das Modell die Höhe automatisch an.
-- **Magnettaschen (optional):** 4 pro Zelle, unten offen – zum Einkleben (6,5 × 2,4 mm) oder
-  Einpressen (5,9 × 2,0 mm) für Magnete 6 × 2 mm.
-- **Kappenbeschriftung:** Text auf der Kappe, bei der Zweifarb-Variante in der Farbe des Glases.
-- **Griffrillen:** senkrechte Rillen an der Kappe, die Anzahl wächst mit der Kappengröße.
-- **Grundplatten-Passprobe:** kleine Grundplatte (1–5 Zellen je Seite) zum Testen des Sitzes,
-  bevor du eine große Platte druckst.
-- **Ohne Stützen:** Glas steht auf seinem Fuß mit der Öffnung nach oben, die Kappe wird mit der
-  Deckfläche nach unten gedruckt.
+- **Genuine Gridfinity foot:** 42 mm grid, foot profile 0.8 / 1.8 / 2.15 mm,
+  0.5 mm gap between bins (`base_gap`). Fits standard baseplates.
+- **Self-supporting thread:** 90° trapezoid with 45° flanks – no overhang in the
+  thread. Optionally the ISO 60° thread.
+- **Height in Gridfinity units:** closed height = `height_units` × 7 mm. If the
+  jar is too low for the thread, the model raises the height automatically.
+- **Magnet pockets (optional):** 4 per cell, open at the bottom – for gluing in
+  (6.5 × 2.4 mm) or press-fitting (5.9 × 2.0 mm) magnets 6 × 2 mm.
+- **Cap label:** text on the cap, in the two-colour variant in the colour of the
+  jar.
+- **Grip grooves:** vertical grooves on the cap, the number grows with the cap
+  size.
+- **Baseplate fit test:** small baseplate (1–5 cells per side) for testing the
+  fit before you print a large plate.
+- **Without supports:** the jar stands on its foot with the opening facing up,
+  the cap is printed with the top face down.
 
-![1×1-Glas mit Kappenaufschrift „M3" neben einem offenen Glas auf einer Grundplatte](images/02_1x1-schrauben-m3.jpg)
+![1×1 jar with cap label "M3" next to an open jar on a baseplate](images/02_1x1-schrauben-m3.jpg)
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Namen entsprechen den Customizer-Parametern des Modells.
+The names correspond to the model's Customizer parameters.
 
-### Teileauswahl
+### Part Selection
 
-| Parameter | Beschreibung | Standard | Auswahl |
+| Parameter | Description | Default | Selection |
 |---|---|---|---|
-| part | Welches Teil erzeugt wird | Preview open | Preview assembled (Kappe auf, nur Ansicht), Preview open (Kappe daneben, nur Ansicht), Glas + Kappe (Druck), Zweifarbig 2 Farben (Druck), nur Glas, nur Kappe, Grundplatten-Passprobe (Druck) |
+| part | Which part is generated | Preview open | Preview assembled (cap on, view only), Preview open (cap beside it, view only), jar + cap (print), two-colour 2 colours (print), jar only, cap only, baseplate fit test (print) |
 
-Die beiden Vorschau-Ansichten sind nur zur Anzeige gedacht und nicht zum Drucken.
+The two preview views are for display only and not for printing.
 
-### Gridfinity-Grundfläche
+### Gridfinity Footprint
 
-| Parameter | Beschreibung | Standard | Bereich |
+| Parameter | Description | Default | Range |
 |---|---|---|---|
-| grid_size | Grundfläche in Zellen (N × N, je 42 mm) | 1 | 1–4 |
-| height_units | Geschlossene Höhe in Einheiten zu 7 mm | 7 | 4–15 |
-| base_gap | Spalt zwischen benachbarten Bins (0,5 = Standard) | 0,5 | 0,3–0,8 mm, Schritt 0,05 |
-| magnets | Magnettaschen im Boden | none | Keine, Taschen 6,5 × 2,4 mm (einkleben), Pressfit-Taschen 5,9 × 2,0 mm |
+| grid_size | Footprint in cells (N × N, 42 mm each) | 1 | 1–4 |
+| height_units | Closed height in units of 7 mm | 7 | 4–15 |
+| base_gap | Gap between adjacent bins (0.5 = standard) | 0.5 | 0.3–0.8 mm, step 0.05 |
+| magnets | Magnet pockets in the base | none | None, pockets 6.5 × 2.4 mm (glue in), press-fit pockets 5.9 × 2.0 mm |
 
-### Wände und Boden
+### Walls and Floor
 
-| Parameter | Beschreibung | Standard | Bereich |
+| Parameter | Description | Default | Range |
 |---|---|---|---|
-| wall | Wandstärke des Glases, mindestens 2,0 | 2,4 | 2,0–6,0 mm, Schritt 0,1 |
-| floor_z | Höhe des Innenbodens über dem Bett; wird über Magnettaschen automatisch angehoben | 3,4 | 2,6–8,0 mm, Schritt 0,2 |
+| wall | Wall thickness of the jar, at least 2.0 | 2.4 | 2.0–6.0 mm, step 0.1 |
+| floor_z | Height of the inner floor above the bed; raised automatically above magnet pockets | 3.4 | 2.6–8.0 mm, step 0.2 |
 
-### Gewinde und Kappe
+### Thread and Cap
 
-| Parameter | Beschreibung | Standard | Bereich |
+| Parameter | Description | Default | Range |
 |---|---|---|---|
-| thread_style | Gewindeform | trap90 | Trapez 90° (selbsttragend), ISO 60° |
-| thread_depth | Gewindetiefe der Trapezform | 1,0 | 0,6–1,4 mm, Schritt 0,1 |
-| thread_pitch | Steigung; grob = leicht von Hand zu schrauben | 2,8 | 1,5–4,0 mm, Schritt 0,1 |
-| thread_turns | Anzahl der Gewindegänge | 3 | 2–6, Schritt 0,5 |
-| thread_slop | Druckspiel zwischen Glas- und Kappengewinde | 0,12 | 0,05–0,30 mm, Schritt 0,01 |
-| lid_tolerance | Zusätzlicher Durchmesser im Kappengewinde | 0,1 | 0–1,0 mm, Schritt 0,05 |
-| cap_wall | Wandstärke der Kappe um das Gewinde | 2,2 | 1,6–6,0 mm, Schritt 0,2 |
-| cap_top | Dicke der Kappendeckfläche | 2,4 | 2,0–6,0 mm, Schritt 0,2 |
-| cap_margin | Abstand der Kappe zum Rand der Grundfläche | 0,5 | 0,2–1,5 mm, Schritt 0,1 |
-| lip_height | Höhe des Schulterrands unter dem Gewinde, auf dem die Kappe aufsitzt | 3,5 | 2–8 mm, Schritt 0,5 |
-| lip_round | Rundung der oberen Außenkante des Schulterrands | 1,0 | 0–2 mm, Schritt 0,25 |
-| cap_chamfer | Fase an der Kappenunterkante gegen Elefantenfuß | 0,6 | 0–2 mm, Schritt 0,1 |
+| thread_style | Thread form | trap90 | Trapezoid 90° (self-supporting), ISO 60° |
+| thread_depth | Thread depth of the trapezoid form | 1.0 | 0.6–1.4 mm, step 0.1 |
+| thread_pitch | Pitch; coarse = easy to screw by hand | 2.8 | 1.5–4.0 mm, step 0.1 |
+| thread_turns | Number of thread turns | 3 | 2–6, step 0.5 |
+| thread_slop | Print clearance between jar and cap thread | 0.12 | 0.05–0.30 mm, step 0.01 |
+| lid_tolerance | Additional diameter in the cap thread | 0.1 | 0–1.0 mm, step 0.05 |
+| cap_wall | Wall thickness of the cap around the thread | 2.2 | 1.6–6.0 mm, step 0.2 |
+| cap_top | Thickness of the cap top face | 2.4 | 2.0–6.0 mm, step 0.2 |
+| cap_margin | Distance of the cap from the edge of the footprint | 0.5 | 0.2–1.5 mm, step 0.1 |
+| lip_height | Height of the shoulder rim below the thread on which the cap sits | 3.5 | 2–8 mm, step 0.5 |
+| lip_round | Rounding of the upper outer edge of the shoulder rim | 1.0 | 0–2 mm, step 0.25 |
+| cap_chamfer | Chamfer on the cap's lower edge against elephant's foot | 0.6 | 0–2 mm, step 0.1 |
 
-### Kappen-Griff
+### Cap Grip
 
-| Parameter | Beschreibung | Standard | Bereich |
+| Parameter | Description | Default | Range |
 |---|---|---|---|
-| grip_style | Griffrillen oder glatt | flutes | Senkrechte Rillen, glatt |
-| grip_pitch | Soll-Abstand der Rillen; die Anzahl skaliert mit der Kappe | 6 | 3–15 mm, Schritt 0,5 |
-| grip_depth | Rillentiefe; bis 0,6 halten, damit die Gewindewand stark bleibt | 0,5 | 0,3–0,8 mm, Schritt 0,1 |
+| grip_style | Grip grooves or smooth | flutes | Vertical grooves, smooth |
+| grip_pitch | Target spacing of the grooves; the count scales with the cap | 6 | 3–15 mm, step 0.5 |
+| grip_depth | Groove depth; keep up to 0.6 so the thread wall stays strong | 0.5 | 0.3–0.8 mm, step 0.1 |
 
-### Text auf der Kappe
+### Text on the Cap
 
-| Parameter | Beschreibung | Standard | Bereich |
+| Parameter | Description | Default | Range |
 |---|---|---|---|
-| lid_text_enabled | Text in die Kappendeckfläche gravieren | 0 | 0 = Aus, 1 = An |
-| lid_text | Text | M3 | Freitext |
-| lid_text_size | Schriftgröße, 0 = automatisch passend zur Kappe | 0 | 0–40 mm, Schritt 0,5 |
-| lid_text_depth | Gravurtiefe | 0,6 | 0,3–1,5 mm, Schritt 0,1 |
+| lid_text_enabled | Engrave text into the cap top face | 0 | 0 = off, 1 = on |
+| lid_text | Text | M3 | Free text |
+| lid_text_size | Font size, 0 = automatically fitted to the cap | 0 | 0–40 mm, step 0.5 |
+| lid_text_depth | Engraving depth | 0.6 | 0.3–1.5 mm, step 0.1 |
 
-### Grundplatten-Passprobe
+### Baseplate Fit Test
 
-| Parameter | Beschreibung | Standard | Bereich |
+| Parameter | Description | Default | Range |
 |---|---|---|---|
-| baseplate_cells | Zellen je Seite (N × N) | 2 | 1–5 |
-| baseplate_floor | Bodenstärke unter den Zellen | 1,2 | 0,8–3,0 mm, Schritt 0,2 |
-| baseplate_rim | Zusätzlicher Rand um die Zellen | 1,2 | 0,4–4,0 mm, Schritt 0,2 |
-| baseplate_clearance | Spiel zwischen Bin-Fuß und Zelle je Seite | 0,15 | 0,05–0,40 mm, Schritt 0,05 |
+| baseplate_cells | Cells per side (N × N) | 2 | 1–5 |
+| baseplate_floor | Floor thickness under the cells | 1.2 | 0.8–3.0 mm, step 0.2 |
+| baseplate_rim | Additional rim around the cells | 1.2 | 0.4–4.0 mm, step 0.2 |
+| baseplate_clearance | Clearance between bin foot and cell per side | 0.15 | 0.05–0.40 mm, step 0.05 |
 
-### Qualität
+### Quality
 
-| Parameter | Beschreibung | Standard | Bereich |
+| Parameter | Description | Default | Range |
 |---|---|---|---|
-| round_res | Render-Glätte | 96 | 48–180, Schritt 8 |
-| thread_res | Segmente pro Gewindegang | 48 | 24–96, Schritt 8 |
+| round_res | Render smoothness | 96 | 48–180, step 8 |
+| thread_res | Segments per thread turn | 48 | 24–96, step 8 |
 
-## Konstruktion
+## Construction
 
-### OpenSCAD-Ansatz
+### OpenSCAD Approach
 
-Das Modell ist OpenSCAD und nutzt die Bibliothek BOSL2 für das robuste Trapezgewinde. Die
-Gridfinity-Geometrie ist aus der öffentlichen Spezifikation geschrieben. Das Glas ist rund und füllt
-die Grundfläche; die Kappe schraubt von außen auf und bleibt innerhalb der Bin-Hülle.
+The model is OpenSCAD and uses the BOSL2 library for the robust trapezoidal
+thread. The Gridfinity geometry is written from the public specification. The
+jar is round and fills the footprint; the cap screws on from the outside and
+stays within the bin envelope.
 
-### Parametrische Logik
+### Parametric Logic
 
-Aus den Eingaben ergeben sich die Maße so:
+The dimensions result from the inputs as follows:
 
-| Größe | Berechnung |
+| Size | Calculation |
 |---|---|
-| Grundfläche | grid_size × 42 − base_gap (1 Zelle: 41,5 mm) |
-| Kappen-Außenradius | Grundfläche / 2 − cap_margin |
-| Glas- und Gewinderadius | Kappenradius − cap_wall − lid_tolerance / 2 |
-| Geschlossene Höhe | Einheiten × 7 mm |
-| Mindesthöhe | so viele Einheiten, dass Fuß, Glaskörper, Schulterrand und Kappe samt Gewinde passen |
-| Innenboden | mindestens über den Magnettaschen (Taschenhöhe + 0,8 mm); bei mehreren Zellen mindestens 1 mm über den Fußspalten |
+| Footprint | grid_size × 42 − base_gap (1 cell: 41.5 mm) |
+| Cap outer radius | footprint / 2 − cap_margin |
+| Jar and thread radius | cap radius − cap_wall − lid_tolerance / 2 |
+| Closed height | units × 7 mm |
+| Minimum height | as many units as needed for the foot, jar body, shoulder rim and cap including thread to fit |
+| Inner floor | at least above the magnet pockets (pocket height + 0.8 mm); with several cells at least 1 mm above the foot gaps |
 
-Mit den Voreinstellungen (1×1, 7 Einheiten) ergibt sich eine Höhe von 49 mm und ein Gewindeaußendurchmesser
-von rund 36 mm; die Mindesthöhe liegt bei 4 Einheiten (28 mm). Die Werte sind aus den Formeln und den
-Standardwerten abgeleitet.
+With the default settings (1×1, 7 units), the result is a height of 49 mm and a
+thread outer diameter of about 36 mm; the minimum height is 4 units (28 mm). The
+values are derived from the formulas and the default values.
 
-### Druckoptimierungen
+### Print Optimizations
 
-- **Selbsttragendes Gewinde:** 45°-Flanken, die Kappe wird mit der Deckfläche nach unten gedruckt.
-- **Kein Elefantenfuß an der Kappe:** `cap_chamfer` fasst die Unterkante an.
-- **Gewinde als Perimeter:** das Gewinde besteht fast nur aus Außenwänden, deshalb 4 Wände.
-- **Mehrzellige Böden:** der Innenboden liegt über den Fußspalten, damit der Boden nicht durchsichtig wird.
-- **Große Gläser:** ab 3×3 werden Glas und Kappe als getrennte Objekte erzeugt; der Slicer legt sie
-  gegebenenfalls auf zwei Platten.
+- **Self-supporting thread:** 45° flanks, the cap is printed with the top face
+  down.
+- **No elephant's foot on the cap:** `cap_chamfer` chamfers the lower edge.
+- **Thread as perimeters:** the thread consists almost only of outer walls,
+  hence 4 walls.
+- **Multi-cell floors:** the inner floor lies above the foot gaps so that the
+  floor does not become see-through.
+- **Large jars:** from 3×3, jar and cap are generated as separate objects; the
+  slicer places them on two plates if necessary.
 
-![Grundplatten-Passprobe 2×2 mit zwei eingesetzten Gläsern](images/06_grundplatte-passprobe.jpg)
+![2×2 baseplate fit test with two inserted jars](images/06_grundplatte-passprobe.jpg)
 
-## Varianten
+## Variants
 
-Zum Modell gehören fünf Referenzvarianten. Alle sind Einstellungen desselben Modells; im Customizer
-stellst du beliebige andere Werte ein.
+Five reference variants belong to the model. All are settings of the same model;
+in the Customizer you can set any other values.
 
-| Variante | Raster | Höhe | Magnete | Kappentext |
+| Variant | Grid | Height | Magnets | Cap text |
 |---|---|---|---|---|
-| v1_1x1_screws_49mm | 1×1 | 7 Einheiten (49 mm) | Einkleben | M3 |
-| v2_1x1_beads_35mm | 1×1 | 5 Einheiten (35 mm) | Einpressen | BEADS |
-| v3_2x2_spices_42mm | 2×2 | 6 Einheiten (42 mm) | Einkleben | SPICE |
-| v4_3x3_bulk_56mm | 3×3 | 8 Einheiten (56 mm) | Einkleben | BULK (Glas und Kappe getrennt) |
-| v5_baseplate_2x2_test | 2×2 Zellen | – | – | Grundplatten-Passprobe |
+| v1_1x1_screws_49mm | 1×1 | 7 units (49 mm) | Glue-in | M3 |
+| v2_1x1_beads_35mm | 1×1 | 5 units (35 mm) | Press-fit | BEADS |
+| v3_2x2_spices_42mm | 2×2 | 6 units (42 mm) | Glue-in | SPICE |
+| v4_3x3_bulk_56mm | 3×3 | 8 units (56 mm) | Glue-in | BULK (jar and cap separate) |
+| v5_baseplate_2x2_test | 2×2 cells | – | – | Baseplate fit test |
 
-![1×1-Glas mit Kappenaufschrift „BEADS", dahinter ein offenes Glas mit sichtbarem Gewinde](images/03_1x1-perlen.jpg)
+![1×1 jar with cap label "BEADS", behind it an open jar with visible thread](images/03_1x1-perlen.jpg)
 
-## Druckempfehlungen
+## Print Recommendations
 
-| Einstellung | Empfehlung |
+| Setting | Recommendation |
 |---|---|
-| Material | PLA für trockene Lagerung, PETG für ein zäheres Gefühl |
-| Layerhöhe | 0,20 mm |
-| Wände | 4 (das Gewinde besteht aus Perimetern) |
-| Infill | 15 % Gyroid |
-| Supports | keine |
-| Ausrichtung Glas | aufrecht auf dem Gridfinity-Fuß, Öffnung nach oben |
-| Ausrichtung Kappe | Deckfläche nach unten, Öffnung nach oben |
-| Ausrichtung Grundplatte | flach |
+| Material | PLA for dry storage, PETG for a tougher feel |
+| Layer height | 0.20 mm |
+| Walls | 4 (the thread consists of perimeters) |
+| Infill | 15 % gyroid |
+| Supports | none |
+| Jar orientation | upright on the Gridfinity foot, opening facing up |
+| Cap orientation | top face down, opening facing up |
+| Baseplate orientation | flat |
 
-Besondere Hinweise
+Special notes
 
-- **Gewinde-Passung:** Klemmt die Kappe, erhöhe `thread_slop` auf etwa 0,15. Sitzt sie zu locker, verringere ihn.
-- **Magnete:** von unten in die Taschen einsetzen, Polung beachten und alle Gläser und Platten gleich
-  herum bestücken. Bei den Einkleb-Taschen genügt ein Tropfen Sekundenkleber.
-- **Sitz in der Grundplatte:** Sitzen die Gläser stramm, erhöhe `base_gap` auf 0,6 mm. Drucke bei einer
-  Grundplatte von anderswo zuerst die Passprobe.
-- **Test vor dem großen Druck:** Bei geänderten Gewinde- oder Passungswerten zuerst ein Probestück drucken.
+- **Thread fit:** If the cap jams, increase `thread_slop` to about 0.15. If it
+  sits too loosely, reduce it.
+- **Magnets:** insert them into the pockets from below, mind the polarity and
+  fit all jars and plates the same way round. For the glue-in pockets, a drop of
+  superglue is enough.
+- **Fit in the baseplate:** If the jars fit tightly, increase `base_gap` to
+  0.6 mm. If you have a baseplate from elsewhere, print the fit test first.
+- **Test before the big print:** If you change thread or fit values, print a
+  test piece first.
 
-![3×3-Vorratsglas mit Kappenaufschrift „BULK"](images/05_3x3-vorrat.jpg)
+![3×3 storage jar with cap label "BULK"](images/05_3x3-vorrat.jpg)
 
-## Was du sonst brauchst
+## What Else You Need
 
-Das Glas ist der **Bin**, nicht die Grundplatte. Für den Einsatz im Gridfinity-System brauchst du:
+The jar is the **bin**, not the baseplate. To use it in the Gridfinity system,
+you need:
 
-1. **Eine Gridfinity-Grundplatte** (42-mm-Raster) – schlicht, magnetisch oder zum Verschrauben.
-   Du kannst die **Passprobe** aus diesem Modell drucken (1–5 Zellen je Seite) oder auf MakerWorld nach
-   „Gridfinity baseplate" suchen. Für eine Platte nach Schubladenmaß helfen zum Beispiel das
-   [Gridfinity Layout Tool](https://gridfinitylayouttool.com/) oder
-   [Gridfinity Rebuilt for OpenSCAD](https://github.com/kennetek/gridfinity-rebuilt-openscad).
-   Hintergrund und Spezifikation: [gridfinity.xyz](https://gridfinity.xyz/).
-2. **Magnete (optional):** 6 × 2 mm Neodym-Scheiben, 4 pro Zelle, nur wenn deine Platte Magnettaschen hat.
-3. **Etwas Kleber** für die Magnete (bei Einkleb-Taschen).
-4. **Ein Fach**, das zur Grundplatte passt: Innenmaß messen, durch 42 mm teilen, so viele Zellen drucken.
+1. **A Gridfinity baseplate** (42 mm grid) – plain, magnetic or screw-down.
+   You can print the **fit test** from this model (1–5 cells per side) or search
+   MakerWorld for "Gridfinity baseplate". For a plate sized to your drawer, the
+   [Gridfinity Layout Tool](https://gridfinitylayouttool.com/) or
+   [Gridfinity Rebuilt for OpenSCAD](https://github.com/kennetek/gridfinity-rebuilt-openscad),
+   for example, can help.
+   Background and specification: [gridfinity.xyz](https://gridfinity.xyz/).
+2. **Magnets (optional):** 6 × 2 mm neodymium discs, 4 per cell, only if your
+   plate has magnet pockets.
+3. **A little glue** for the magnets (for glue-in pockets).
+4. **A compartment** that matches the baseplate: measure the inner dimension,
+   divide by 42 mm, print that many cells.
 
-Ohne Grundplatte funktionieren die Gläser auch als freistehende Schraubgläser.
+Without a baseplate, the jars also work as free-standing screw-top jars.
 
-## Anwendungsbeispiele
+## Usage Examples
 
-- **Werkstatt:** Schrauben, Muttern, Dübel und Kleinteile im Raster sortieren und beschriften („M3").
-- **Elektronik:** SD-Karten, Jumper, Kleinteile für Projekte.
-- **Basteln:** Perlen, Knöpfe, Nähzubehör.
-- **Küche:** Gewürze in der Schublade (Variante „SPICE").
-- **Vorrat:** großes 3×3-Glas für Schüttgut.
-- **Farbcodierung:** Gläser und Kappen in verschiedenen Farben für verschiedene Inhalte.
+- **Workshop:** Sort screws, nuts, wall plugs and small parts in the grid and
+  label them ("M3").
+- **Electronics:** SD cards, jumper wires, small parts for projects.
+- **Crafts:** Beads, buttons, sewing supplies.
+- **Kitchen:** Spices in the drawer ("SPICE" variant).
+- **Storage:** Large 3×3 jar for bulk goods.
+- **Colour coding:** Jars and caps in different colours for different contents.
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-| Problem | Ursache | Lösung |
+| Problem | Cause | Solution |
 |---|---|---|
-| Kappe klemmt | Gewindespiel zu klein für deinen Drucker | `thread_slop` auf etwa 0,15 erhöhen |
-| Kappe sitzt locker | Gewindespiel zu groß | `thread_slop` verringern |
-| Glas sitzt stramm in der Grundplatte | Spalt zu klein | `base_gap` auf 0,6 mm erhöhen |
-| Glas ist höher als eingestellt | Für das Gewinde ist eine Mindesthöhe nötig, das Modell hebt die Höhe automatisch an | Gewollt; mit weniger Gewindegängen (`thread_turns`) oder kleinerer Schulter (`lip_height`) sinkt die Mindesthöhe |
-| Innenboden liegt höher als eingestellt | Der Boden wird über Magnettaschen und Fußspalten angehoben | Das ist gewollt; Magnete weglassen oder `floor_z` prüfen |
-| Magnete haften falsch herum | Polung nicht einheitlich | Alle Gläser und Platten gleich herum bestücken |
-| Glas und Kappe liegen auf zwei Platten | 3×3 und größer sind getrennte Objekte | Im Slicer auf zwei Platten drucken |
+| Cap jams | Thread clearance too small for your printer | Increase `thread_slop` to about 0.15 |
+| Cap sits loosely | Thread clearance too large | Reduce `thread_slop` |
+| Jar fits tightly in the baseplate | Gap too small | Increase `base_gap` to 0.6 mm |
+| Jar is taller than set | A minimum height is needed for the thread, the model raises the height automatically | Intended; with fewer thread turns (`thread_turns`) or a smaller shoulder (`lip_height`) the minimum height drops |
+| Inner floor is higher than set | The floor is raised above magnet pockets and foot gaps | This is intended; omit the magnets or check `floor_z` |
+| Magnets stick the wrong way round | Polarity not uniform | Fit all jars and plates the same way round |
+| Jar and cap are on two plates | 3×3 and larger are separate objects | Print on two plates in the slicer |
 
-## Entwicklungsgeschichte
+## Development History
 
-Das Modell entstand im Oktober 2026 als Schraubglas für das Gridfinity-System und wurde im selben Monat
-auf MakerWorld veröffentlicht. Das Gewinde nutzt eine grobe, selbsttragende Trapezform; die ISO-Form blieb
-als Option erhalten.
+The model was created in October 2026 as a screw-top jar for the Gridfinity
+system and was published on MakerWorld in the same month. The thread uses a
+coarse, self-supporting trapezoid form; the ISO form was kept as an option.
 
-Die Bilder in diesem Repository sind Renderings der Modellgeometrie beziehungsweise daraus abgeleitete
-Szenenbilder; Umgebung, Beschriftung und Beiwerk wie Schrauben sind illustrativ.
+The images in this repository are renderings of the model geometry or scene
+images derived from it; environment, labelling and accessories such as screws
+are illustrative.
 
-![2×2-Glas mit gelber Kappe „SPICE" auf einer Grundplatte, daneben eine abgenommene Kappe](images/04_2x2-gewuerze.jpg)
+![2×2 jar with yellow cap "SPICE" on a baseplate, with a removed cap beside it](images/04_2x2-gewuerze.jpg)
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: [https://makerworld.com/en/models/3434732-parametric-gridfinity-screw-top-jar](https://makerworld.com/en/models/3434732-parametric-gridfinity-screw-top-jar)
+👉 MakerWorld link: [https://makerworld.com/en/models/3434732-parametric-gridfinity-screw-top-jar](https://makerworld.com/en/models/3434732-parametric-gridfinity-screw-top-jar)
 
-Profil: [https://makerworld.com/en/@BetaHydri](https://makerworld.com/en/@BetaHydri)
+Profile: [https://makerworld.com/en/@BetaHydri](https://makerworld.com/en/@BetaHydri)
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository: © BetaHydri. Das Modell (inkl. Quellcode) und alle
-Druckdateien werden ausschließlich über MakerWorld unter der dort angegebenen Lizenz
-(CC BY-NC-SA 4.0) verteilt. Dieses Repository enthält bewusst keine Modell-, Quellcode- oder Druckdateien.
+Documentation and images in this repository: © BetaHydri. The model (including
+source code) and all print files are distributed exclusively via MakerWorld
+under the licence stated there (CC BY-NC-SA 4.0). This repository deliberately
+contains no model, source code or print files.
 
-Gridfinity ist ein offener Standard von Zack Freedman ([gridfinity.xyz](https://gridfinity.xyz/)).
-Die Geometrie dieses Modells ist nach der öffentlichen Spezifikation geschrieben.
+Gridfinity is an open standard by Zack Freedman ([gridfinity.xyz](https://gridfinity.xyz/)).
+The geometry of this model is written from the public specification.

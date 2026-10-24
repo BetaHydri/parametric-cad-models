@@ -1,392 +1,394 @@
-# Parametric Kitchen Paper Towel Roll Holder – Wand, Unterschrank oder Tischständer mit Federbremse
+# Parametric Kitchen Paper Towel Roll Holder – Wall, Under-Cabinet or Tabletop Stand with Spring Brake
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Parametrischer Küchenrollenhalter für den FDM-Druck: eine Datei, drei
-Montagearten (an der Wand, unter dem Hängeschrank, frei auf dem Tisch) und
-dieselbe Spindel mit eingebauter Federbremse, damit die Rolle einhändig
-abreißt und nicht von allein abrollt. Rollenbreite, Kerndurchmesser, Montage
-und Teilung für kleine Druckbetten stellst du im MakerWorld-Customizer ein.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/3143928-parametric-kitchen-paper-towel-roll-holder)
+A parametric kitchen paper towel roll holder for FDM printing: one file, three
+mounting styles (on the wall, under the wall cabinet, free-standing on the
+table) and the same spindle with a built-in spring brake, so that the roll
+tears off with one hand and does not unroll by itself. You set roll width, core
+diameter, mounting and the split for small print beds in the MakerWorld
+Customizer.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/3143928-parametric-kitchen-paper-towel-roll-holder)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-P1S%20%7C%20P2S%20%7C%20H2C-green)
 ![Print files](https://img.shields.io/badge/Print%20files-MakerWorld%20only-blue)
 
-> **Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:**
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/3143928-parametric-kitchen-paper-towel-roll-holder](https://makerworld.com/en/models/3143928-parametric-kitchen-paper-towel-roll-holder)
+> **The model with all print profiles is available exclusively on MakerWorld:**
+> 👉 [MakerWorld link: https://makerworld.com/en/models/3143928-parametric-kitchen-paper-towel-roll-holder](https://makerworld.com/en/models/3143928-parametric-kitchen-paper-towel-roll-holder)
 >
-> ![Parametric Kitchen Paper Towel Roll Holder – Wand-, Unterschrank- und Tischvariante in einer Wohnmobil-Küche](images/01_hero.jpg)
+> ![Parametric Kitchen Paper Towel Roll Holder – wall, under-cabinet and table variants in a motorhome kitchen](images/01_hero.jpg)
 
-Der **Parametric Kitchen Paper Towel Roll Holder** besteht aus einer Spindel,
-auf die die Rolle von der offenen Seite aufgeschoben wird, und je nach Stil
-einer Rückplatte (Wand), einem Winkel mit Deckenflansch (Unterschrank) oder
-einem beschwerten Fuß mit senkrechter Säule (Tisch). Die Bremse ist ein
-Federblatt, das leicht in den Pappkern drückt. Lange Teile lassen sich per
-gedrucktem Gewinde teilen und passen dann auf Druckbetten mit 256 mm.
+The **Parametric Kitchen Paper Towel Roll Holder** consists of a spindle onto
+which the roll is slid from the open side and, depending on the style, a back
+plate (wall), a bracket with a ceiling flange (under-cabinet) or a weighted
+base with a vertical post (table). The brake is a spring blade that presses
+lightly into the cardboard core. Long parts can be split using a printed thread
+and then fit on 256 mm print beds.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Konstruktion](#konstruktion)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Parametric Options](#parametric-options)
+- [Design](#design)
+- [Print Recommendations](#print-recommendations)
+- [Use Cases](#use-cases)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Küchenrollenhalter gibt es in jedem Baumarkt – nur selten für den Ort, an dem
-du ihn brauchst:
+Paper towel holders are available in every hardware store – but rarely for the
+place where you need one:
 
-- Im Wohnmobil, Camper oder Boot rüttelt die Fahrt die Rolle ab; ohne Bremse
-  liegt nach der ersten Kurve die halbe Rolle auf dem Boden.
-- Unter einem Hängeschrank ist der Platz begrenzt, und frische Rollen sind dick
-  (bis ca. 150 mm Durchmesser). Ein Winkel, der für die halb leere Rolle passt,
-  schleift an der vollen.
-- Rollen sind unterschiedlich breit (ca. 180–260 mm) und haben verschieden
-  weite Kerne (ca. 38–46 mm). Ein starrer Halter passt nur zu einem Fall.
-- Die Rolle ist 260 mm breit, das Druckbett hat 256 mm – ein einteiliger Halter
-  passt nicht auf den Drucker.
-- Wer nicht bohren darf (Mietwohnung, Möbelfront), braucht eine
-  Klebe-Variante.
+- In a motorhome, camper or boat, driving shakes the roll loose; without a
+  brake, half the roll is on the floor after the first curve.
+- Space under a wall cabinet is limited, and fresh rolls are thick (up to about
+  150 mm in diameter). A bracket that fits the half-empty roll rubs against the
+  full one.
+- Rolls come in different widths (about 180–260 mm) and have cores of different
+  sizes (about 38–46 mm). A rigid holder fits only one case.
+- The roll is 260 mm wide, the print bed is 256 mm – a one-piece holder does not
+  fit on the printer.
+- If you are not allowed to drill (rental apartment, furniture front), you need
+  an adhesive variant.
 
-## Die Idee
+## The Idea
 
-Eine Spindel mit Bremse für alle drei Montagearten. Sie ist etwas dünner als
-der Kern (`spin_play`), sodass sich die Rolle frei dreht; nur die Bremse sitzt
-ein Stück höher als der Kern (`brake_preload`) und erzeugt einen leichten
-Dauerwiderstand. Die Bremse ist standardmäßig ein **separates Federblatt zum
-Einclipsen**, das flach gedruckt wird und auch in geteilten Teilen funktioniert.
-Lange Teile teilt das Modell auf Wunsch in zwei Segmente mit grobem, gedrucktem
-Schraubgewinde. Alle Maße in Millimetern, alle Werte als Customizer-Parameter.
+One spindle with a brake for all three mounting styles. It is slightly thinner
+than the core (`spin_play`) so that the roll turns freely; only the brake sits
+a little higher than the core (`brake_preload`) and creates a light constant
+resistance. By default, the brake is a **separate clip-in spring blade** that is
+printed flat and also works in split parts. If desired, the model splits long
+parts into two segments with a coarse, printed screw thread. All dimensions are
+in millimeters, all values are Customizer parameters.
 
 ## Highlights
 
-- **Drei Montagearten in einer Datei:** Wand (Spindel seitlich), Unterschrank
-  (Spindel hängt nach unten, Schrauben nach oben) und Tischständer.
-- **Federbremse gegen Abrollen:** Zwei Bauarten über `brake_type`: `insert`
-  (Standard) ist ein separates Clip-Federblatt, `integrated` ein
-  druckintegriertes Blatt in der Spindelwand (nur für einteilige Spindeln).
-- **Einstellbare Bremskraft:** `brake_preload` (0 = freilaufend, typisch
-  0,4–0,7 mm).
-- **Rollen-Voreinstellungen:** `roll_preset` mit Standard 230, Deutsch 260,5,
-  Groß 250, Kompakt 180 und Eigen; Kern- und Außendurchmesser als Parameter.
-- **Schrauben oder Klebeband:** `screw_hole_dia = 0` ergibt eine glatte
-  Rückplatte für doppelseitiges Klebeband.
-- **Ganz oder geteilt:** Teilung per gedrucktem Gewinde ohne Kleber für
-  256-mm-Druckbetten.
-- **Dicke Rollen im Blick:** `clearance_roll_dia` hält den Unterschrank-Winkel
-  frei für die größte Rolle, die je hängen soll.
-- **Tischständer mit Beschwerung:** `weight_recess` für Sand oder Münzen.
-- **Materialhinweise:** PLA zu Hause, PETG im Fahrzeug, der Clip bevorzugt in
+- **Three mounting styles in one file:** wall (spindle sticks out sideways),
+  under-cabinet (spindle hangs downward, screws point upward) and table stand.
+- **Spring brake against unrolling:** Two designs via `brake_type`: `insert`
+  (default) is a separate clip-in spring blade, `integrated` is a blade
+  integrated into the print in the spindle wall (for one-piece spindles only).
+- **Adjustable braking force:** `brake_preload` (0 = free-running, typically
+  0.4–0.7 mm).
+- **Roll presets:** `roll_preset` with Standard 230, German 260.5, Large 250,
+  Compact 180 and Custom; core and outer diameter as parameters.
+- **Screws or adhesive tape:** `screw_hole_dia = 0` gives a smooth back plate
+  for double-sided adhesive tape.
+- **Whole or split:** Splitting via a printed thread without glue for 256 mm
+  print beds.
+- **Thick rolls in mind:** `clearance_roll_dia` keeps the under-cabinet bracket
+  clear for the largest roll that is ever to hang there.
+- **Table stand with weight:** `weight_recess` for sand or coins.
+- **Material notes:** PLA at home, PETG in the vehicle, the clip preferably in
   PETG.
 
-![Wandvariante: Rückplatte mit Spindel und aufgesteckter Rolle](images/02_wandmontage.jpg)
+![Wall variant: back plate with spindle and mounted roll](images/02_wandmontage.jpg)
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Namen entsprechen den Customizer-Parametern des Modells.
+The names correspond to the model's Customizer parameters.
 
-### Ausgabe und Montage
+### Output and Mounting
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `part` | Ausgabe: Vorschau Wand, Vorschau Tisch, `Wall holder`, `Wall holder split`, `Table base`, `Table post`, `Table split`, `Brake spring` | Vorschau Wand | Auswahl |
-| `mount_style` | `Vertical wall` (Spindel steht seitlich ab, Schrauben seitlich) oder `Under-shelf` (Spindel hängt nach unten, Schrauben nach oben); wirkt nur auf die Wandteile | `Vertical wall` | Auswahl |
+| `part` | Output: preview wall, preview table, `Wall holder`, `Wall holder split`, `Table base`, `Table post`, `Table split`, `Brake spring` | preview wall | selection |
+| `mount_style` | `Vertical wall` (spindle sticks out sideways, screws on the side) or `Under-shelf` (spindle hangs downward, screws point upward); affects the wall parts only | `Vertical wall` | selection |
 
-### Küchenrolle
+### Paper Towel Roll
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `roll_preset` | Rollenbreite: Standard 230 mm, Deutsch 260,5 mm, Groß 250 mm, Kompakt 180 mm, Eigen | Standard 230 mm | Auswahl |
-| `roll_length_custom` | Eigene Rollenbreite (nur bei `Custom`) | 230 | 120–320 mm |
-| `core_inner_dia` | Innendurchmesser des Pappkerns (nachmessen) | 41 | 30–60 mm, Schritt 0,5 |
-| `roll_outer_dia` | Außendurchmesser deiner vollen Rolle (Referenz und Warnungen) | 98 | 90–160 mm |
-| `clearance_roll_dia` | Größte Rolle, die je hängen soll; Unterschrank-Winkel und Streben werden immer für diesen Durchmesser freigeschnitten | 140 | 98–170 mm |
-| `roll_clear_gap` | Luftspalt rund um die Rolle je Seite | 4 | 1–12 mm, Schritt 0,5 |
+| `roll_preset` | Roll width: Standard 230 mm, German 260.5 mm, Large 250 mm, Compact 180 mm, Custom | Standard 230 mm | selection |
+| `roll_length_custom` | Custom roll width (only with `Custom`) | 230 | 120–320 mm |
+| `core_inner_dia` | Inner diameter of the cardboard core (measure it) | 41 | 30–60 mm, step 0.5 |
+| `roll_outer_dia` | Outer diameter of your full roll (reference and warnings) | 98 | 90–160 mm |
+| `clearance_roll_dia` | Largest roll that is ever to hang there; the under-cabinet bracket and struts are always cut clear for this diameter | 140 | 98–170 mm |
+| `roll_clear_gap` | Air gap around the roll per side | 4 | 1–12 mm, step 0.5 |
 
-### Passung und Bremse
+### Fit and Brake
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `spin_play` | Radialspiel, damit sich die Rolle frei dreht (je Seite) | 0,8 | 0,3–2,0 mm, Schritt 0,1 |
-| `enable_brake` | Bremse ein/aus | an | an / aus |
-| `brake_type` | `integrated` (druckintegriertes Blatt, nur einteilige Spindel) oder `insert` (separates Clip-Federblatt) | `insert` | Auswahl |
-| `brake_preload` | Bremskraft: 0 = keine, höher = fester | 0,5 | 0,0–1,5 mm, Schritt 0,1 |
-| `enable_end_stop` | Endwulst, der die Rolle am Abrutschen hindert | an | an / aus |
+| `spin_play` | Radial clearance so that the roll turns freely (per side) | 0.8 | 0.3–2.0 mm, step 0.1 |
+| `enable_brake` | Brake on/off | on | on / off |
+| `brake_type` | `integrated` (blade integrated into the print, one-piece spindle only) or `insert` (separate clip-in spring blade) | `insert` | selection |
+| `brake_preload` | Braking force: 0 = none, higher = firmer | 0.5 | 0.0–1.5 mm, step 0.1 |
+| `enable_end_stop` | End bead that keeps the roll from slipping off | on | on / off |
 
-### Clip-Federblatt (`brake_type = insert`)
+### Clip-in Spring Blade (`brake_type = insert`)
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `brake_blade_w` | Breite von Fuß und Blatt-Basis | 15 | 8–24 mm |
-| `brake_blade_len` | Gesamtlänge des Clips (Fuß plus freie Zunge); länger = weicher | 34 | 18–50 mm |
-| `brake_blade_thk` | Dicke von Fuß und Rastlippe | 1,6 | 1,0–2,4 mm, Schritt 0,1 |
-| `brake_spring_thk` | Dicke der freien Federzunge | 1,0 | 0,8–1,6 mm, Schritt 0,1 |
-| `brake_tip_w` | Breite der Zungenspitze; schmaler = weicher | 9 | 6–18 mm |
-| `brake_slot_clear` | Spiel zwischen Clip und Schlitz je Seite | 0,2 | 0,1–0,4 mm, Schritt 0,05 |
+| `brake_blade_w` | Width of foot and blade base | 15 | 8–24 mm |
+| `brake_blade_len` | Overall length of the clip (foot plus free tongue); longer = softer | 34 | 18–50 mm |
+| `brake_blade_thk` | Thickness of foot and locking lip | 1.6 | 1.0–2.4 mm, step 0.1 |
+| `brake_spring_thk` | Thickness of the free spring tongue | 1.0 | 0.8–1.6 mm, step 0.1 |
+| `brake_tip_w` | Width of the tongue tip; narrower = softer | 9 | 6–18 mm |
+| `brake_slot_clear` | Clearance between clip and slot per side | 0.2 | 0.1–0.4 mm, step 0.05 |
 
-### Integrierte Bremse (`brake_type = integrated`)
+### Integrated Brake (`brake_type = integrated`)
 
-Das Blatt ist eine hohe, dünne Zunge in der Spindelwand. Beim stehenden Druck
-kann sie schwingen; dünne Haltestege verhindern das und werden nach dem
-Druck abgeknipst.
+The blade is a tall, thin tongue in the spindle wall. When printed standing up
+it can vibrate; thin retaining bridges prevent this and are snipped off after
+printing.
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `brake_tie_count` | Höchstzahl der Haltestege (0 = keine) | 4 | 0–6 |
-| `brake_tie_h` | Höhe jedes Stegs | 0,6 | 0,3–1,2 mm, Schritt 0,1 |
-| `brake_tie_start` | Druckhöhe des ersten Stegs | 90 | 40–150 mm, Schritt 5 |
-| `brake_tie_spacing` | Abstand der Stege nach oben | 110 | 30–180 mm, Schritt 5 |
+| `brake_tie_count` | Maximum number of retaining bridges (0 = none) | 4 | 0–6 |
+| `brake_tie_h` | Height of each bridge | 0.6 | 0.3–1.2 mm, step 0.1 |
+| `brake_tie_start` | Print height of the first bridge | 90 | 40–150 mm, step 5 |
+| `brake_tie_spacing` | Spacing of the bridges going upward | 110 | 30–180 mm, step 5 |
 
-### Wandmontage
+### Wall Mounting
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `wall_plate_w` | Breite der Rückplatte (Wand); der Unterschrank-Steg ist fest 50 mm | 90 | 50–140 mm |
-| `wall_plate_h` | Höhe der Rückplatte | 92 | 50–160 mm |
-| `wall_plate_t` | Dicke der Rückplatte | 6 | 4–12 mm, Schritt 0,5 |
-| `wall_plate_round` | Eckenrundung der Rückplatte | 8 | 2–20 mm |
-| `screw_hole_dia` | Schraubenloch (M4 ca. 4,5); 0 = Platte nur zum Kleben | 4,5 | 0–8 mm, Schritt 0,5 |
-| `screw_head_dia` | Senkdurchmesser für den Schraubenkopf | 9 | 6–16 mm, Schritt 0,5 |
-| `screw_spacing` | Abstand der beiden Schraubenlöcher | 60 | 30–130 mm |
-| `spool_extra` | Zusätzliche Spindellänge über die Rolle hinaus | 12 | 6–30 mm |
+| `wall_plate_w` | Width of the back plate (wall); the under-cabinet web is fixed at 50 mm | 90 | 50–140 mm |
+| `wall_plate_h` | Height of the back plate | 92 | 50–160 mm |
+| `wall_plate_t` | Thickness of the back plate | 6 | 4–12 mm, step 0.5 |
+| `wall_plate_round` | Corner rounding of the back plate | 8 | 2–20 mm |
+| `screw_hole_dia` | Screw hole (M4 approx. 4.5); 0 = plate for gluing only | 4.5 | 0–8 mm, step 0.5 |
+| `screw_head_dia` | Countersink diameter for the screw head | 9 | 6–16 mm, step 0.5 |
+| `screw_spacing` | Distance between the two screw holes | 60 | 30–130 mm |
+| `spool_extra` | Additional spindle length beyond the roll | 12 | 6–30 mm |
 
-### Unterschrank (nur `mount_style = Under-shelf`)
+### Under-Cabinet (only `mount_style = Under-shelf`)
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `shelf_depth` | Länge der oberen Montagefläche (vorne–hinten); länger = mehr Klebefläche | 130 | 45–220 mm |
-| `shelf_tab_w` | Breite der Befestigungszunge; läuft in einem Bogen aus | 50 | 24–140 mm |
-| `shelf_drop` | Abstand von der Montagefläche zur Spindel; muss den Rollenradius freihalten | 90 | 55–140 mm |
-| `web_t` | Dicke des Stegs | 8 | 5–16 mm, Schritt 0,5 |
+| `shelf_depth` | Length of the upper mounting surface (front to back); longer = more adhesive area | 130 | 45–220 mm |
+| `shelf_tab_w` | Width of the fastening tab; ends in an arc | 50 | 24–140 mm |
+| `shelf_drop` | Distance from the mounting surface to the spindle; must keep the roll radius clear | 90 | 55–140 mm |
+| `web_t` | Thickness of the web | 8 | 5–16 mm, step 0.5 |
 
-### Tischständer
+### Table Stand
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `base_dia` | Durchmesser des Fußes | 130 | 90–220 mm |
-| `base_h` | Dicke der Fußscheibe | 16 | 8–40 mm |
-| `post_h` | Säulenhöhe über dem Fuß (sollte mindestens der Rollenbreite entsprechen) | 220 | 80–300 mm |
-| `knob_dia` | Durchmesser der Kugel oben (0 = keine) | 58 | 0–90 mm |
-| `weight_recess` | Ringaussparung unter dem Fuß für Sand oder Münzen (0 = aus) | 0 | 0–30 mm |
+| `base_dia` | Diameter of the base | 130 | 90–220 mm |
+| `base_h` | Thickness of the base disc | 16 | 8–40 mm |
+| `post_h` | Post height above the base (should be at least the roll width) | 220 | 80–300 mm |
+| `knob_dia` | Diameter of the ball on top (0 = none) | 58 | 0–90 mm |
+| `weight_recess` | Annular recess under the base for sand or coins (0 = off) | 0 | 0–30 mm |
 
-### Gedruckte Gewindeverbindung
+### Printed Thread Connection
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `thread_dia` | Außendurchmesser des Gewindes | 18 | 12–30 mm, Schritt 0,5 |
-| `thread_pitch` | Steigung; absichtlich grob | 3,5 | 3–6 mm, Schritt 0,5 |
-| `thread_len` | Eingriffslänge (ab 4 Windungen robust) | 14 | 8–24 mm |
-| `thread_clear` | Spiel am Innengewinde | 0,35 | 0,15–0,7 mm, Schritt 0,05 |
-| `split_at` | Wo ein Teil in zwei Segmente geteilt wird (Anteil der Länge) | 0,55 | 0,35–0,7, Schritt 0,05 |
+| `thread_dia` | Outer diameter of the thread | 18 | 12–30 mm, step 0.5 |
+| `thread_pitch` | Pitch; intentionally coarse | 3.5 | 3–6 mm, step 0.5 |
+| `thread_len` | Engagement length (robust from 4 turns) | 14 | 8–24 mm |
+| `thread_clear` | Clearance on the internal thread | 0.35 | 0.15–0.7 mm, step 0.05 |
+| `split_at` | Where a part is split into two segments (fraction of the length) | 0.55 | 0.35–0.7, step 0.05 |
 
-### Qualität
+### Quality
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `round_res` | Glätte der runden Flächen (für den Export erhöhen) | 96 | 48–220, Schritt 8 |
-| `thread_res` | Glätte der Gewindewendel | 64 | 32–128, Schritt 8 |
+| `round_res` | Smoothness of the round surfaces (increase for export) | 96 | 48–220, step 8 |
+| `thread_res` | Smoothness of the thread helix | 64 | 32–128, step 8 |
 
-![Unterschrank-Variante: Flansch unter dem Regalboden, Rolle hängt darunter](images/03_unterschrank.jpg)
+![Under-cabinet variant: flange under the shelf board, roll hangs beneath it](images/03_unterschrank.jpg)
 
-## Konstruktion
+## Design
 
-### OpenSCAD-Ansatz
+### OpenSCAD Approach
 
-Das Modell ist reines OpenSCAD ohne externe Bibliotheken und läuft im
-MakerWorld-Customizer. Ein `part`-Selektor gibt Vorschau (mit Geisterrolle und
-rotem Banner), ganze Teile, geteilte Teile oder das Federblatt aus. Alle Teile
-sind in ihrer Druckausrichtung modelliert.
+The model is pure OpenSCAD without external libraries and runs in the
+MakerWorld Customizer. A `part` selector outputs the preview (with a ghost roll
+and red banner), whole parts, split parts or the spring blade. All parts are
+modeled in their print orientation.
 
-### Parametrische Logik
+### Parametric Logic
 
-| Größe | Formel / Regel |
+| Quantity | Formula / Rule |
 |---|---|
-| Spindelradius | Kernradius − `spin_play` |
-| Bremshöhe | Kernradius + `brake_preload` |
-| Spindellänge | Rollenbreite + `spool_extra` |
-| Freischnitt Unterschrank | Radius der größeren von `roll_outer_dia` und `clearance_roll_dia`, plus `roll_clear_gap` |
-| Clip-Schlitzlänge | `brake_blade_len` + 2 mm |
-| Haltefuß des Clips | 30 % der Clip-Länge, mindestens 8 mm, höchstens 14 mm |
-| Bremsdom über der Spindel | `spin_play` + `brake_preload` |
-| Gewindetiefe | 0,42 × `thread_pitch` |
-| Plattenbreite Unterschrank | fest 50 mm (Wand: `wall_plate_w`) |
+| Spindle radius | core radius − `spin_play` |
+| Brake height | core radius + `brake_preload` |
+| Spindle length | roll width + `spool_extra` |
+| Under-cabinet clearance cut | radius of the larger of `roll_outer_dia` and `clearance_roll_dia`, plus `roll_clear_gap` |
+| Clip slot length | `brake_blade_len` + 2 mm |
+| Retaining foot of the clip | 30 % of the clip length, at least 8 mm, at most 14 mm |
+| Brake dome above the spindle | `spin_play` + `brake_preload` |
+| Thread depth | 0.42 × `thread_pitch` |
+| Plate width under-cabinet | fixed 50 mm (wall: `wall_plate_w`) |
 
-Mit den Voreinstellungen (Kerninnendurchmesser 41 mm, Rolle 230 mm) ergeben
-sich: Spindelradius 19,7 mm (Ø 39,4 mm), Bremsradius 21,0 mm, Spindellänge
-242 mm, Clip-Schlitzlänge 36 mm, Haltefuß 10,2 mm, Gewindetiefe ca. 1,5 mm und
-ein Bremsdom von 1,3 mm über der Spindeloberfläche. Mit der Rolle „Deutsch
-260,5 mm“ wird die Spindel 272,5 mm lang.
+With the default settings (core inner diameter 41 mm, roll 230 mm), the result
+is: spindle radius 19.7 mm (Ø 39.4 mm), brake radius 21.0 mm, spindle length
+242 mm, clip slot length 36 mm, retaining foot 10.2 mm, thread depth approx.
+1.5 mm and a brake dome of 1.3 mm above the spindle surface. With the "German
+260.5 mm" roll, the spindle becomes 272.5 mm long.
 
-Die Werte sind aus den Formeln und den Standardwerten abgeleitet.
+The values are derived from the formulas and the default values.
 
-### Besondere Algorithmen
+### Special Algorithms
 
-- **Spindel dünner als der Kern, Bremse dicker:** Die Rolle dreht sich frei auf
-  dem Schaft; nur der Bremsdom stößt in den Pappkern und erzeugt
-  Reibung. Die Stärke ist ein einziger Regler (`brake_preload`).
-- **Clip mit Rastlippe:** Der Clip hat einen kräftigen Fuß, der unter eine
-  Lippe im Schlitz gleitet und von der Rolle nie herausgedrückt wird. Eine
-  kleine Rastnase schnappt in eine Nut. Daran hängt eine dünne, verjüngte
-  Federzunge mit einem gerundeten Dom an der freien Spitze und einem Luftspalt
-  von 2,6 mm darunter.
-- **Federzunge statt Höcker:** Ein früher Testdruck zeigte: Ein dicker,
-  voll breiter und kurzer Clip mit Dom in der Mitte bleibt starr und wirkt nur
-  als Höcker. Deshalb ist die Zunge heute dünner als der Fuß, verjüngt sich
-  zur Spitze und der Dom sitzt am freien Ende.
-- **Integrierte Bremse mit Haltestegen:** Das Blatt ist aus der Spindelwand
-  geschnitten: zwei Seitenschlitze und eine Aussparung darunter. Beim stehenden
-  Druck schwingt die freie Zunge ab ca. 100 mm Höhe; dünne, abknipsbare Stege
-  im Abstand von `brake_tie_spacing` verhindern das Rattern.
-- **Gedrucktes Grobgewinde:** Trapezprofil mit flachem Kamm, 3,5 mm Steigung und
-  ca. 4 Windungen. Es ist robust und von Hand schraubbar; ein Tropfen Kleber
-  macht es dauerhaft.
-- **Teilung nach Anteil:** `split_at` teilt Wandspindel und Tischsäule in zwei
-  Segmente. Das Segment mit der freien Spitze bekommt den Endwulst, sodass die
-  zusammengesetzte Spindel nur einen Wulst hat.
-- **Unterschrank frei für die dickste Rolle:** Winkel und Streben werden für
-  `clearance_roll_dia` plus Luftspalt freigeschnitten, nicht für die gerade
-  hängende Rolle.
-- **Spindel direkt auf der Platte:** Bei der Wandvariante sitzt die Spindel ohne
-  Stützstrebe auf der Platte. Eine frühere Strebe kollidierte mit jeder Rolle
-  und wurde entfernt.
+- **Spindle thinner than the core, brake thicker:** The roll turns freely on
+  the shaft; only the brake dome pushes into the cardboard core and creates
+  friction. The strength is a single control (`brake_preload`).
+- **Clip with locking lip:** The clip has a sturdy foot that slides under a lip
+  in the slot and is never pushed out by the roll. A small latch snaps into a
+  groove. Attached to it is a thin, tapered spring tongue with a rounded dome
+  at the free tip and an air gap of 2.6 mm underneath.
+- **Spring tongue instead of bump:** An early test print showed that a thick,
+  full-width and short clip with a dome in the middle stays rigid and acts only
+  as a bump. That is why the tongue is now thinner than the foot, tapers toward
+  the tip, and the dome sits at the free end.
+- **Integrated brake with retaining bridges:** The blade is cut out of the
+  spindle wall: two side slots and a cut-out underneath. When printed standing
+  up, the free tongue vibrates from about 100 mm height; thin, snip-off bridges
+  at the spacing of `brake_tie_spacing` prevent the chatter.
+- **Printed coarse thread:** Trapezoidal profile with a flat crest, 3.5 mm
+  pitch and approx. 4 turns. It is robust and can be screwed by hand; a drop of
+  glue makes it permanent.
+- **Split by fraction:** `split_at` splits the wall spindle and table post into
+  two segments. The segment with the free tip gets the end bead, so the
+  assembled spindle has only one bead.
+- **Under-cabinet clear for the thickest roll:** Bracket and struts are cut
+  clear for `clearance_roll_dia` plus air gap, not for the straight-hanging
+  roll.
+- **Spindle directly on the plate:** In the wall variant, the spindle sits on
+  the plate without a support strut. An earlier strut collided with every roll
+  and was removed.
 
 ```mermaid
 flowchart LR
-    R[Rolle: Breite, Kern, Außen-Ø] --> S[Spindel]
+    R[Roll: width, core, outer Ø] --> S[Spindle]
     S --> B{brake_type}
-    B -->|insert| C[Clip-Federblatt + Schlitz]
-    B -->|integrated| I[Blatt in der Wand + Haltestege]
-    M[mount_style] --> W[Wand / Unterschrank / Tisch]
+    B -->|insert| C[Clip spring blade + slot]
+    B -->|integrated| I[Blade in the wall + retaining bridges]
+    M[mount_style] --> W[Wall / under-cabinet / table]
     S --> W
-    W --> O[part: ganz / geteilt / Federblatt]
+    W --> O[part: whole / split / spring blade]
     C --> O
     I --> O
-    T[Gewinde + split_at] --> O
+    T[Thread + split_at] --> O
 ```
 
-### Modularität
+### Modularity
 
-Der Code trennt Spindel, Bremse (beide Bauarten), Clip, Rückplatte, Unterschrank-
-Winkel, Tischfuß und Säule, das gedruckte Gewinde sowie die Vorschau mit
-Geisterrolle. Die „alles auf einer Platte“-Ausgaben ordnen die Segmente und den
-Clip nebeneinander an.
+The code separates spindle, brake (both designs), clip, back plate,
+under-cabinet bracket, table base and post, the printed thread and the preview
+with ghost roll. The "everything on one plate" outputs arrange the segments and
+the clip side by side.
 
-### Druckoptimierungen
+### Print Optimizations
 
-- **Federblatt druckt flach**, Dom nach oben, ohne Stützen.
-- **Tischfuß flach**, ebenfalls ohne Stützen.
-- **Clip automatisch dabei:** Bei Teilen mit Clip-Schlitz legt das Modell den
-  Clip daneben auf die Platte, damit er nicht vergessen wird.
-- **Geteilte Teile:** Segmente und Clip liegen auf einer 256-mm-Platte.
-- **Grobes Gewinde:** Trapezprofil statt feinem V-Gewinde.
+- **Spring blade prints flat**, dome facing up, without supports.
+- **Table base flat**, likewise without supports.
+- **Clip included automatically:** For parts with a clip slot, the model places
+  the clip next to it on the plate so that it is not forgotten.
+- **Split parts:** Segments and clip lie on a 256 mm plate.
+- **Coarse thread:** Trapezoidal profile instead of a fine V-thread.
 
-![Tischständer: runder Fuß, senkrechte Säule und Kugel oben](images/04_tischstaender.jpg)
+![Table stand: round base, vertical post and ball on top](images/04_tischstaender.jpg)
 
-## Druckempfehlungen
+## Print Recommendations
 
-Die Profile sind für **Bambu PETG Basic** gebaut (0,20 mm Layerhöhe, 2 Wände,
-Gyroid 10 %). Teilteile und kleine Teile sind für den **P2S** (256 mm) ausgelegt,
-einteilige hohe Teile für den **H2C**.
+The profiles are built for **Bambu PETG Basic** (0.20 mm layer height, 2 walls,
+gyroid 10 %). Split parts and small parts are designed for the **P2S** (256 mm),
+one-piece tall parts for the **H2C**.
 
-| Einstellung | Empfehlung |
+| Setting | Recommendation |
 |---|---|
-| Material | PETG für den Halter; PLA zu Hause möglich, Clip bevorzugt in PETG |
-| Layerhöhe | 0,20 mm |
-| Wände | 2 |
+| Material | PETG for the holder; PLA possible at home, clip preferably in PETG |
+| Layer height | 0.20 mm |
+| Walls | 2 |
 | Infill | Gyroid 10 % |
-| Supports | Spindelteile mit Clip-Schlitz: leichte Baumstützen; Tischfuß und Clip: keine |
-| Ausrichtung | Wand: Platte auf dem Bett, Spindel nach oben; Tischfuß flach; Säulen und geteilte Spindeln stehend; Clip flach |
+| Supports | Spindle parts with clip slot: light tree supports; table base and clip: none |
+| Orientation | Wall: plate on the bed, spindle pointing up; table base flat; posts and split spindles standing; clip flat |
 
-**Besondere Hinweise**
+**Special notes**
 
-- **Wohnmobil, Auto und Boot:** In einer aufgeheizten Kabine verzieht sich PLA.
-  Dort mindestens PETG verwenden.
-- **Einteilig braucht Höhe:** Eine einteilige Wandspindel ist ca. Rollenbreite +
-  12 mm + Plattendicke hoch, also bei 230 mm Rolle etwa 248 mm und bei 260,5 mm
-  Rolle etwa 278 mm. Die Tischsäule mit Kugel misst bei den Voreinstellungen ca.
-  272 mm. Auf einem 256-mm-Bett nutzt du die geteilten Ausgaben.
-- **Integrierte Bremse:** Nur bei `brake_type = integrated` die Haltestege nach
-  dem Druck mit einem Seitenschneider bündig abknipsen. Die Zunge muss danach
-  frei federn.
-- **Montage:** Gewindeteile von Hand verschrauben, Tischsäule in den Fuß
-  schrauben, Clip in den Schlitz drücken. Wand und Unterschrank mit zwei Schrauben
-  oder doppelseitigem Klebeband.
-- **Teilen im Slicer:** Jedes Teil lässt sich auch im Bambu Studio mit dem
-  Schneidwerkzeug (Planar oder Schwalbenschwanz) und Steckverbindern teilen.
+- **Motorhome, car and boat:** In a heated cabin, PLA warps. Use at least PETG
+  there.
+- **One-piece needs height:** A one-piece wall spindle is approx. roll width +
+  12 mm + plate thickness tall, so about 248 mm for a 230 mm roll and about
+  278 mm for a 260.5 mm roll. The table post with ball measures approx. 272 mm
+  with the default settings. On a 256 mm bed, use the split outputs.
+- **Integrated brake:** Only with `brake_type = integrated`, snip the retaining
+  bridges off flush with side cutters after printing. The tongue must then be
+  able to spring freely.
+- **Assembly:** Screw threaded parts together by hand, screw the table post
+  into the base, press the clip into the slot. Wall and under-cabinet with two
+  screws or double-sided adhesive tape.
+- **Splitting in the slicer:** Any part can also be split in Bambu Studio with
+  the cut tool (planar or dovetail) and connectors.
 
-## Anwendungsbeispiele
+## Use Cases
 
-- **Camper, Wohnmobil und Boot:** Unterschrank-Variante mit Federbremse, dazu
-  Halter in PETG.
-- **Küche an der Wand:** Wandplatte neben der Arbeitsfläche, aufgeschraubt oder
-  geklebt.
-- **Mietwohnung ohne Bohren:** `screw_hole_dia = 0` und doppelseitiges
-  Klebeband (z. B. 3M VHB).
-- **Tisch und Theke:** Der Tischständer steht frei, ohne Montage.
-- **Werkstatt und Homelab-Ecke:** Papierrolle für Reinigung und Etiketten,
-  angeschraubt an die Werkbank oder unter ein Regalbrett.
-- **Kleine Drucker:** Geteilte Ausgabe für 256-mm-Betten.
-- **Andere Rollen:** Breite und Kern über Presets oder `Custom` anpassen.
+- **Camper, motorhome and boat:** Under-cabinet variant with spring brake,
+  plus holder in PETG.
+- **Kitchen on the wall:** Wall plate next to the work surface, screwed on or
+  glued.
+- **Rental apartment without drilling:** `screw_hole_dia = 0` and double-sided
+  adhesive tape (e.g. 3M VHB).
+- **Table and counter:** The table stand stands free, without mounting.
+- **Workshop and homelab corner:** Paper roll for cleaning and labels, screwed
+  to the workbench or under a shelf board.
+- **Small printers:** Split output for 256 mm beds.
+- **Other rolls:** Adjust width and core via presets or `Custom`.
 
-![Küche mit Wand-, Unterschrank- und Tischvariante nebeneinander](images/05_kueche-drei-varianten.jpg)
+![Kitchen with wall, under-cabinet and table variants side by side](images/05_kueche-drei-varianten.jpg)
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-| Symptom | Ursache | Fix |
+| Symptom | Cause | Fix |
 |---|---|---|
-| Die Rolle bremst nicht | Bremsdom zu niedrig | `brake_preload` erhöhen (typisch 0,4–0,7) |
-| Die Rolle läuft schwer | Bremse zu stark oder `spin_play` zu klein | `brake_preload` verringern oder `spin_play` erhöhen |
-| Die Rolle passt nicht auf die Spindel | `core_inner_dia` falsch | Kern nachmessen und eintragen |
-| Der Clip federt nicht | Zunge zu dick oder zu breit | `brake_spring_thk` ≤ 1,4 mm, `brake_tip_w` ≤ 14 mm; in PETG drucken |
-| Der Clip lässt sich nicht einschieben | Passung zu eng | `brake_slot_clear` erhöhen |
-| Der Clip fehlt auf der Platte | Er wird nur bei Teilen mit Schlitz automatisch beigelegt | `part = Brake spring` separat exportieren |
-| Die Zunge der integrierten Bremse klemmt | Haltestege nicht entfernt | Stege bündig abknipsen |
-| Unterschrank schleift an der Rolle | Winkel auf zu kleine Rolle ausgelegt | `clearance_roll_dia` und `shelf_drop` erhöhen |
-| Das Gewinde sitzt zu stramm | Druck fällt etwas größer aus | `thread_clear` erhöhen |
-| Das Gewinde wackelt | Spiel zu groß | `thread_clear` verringern |
-| Teil passt nicht aufs Druckbett | Spindel einteilig zu lang | `Wall holder split` bzw. `Table split` verwenden |
-| Rolle rutscht von der Säule | Säule kürzer als die Rolle | `post_h` mindestens so groß wie die Rollenbreite |
+| The roll does not brake | Brake dome too low | increase `brake_preload` (typically 0.4–0.7) |
+| The roll runs stiffly | Brake too strong or `spin_play` too small | decrease `brake_preload` or increase `spin_play` |
+| The roll does not fit on the spindle | `core_inner_dia` wrong | measure the core and enter it |
+| The clip does not spring | Tongue too thick or too wide | `brake_spring_thk` ≤ 1.4 mm, `brake_tip_w` ≤ 14 mm; print in PETG |
+| The clip cannot be pushed in | Fit too tight | increase `brake_slot_clear` |
+| The clip is missing on the plate | It is only included automatically for parts with a slot | export `part = Brake spring` separately |
+| The tongue of the integrated brake is stuck | Retaining bridges not removed | snip the bridges off flush |
+| Under-cabinet rubs against the roll | Bracket designed for too small a roll | increase `clearance_roll_dia` and `shelf_drop` |
+| The thread is too tight | Print comes out slightly larger | increase `thread_clear` |
+| The thread wobbles | Clearance too large | decrease `thread_clear` |
+| Part does not fit on the print bed | One-piece spindle too long | use `Wall holder split` or `Table split` |
+| Roll slips off the post | Post shorter than the roll | `post_h` at least as large as the roll width |
 
-## Entwicklungsgeschichte
+## Development History
 
-Die ersten Dateien des Modells stammen vom 6. August 2026: Vorschauansichten,
-Skripte für die Titelbilder und die erste Wand-, Unterschrank- und Tischversion
-mit integrierter Federbremse als druckintegriertem Blatt. Beim stehenden Druck
-schwingt die lange freie Zunge ab ca. 100 mm Druckhöhe; dagegen kamen die
-abknipsbaren Haltestege dazu. Am 7. August 2026 kam das
-Clip-Federblatt: Es lässt sich flach in PETG drucken und passt in jedes
-geteilte Teil. Der erste Clip lag im Test flach und wirkte nur als Höcker; die
-Neukonstruktion mit dünner, verjüngter Zunge und Dom an der Spitze löste das.
-Weitere Korrekturen betrafen eine Stützstrebe, die mit jeder Rolle
-kollidierte (entfernt), einen doppelten Endwulst an der Teilungsstelle und den
-Freischnitt für dicke Rollen im Unterschrank. Am 8. August 2026 entstanden die
-„alles auf einer Platte“-Ausgaben für geteilte Teile; die Beschreibung stammt
-vom 31. August 2026.
+The first files of the model date from August 6, 2026: preview views, scripts
+for the cover images and the first wall, under-cabinet and table version with
+the integrated spring brake as a blade integrated into the print. When printed
+standing up, the long free tongue vibrates from about 100 mm print height; the
+snip-off retaining bridges were added to counter this. On August 7, 2026, the
+clip spring blade was added: it can be printed flat in PETG and fits into every
+split part. In testing, the first clip lay flat and acted only as a bump; the
+redesign with a thin, tapered tongue and a dome at the tip solved this. Further
+corrections concerned a support strut that collided with every roll (removed),
+a double end bead at the split point and the clearance cut for thick rolls in
+the under-cabinet variant. On August 8, 2026, the "everything on one plate"
+outputs for split parts were created; the description dates from August 31,
+2026.
 
-Die Bilder in diesem Repository sind Renderings der Modellgeometrie
-beziehungsweise daraus abgeleitete Szenenbilder; Druckfotos sind nicht dabei.
+The images in this repository are renderings of the model geometry or scene
+images derived from it; there are no photos of prints.
 
-![Geteilter Tischständer mit Fuß, zwei Säulenhälften und Clip](images/06_geteilte-teile.jpg)
+![Split table stand with base, two post halves and clip](images/06_geteilte-teile.jpg)
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: https://makerworld.com/en/models/3143928-parametric-kitchen-paper-towel-roll-holder
+👉 MakerWorld link: https://makerworld.com/en/models/3143928-parametric-kitchen-paper-towel-roll-holder
 
-Profil: <https://makerworld.com/en/@BetaHydri>
+Profile: <https://makerworld.com/en/@BetaHydri>
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository: © BetaHydri. Das Modell (inkl.
-Quellcode) und alle Druckdateien werden ausschließlich über MakerWorld unter
-der dort angegebenen Lizenz verteilt. Dieses Repository enthält bewusst keine
-Modell-, Quellcode- oder Druckdateien.
+Documentation and images in this repository: © BetaHydri. The model (including
+source code) and all print files are distributed exclusively via MakerWorld
+under the license stated there. This repository intentionally contains no
+model, source code or print files.

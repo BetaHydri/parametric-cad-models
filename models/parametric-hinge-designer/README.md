@@ -1,373 +1,372 @@
 # Parametric Print-in-Place Hinge Designer
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Parametrisches Scharnier, das flach, ohne Stützen und ohne Montage in einem
-Druckjob entsteht – mit frei definierbarem Lochbild oder Langlöchern.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/3160240-parametric-print-in-place-hinge-generator)
+Parametric hinge that is produced flat, without supports and without assembly
+in a single print job – with a freely definable hole pattern or slotted holes.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/3160240-parametric-print-in-place-hinge-generator)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-P1S%20%7C%20P2S%20%7C%20H2C-green)
 ![Print files](https://img.shields.io/badge/Print%20files-MakerWorld%20only-blue)
 
-> **Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:**
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/3160240-parametric-print-in-place-hinge-generator](https://makerworld.com/en/models/3160240-parametric-print-in-place-hinge-generator)
+> **The model with all print profiles is available exclusively on MakerWorld:**
+> 👉 [MakerWorld link: https://makerworld.com/en/models/3160240-parametric-print-in-place-hinge-generator](https://makerworld.com/en/models/3160240-parametric-print-in-place-hinge-generator)
 >
-> ![Parametric Print-in-Place Hinge Designer – vier gefaltete Scharnier-Varianten mit Löchern und Langlöchern auf einer Werkbank](images/01_hero.png)
+> ![Parametric Print-in-Place Hinge Designer – four folded hinge variants with holes and slotted holes on a workbench](images/01_hero.png)
 
-Der **Parametric Print-in-Place Hinge Designer** erzeugt ein Knuckle-Scharnier
-(Barrel-Hinge) aus zwei Flügeln und einem durchgehenden Pin. Beide Flügel liegen
-beim Druck flach und offen auf dem Bett, das Scharnier ist direkt nach dem Druck
-beweglich. Länge, Flügelbreite, Festigkeits-Preset, Spiel und Montagebild
-(Schraublöcher, Senkung, Langlöcher) stellst du im MakerWorld-Customizer ein.
+The **Parametric Print-in-Place Hinge Designer** creates a knuckle hinge (barrel
+hinge) from two leaves and a continuous pin. Both leaves lie flat and open on
+the bed during printing, and the hinge is movable straight after printing. You
+set the length, leaf width, strength preset, clearance and mounting pattern
+(screw holes, countersink, slotted holes) in the MakerWorld Customizer.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Konstruktion](#konstruktion)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Parametric Options](#parametric-options)
+- [Construction](#construction)
+- [Print Recommendations](#print-recommendations)
+- [Usage Examples](#usage-examples)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Ein bewegliches Gelenk im FDM-Druck hängt an einer einzigen Größe: dem Spiel
-zwischen Pin und Bohrung. Ist es zu klein, verschweißen die Teile beim Druck
-und das Scharnier ist ein Stück Plastik. Ist es zu groß, wackelt das Gelenk.
-Das richtige Maß hängt von Drucker, Düse, Material und Kalibrierung ab.
+A movable joint in FDM printing depends on a single quantity: the clearance
+between pin and bore. If it is too small, the parts fuse during printing and the
+hinge is a lump of plastic. If it is too large, the joint wobbles. The right
+value depends on the printer, nozzle, material and calibration.
 
-Dazu kommen praktische Anforderungen, die ein fertiges Standard-Scharnier
-selten trifft:
+In addition, there are practical requirements that a ready-made standard hinge
+rarely meets:
 
-- Die Länge soll zum Einsatzort passen (Klappe, Deckel, Blende).
-- Die Flügel brauchen ein Befestigungsbild, das zu den vorhandenen Schrauben
-  passt – oder Langlöcher zum Nachjustieren.
-- Je nach Belastung sind dünne Knuckles zu schwach oder dicke Knuckles
-  überdimensioniert.
-- Die Geometrie muss stützenfrei druckbar sein, sonst ist das Gelenk nach dem
-  Entfernen der Stützen nicht mehr sauber.
+- The length should match the place of use (flap, lid, cover plate).
+- The leaves need a mounting pattern that matches the existing screws – or
+  slotted holes for readjustment.
+- Depending on the load, thin knuckles are too weak or thick knuckles are
+  oversized.
+- The geometry must be printable without supports, otherwise the joint is no
+  longer clean after the supports are removed.
 
-## Die Idee
+## The Idea
 
-Das Scharnier wird vollständig aus Parametern abgeleitet. Ein
-**Festigkeits-Preset** (`simple`, `standard`, `heavy`) legt Pin-Durchmesser,
-Barrel-Wand, Plattenstärke und Knuckle-Teilung fest, aus der Länge ergibt sich
-die Knuckle-Anzahl. Das **Spiel** (`hinge_gap`) ist ein eigener Regler, damit du
-es auf deinen Drucker abstimmen kannst. Ein kleiner **Testcoupon** (30 mm)
-erlaubt es, das Spiel zu prüfen, bevor ein großes Teil gedruckt wird.
+The hinge is derived entirely from parameters. A **strength preset**
+(`simple`, `standard`, `heavy`) defines pin diameter, barrel wall, leaf
+thickness and knuckle pitch; the number of knuckles follows from the length. The
+**clearance** (`hinge_gap`) is a separate control so that you can tune it to your
+printer. A small **test coupon** (30 mm) lets you check the clearance before a
+large part is printed.
 
-Das Montagebild nutzt dieselbe Verteilungslogik wie die Adapterplatte des
-DIN-Rail-Adapters aus derselben Modellfamilie: Raster aus Löchern, optional
-mit Senkung, oder Langlöcher in beliebiger Ausrichtung.
+The mounting pattern uses the same distribution logic as the adapter plate of
+the DIN-rail adapter from the same model family: grid of holes, optionally with
+countersink, or slotted holes in any orientation.
 
 ## Highlights
 
-- **Print-in-place:** Flügel und ineinandergreifende Knuckles werden flach und
-  offen gedruckt; das Scharnier ist direkt nach dem Druck beweglich.
-- **Keine Stützen, keine Montage:** Barrel und durchgehender Pin entstehen
-  gemeinsam mit dem eingestellten Spiel.
-- **Drei Festigkeits-Presets** plus `custom` mit frei wählbarem Pin, Wand,
-  Plattenstärke und Knuckle-Anzahl.
-- **Druckerabhängige Länge:** Der Drucker-Parameter begrenzt die maximale
-  Scharnierlänge auf den Bauraum.
-- **Montagebild frei definierbar:** Lochraster (Spalten × Reihen), optionale
-  Senkung (oben oder unten), Langlöcher (quer oder längs zur Achse).
-- **Zwei Vorschau-Modi** (gefaltet und flach, zweifarbig) mit rotem
-  „NOT FOR PRINTING“-Banner sowie ein echter Zweifarb-Druckmodus: jeder Flügel
-  bekommt ein eigenes Filament.
-- **Einzelne Flügel exportierbar** (`leaf_left`, `leaf_right`).
-- **Geprüfte Geometrie:** Jeder Flügel ist ein wasserdichter Einzelkörper
-  (`Volumes: 2` je Flügel in OpenSCAD); zusätzlich gibt es eine Fit-Prüfung
-  über Mindestabstand und Schnittvolumen zwischen den Flügeln.
-- **Fünf fertige Varianten** mit Bambu-Studio-Profilen in je 2, 3 und 4 Wänden.
+- **Print-in-place:** Leaves and interlocking knuckles are printed flat and
+  open; the hinge is movable straight after printing.
+- **No supports, no assembly:** Barrel and continuous pin are created together
+  with the set clearance.
+- **Three strength presets** plus `custom` with freely selectable pin, wall,
+  leaf thickness and knuckle count.
+- **Printer-dependent length:** The printer parameter limits the maximum hinge
+  length to the build volume.
+- **Freely definable mounting pattern:** Hole grid (columns × rows), optional
+  countersink (top or bottom), slotted holes (across or along the axis).
+- **Two preview modes** (folded and flat, two-colour) with a red
+  "NOT FOR PRINTING" banner as well as a genuine two-colour print mode: each
+  leaf gets its own filament.
+- **Individual leaves exportable** (`leaf_left`, `leaf_right`).
+- **Verified geometry:** Each leaf is a watertight single body (`Volumes: 2` per
+  leaf in OpenSCAD); in addition there is a fit check via minimum distance and
+  intersection volume between the leaves.
+- **Five ready-made variants** with Bambu Studio profiles in 2, 3 and 4 walls
+  each.
 
-![Flache Druckanordnung beider Flügel, zweifarbig](images/03_vorschau-flach.png)
+![Flat print layout of both leaves, two-colour](images/03_vorschau-flach.png)
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Namen entsprechen den Customizer-Parametern des Modells.
+The names correspond to the model's Customizer parameters.
 
-### Ansicht und Drucker
+### View and Printer
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `part` | Ausgabe: Vorschau gefaltet/flach (zweifarbig, nicht druckbar), `print` (einfarbig), `print_2color`, `leaf_left`, `leaf_right` | `preview_folded` | Auswahl |
-| `fold_angle` | Faltwinkel der Vorschau (0 = flach/offen) | 100 | 0–170, Schritt 5, Grad |
-| `printer` | Bauraum, begrenzt die maximale Scharnierlänge | 256 | 180 (A1 mini), 256 (A1 / P1 / P2 / X1 / X2D), 325 (H2C / A2L), 350 (H2D / H2S), 999 (unbegrenzt) |
+| `part` | Output: preview folded/flat (two-colour, not printable), `print` (single colour), `print_2color`, `leaf_left`, `leaf_right` | `preview_folded` | Selection |
+| `fold_angle` | Fold angle of the preview (0 = flat/open) | 100 | 0–170, step 5, degrees |
+| `printer` | Build volume, limits the maximum hinge length | 256 | 180 (A1 mini), 256 (A1 / P1 / P2 / X1 / X2D), 325 (H2C / A2L), 350 (H2D / H2S), 999 (unlimited) |
 
-### Festigkeit und Grundmaße
+### Strength and Basic Dimensions
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `strength` | Preset für Pin, Barrel-Wand, Plattenstärke, Knuckle-Teilung | `standard` | `simple`, `standard`, `heavy`, `custom` |
-| `hinge_length` | Scharnierlänge entlang der Achse | 60 | 20–340 mm |
-| `leaf_len` | Plattenlänge je Flügel ab der Barrel-Außenkante | 22 | 8–120 mm |
-| `corner_radius` | Eckenradius der Platten | 3 | 0–12 mm |
-| `hinge_gap` | Radiales Spiel um den Pin und zwischen Knuckle und gegenüberliegender Platte | 0,4 | 0,2–0,7 mm |
-| `axial_gap` | Axialer Spalt zwischen benachbarten Knuckles | 0,4 | 0,2–0,8 mm |
+| `strength` | Preset for pin, barrel wall, leaf thickness, knuckle pitch | `standard` | `simple`, `standard`, `heavy`, `custom` |
+| `hinge_length` | Hinge length along the axis | 60 | 20–340 mm |
+| `leaf_len` | Leaf length per leaf from the outer edge of the barrel | 22 | 8–120 mm |
+| `corner_radius` | Corner radius of the leaves | 3 | 0–12 mm |
+| `hinge_gap` | Radial clearance around the pin and between knuckle and opposite leaf | 0.4 | 0.2–0.7 mm |
+| `axial_gap` | Axial gap between adjacent knuckles | 0.4 | 0.2–0.8 mm |
 
-Die Presets setzen folgende Werte:
+The presets set the following values:
 
-| Preset | Pin-Ø | Barrel-Wand | Plattenstärke | Ziel-Teilung der Knuckles |
+| Preset | Pin Ø | Barrel wall | Leaf thickness | Target knuckle pitch |
 |---|---|---|---|---|
-| `simple` | 3 mm | 1,2 mm | 2,4 mm | 14 mm |
-| `standard` | 4 mm | 1,6 mm | 3,0 mm | 10 mm |
-| `heavy` | 6 mm | 2,4 mm | 4,0 mm | 8 mm |
+| `simple` | 3 mm | 1.2 mm | 2.4 mm | 14 mm |
+| `standard` | 4 mm | 1.6 mm | 3.0 mm | 10 mm |
+| `heavy` | 6 mm | 2.4 mm | 4.0 mm | 8 mm |
 
-### Custom-Werte (nur bei `strength = custom`)
+### Custom Values (only with `strength = custom`)
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `custom_pin_diameter` | Pin-Durchmesser | 4 | 2–10 mm |
-| `custom_barrel_wall` | Wandstärke des Barrels um den Pin | 1,6 | 0,8–5 mm |
-| `custom_leaf_thickness` | Plattenstärke | 3 | 1,6–8 mm |
-| `custom_knuckle_count` | Anzahl der Knuckles (ungerade empfohlen) | 5 | 3–31 |
+| `custom_pin_diameter` | Pin diameter | 4 | 2–10 mm |
+| `custom_barrel_wall` | Wall thickness of the barrel around the pin | 1.6 | 0.8–5 mm |
+| `custom_leaf_thickness` | Leaf thickness | 3 | 1.6–8 mm |
+| `custom_knuckle_count` | Number of knuckles (odd recommended) | 5 | 3–31 |
 
-### Montagebild
+### Mounting Pattern
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `holes_enabled` | Lochraster aktiv | `true` | an/aus |
-| `hole_cols` | Löcher quer zur Achse (X) | 1 | 1–6 |
-| `hole_rows` | Löcher entlang der Achse (Y) | 3 | 1–20 |
-| `hole_diameter` | Lochdurchmesser (M3 frei: 3,4; M4 frei: 4,5) | 3,4 | 2–8 mm |
-| `countersink` | Senkung für Senkkopfschrauben | `false` | an/aus |
-| `countersink_side` | Seite der Senkung | `top` | `top`, `bottom` |
-| `countersink_extra` | Zusätzlicher Senkungsdurchmesser über dem Loch (90°-Kegel) | 2,8 | 1,5–6 mm |
-| `slots_enabled` | Langlöcher aktiv | `false` | an/aus |
-| `slot_count` | Anzahl der Langlöcher | 2 | 1–10 |
-| `slot_width` | Breite eines Langlochs | 4 | 2–10 mm |
-| `slot_length` | Länge eines Langlochs | 14 | 5–100 mm |
-| `slot_dir` | Ausrichtung: `across` (quer zur Achse, Abstand justieren) oder `along` (entlang der Achse, seitlich justieren) | `across` | Auswahl |
-| `mount_margin` | Randabstand der Muster | 6 | 3–25 mm |
+| `holes_enabled` | Hole grid active | `true` | on/off |
+| `hole_cols` | Holes across the axis (X) | 1 | 1–6 |
+| `hole_rows` | Holes along the axis (Y) | 3 | 1–20 |
+| `hole_diameter` | Hole diameter (M3 clearance: 3.4; M4 clearance: 4.5) | 3.4 | 2–8 mm |
+| `countersink` | Countersink for countersunk screws | `false` | on/off |
+| `countersink_side` | Side of the countersink | `top` | `top`, `bottom` |
+| `countersink_extra` | Additional countersink diameter above the hole (90° cone) | 2.8 | 1.5–6 mm |
+| `slots_enabled` | Slotted holes active | `false` | on/off |
+| `slot_count` | Number of slotted holes | 2 | 1–10 |
+| `slot_width` | Width of a slotted hole | 4 | 2–10 mm |
+| `slot_length` | Length of a slotted hole | 14 | 5–100 mm |
+| `slot_dir` | Orientation: `across` (across the axis, adjust the distance) or `along` (along the axis, adjust sideways) | `across` | Selection |
+| `mount_margin` | Edge margin of the patterns | 6 | 3–25 mm |
 
-Sind Löcher und Langlöcher gleichzeitig aktiv, liegen die Löcher im inneren
-Band (55 % der Nutzbreite) und die Langlöcher im äußeren Band (45 %), damit sie
-sich nicht überschneiden. Alle Muster sind je Flügel gespiegelt.
+If holes and slotted holes are active at the same time, the holes lie in the
+inner band (55 % of the usable width) and the slotted holes in the outer band
+(45 %), so that they do not overlap. All patterns are mirrored per leaf.
 
-### Qualität
+### Quality
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `quality` | Kurvenauflösung (`$fn`) im Render | 96 | 24 (Schnell), 64 (Mittel), 96 (Hoch), 128 (Sehr hoch) |
+| `quality` | Curve resolution (`$fn`) in the render | 96 | 24 (Fast), 64 (Medium), 96 (High), 128 (Very high) |
 
-In der Vorschau verwendet das Modell `$fn = 40`.
+In the preview, the model uses `$fn = 40`.
 
-![Variante mit Langlöchern, gefaltet](images/04_variante-langloecher.png)
+![Variant with slotted holes, folded](images/04_variante-langloecher.png)
 
-## Konstruktion
+## Construction
 
-### OpenSCAD-Ansatz
+### OpenSCAD Approach
 
-Das Modell ist eine reine OpenSCAD-Konstruktion. Alle Maße stehen als
-benannte Parameter am Anfang; die Customizer-Gruppen entsprechen den
-Abschnitten oben. Ein `part`-Selektor am Ende der Datei entscheidet, ob eine
-Vorschau, ein Druck-Layout oder ein einzelner Flügel ausgegeben wird.
+The model is a pure OpenSCAD construction. All dimensions are named parameters
+at the top; the Customizer groups correspond to the sections above. A `part`
+selector at the end of the file decides whether a preview, a print layout or a
+single leaf is output.
 
-### Parametrische Logik
+### Parametric Logic
 
-Aus dem Preset und den Grundmaßen werden die effektiven Maße abgeleitet:
+The effective dimensions are derived from the preset and the basic dimensions:
 
-| Größe | Formel / Regel |
+| Size | Formula / Rule |
 |---|---|
-| Länge `L` | `min(hinge_length, printer − 8)`; bei `printer = 999` unbegrenzt |
-| Knuckle-Anzahl `N` | `custom_knuckle_count` bei `custom`, sonst `round(L / Teilung)`, mindestens 3, auf ungerade Zahl aufgerundet |
-| Bohrungsradius | Pin-Radius + `hinge_gap` |
-| Barrel-Außenradius | Bohrungsradius + Barrel-Wand |
-| Achshöhe | gleich Barrel-Außenradius (Barrel liegt tangential auf dem Bett) |
-| Knuckle-Teilung | `L / N` |
-| Knuckle-Länge | Teilung − `axial_gap` |
-| Plattenaußenkante | Barrel-Außenradius + `leaf_len` |
+| Length `L` | `min(hinge_length, printer − 8)`; unlimited for `printer = 999` |
+| Knuckle count `N` | `custom_knuckle_count` for `custom`, otherwise `round(L / pitch)`, at least 3, rounded up to an odd number |
+| Bore radius | pin radius + `hinge_gap` |
+| Barrel outer radius | bore radius + barrel wall |
+| Axis height | equal to the barrel outer radius (barrel lies tangentially on the bed) |
+| Knuckle pitch | `L / N` |
+| Knuckle length | pitch − `axial_gap` |
+| Leaf outer edge | barrel outer radius + `leaf_len` |
 
-Mit den Presets ergeben sich daraus unter anderem diese Werte:
+With the presets, this gives, among others, these values:
 
-| Variante | Preset | Länge | `leaf_len` | Barrel-Ø | Knuckles | Fläche (B × L) | Montage |
+| Variant | Preset | Length | `leaf_len` | Barrel Ø | Knuckles | Area (W × L) | Mounting |
 |---|---|---|---|---|---|---|---|
-| `simple_40mm` | `simple` | 40 mm | 18 | 6,2 mm | 3 | ca. 42,2 × 40 mm | 1 × 3 Löcher, Ø 3,4 |
-| `standard_60mm` | `standard` | 60 mm | 22 | 8,0 mm | 7 | ca. 52 × 60 mm | 1 × 3 Löcher, Ø 3,4 |
-| `heavy_80mm` | `heavy` | 80 mm | 26 | 11,6 mm | 11 | ca. 63,6 × 80 mm | 1 × 4 Löcher, Ø 4,5 |
-| `standard_slots_60mm` | `standard` | 60 mm | 26 | 8,0 mm | 7 | ca. 60 × 60 mm | 2 Langlöcher quer, 12 × 4,5 mm |
-| `test_coupon_30mm` | `standard` | 30 mm | 14 | 8,0 mm | 3 | ca. 36 × 30 mm | keine |
+| `simple_40mm` | `simple` | 40 mm | 18 | 6.2 mm | 3 | approx. 42.2 × 40 mm | 1 × 3 holes, Ø 3.4 |
+| `standard_60mm` | `standard` | 60 mm | 22 | 8.0 mm | 7 | approx. 52 × 60 mm | 1 × 3 holes, Ø 3.4 |
+| `heavy_80mm` | `heavy` | 80 mm | 26 | 11.6 mm | 11 | approx. 63.6 × 80 mm | 1 × 4 holes, Ø 4.5 |
+| `standard_slots_60mm` | `standard` | 60 mm | 26 | 8.0 mm | 7 | approx. 60 × 60 mm | 2 slotted holes across, 12 × 4.5 mm |
+| `test_coupon_30mm` | `standard` | 30 mm | 14 | 8.0 mm | 3 | approx. 36 × 30 mm | none |
 
-Die Werte sind aus den Formeln und den Variantenparametern abgeleitet
-(Barrel-Ø mit `hinge_gap` = 0,4 mm).
+The values are derived from the formulas and the variant parameters (barrel Ø
+with `hinge_gap` = 0.4 mm).
 
-### Besondere Algorithmen
+### Special Algorithms
 
-- **Alternierende Knuckles:** Gerade Segmente gehören zum linken, ungerade
-  zum rechten Flügel. Bei ungerader Knuckle-Anzahl liegen beide Enden am linken
-  Flügel; der Pin gehört ebenfalls zum linken Flügel und läuft durchgehend.
-- **Freistellung (Scallop):** Jeder Flügel wird an den Knuckles des anderen
-  Flügels um Barrel-Radius + Spiel ausgespart. Die Freistellung ist so lang
-  wie Teilung + `axial_gap`, damit auch die axialen Spalte frei bleiben;
-  sonst stoßen die Stirnflächen in die Platte des Nachbarn und verschweißen.
-- **Nahtspalt:** Beide Innenkanten der Platten werden um `hinge_gap / 2`
-  zurückgesetzt. Ohne diesen Versatz würden sich die Plattenkanten in jeder
-  Axiallücke berühren und zu einem Teil verschmelzen.
-- **Pin nach der Freistellung:** Der Pin wird erst nach dem Ausklinken zum
-  linken Flügel addiert, damit er durchgehend und unbeschädigt bleibt.
-- **Montage-Verteilung:** Ein linearer Verteilungshelfer ordnet Löcher und
-  Langlöcher gleichmäßig im jeweiligen Band an.
-- **Eingebaute Prüfungen:** `assert`-Bedingungen blockieren unsinnige
-  Kombinationen (siehe [Fehlersuche / FAQ](#fehlersuche--faq)).
+- **Alternating knuckles:** Even segments belong to the left leaf, odd ones to
+  the right leaf. With an odd knuckle count, both ends lie on the left leaf; the
+  pin also belongs to the left leaf and runs continuously.
+- **Relief cut (scallop):** Each leaf is cut out at the knuckles of the other
+  leaf by barrel radius + clearance. The relief cut is as long as pitch +
+  `axial_gap`, so that the axial gaps also stay free; otherwise the end faces
+  butt into the neighbour's leaf and fuse.
+- **Seam gap:** Both inner edges of the leaves are set back by `hinge_gap / 2`.
+  Without this offset, the leaf edges would touch in every axial gap and merge
+  into one part.
+- **Pin after the relief cut:** The pin is only added to the left leaf after the
+  notching, so that it stays continuous and undamaged.
+- **Mounting distribution:** A linear distribution helper arranges holes and
+  slotted holes evenly in the respective band.
+- **Built-in checks:** `assert` conditions block nonsensical combinations (see
+  [Troubleshooting / FAQ](#troubleshooting--faq)).
 
 ```mermaid
 flowchart LR
-    P[Preset / Custom-Werte] --> D[Abgeleitete Maße]
+    P[Preset / custom values] --> D[Derived dimensions]
     L[hinge_length + printer] --> D
-    D --> K[Knuckle-Anzahl N]
-    K --> LL[Linker Flügel: Platte + gerade Knuckles + Pin]
-    K --> RR[Rechter Flügel: Platte + ungerade Knuckles - Pin-Kanal]
-    M[Montage-Muster] --> LL
+    D --> K[Knuckle count N]
+    K --> LL[Left leaf: plate + even knuckles + pin]
+    K --> RR[Right leaf: plate + odd knuckles - pin channel]
+    M[Mounting pattern] --> LL
     M --> RR
-    LL --> O[part: Vorschau / Druck / Einzelflügel]
+    LL --> O[part: Preview / Print / Single leaf]
     RR --> O
 ```
 
-### Modularität
+### Modularity
 
-Das Modell ist in kleine Bausteine zerlegt: Zylinder entlang der Achse,
-durchgehender Pin, Knuckle-Gruppen je Parität, Freistellungs-Zylinder,
-Plattenkontur, Loch- und Langloch-Schneidkörper, Montage-Verteilung sowie die
-zwei Flügel als eigene Module. Die Vorschau faltet den rechten Flügel um die
-Scharnierachse. Dadurch lassen sich Flügel einzeln exportieren und die
-Geometrie in eigene Designs übernehmen.
+The model is broken down into small building blocks: cylinders along the axis,
+continuous pin, knuckle groups per parity, relief-cut cylinders, leaf contour,
+hole and slot cutting bodies, mounting distribution, as well as the two leaves
+as separate modules. The preview folds the right leaf around the hinge axis.
+This makes it possible to export leaves individually and take the geometry over
+into your own designs.
 
-### Druckoptimierungen
+### Print Optimizations
 
-- **Flach gedruckt:** Beide Flügel liegen bei Z = 0 auf dem Bett, die
-  Barrel-Achse verläuft parallel zum Bett. Die Schichtlinien laufen damit
-  parallel zur Gelenkachse, sodass der Pin bei wiederholter Biegung nicht
-  delaminiert.
-- **Stützenfrei:** Der Spalt entsteht horizontal zwischen den Schichten; der
-  obere Teil des Knuckles überbrückt ihn.
-- **Senkung stützenfrei:** Die Senkung liegt standardmäßig oben (der
-  Klappseite abgewandt).
-- **Kurze Pin-Brücken:** Bei langen Scharnieren erhöht sich die Zahl der
-  Knuckles, damit die Brücken kurz bleiben.
-- **Manifold-geprüft:** Jeder Flügel ist ein geschlossener Einzelkörper; die
-  Fit-Prüfung bewertet Interferenz über das Schnittvolumen und das
-  Spiel über den Mindestabstand der Oberflächen.
+- **Printed flat:** Both leaves lie at Z = 0 on the bed, the barrel axis runs
+  parallel to the bed. The layer lines therefore run parallel to the hinge axis,
+  so that the pin does not delaminate under repeated bending.
+- **Support-free:** The gap is created horizontally between the layers; the
+  upper part of the knuckle bridges it.
+- **Support-free countersink:** The countersink is on the top by default (facing
+  away from the flap side).
+- **Short pin bridges:** With long hinges, the number of knuckles increases so
+  that the bridges stay short.
+- **Manifold-checked:** Each leaf is a closed single body; the fit check
+  evaluates interference via the intersection volume and clearance via the
+  minimum distance between the surfaces.
 
-![Gefaltete Vorschau der zwei Flügel mit Knuckles](images/02_vorschau-gefaltet.png)
+![Folded preview of the two leaves with knuckles](images/02_vorschau-gefaltet.png)
 
-## Druckempfehlungen
+## Print Recommendations
 
-Die mitgelieferten Profile sind für **Bambu Lab P2S** mit **Bambu PETG Basic**
-erstellt und im Bambu Studio testgeslict. Die Parameter lassen sich auch für
-P1S und H2C verwenden; die Länge begrenzt der Parameter `printer`.
+The included profiles are created for the **Bambu Lab P2S** with **Bambu PETG
+Basic** and test-sliced in Bambu Studio. The parameters can also be used for the
+P1S and H2C; the length is limited by the `printer` parameter.
 
-| Einstellung | Empfehlung |
+| Setting | Recommendation |
 |---|---|
-| Material | PETG (Standard der Profile); siehe Materialtabelle unten |
-| Layerhöhe | 0,16–0,20 mm (feinere Schichten machen den Barrel runder) |
-| Wände | 3 (empfohlen); 2 für schnell und leicht, 4 für belastete Scharniere |
-| Infill | 15–40 % (Profile: Gyroid, 15 %) |
-| Supports | keine |
-| Ausrichtung | flach auf dem Bett, wie erzeugt – nicht drehen |
-| Spiel (`hinge_gap`) | PLA 0,30–0,40 mm, PETG 0,40–0,50 mm |
+| Material | PETG (default of the profiles); see material table below |
+| Layer height | 0.16–0.20 mm (finer layers make the barrel rounder) |
+| Walls | 3 (recommended); 2 for fast and light, 4 for loaded hinges |
+| Infill | 15–40 % (profiles: gyroid, 15 %) |
+| Supports | none |
+| Orientation | flat on the bed, as generated – do not rotate |
+| Clearance (`hinge_gap`) | PLA 0.30–0.40 mm, PETG 0.40–0.50 mm |
 
-**Besondere Hinweise**
+**Special notes**
 
-- Nach dem Druck das Scharnier einmal vorsichtig hin- und herbewegen, um das
-  Gelenk freizulösen.
-- Vor einem großen Teil zuerst den 30-mm-Testcoupon drucken und `hinge_gap`
-  einstellen.
-- Zweifarbdruck (`print_2color`): Jeder Flügel erhält ein eigenes Filament.
+- After printing, move the hinge back and forth carefully once to free the
+  joint.
+- Before a large part, print the 30 mm test coupon first and tune `hinge_gap`.
+- Two-colour printing (`print_2color`): Each leaf gets its own filament.
 
-### Materialwahl für Scharniere
+### Material Choice for Hinges
 
-Ein Scharnier ist ein zyklisch belastetes Bauteil. Die Materialeigenschaften
-stammen aus der Modellbeschreibung.
+A hinge is a cyclically loaded component. The material properties come from the
+model description.
 
-| Material | Eignung | Zu beachten |
+| Material | Suitability | Points to note |
 |---|---|---|
-| PETG | Allround: zäh, gute Schichthaftung, wenig Warping; Standard der Profile | neigt zu Fäden, Spiel eher 0,4–0,5 mm |
-| PA / Nylon (auch PA-CF/GF) | beste Wahl bei Ermüdung und Verschleiß, selbstschmierend | stark hygroskopisch (trocknen), hohe Betttemperatur, am besten Gehäuse |
-| PP | klassisches Material für Filmscharniere, sehr ermüdungsfest | schlechte Betthaftung, Warping |
-| ABS / ASA | zäher und wärmebeständiger als PLA; ASA zusätzlich UV-/wetterfest | Heizbett, Gehäuse und Belüftung nötig |
-| TPU | weiche, dämpfende Gelenke und Bänder | langsam drucken, nicht für präzise starre Drehpunkte |
-| PC | sehr steif und hitzebeständig | ca. 300 °C Hotend, Heizbett, Gehäuse |
-| PLA | leichte Innenanwendungen, Testcoupon | spröde bei Biegung und Schlag, geringe Hitzebeständigkeit |
+| PETG | All-rounder: tough, good layer adhesion, little warping; default of the profiles | tends to stringing, clearance rather 0.4–0.5 mm |
+| PA / nylon (also PA-CF/GF) | best choice for fatigue and wear, self-lubricating | strongly hygroscopic (dry it), high bed temperature, preferably an enclosure |
+| PP | classic material for living hinges, very fatigue-resistant | poor bed adhesion, warping |
+| ABS / ASA | tougher and more heat-resistant than PLA; ASA additionally UV/weather-resistant | heated bed, enclosure and ventilation required |
+| TPU | soft, damping joints and bands | print slowly, not for precise rigid pivots |
+| PC | very stiff and heat-resistant | approx. 300 °C hotend, heated bed, enclosure |
+| PLA | light indoor applications, test coupon | brittle under bending and impact, low heat resistance |
 
-Kurzempfehlung: Innenbereich → PETG; häufig bewegt oder belastet → PA,
-bevorzugt CF-verstärkt; Außenbereich → ASA; flexibler Verbinder → TPU;
-dekorativ oder Testcoupon → PLA.
+Short recommendation: indoor use → PETG; frequently moved or loaded → PA,
+preferably CF-reinforced; outdoor use → ASA; flexible connector → TPU;
+decorative or test coupon → PLA.
 
-## Anwendungsbeispiele
+## Usage Examples
 
-Die Beispiele sind Einsatzideen; die konkrete Auslegung hängt von Last,
-Material und Montage ab.
+The examples are application ideas; the actual design depends on load, material
+and mounting.
 
-- **Klappe an einem Rack oder Gehäuse (Homelab):** Blende oder Abdeckung an
-  einem Netzwerk-Rack, Patchpanel-Schutz oder einem Mini-PC-Gehäuse. Mit
-  `standard` und Lochraster auf die vorhandenen Schrauben abgestimmt.
-- **Klappdeckel für Elektronik-Gehäuse:** Deckel für Raspberry-Pi- oder
-  Mikrocontroller-Gehäuse, Leaf-Länge und Lochbild passend zum Gehäuse.
-- **Justierbare Klappen mit Langlöchern:** Bei `slots_enabled` mit
-  `slot_dir = across` lässt sich der Abstand zur Montagefläche nachjustieren;
-  mit `along` die seitliche Position.
-- **Belastetere Türen und Deckel:** Preset `heavy` mit Pin-Ø 6 mm,
-  Barrel-Wand 2,4 mm und 4 mm Plattenstärke; Material z. B. PA-CF oder PETG
-  mit 4 Wänden.
-- **Leichte Klappen und Deckel:** Preset `simple` (40 mm) für kleine Boxen.
-- **Spielkalibrierung:** Der Testcoupon (30 mm) dient dazu, `hinge_gap` für
-  neues Filament oder einen neuen Drucker einzustellen.
-- **Bausteine für eigene Designs:** Einzelne Flügel (`leaf_left`,
-  `leaf_right`) exportieren und in Konstruktionen einbauen.
-- **Flächenbündige Schraubenköpfe:** Mit `countersink` Senkkopfschrauben
-  versenken.
+- **Flap on a rack or enclosure (homelab):** Cover plate or lid on a network
+  rack, patch panel protection or a mini-PC case. Matched to the existing
+  screws with `standard` and a hole grid.
+- **Hinged lid for electronics enclosures:** Lid for Raspberry Pi or
+  microcontroller enclosures, leaf length and hole pattern matched to the
+  enclosure.
+- **Adjustable flaps with slotted holes:** With `slots_enabled` and
+  `slot_dir = across`, the distance to the mounting surface can be readjusted;
+  with `along`, the lateral position.
+- **More heavily loaded doors and lids:** Preset `heavy` with pin Ø 6 mm, barrel
+  wall 2.4 mm and 4 mm leaf thickness; material e.g. PA-CF or PETG with 4 walls.
+- **Light flaps and lids:** Preset `simple` (40 mm) for small boxes.
+- **Clearance calibration:** The test coupon (30 mm) is used to tune
+  `hinge_gap` for new filament or a new printer.
+- **Building blocks for your own designs:** Export individual leaves
+  (`leaf_left`, `leaf_right`) and build them into constructions.
+- **Flush screw heads:** Countersink countersunk screws with `countersink`.
 
-![Variante Heavy mit vier Schraublöchern je Flügel, gefaltet](images/05_variante-heavy.png)
+![Heavy variant with four screw holes per leaf, folded](images/05_variante-heavy.png)
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-| Symptom | Ursache | Fix |
+| Symptom | Cause | Fix |
 |---|---|---|
-| Scharnier ist verschweißt / bewegt sich nicht | Spiel zu klein für Drucker oder Material | `hinge_gap` erhöhen (PLA 0,30–0,40, PETG 0,40–0,50 mm); Testcoupon drucken |
-| Scharnier wackelt oder klappert | Spiel zu groß | `hinge_gap` verringern |
-| Scharnier sitzt direkt nach dem Druck fest | Gelenk noch nicht freigebrochen | einmal vorsichtig hin- und herbewegen |
-| Vorschau zeigt rotes „NOT FOR PRINTING“ | Vorschau-Modus aktiv | `part` auf `print` oder `print_2color` setzen |
-| Scharnier ist kürzer als `hinge_length` | Bauraum-Begrenzung über `printer` | passenden Drucker wählen oder 999 (unbegrenzt) |
-| Fehler „Zu viele Knuckles für die Länge“ | Knuckle kürzer als 1,5 mm | weniger Knuckles (`custom_knuckle_count`) oder größere Länge |
-| Fehler „Platte zu schmal für das Lochbild“ | `leaf_len` zu klein für Randabstand und Lochdurchmesser | `leaf_len` erhöhen oder `mount_margin`/`hole_diameter` verkleinern |
-| Fehler „Barrel-Wand < 0.8 mm“ | `custom_barrel_wall` unter 0,8 mm | Wert auf mindestens 0,8 mm setzen |
-| Fehler „Plattenstärke < 1.2 mm“ | Plattenstärke unter 1,2 mm | Wert auf mindestens 1,2 mm setzen |
-| Die beiden Scharnierenden gehören zu unterschiedlichen Flügeln | gerade Knuckle-Anzahl bei `custom` | ungerade `custom_knuckle_count` wählen (beide Enden am linken Flügel) |
-| Langloch kürzer als eingestellt | bei `across` auf die Bandbreite begrenzt | `leaf_len` erhöhen oder `mount_margin` verkleinern |
-| Scharnier bricht oder ermüdet | PLA ist spröde bei Biegung | PETG, PA oder ASA verwenden; `heavy` oder mehr Wände |
+| Hinge is fused / does not move | Clearance too small for printer or material | Increase `hinge_gap` (PLA 0.30–0.40, PETG 0.40–0.50 mm); print the test coupon |
+| Hinge wobbles or rattles | Clearance too large | Reduce `hinge_gap` |
+| Hinge is stuck right after printing | Joint not yet broken free | Move it back and forth carefully once |
+| Preview shows red "NOT FOR PRINTING" | Preview mode active | Set `part` to `print` or `print_2color` |
+| Hinge is shorter than `hinge_length` | Build volume limit via `printer` | Choose the matching printer or 999 (unlimited) |
+| Error "Too many knuckles for the length" | Knuckle shorter than 1.5 mm | Fewer knuckles (`custom_knuckle_count`) or greater length |
+| Error "Leaf too narrow for the hole pattern" | `leaf_len` too small for edge margin and hole diameter | Increase `leaf_len` or reduce `mount_margin`/`hole_diameter` |
+| Error "Barrel wall < 0.8 mm" | `custom_barrel_wall` below 0.8 mm | Set the value to at least 0.8 mm |
+| Error "Leaf thickness < 1.2 mm" | Leaf thickness below 1.2 mm | Set the value to at least 1.2 mm |
+| The two hinge ends belong to different leaves | Even knuckle count with `custom` | Choose an odd `custom_knuckle_count` (both ends on the left leaf) |
+| Slotted hole shorter than set | With `across` limited to the band width | Increase `leaf_len` or reduce `mount_margin` |
+| Hinge breaks or fatigues | PLA is brittle under bending | Use PETG, PA or ASA; `heavy` or more walls |
 
-## Entwicklungsgeschichte
+## Development History
 
-Das Modell ist Teil einer Familie parametrischer OpenSCAD-Designs. Die
-Montageplatten folgen derselben Logik wie beim DIN-Rail-Adapter (Lochraster,
-Langlöcher, Senkung). Die Konstruktion orientiert sich an Auslegungen für
-Print-in-place-Spiel (PLA 0,30–0,40 mm, PETG 0,40–0,50 mm) und an der Regel,
-die Schichten parallel zur Gelenkachse laufen zu lassen. Die Fit-Prüfung nutzt
-den Mindestabstand und das Schnittvolumen beider Flügel (OpenCascade): Der
-Abstand muss größer als 0,05 mm sein, das Schnittvolumen kleiner als
-0,05 mm³. Die fünf Druckvarianten (mit 2, 3 und 4 Wänden) entstanden im
-August 2026.
+The model is part of a family of parametric OpenSCAD designs. The mounting
+plates follow the same logic as the DIN-rail adapter (hole grid, slotted holes,
+countersink). The construction is based on designs for print-in-place clearance
+(PLA 0.30–0.40 mm, PETG 0.40–0.50 mm) and on the rule of letting the layers run
+parallel to the hinge axis. The fit check uses the minimum distance and the
+intersection volume of both leaves (OpenCascade): the distance must be greater
+than 0.05 mm, the intersection volume smaller than 0.05 mm³. The five print
+variants (with 2, 3 and 4 walls) were created in August 2026.
 
-![Variante mit Senkung, gefaltet](images/06_variante-senkung.png)
+![Variant with countersink, folded](images/06_variante-senkung.png)
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: https://makerworld.com/en/models/3160240-parametric-print-in-place-hinge-generator
+👉 MakerWorld link: https://makerworld.com/en/models/3160240-parametric-print-in-place-hinge-generator
 
-Profil: <https://makerworld.com/en/@BetaHydri>
+Profile: <https://makerworld.com/en/@BetaHydri>
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository: © BetaHydri. Das Modell (inkl.
-Quellcode) und alle Druckdateien werden ausschließlich über MakerWorld unter
-der dort angegebenen Lizenz verteilt. Dieses Repository enthält bewusst keine
-Modell-, Quellcode- oder Druckdateien.
+Documentation and images in this repository: © BetaHydri. The model (including
+source code) and all print files are distributed exclusively via MakerWorld
+under the licence stated there. This repository deliberately contains no model,
+source code or print files.

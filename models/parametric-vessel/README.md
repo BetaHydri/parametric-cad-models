@@ -1,349 +1,350 @@
-# Parametric Storage Vessel – Rund oder eckig, mit Steckdeckel, Rillen und Beschriftung
+# Parametric Storage Vessel – Round or Rectangular, with Push-Fit Lid, Grooves and Lettering
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Parametrisches Vorratsgefäß für den FDM-Druck: runder oder rechteckiger Körper,
-Steckdeckel mit einstellbarem Spiel, optionale Rillenstruktur und Text auf
-Deckel und Wand – alles im MakerWorld-Customizer.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/2917278-parametric-vessel-with-friction-fit-lid)
+Parametric storage vessel for FDM printing: round or rectangular body, push-fit
+lid with adjustable clearance, optional groove structure and text on lid and
+wall – all in the MakerWorld Customizer.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/2917278-parametric-vessel-with-friction-fit-lid)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-P1S%20%7C%20P2S%20%7C%20H2C-green)
 ![Print files](https://img.shields.io/badge/Print%20files-MakerWorld%20only-blue)
 
-> **Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:**
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/2917278-parametric-vessel-with-friction-fit-lid](https://makerworld.com/en/models/2917278-parametric-vessel-with-friction-fit-lid)
+> **The model with all print profiles is available exclusively on MakerWorld:**
+> 👉 [MakerWorld link: https://makerworld.com/en/models/2917278-parametric-vessel-with-friction-fit-lid](https://makerworld.com/en/models/2917278-parametric-vessel-with-friction-fit-lid)
 >
-> ![Parametric Storage Vessel – runde und eckige Gefäße mit glatter und gerillter Wand samt Deckeln](images/01_hero.png)
+> ![Parametric Storage Vessel – round and rectangular vessels with smooth and grooved walls, including lids](images/01_hero.png)
 
-Der **Parametric Storage Vessel** erzeugt ein Gefäß aus Körper und
-Reibschluss-Deckel. Du wählst zwischen rund (Zylinder) und rechteckig (mit
-Eckenradius), stellst Maße, Wandstärke, Deckelspiel und Rillenstruktur ein und
-kannst optional einen Schriftzug auf den Deckel und die Wand setzen. Körper und
-Deckel liegen flach und ohne Stützen auf dem Bett; ein Zweifarb-Modus gibt
-Körper, Deckel und Text getrennte Farbgruppen.
+The **Parametric Storage Vessel** creates a vessel consisting of a body and a
+friction-fit lid. You choose between round (cylinder) and rectangular (with
+corner radius), set dimensions, wall thickness, lid clearance and groove
+structure, and can optionally place lettering on the lid and the wall. Body and
+lid lie flat and without supports on the bed; a two-color mode gives body, lid
+and text separate color groups.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Konstruktion](#konstruktion)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Parametric Options](#parametric-options)
+- [Design](#design)
+- [Print Recommendations](#print-recommendations)
+- [Use Cases](#use-cases)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Dosen und Gefäße für Werkstatt, Küche oder Regal gibt es fertig – nur selten
-in genau dem Maß, das du brauchst:
+Tins and vessels for workshop, kitchen or shelf are available ready-made – but
+rarely in exactly the size you need:
 
-- Das Fach im Regal ist 90 mm breit, die Dose aus dem Laden 100 mm.
-- Ein Deckel, der zu locker sitzt, rutscht ab; einer, der zu stramm sitzt,
-  lässt sich nicht mehr öffnen.
-- Beschriftung per Aufkleber löst sich, und Gravuren im Slicer sind
-  umständlich.
-- Eine glatte Wand ist praktisch, eine strukturierte Wand sieht besser aus –
-  und beides will man ohne zweites Modell umschalten können.
+- The shelf compartment is 90 mm wide, the tin from the store is 100 mm.
+- A lid that fits too loosely slips off; one that fits too tightly can no longer
+  be opened.
+- Lettering via sticker comes off, and engraving in the slicer is
+  cumbersome.
+- A smooth wall is practical, a textured wall looks better – and you want to be
+  able to switch between the two without needing a second model.
 
-## Die Idee
+## The Idea
 
-Ein einziges Modell deckt runde und rechteckige Gefäße ab. Der Deckel wird aus
-den Körpermaßen abgeleitet: Ein Rand (Skirt) schiebt sich mit einem
-einstellbaren Spiel (`fit_clearance`) in die Öffnung, die Deckelplatte steht
-rundum 0,5 mm über. Rillen, Aufschriften und Zweifarb-Ausgabe sind Optionen auf
-derselben Grundform. Alle Maße in Millimetern, alle Werte als
-Customizer-Parameter.
+A single model covers round and rectangular vessels. The lid is derived from the
+body dimensions: a rim (skirt) slides into the opening with an adjustable
+clearance (`fit_clearance`), and the lid plate overhangs by 0.5 mm all around.
+Grooves, lettering and two-color output are options on the same basic shape. All
+dimensions in millimeters, all values as Customizer parameters.
 
 ## Highlights
 
-- **Zwei Formen:** `round` (Zylinder) und `rect` (Rechteck mit `corner_r`).
-- **Freie Maße:** `diameter`, `width`, `depth` und `height` bis 320 mm.
-- **Steckdeckel mit einstellbarem Spiel:** `fit_clearance` (Standard 0,15 mm je
-  Seite), `skirt_depth` und eine Einführfase `skirt_chamfer`.
-- **Rillenstruktur:** rechteckig, V-förmig oder gerundet; Anzahl, Tiefe und
-  Breite einstellbar.
-- **Text auf Deckel und Wand:** Aufschrift als saubere Vertiefung oder als
-  bündige Farbeinlage im Mehrfarbdruck; bei runden Gefäßen folgt jeder
-  Buchstabe der Krümmung.
-- **Rillen weichen dem Text:** Um den Schriftzug bleibt ein glatter Bereich
-  (`text_panel_margin`), die Rillen laufen darüber und darunter weiter.
-- **Mehrfarbmodus:** Körper, Deckel und Text als getrennte Farbgruppen
+- **Two shapes:** `round` (cylinder) and `rect` (rectangle with `corner_r`).
+- **Free dimensions:** `diameter`, `width`, `depth` and `height` up to 320 mm.
+- **Push-fit lid with adjustable clearance:** `fit_clearance` (default 0.15 mm per
+  side), `skirt_depth` and a lead-in chamfer `skirt_chamfer`.
+- **Groove structure:** rectangular, V-shaped or rounded; number, depth and width
+  adjustable.
+- **Text on lid and wall:** lettering as a clean recess or as a flush color inlay
+  in multicolor printing; on round vessels, each letter follows the curvature.
+- **Grooves make way for the text:** A smooth area remains around the lettering
+  (`text_panel_margin`); the grooves continue above and below it.
+- **Multicolor mode:** body, lid and text as separate color groups
   (`Multicolor Export`).
-- **Vorschau-Modi:** zusammengebaut und geöffnet, zweifarbig, mit rotem
-  „NOT FOR PRINTING“-Banner.
-- **Druckfreundlich:** flacher Boden, Fase gegen Elefantenfuß, Mindestwand
-  2 mm, ohne Stützen.
-- **Fünf fertige Varianten** mit Bambu-Studio-Profilen für den P1S.
+- **Preview modes:** assembled and open, two-color, with a red
+  "NOT FOR PRINTING" banner.
+- **Print-friendly:** flat base, chamfer against elephant's foot, minimum wall
+  2 mm, no supports.
+- **Five ready-made variants** with Bambu Studio profiles for the P1S.
 
-![Hohes rundes Gefäß mit Deckel auf einem Eichentisch](images/02_rund-hoch.png)
+![Tall round vessel with lid on an oak table](images/02_rund-hoch.png)
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Namen entsprechen den Customizer-Parametern des Modells.
+The names correspond to the model's Customizer parameters.
 
-### Ausgabe
+### Output
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `part` | Ausgabe: `Preview 2-color` (zusammengebaut, nicht druckbar), `Preview open` (Deckel daneben, nicht druckbar), `both` (beide Teile flach, einfarbig), `Multicolor Export` (beide flach, zwei Farben), `body`, `lid` | `Preview open` | Auswahl |
+| `part` | Output: `Preview 2-color` (assembled, not printable), `Preview open` (lid beside it, not printable), `both` (both parts flat, single color), `Multicolor Export` (both flat, two colors), `body`, `lid` | `Preview open` | Selection |
 
-### Form und Maße
+### Shape and Dimensions
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `shape` | `round` (Zylinder) oder `rect` (Rechteck) | `round` | Auswahl |
-| `diameter` | Außendurchmesser (rund) | 80 | 20–320 mm |
-| `width` | Breite X (rechteckig) | 80 | 20–320 mm |
-| `depth` | Tiefe Y (rechteckig) | 80 | 20–320 mm |
-| `height` | Außenhöhe des Körpers ohne Deckel | 100 | 20–320 mm |
-| `corner_r` | Eckenradius (rechteckig), 0 = scharfe Ecken | 5 | 0–30 mm, Schritt 0,5 |
+| `shape` | `round` (cylinder) or `rect` (rectangle) | `round` | Selection |
+| `diameter` | Outer diameter (round) | 80 | 20–320 mm |
+| `width` | Width X (rectangular) | 80 | 20–320 mm |
+| `depth` | Depth Y (rectangular) | 80 | 20–320 mm |
+| `height` | Outer height of the body without lid | 100 | 20–320 mm |
+| `corner_r` | Corner radius (rectangular), 0 = sharp corners | 5 | 0–30 mm, step 0.5 |
 
-### Wände und Boden
+### Walls and Floor
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `wall` | Wandstärke, mindestens 2,0 | 2,4 | 2,0–6,0 mm, Schritt 0,1 |
-| `floor_t` | Bodenstärke, mindestens 2,0 | 2,0 | 2,0–6,0 mm, Schritt 0,1 |
+| `wall` | Wall thickness, at least 2.0 | 2.4 | 2.0–6.0 mm, step 0.1 |
+| `floor_t` | Floor thickness, at least 2.0 | 2.0 | 2.0–6.0 mm, step 0.1 |
 
-### Deckel
+### Lid
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `lid_enabled` | Deckel erzeugen (im aktuellen Modellstand wird der Wert nicht ausgewertet; den Deckel wählst du über `part`) | 1 | 0 = Nein, 1 = Ja |
-| `fit_clearance` | Spalt zwischen Deckelrand und Innenwand je Seite; kleiner = fester | 0,15 | 0,05–0,5 mm, Schritt 0,05 |
-| `skirt_depth` | Wie tief der Deckelrand in den Körper reicht | 8 | 3–30 mm, Schritt 0,5 |
-| `skirt_chamfer` | Einführfase an der Spitze des Deckelrands | 1,0 | 0–3 mm, Schritt 0,1 |
+| `lid_enabled` | Create lid (in the current model version the value is not evaluated; you select the lid via `part`) | 1 | 0 = No, 1 = Yes |
+| `fit_clearance` | Gap between lid rim and inner wall per side; smaller = tighter | 0.15 | 0.05–0.5 mm, step 0.05 |
+| `skirt_depth` | How deep the lid rim reaches into the body | 8 | 3–30 mm, step 0.5 |
+| `skirt_chamfer` | Lead-in chamfer at the tip of the lid rim | 1.0 | 0–3 mm, step 0.1 |
 
-### Kosmetik
+### Cosmetics
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `bottom_chamfer` | Fase an der unteren Außenkante (gegen Elefantenfuß) | 0,6 | 0–2 mm, Schritt 0,1 |
+| `bottom_chamfer` | Chamfer on the lower outer edge (against elephant's foot) | 0.6 | 0–2 mm, step 0.1 |
 
-### Relief / Textur
+### Relief / Texture
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `relief_enabled` | Senkrechte Rillen an der Außenwand | 0 | 0 = Aus, 1 = An |
-| `relief_style` | Rillenform | 2 | 0 = Rechteck, 1 = V-Rille, 2 = Gerundet |
-| `relief_count` | Gesamtzahl der Rillen am Umfang | 120 | 4–500 |
-| `relief_depth` | Tiefe jeder Rille | 0,6 | 0,2–1,2 mm, Schritt 0,1 |
-| `relief_width` | Breite jeder Rille | 1,0 | 0,5–4,0 mm, Schritt 0,1 |
-| `relief_corner` | Mindestabstand der Rillen zu den Ecken (nur rechteckig) | 2,0 | 1,0–15 mm, Schritt 0,5 |
+| `relief_enabled` | Vertical grooves on the outer wall | 0 | 0 = Off, 1 = On |
+| `relief_style` | Groove shape | 2 | 0 = Rectangle, 1 = V-groove, 2 = Rounded |
+| `relief_count` | Total number of grooves around the circumference | 120 | 4–500 |
+| `relief_depth` | Depth of each groove | 0.6 | 0.2–1.2 mm, step 0.1 |
+| `relief_width` | Width of each groove | 1.0 | 0.5–4.0 mm, step 0.1 |
+| `relief_corner` | Minimum distance of the grooves from the corners (rectangular only) | 2.0 | 1.0–15 mm, step 0.5 |
 
-### Text – Deckeloberseite
+### Text – Lid Top
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `lid_text_enabled` | Text auf der Deckeloberseite | 0 | 0 = Aus, 1 = An |
-| `lid_text` | Text (leer = keiner) | `TOP` | Freitext |
-| `lid_text_size` | Schriftgröße (0 = automatisch) | 0 | 0–40 mm, Schritt 0,5 |
-| `lid_text_depth` | Gravurtiefe | 0,6 | 0,3–1,5 mm, Schritt 0,1 |
+| `lid_text_enabled` | Text on the lid top | 0 | 0 = Off, 1 = On |
+| `lid_text` | Text (empty = none) | `TOP` | Free text |
+| `lid_text_size` | Font size (0 = automatic) | 0 | 0–40 mm, step 0.5 |
+| `lid_text_depth` | Engraving depth | 0.6 | 0.3–1.5 mm, step 0.1 |
 
-### Text – Gefäßwand
+### Text – Vessel Wall
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `body_text_enabled` | Text auf der Wand | 0 | 0 = Aus, 1 = An |
-| `body_text` | Text (leer = keiner) | `TEXT` | Freitext |
-| `body_text_size` | Schriftgröße (0 = automatisch) | 0 | 0–40 mm, Schritt 0,5 |
-| `body_text_depth` | Gravurtiefe | 0,8 | 0,3–1,5 mm, Schritt 0,1 |
-| `body_text_side` | Wand für den Text (rechteckig) | `Front` | `Front`, `Back`, `Left`, `Right` |
-| `body_text_angle` | Winkelposition des Texts (rund), 0 = +X / vorn | 0 | 0–355°, Schritt 5 |
-| `body_text_vpos` | Vertikale Position | `Middle` | `Top`, `Middle`, `Bottom` |
-| `body_text_z` | Genaue Höhe der Textmitte ab Boden (0 = Position oben verwenden) | 0 | 0–300 mm, Schritt 1 |
-| `text_panel_margin` | Glatter Freiraum um den Text, frei von Rillen | 2 | 0–12 mm, Schritt 0,5 |
+| `body_text_enabled` | Text on the wall | 0 | 0 = Off, 1 = On |
+| `body_text` | Text (empty = none) | `TEXT` | Free text |
+| `body_text_size` | Font size (0 = automatic) | 0 | 0–40 mm, step 0.5 |
+| `body_text_depth` | Engraving depth | 0.8 | 0.3–1.5 mm, step 0.1 |
+| `body_text_side` | Wall for the text (rectangular) | `Front` | `Front`, `Back`, `Left`, `Right` |
+| `body_text_angle` | Angular position of the text (round), 0 = +X / front | 0 | 0–355°, step 5 |
+| `body_text_vpos` | Vertical position | `Middle` | `Top`, `Middle`, `Bottom` |
+| `body_text_z` | Exact height of the text center from the floor (0 = use the position above) | 0 | 0–300 mm, step 1 |
+| `text_panel_margin` | Smooth clear area around the text, free of grooves | 2 | 0–12 mm, step 0.5 |
 
-### Qualität
+### Quality
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `$fn` | Glätte der runden Flächen | 64 | 16–128, Schritt 8 |
+| `$fn` | Smoothness of round surfaces | 64 | 16–128, step 8 |
 
-![Rundes Gefäß mit feiner, gerundeter Rillenstruktur](images/03_rund-rillen.png)
+![Round vessel with fine, rounded groove structure](images/03_rund-rillen.png)
 
-## Konstruktion
+## Design
 
-### OpenSCAD-Ansatz
+### OpenSCAD Approach
 
-Das Modell ist reines OpenSCAD ohne externe Bibliotheken und läuft im
-MakerWorld-Customizer. Ein `part`-Selektor entscheidet, ob Vorschau,
-Druck-Layout oder ein Einzelteil ausgegeben wird. Eingaben werden intern
-begrenzt: Wand und Boden mindestens 2 mm, Durchmesser mindestens
-`2 × Wand + 4`, Höhe mindestens `Boden + 10`.
+The model is pure OpenSCAD without external libraries and runs in the MakerWorld
+Customizer. A `part` selector decides whether the preview, print layout or a
+single part is output. Inputs are limited internally: wall and floor at least
+2 mm, diameter at least `2 × wall + 4`, height at least `floor + 10`.
 
-### Parametrische Logik
+### Parametric Logic
 
-| Größe | Formel / Regel |
+| Quantity | Formula / Rule |
 |---|---|
-| Innenradius (rund) | Außenradius − `wall` |
-| Deckelplatte | Dicke = max(`floor_t`, 2 mm); rund: Radius = Außenradius + 0,5 mm; eckig: 0,5 mm Überstand je Seite |
-| Skirt-Außenmaß | Innenmaß des Körpers − 2 × `fit_clearance` |
-| Skirt-Wand | max(1,5 mm, `wall` / 2) |
-| Relief-Tiefe | begrenzt auf `wall` − 0,8 mm, damit mindestens 0,8 mm Wand bleiben |
-| Text-Einlage (Mehrfarb) | min(`wall` − 0,6 mm, max(`body_text_depth`, 1,6 mm)) |
-| Platte neben dem Körper | Versatz = Durchmesser bzw. Breite + 15 mm |
+| Inner radius (round) | outer radius − `wall` |
+| Lid plate | thickness = max(`floor_t`, 2 mm); round: radius = outer radius + 0.5 mm; rectangular: 0.5 mm overhang per side |
+| Skirt outer dimension | inner dimension of the body − 2 × `fit_clearance` |
+| Skirt wall | max(1.5 mm, `wall` / 2) |
+| Relief depth | limited to `wall` − 0.8 mm so that at least 0.8 mm of wall remains |
+| Text inlay (multicolor) | min(`wall` − 0.6 mm, max(`body_text_depth`, 1.6 mm)) |
+| Plate beside the body | offset = diameter or width + 15 mm |
 
-Mit den Voreinstellungen (rund, Ø 80 × 100 mm) ergeben sich: Innenradius
-37,6 mm, Skirt-Außenradius 37,45 mm, Skirt-Wand 1,5 mm, Deckelplatte 2,0 mm.
-Der Innenraum fasst rechnerisch ca. 0,43 l (Innenradius 37,6 mm, Innenhöhe
+With the default settings (round, Ø 80 × 100 mm), this results in: inner radius
+37.6 mm, skirt outer radius 37.45 mm, skirt wall 1.5 mm, lid plate 2.0 mm. The
+interior holds approx. 0.43 l by calculation (inner radius 37.6 mm, inner height
 98 mm).
 
-Die Werte sind aus den Formeln und den Standardwerten abgeleitet.
+The values are derived from the formulas and the default values.
 
-### Besondere Algorithmen
+### Special Algorithms
 
-- **Deckelrand statt Gewinde:** Der Skirt ist ein dünnwandiger Rand, der mit
-  `fit_clearance` Luft in den Innenraum passt und über die Reibung hält. Die
-  Fase an der Spitze erleichtert das Einführen.
-- **Rillen am Rechteck:** Rillen werden je Wand gleichmäßig verteilt. Der
-  Abstand ergibt sich aus Umfang / `relief_count`; um die Ecken bleibt
-  `relief_corner` frei.
-- **Rillenprofile:** Rechteck, V-Rille und eine halbelliptische Rundung mit
-  der Breite `relief_width` und der Tiefe `relief_depth`.
-- **Text auf runder Wand:** Jeder Buchstabe sitzt auf seiner eigenen
-  Tangentialebene an seiner Bogenposition und wird radial in die Wand
-  geschnitten. Die Schrift folgt so der Krümmung. Die Gesamtbreite ist auf
-  einen Bogen von 90° begrenzt.
-- **Text auf ebener Wand:** Der Text wird in die gewählte Fläche graviert; die
-  Größe berücksichtigt die ebene Fläche ohne Eckenradius.
-- **Glatte Zone um den Text:** Aus den Rillen wird ein Bereich um die Kontur
-  des Texts (plus `text_panel_margin`) herausgeschnitten, damit kein Buchstabe
-  in eine Rille ragt.
-- **Text auf dem Deckel:** Der Text ist gespiegelt modelliert, damit er nach
-  dem Umdrehen des Deckels auf dem Gefäß richtig lesbar ist.
-- **Farbeinlage:** Im Mehrfarbmodus füllt eine eigene Farbgruppe exakt die
-  Vertiefung. Die Einlage ist tiefer als die Einzelfarb-Gravur, weil eine 0,6 mm
-  dünne Haut an einer senkrechten Wand fadig druckt.
+- **Lid rim instead of thread:** The skirt is a thin-walled rim that fits into
+  the interior with `fit_clearance` of air and holds through friction. The
+  chamfer at the tip makes insertion easier.
+- **Grooves on the rectangle:** Grooves are distributed evenly per wall. The
+  spacing results from circumference / `relief_count`; `relief_corner` remains
+  free around the corners.
+- **Groove profiles:** Rectangle, V-groove and a semi-elliptical rounding with
+  the width `relief_width` and the depth `relief_depth`.
+- **Text on a round wall:** Each letter sits on its own tangent plane at its arc
+  position and is cut radially into the wall. The lettering thus follows the
+  curvature. The total width is limited to an arc of 90°.
+- **Text on a flat wall:** The text is engraved into the selected face; the size
+  takes into account the flat face without the corner radius.
+- **Smooth zone around the text:** An area around the contour of the text (plus
+  `text_panel_margin`) is cut out of the grooves so that no letter protrudes
+  into a groove.
+- **Text on the lid:** The text is modeled mirrored so that it is legible when
+  the lid is turned over onto the vessel.
+- **Color inlay:** In multicolor mode, a separate color group fills the recess
+  exactly. The inlay is deeper than the single-color engraving, because a 0.6 mm
+  thin skin prints stringy on a vertical wall.
 
 ```mermaid
 flowchart LR
-    S[shape + Maße] --> B[Körper]
+    S[shape + dimensions] --> B[Body]
     W[wall / floor_t] --> B
-    B --> L[Deckel: Platte + Skirt mit fit_clearance]
-    R[Relief-Parameter] --> B
-    T[Text-Parameter] --> B
+    B --> L[Lid: plate + skirt with fit_clearance]
+    R[Relief parameters] --> B
+    T[Text parameters] --> B
     T --> L
-    B --> O[part: Vorschau / both / Multicolor / body / lid]
+    B --> O[part: preview / both / Multicolor / body / lid]
     L --> O
 ```
 
-### Modularität
+### Modularity
 
-Der Code trennt Körper, Deckel, Fase, Rillengeneratoren (rund und eckig),
-Rillenprofil, Text-Volumen und die Farb-Wrapper für Einzel- und
-Mehrfarbausgabe. Für die Vorschau gibt es ein Banner-Modul und eine
-Start-Kamera, die beide Teile zentriert zeigt.
+The code separates body, lid, chamfer, groove generators (round and rectangular),
+groove profile, text volumes and the color wrappers for single-color and
+multicolor output. For the preview there is a banner module and a start camera
+that shows both parts centered.
 
-### Druckoptimierungen
+### Print Optimizations
 
-- **Körper aufrecht, Deckel auf der flachen Oberseite:** Der Skirt zeigt nach
-  oben, es sind keine Stützen nötig.
-- **Fase unten** (`bottom_chamfer`) gegen Elefantenfuß.
-- **Mindestwände:** Wand und Boden mindestens 2 mm, Rillen lassen mindestens
-  0,8 mm Wand stehen.
-- **Rillen enden am Boden:** Die Rillen laufen vom Bodenniveau bis zum Rand und
-  schneiden den Boden nicht an.
-- **Einlage statt dünner Haut:** Mehrfarb-Text als tiefer Farbblock.
+- **Body upright, lid on the flat top side:** The skirt points upward, no
+  supports are needed.
+- **Chamfer at the bottom** (`bottom_chamfer`) against elephant's foot.
+- **Minimum walls:** Wall and floor at least 2 mm; grooves leave at least 0.8 mm
+  of wall.
+- **Grooves end at the floor:** The grooves run from floor level to the rim and do
+  not cut into the floor.
+- **Inlay instead of a thin skin:** Multicolor text as a deep color block.
 
-![Rechteckiges Gefäß mit V-Rillen](images/04_eckig-v-rillen.png)
+![Rectangular vessel with V-grooves](images/04_eckig-v-rillen.png)
 
-## Druckempfehlungen
+## Print Recommendations
 
-Die mitgelieferten Profile sind für **Bambu Lab P1S** mit Bambu PLA Basic
-erstellt und im Bambu Studio testgeslict (0,20 mm Layerhöhe, 2 Wände, Gyroid
-15 %). Das Modell lässt sich auch auf P2S (256 mm) und H2C (bis 325 mm für
-große Gefäße) drucken.
+The supplied profiles are created for the **Bambu Lab P1S** with Bambu PLA Basic
+and test-sliced in Bambu Studio (0.20 mm layer height, 2 walls, gyroid 15 %).
+The model can also be printed on the P2S (256 mm) and H2C (up to 325 mm for large
+vessels).
 
-| Einstellung | Empfehlung |
+| Setting | Recommendation |
 |---|---|
-| Material | PLA (Profile) |
-| Layerhöhe | 0,20 mm (0,12–0,16 mm für feinere Rillen) |
-| Wände | 3 oder mehr empfohlen; die Profile nutzen 2 |
-| Infill | 10–15 % für Dekoration, 30–40 % für Funktion |
-| Supports | keine |
-| Ausrichtung | Körper aufrecht auf dem flachen Boden, Deckel auf der flachen Oberseite |
-| Deckelspiel (`fit_clearance`) | Standard 0,15 mm je Seite; bei lockerem Sitz verringern |
+| Material | PLA (profiles) |
+| Layer height | 0.20 mm (0.12–0.16 mm for finer grooves) |
+| Walls | 3 or more recommended; the profiles use 2 |
+| Infill | 10–15 % for decoration, 30–40 % for function |
+| Supports | none |
+| Orientation | Body upright on the flat floor, lid on the flat top side |
+| Lid clearance (`fit_clearance`) | Default 0.15 mm per side; decrease if the fit is loose |
 
-**Besondere Hinweise**
+**Special notes**
 
-- Zweifarb-Ausgabe (`Multicolor Export`): STL **direkt aus der
-  OpenSCAD-Vorschau** exportieren, ohne F6/Render und ohne Kommandozeile –
-  sonst werden alle Gruppen zu einem Körper vereinigt und die Farben gehen
-  verloren. Im Bambu Studio erscheinen Körper, Deckel und Text als getrennte
-  Teile mit je einem Filament.
-- Die Vorschau-Modi sind absichtlich nicht druckbar (rotes
-  „NOT FOR PRINTING“-Banner).
-- Alternativ färbst du Text und Deckel im Slicer mit dem Farbmal-Werkzeug.
-- Der Deckel sitzt per Reibschluss (`fit_clearance`) und ist nicht luftdicht.
+- Two-color output (`Multicolor Export`): export the STL **directly from the
+  OpenSCAD preview**, without F6/Render and without the command line –
+  otherwise all groups are merged into one body and the colors are lost. In
+  Bambu Studio, body, lid and text appear as separate parts with one filament
+  each.
+- The preview modes are intentionally not printable (red
+  "NOT FOR PRINTING" banner).
+- Alternatively, you can color text and lid in the slicer with the color paint
+  tool.
+- The lid sits by friction fit (`fit_clearance`) and is not airtight.
 
-## Anwendungsbeispiele
+## Use Cases
 
-- **Werkstatt-Dosen:** Schrauben, Dübel und Kabelbinder in Gefäßen mit
-  passender Aufschrift an der Wand (`body_text`).
-- **Regalfach-Maß:** Ein rechteckiges Gefäß, das exakt in ein Fach passt, über
-  `width`, `depth` und `height`.
-- **Vorratsdosen mit Aufschrift:** Runde Gefäße mit Texten wie `COFFEE`,
-  `HONEY` oder eckige mit `TEA`; Text auf Deckel und Wand in Kontrastfarbe.
-- **Kleinteile im Homelab:** Gefäße für Patchkabel, SSDs oder Schrauben mit
-  Aufschrift auf dem Deckel.
-- **Strukturierte Pflanzen- oder Stifttöpfe:** Gefäße mit feinen Rillen, ohne
-  Deckel genutzt (`part = body`).
-- **Zweifarb-Set:** Körper, Deckel und Text in drei Farben über
+- **Workshop tins:** screws, wall plugs and cable ties in vessels with matching
+  lettering on the wall (`body_text`).
+- **Shelf compartment size:** A rectangular vessel that fits exactly into a
+  compartment, via `width`, `depth` and `height`.
+- **Storage tins with lettering:** Round vessels with texts such as `COFFEE`,
+  `HONEY` or rectangular ones with `TEA`; text on lid and wall in a contrast
+  color.
+- **Small parts in the homelab:** vessels for patch cables, SSDs or screws with
+  lettering on the lid.
+- **Textured plant or pen pots:** vessels with fine grooves, used without a lid
+  (`part = body`).
+- **Two-color set:** body, lid and text in three colors via
   `Multicolor Export`.
-- **Serie in einer Reihe:** Mehrere Gefäße mit denselben Maßen und
-  unterschiedlichen Aufschriften.
+- **Series in a row:** Several vessels with the same dimensions and different
+  lettering.
 
-![Rundes Gefäß mit mehrfarbiger Aufschrift](images/05_text-kaffee-mehrfarbig.png)
+![Round vessel with multicolor lettering](images/05_text-kaffee-mehrfarbig.png)
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-| Symptom | Ursache | Fix |
+| Symptom | Cause | Fix |
 |---|---|---|
-| Deckel sitzt zu locker | `fit_clearance` zu groß für den Drucker | `fit_clearance` verringern (z. B. 0,10 mm) |
-| Deckel klemmt oder lässt sich nicht aufsetzen | Spiel zu klein, Druck fällt etwas größer aus | `fit_clearance` erhöhen (z. B. 0,25 mm) |
-| Deckel lässt sich schlecht einführen | Einführfase zu klein | `skirt_chamfer` erhöhen |
-| Deckel hält nicht fest | Skirt zu kurz | `skirt_depth` erhöhen |
-| Rillen wirken zu flach oder fehlen | `relief_depth` wird auf `wall` − 0,8 mm begrenzt | `wall` erhöhen oder `relief_depth` verringern |
-| Rechteck zeigt an einer Wand keine Rillen | Nutzbreite (Wandlänge − 2 × `relief_corner`) zu klein oder `relief_count` zu niedrig für die Wandlänge | `relief_corner` verkleinern oder `relief_count` erhöhen |
-| Zweifarb-STL hat nur eine Farbe | Export über F6/Render oder Kommandozeile | STL direkt aus der Vorschau exportieren |
-| Vorschau zeigt „NOT FOR PRINTING“ | Vorschau-Modus aktiv | `part` auf `both`, `Multicolor Export`, `body` oder `lid` setzen |
-| Text sitzt nicht, wo er soll | Position falsch gewählt | `body_text_side` (eckig) bzw. `body_text_angle` (rund), `body_text_vpos` oder `body_text_z` anpassen |
-| Text ist zu groß oder zu klein | Automatische Größe | `body_text_size` bzw. `lid_text_size` setzen |
-| Langer Text auf runder Wand wird sehr klein | Textbreite ist auf einen Bogen von 90° begrenzt | Text kürzen |
+| Lid fits too loosely | `fit_clearance` too large for the printer | Decrease `fit_clearance` (e.g. 0.10 mm) |
+| Lid jams or cannot be put on | Clearance too small, print comes out slightly larger | Increase `fit_clearance` (e.g. 0.25 mm) |
+| Lid is hard to insert | Lead-in chamfer too small | Increase `skirt_chamfer` |
+| Lid does not hold firmly | Skirt too short | Increase `skirt_depth` |
+| Grooves look too shallow or are missing | `relief_depth` is limited to `wall` − 0.8 mm | Increase `wall` or decrease `relief_depth` |
+| Rectangle shows no grooves on one wall | Usable width (wall length − 2 × `relief_corner`) too small or `relief_count` too low for the wall length | Decrease `relief_corner` or increase `relief_count` |
+| Two-color STL has only one color | Export via F6/Render or command line | Export the STL directly from the preview |
+| Preview shows "NOT FOR PRINTING" | Preview mode active | Set `part` to `both`, `Multicolor Export`, `body` or `lid` |
+| Text is not where it should be | Wrong position selected | Adjust `body_text_side` (rectangular) or `body_text_angle` (round), `body_text_vpos` or `body_text_z` |
+| Text is too large or too small | Automatic size | Set `body_text_size` or `lid_text_size` |
+| Long text on a round wall becomes very small | Text width is limited to an arc of 90° | Shorten the text |
 
-## Entwicklungsgeschichte
+## Development History
 
-Die ersten Dateien des Modells stammen aus dem Juni 2026: ein rundes und ein
-eckiges Gefäß mit Deckel. Anfang August 2026 kamen die Referenzvarianten
-(rund hoch, rund mit Rillen, eckig mit V-Rillen, rund mit feinen Rillen, eckig
-gerundet), die Profile für den P1S und die Renderings dazu. Mitte August
-folgte die Aufschrift auf Deckel und Gefäßwand mit Mehrfarb-Einlage: Die
-Beispiel-Renderings vom 19. August 2026 zeigen Gefäße mit Aufschriften wie
-COFFEE, HONEY und TEA. Im aktuellen Stand folgt die Schrift auf runden Wänden
-buchstabenweise der Krümmung, und die Rillen weichen dem Text aus.
+The first files of the model date from June 2026: a round and a rectangular
+vessel with a lid. In early August 2026, the reference variants (tall round,
+round with grooves, rectangular with V-grooves, round with fine grooves,
+rectangular rounded), the profiles for the P1S and the renderings for them
+followed. In mid-August, lettering on the lid and vessel wall with a multicolor
+inlay followed: the example renderings from August 19, 2026 show vessels with
+lettering such as COFFEE, HONEY and TEA. In the current version, the lettering on
+round walls follows the curvature letter by letter, and the grooves make way for
+the text.
 
-Die Bilder in diesem Repository sind Renderings der Modellgeometrie
-beziehungsweise daraus abgeleitete Szenenbilder; Druckfotos sind nicht dabei.
+The images in this repository are renderings of the model geometry or scene
+images derived from it; there are no print photos.
 
-![Rechteckiges Gefäß mit mehrfarbiger Aufschrift](images/06_text-tee-eckig-mehrfarbig.png)
+![Rectangular vessel with multicolor lettering](images/06_text-tee-eckig-mehrfarbig.png)
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: https://makerworld.com/en/models/2917278-parametric-vessel-with-friction-fit-lid
+👉 MakerWorld link: https://makerworld.com/en/models/2917278-parametric-vessel-with-friction-fit-lid
 
-Profil: <https://makerworld.com/en/@BetaHydri>
+Profile: <https://makerworld.com/en/@BetaHydri>
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository: © BetaHydri. Das Modell (inkl.
-Quellcode) und alle Druckdateien werden ausschließlich über MakerWorld unter
-der dort angegebenen Lizenz verteilt. Dieses Repository enthält bewusst keine
-Modell-, Quellcode- oder Druckdateien.
+Documentation and images in this repository: © BetaHydri. The model (including
+source code) and all print files are distributed exclusively via MakerWorld under
+the license stated there. This repository intentionally contains no model, source
+code or print files.

@@ -1,385 +1,382 @@
-# Parametric Foldable Wall Hook – Klappbarer Wandhaken mit Stift-Scharnier
+# Parametric Foldable Wall Hook – Folding Wall Hook with Pin Hinge
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Parametrischer, klappbarer Wandhaken für den FDM-Druck: Er sitzt bündig in
-seinem Gehäuse und klappt bei Bedarf aus, um Handtücher, Taschen oder Jacken zu
-tragen. Vier Teile (Haken, Gehäuse, Stift, Außenschale), alle ohne Support
-druckbar; Maße, Verzierung und Haltekräfte stellst du im MakerWorld-Customizer
-ein.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/3056446-parametric-foldable-wall-hook)
+Parametric folding wall hook for FDM printing: it sits flush in its housing and
+folds out when needed to carry towels, bags or jackets. Four parts (hook,
+housing, pin, outer shell), all printable without supports; you set the
+dimensions, decoration and holding forces in the MakerWorld Customizer.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/3056446-parametric-foldable-wall-hook)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-P2S-green)
 ![Print files](https://img.shields.io/badge/Print%20files-MakerWorld%20only-blue)
 
-> **Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:**
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/3056446-parametric-foldable-wall-hook](https://makerworld.com/en/models/3056446-parametric-foldable-wall-hook)
+> **The model with all print profiles is available exclusively on MakerWorld:**
+> 👉 [MakerWorld link: https://makerworld.com/en/models/3056446-parametric-foldable-wall-hook](https://makerworld.com/en/models/3056446-parametric-foldable-wall-hook)
 >
-> ![Die vier Teile des Wandhakens: Gehäuse, Haken, Außenschale mit Rillen und Stift](images/01_hero.png)
+> ![The four parts of the wall hook: housing, hook, outer shell with grooves and pin](images/01_hero.png)
 
-Der **Parametric Foldable Wall Hook** besteht aus einem beweglichen **Haken**
-(Arm), einem **Gehäuse** mit Hakentasche, einem kräftigen **Scharnier-Stift** und
-einer dekorativen **Außenschale** mit Relief. Der Haken dreht sich unten und
-klappt nach vorn aus, bis eine Ferse an der massiven Rückwand des Gehäuses einen
-harten Anschlag bildet. Geschlossen sitzt er per Einrast-Noppen bündig im
-Gehäuse. Die Außenschale verdeckt die Stift-Enden, sodass der Stift nicht
-herauswandern kann.
+The **Parametric Foldable Wall Hook** consists of a movable **hook** (arm), a
+**housing** with a hook pocket, a sturdy **hinge pin** and a decorative **outer
+shell** with a relief pattern. The hook pivots at the bottom and folds out
+towards the front until a heel forms a hard stop against the solid back wall of
+the housing. When closed, it sits flush in the housing, held by detent bumps.
+The outer shell covers the pin ends so that the pin cannot work its way out.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Konstruktion](#konstruktion)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Parametric Options](#parametric-options)
+- [Design](#design)
+- [Print Recommendations](#print-recommendations)
+- [Use Cases](#use-cases)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Ein Wandhaken, der nur bei Bedarf herausklappt, ist praktisch – gedruckt aber
-nicht trivial:
+A wall hook that only folds out when needed is practical – but not trivial to
+print:
 
-- Ein Scharnier, das im Druck „in place“ entsteht, hat einen Spalt, der Kerben
-  und Gravuren darunter zu Spaghetti macht.
-- Ein Haken, der nur eingeschnappt ist, kann herauswandern; dann sitzt der
-  Drehpunkt falsch und der Anschlag greift nicht mehr.
-- Ohne Arretierung fällt der geschlossene Haken ins Gehäuse oder schließt nicht
-  bündig ab.
-- Unter Last darf der Haken nicht zuklappen, sondern muss in den Anschlag
-  drücken.
-- Maße und Optik hängen vom Einsatz ab (Handtuch, Beutel, Bügel), ein starres
-  Modell passt selten.
+- A hinge that is created "in place" during printing has a gap that turns the
+  notches and engravings below it into spaghetti.
+- A hook that is merely snapped in can work its way out; the pivot is then in
+  the wrong position and the stop no longer engages.
+- Without a detent, the closed hook falls into the housing or does not close
+  flush.
+- Under load, the hook must not fold shut but has to press into the stop.
+- Dimensions and appearance depend on the use (towel, bag, hanger), so a rigid
+  model rarely fits.
 
-## Die Idee
+## The Idea
 
-Der Drehpunkt sitzt **unten**, der Haken klappt nach oben zu und nach vorn aus.
-Eine anhängende Last drückt den Arm in den Anschlag: Eine Ferse unter dem
-Drehpunkt trifft bei `max_open_angle` flächig auf die massive Rückwand. Das
-Scharnier ist ein **separater, lasttragender Stift**, der seitlich durch Gehäuse,
-Arm und Gehäuse gesteckt wird. Alle vier Teile sind einzeln gedruckte Körper –
-kein Scharnierspalt, keine Stützen. Alle Maße in Millimetern, alle Werte als
-Customizer-Parameter.
+The pivot is at the **bottom**; the hook folds shut upwards and folds out
+towards the front. A hanging load presses the arm into the stop: a heel below
+the pivot meets the solid back wall with its full surface at `max_open_angle`.
+The hinge is a **separate, load-bearing pin** that is inserted from the side
+through housing, arm and housing. All four parts are individually printed
+bodies – no hinge gap, no supports. All dimensions are in millimetres, all
+values are Customizer parameters.
 
 ## Highlights
 
-- **Vier getrennte Teile:** Haken, Gehäuse, Stift und Außenschale, alle ohne
-  Support druckbar.
-- **Lasttragendes Stift-Scharnier:** `pin_d` (Standard 4 mm), von der Außenschale
-  gesichert.
-- **Harter Anschlag:** Ferse und massive Rückwand, Winkel über `max_open_angle`
-  (Standard 60°).
-- **Bündiger, einrastender Sitz:** seitliche Einrast-Noppen (`detent_*`) und ein
-  oberer Halte-Steg (`top_seat_*`) – beide unabhängig voneinander einstellbar.
-- **Bügel-Sattelkerben:** optionale 45°-V-Nuten (`hanger_notches`) zum Einhängen
-  einer Schlaufe.
-- **Griff-Fingermulde** an der Hakenspitze zum Herausziehen.
-- **Dekorative Außenschale** mit Relief: Rillen, Ringe, Punkte oder Rautung.
-- **Zwei Montagearten:** doppelseitiges Klebeband auf der flachen Rückseite oder
-  Senkkopf-Schrauben durch die Rückwand (`mount_mode`).
-- **Schale optional:** `use_shell = 0` liefert ein umlaufend geschlossenes Gehäuse.
-- **Farbige Vorschau** in vier Schemata, optional mit durchscheinender Schale.
-- **Drei Referenzvarianten** (Rillen, Rautung, Punkte) mit Bambu-Studio-Profilen
-  für den P2S.
+- **Four separate parts:** hook, housing, pin and outer shell, all printable
+  without supports.
+- **Load-bearing pin hinge:** `pin_d` (default 4 mm), secured by the outer
+  shell.
+- **Hard stop:** heel and solid back wall, angle set via `max_open_angle`
+  (default 60°).
+- **Flush, snap-in fit:** lateral detent bumps (`detent_*`) and an upper
+  retaining bar (`top_seat_*`) – both adjustable independently of each other.
+- **Hanger saddle notches:** optional 45° V-grooves (`hanger_notches`) for
+  hanging a loop.
+- **Finger grip recess** at the hook tip for pulling it out.
+- **Decorative outer shell** with relief: grooves, rings, dots or diamond
+  pattern.
+- **Two mounting methods:** double-sided adhesive tape on the flat back or
+  countersunk screws through the back wall (`mount_mode`).
+- **Shell optional:** `use_shell = 0` gives a fully enclosed housing.
+- **Colour preview** in four schemes, optionally with a translucent shell.
+- **Three reference variants** (grooves, diamond, dots) with Bambu Studio
+  profiles for the P2S.
 
-![Relief Rautung auf der Außenschale](images/02_relief-rautung.png)
+![Diamond relief on the outer shell](images/02_relief-rautung.png)
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Namen entsprechen den Customizer-Parametern des Modells.
+The names correspond to the model's Customizer parameters.
 
-### Ausgabe und Vorschau
+### Output and Preview
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `part` | Ausgabe: `Vorschau ausgeklappt`, `Vorschau zugeklappt`, `DRUCK Alle auf Platte`, `DRUCK Alle Platte einfarbig`, `DRUCK Haken`, `DRUCK Gehaeuse`, `DRUCK Stift`, `DRUCK Aussenschale` | `Vorschau ausgeklappt` | Auswahl |
-| `preview_angle` | Klappwinkel in der Vorschau (nur Anzeige), 0 = zu | 0 | 0–180° |
-| `show_cover` | Außenschale in der Vorschau zeigen (aus: Mechanik sichtbar) | 1 | 0 = Nein, 1 = Ja |
+| `part` | Output: `Vorschau ausgeklappt`, `Vorschau zugeklappt`, `DRUCK Alle auf Platte`, `DRUCK Alle Platte einfarbig`, `DRUCK Haken`, `DRUCK Gehaeuse`, `DRUCK Stift`, `DRUCK Aussenschale` | `Vorschau ausgeklappt` | Selection |
+| `preview_angle` | Folding angle in the preview (display only), 0 = closed | 0 | 0–180° |
+| `show_cover` | Show the outer shell in the preview (off: mechanism visible) | 1 | 0 = No, 1 = Yes |
 
-### Größe
+### Size
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `body_width` | Mindest-Außenbreite der Schale (X); wächst automatisch mit der Hakenbreite | 28 | 22–60 mm |
-| `body_depth` | Bautiefe / Wandabstand (Y); so tief klappt der Haken ein | 17 | 12–32 mm, Schritt 0,5 |
+| `body_width` | Minimum outer width of the shell (X); grows automatically with the hook width | 28 | 22–60 mm |
+| `body_depth` | Overall depth / distance from the wall (Y); this is how deep the hook folds in | 17 | 12–32 mm, step 0.5 |
 
-Die Außenhöhe ergibt sich automatisch aus der Hakenlänge.
+The outer height results automatically from the hook length.
 
-### Haken
+### Hook
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `hook_width` | Hakenbreite (X) | 16 | 8–40 mm, Schritt 0,5 |
-| `hook_thick` | Hakendicke (Y), zugleich Scharnier-Durchmesser (Barrel) | 8 | 5–16 mm, Schritt 0,5 |
-| `hook_len` | Hakenlänge ab Drehpunkt nach oben (geschlossen) | 44 | 20–110 mm |
-| `max_open_angle` | Maximaler Ausklappwinkel ab „zu“; hier setzt die Ferse an der Rückwand auf | 60 | 10–90° |
-| `hanger_notches` | Bügel-Sattelkerben (45°-V-Nut) auf der Innenseite: keine, 2 oder 3 Positionen | 2 | 0, 2, 3 |
-| `notch_depth` | Tiefe der Sattelkerben | 1,6 | 0,6–2,5 mm, Schritt 0,1 |
-| `grip_notch_depth` | Tiefe der Griff-Fingermulde an der Spitze | 3,0 | 1,5–5,0 mm, Schritt 0,1 |
-| `grip_notch_wfrac` | Breite der Fingermulde als Anteil der Hakenbreite | 0,82 | 0,5–0,95, Schritt 0,02 |
+| `hook_width` | Hook width (X) | 16 | 8–40 mm, step 0.5 |
+| `hook_thick` | Hook thickness (Y), also the hinge diameter (barrel) | 8 | 5–16 mm, step 0.5 |
+| `hook_len` | Hook length from the pivot upwards (closed) | 44 | 20–110 mm |
+| `max_open_angle` | Maximum opening angle from "closed"; this is where the heel lands on the back wall | 60 | 10–90° |
+| `hanger_notches` | Hanger saddle notches (45° V-groove) on the inside: none, 2 or 3 positions | 2 | 0, 2, 3 |
+| `notch_depth` | Depth of the saddle notches | 1.6 | 0.6–2.5 mm, step 0.1 |
+| `grip_notch_depth` | Depth of the finger grip recess at the tip | 3.0 | 1.5–5.0 mm, step 0.1 |
+| `grip_notch_wfrac` | Width of the finger recess as a fraction of the hook width | 0.82 | 0.5–0.95, step 0.02 |
 
-### Scharnier-Stift
+### Hinge Pin
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `pin_d` | Stift-Durchmesser; kräftig wählen, er trägt die Last | 4,0 | 2,5–7,0 mm, Schritt 0,1 |
-| `pin_play` | Laufspiel zwischen Stift und Armbohrung je Seite | 0,20 | 0,10–0,40 mm, Schritt 0,01 |
-| `holder_pin_clear` | Spiel zwischen Stift und Gehäuseloch je Seite (Durchstecken) | 0,12 | 0,05–0,30 mm, Schritt 0,01 |
+| `pin_d` | Pin diameter; choose a sturdy value, it carries the load | 4.0 | 2.5–7.0 mm, step 0.1 |
+| `pin_play` | Running clearance between pin and arm bore per side | 0.20 | 0.10–0.40 mm, step 0.01 |
+| `holder_pin_clear` | Clearance between pin and housing hole per side (insertion) | 0.12 | 0.05–0.30 mm, step 0.01 |
 
-### Passung und Montage
+### Fit and Mounting
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `cover_wall` | Wandstärke von Gehäuse und Außenschale | 2,0 | 1,2–4,0 mm, Schritt 0,1 |
-| `fit_clear` | Presssitz Gehäuse ↔ Schale je Seite | 0,18 | 0,05–0,40 mm, Schritt 0,01 |
-| `hinge_gap` | Allgemeines Scharnier- bzw. Barrel-Spiel | 0,40 | 0,25–0,60 mm, Schritt 0,01 |
-| `snap_protr` | Höhe der Einrast-Rippe Schale ↔ Gehäuse | 0,45 | 0–1,0 mm, Schritt 0,05 |
-| `use_shell` | Außenschale verwenden (mit Snap-Rillen) oder Gehäuse umlaufend geschlossen | 1 | 0 = Nein, 1 = Ja |
-| `mount_mode` | Montage: Klebeband (flache Rückseite) oder Senkkopf-Schrauben durch die Rückwand | 0 | 0, 1 |
-| `screw_hole_d` | Durchmesser des Schraubenlochs (M3 = 3,4; M4 = 4,5) | 3,4 | 2,5–6,0 mm, Schritt 0,1 |
-| `screw_head_d` | Durchmesser des Senkkopfs | 6,4 | 5–12 mm, Schritt 0,1 |
+| `cover_wall` | Wall thickness of housing and outer shell | 2.0 | 1.2–4.0 mm, step 0.1 |
+| `fit_clear` | Press fit housing ↔ shell per side | 0.18 | 0.05–0.40 mm, step 0.01 |
+| `hinge_gap` | General hinge or barrel clearance | 0.40 | 0.25–0.60 mm, step 0.01 |
+| `snap_protr` | Height of the snap rib shell ↔ housing | 0.45 | 0–1.0 mm, step 0.05 |
+| `use_shell` | Use the outer shell (with snap grooves) or a fully enclosed housing | 1 | 0 = No, 1 = Yes |
+| `mount_mode` | Mounting: adhesive tape (flat back) or countersunk screws through the back wall | 0 | 0, 1 |
+| `screw_hole_d` | Diameter of the screw hole (M3 = 3.4; M4 = 4.5) | 3.4 | 2.5–6.0 mm, step 0.1 |
+| `screw_head_d` | Diameter of the countersunk head | 6.4 | 5–12 mm, step 0.1 |
 
-### Verschluss / Einrasten am Gehäuserand
+### Closure / Detent at the Housing Edge
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `detent_enable` | Seitliche Einrast-Noppen, die den geschlossenen Haken bündig halten | 1 | 0 = Nein, 1 = Ja |
-| `detent_grip` | Haltestärke = Überdeckung Noppe ↔ Hakenseite; 0,15 leichtgängig, 0,30 stramm | 0,15 | 0,10–0,80 mm, Schritt 0,05 |
-| `detent_pos` | Höhe der Einrastung entlang der Hakenlänge (0 = Drehpunkt, 1 = Spitze) | 0,65 | 0,40–0,95, Schritt 0,05 |
+| `detent_enable` | Lateral detent bumps that hold the closed hook flush | 1 | 0 = No, 1 = Yes |
+| `detent_grip` | Holding strength = overlap bump ↔ hook side; 0.15 easy-moving, 0.30 firm | 0.15 | 0.10–0.80 mm, step 0.05 |
+| `detent_pos` | Height of the detent along the hook length (0 = pivot, 1 = tip) | 0.65 | 0.40–0.95, step 0.05 |
 
-### Oberer Halte-Steg / Bündiger Sitz
+### Upper Retaining Bar / Flush Fit
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `top_seat_enable` | Steg an der Rückwand für bündigen Sitz und sanften Klick (unabhängig von Kerben und seitlichen Noppen) | 1 | 0 = Nein, 1 = Ja |
-| `top_seat_grip` | Haltestärke der oberen Noppe = Einrasttiefe in die Hakenrückseite | 0,35 | 0,15–0,80 mm, Schritt 0,05 |
-| `top_seat_pos` | Starthöhe des Stegs entlang der Hakenlänge (0,5 = Mitte, 0,9 = nahe der Spitze) | 0,70 | 0,50–0,90, Schritt 0,05 |
+| `top_seat_enable` | Bar on the back wall for a flush fit and a gentle click (independent of notches and lateral bumps) | 1 | 0 = No, 1 = Yes |
+| `top_seat_grip` | Holding strength of the upper bump = snap depth into the back of the hook | 0.35 | 0.15–0.80 mm, step 0.05 |
+| `top_seat_pos` | Starting height of the bar along the hook length (0.5 = middle, 0.9 = near the tip) | 0.70 | 0.50–0.90, step 0.05 |
 
-### Verzierung
+### Decoration
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `relief_style` | Relief auf den Außenwänden der Schale | 1 | 0 = keins, 1 = vertikale Rillen, 2 = horizontale Ringe, 3 = Punkte, 4 = Rautung (Rillen + Ringe) |
-| `relief_size` | Musterabstand / Teilung | 4 | 2–12 mm, Schritt 0,5 |
-| `relief_depth` | Relieftiefe | 0,6 | 0,3–1,6 mm, Schritt 0,1 |
-| `arm_relief` | Auch die Vorderseite des Arms verzieren (bleibt druckbar) | 1 | 0 = Nein, 1 = Ja |
+| `relief_style` | Relief on the outer walls of the shell | 1 | 0 = none, 1 = vertical grooves, 2 = horizontal rings, 3 = dots, 4 = diamond pattern (grooves + rings) |
+| `relief_size` | Pattern spacing / pitch | 4 | 2–12 mm, step 0.5 |
+| `relief_depth` | Relief depth | 0.6 | 0.3–1.6 mm, step 0.1 |
+| `arm_relief` | Also decorate the front of the arm (remains printable) | 1 | 0 = No, 1 = Yes |
 
-### Vorschau-Farben (nur Anzeige)
+### Preview Colours (display only)
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `color_scheme` | Farbschema: 0 = Grau + Orange, 1 = Holz-Optik + Hell, 2 = Schwarz + Hell, 3 = Eigene Farben | 1 | 0–3 |
-| `cover_color` | Eigene Farbe von Schale und Haken (Schema 3) | `Peru` | Farbname |
-| `kern_color` | Eigene Farbe von Gehäuse und Stift (Schema 3) | `AntiqueWhite` | Farbname |
-| `cover_transparent` | Schale durchscheinend zeigen | 0 | 0 = deckend, 1 = durchscheinend |
+| `color_scheme` | Colour scheme: 0 = grey + orange, 1 = wood look + light, 2 = black + light, 3 = custom colours | 1 | 0–3 |
+| `cover_color` | Custom colour of shell and hook (scheme 3) | `Peru` | Colour name |
+| `kern_color` | Custom colour of housing and pin (scheme 3) | `AntiqueWhite` | Colour name |
+| `cover_transparent` | Show the shell translucent | 0 | 0 = opaque, 1 = translucent |
 
-### Qualität
+### Quality
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `$fn` | Glätte der Kurven; Vorschau 48–64, final 96–128 | 64 | 24–160, Schritt 8 |
+| `$fn` | Smoothness of curves; preview 48–64, final 96–128 | 64 | 24–160, step 8 |
 
-![Relief Punkte auf der Außenschale](images/03_relief-punkte.png)
+![Dots relief on the outer shell](images/03_relief-punkte.png)
 
-## Konstruktion
+## Design
 
-### OpenSCAD-Ansatz
+### OpenSCAD Approach
 
-Das Modell ist reines OpenSCAD ohne externe Bibliotheken und läuft im
-MakerWorld-Customizer. Der `part`-Selektor gibt Vorschau, einzelne Teile oder
-alle vier Teile auf einer Platte aus. Die Koordinaten sind X = Breite, Y = Tiefe
-(von der Wand weg), Z = Höhe. Bei den Auswahlwerten von `part` gibt es bewusst
-keine Doppelpunkte, weil der Customizer sie als Wert:Label-Trenner lesen würde.
+The model is pure OpenSCAD without external libraries and runs in the
+MakerWorld Customizer. The `part` selector outputs the preview, individual parts
+or all four parts on one plate. The coordinates are X = width, Y = depth (away
+from the wall), Z = height. The selection values of `part` deliberately contain
+no colons, because the Customizer would read them as a value:label separator.
 
-### Parametrische Logik
+### Parametric Logic
 
-Das Gehäuse und die Schale werden aus den Hakenmaßen **abgeleitet**:
+The housing and the shell are **derived** from the hook dimensions:
 
-| Größe | Formel / Regel |
+| Quantity | Formula / Rule |
 |---|---|
-| Barrel-Radius | halbe Hakendicke (`hook_thick` / 2) |
-| Mindestbreite Gehäuse | `hook_width` + 2 × (`hinge_gap` + Stiftradius + `holder_pin_clear` + 1,8) |
-| Außenbreite Schale | max(`body_width`, Mindestbreite + 2 × (`cover_wall` + `fit_clear`)) |
-| Drehpunkthöhe über Boden | max(`hook_thick`, halbe Schalenbreite × 0,75 + 2) |
-| Gehäusehöhe | Drehpunkthöhe + `hook_len` + 4 mm Kappe |
-| Außenhöhe Schale | Gehäusehöhe + 2 × (`cover_wall` + `fit_clear`) |
-| Ferse (Anschlag) | (Barrel-Radius + `hinge_gap` + `pin_play` + 0,2) / sin(`max_open_angle`) |
-| Stiftlänge | Gehäusebreite − 0,4 mm (Enden rund 0,2 mm innerhalb der Außenflächen) |
-| Kerbtiefe | min(`notch_depth`, 30 % der Hakendicke) |
-| Kerbpositionen | zwischen 40 % und 80 % der Hakenlänge |
+| Barrel radius | half the hook thickness (`hook_thick` / 2) |
+| Minimum housing width | `hook_width` + 2 × (`hinge_gap` + pin radius + `holder_pin_clear` + 1.8) |
+| Shell outer width | max(`body_width`, minimum width + 2 × (`cover_wall` + `fit_clear`)) |
+| Pivot height above floor | max(`hook_thick`, half the shell width × 0.75 + 2) |
+| Housing height | Pivot height + `hook_len` + 4 mm cap |
+| Shell outer height | Housing height + 2 × (`cover_wall` + `fit_clear`) |
+| Heel (stop) | (barrel radius + `hinge_gap` + `pin_play` + 0.2) / sin(`max_open_angle`) |
+| Pin length | Housing width − 0.4 mm (ends about 0.2 mm inside the outer surfaces) |
+| Notch depth | min(`notch_depth`, 30 % of the hook thickness) |
+| Notch positions | between 40 % and 80 % of the hook length |
 
-Mit den Voreinstellungen ergeben sich: Außenbreite der Schale 29,0 mm,
-Gehäusebreite 24,6 mm, Drehpunkthöhe 12,9 mm, Außenhöhe rund 65,2 mm bei 17 mm
-Bautiefe, Stiftlänge 24,2 mm und eine Ferse von rund 5,5 mm.
+With the default settings this gives: shell outer width 29.0 mm, housing width
+24.6 mm, pivot height 12.9 mm, outer height around 65.2 mm at 17 mm overall
+depth, pin length 24.2 mm and a heel of around 5.5 mm.
 
-Die Werte sind aus den Formeln und den Standardwerten abgeleitet.
+The values are derived from the formulas and the default values.
 
-### Besondere Algorithmen
+### Special Algorithms
 
-- **Kragarm mit Drehpunkt unten:** Der Arm klappt oben in die Tasche zu und nach
-  vorn aus. Die Ferse unter dem Drehpunkt setzt bei `max_open_angle` an der
-  massiven Rückwand auf; eine Last presst sie nur fester an.
-- **Ferse als vollbreiter Keil:** Die hintere Keilfläche liegt nach der Drehung
-  um den Öffnungswinkel flächig in der Rückwandebene. Der Keil endet genau an
-  dieser Fläche, sodass er nicht schon früher klemmt.
-- **Schwenkbahn aus einem 2D-Fächer:** Die Freischnitt-Bahn des Arms entsteht aus
-  einem gedrehten 2D-Profil und wird **einmal** extrudiert. Eine Vereinigung vieler
-  gedrehter 3D-Körper hätte auf einer gemeinsamen Ebene koplanare Deckflächen
-  und damit nicht-manifolde Kanten erzeugt.
-- **Einrast-Noppe am Seitenrand:** Eine Vollkugel in jeder Seitenwand, die
-  die Gehäusewand beim Schließen leicht aufspreizt. Die Arm-Mulde liegt im
-  geschlossenen Zustand exakt auf dem Noppenmittelpunkt – es gibt einen
-  definierten Klick und keine Dauerspannung.
-- **Oberer Halte-Steg:** Ein massiver Block wächst von der Rückwand (im Druck das
-  Bett) bis kurz vor die geschlossene Hakenrückseite. Eine kleine Noppe darauf
-  rastet in eine Mulde an der Hakenrückseite und gibt beim Aufklappen einen
-  sanften Widerstand. Der Block ist in die Rückwand verankert, damit er nicht
-  „schwebt“.
-- **Kerben und Mulden als gedrehte Würfel:** Eine um 45° gedrehte Raute auf der
-  Zielfläche ergibt V-Nuten, die im Druck selbsttragend sind. Die Griffmulde ist
-  ein Zylinderabschnitt, dessen Tiefe so begrenzt wird, dass oben eine Griff-Lippe
-  stehen bleibt.
-- **Relief auf dem Mantel:** Rillen, Ringe, Punkte oder Rautung werden aus der Schale
-  geschnitten; die Ringe als Differenz aus einer großen und einer kleineren
-  Stadion-Scheibe.
+- **Cantilever arm with pivot at the bottom:** The arm folds shut into the
+  pocket at the top and folds out towards the front. At `max_open_angle`, the
+  heel below the pivot lands on the solid back wall; a load only presses it
+  harder against it.
+- **Heel as a full-width wedge:** After rotating by the opening angle, the rear
+  wedge face lies flat in the plane of the back wall. The wedge ends exactly at
+  this face so that it does not jam any earlier.
+- **Swing path from a 2D fan:** The arm's clearance cut is created from a
+  rotated 2D profile and extruded **once**. A union of many rotated 3D bodies
+  would have produced coplanar top faces on a common plane and thus non-manifold
+  edges.
+- **Detent bump on the side edge:** A solid sphere in each side wall that
+  slightly spreads the housing wall apart when closing. When closed, the arm
+  recess sits exactly on the bump centre – giving a defined click and no
+  permanent tension.
+- **Upper retaining bar:** A solid block grows from the back wall (the bed
+  during printing) to just short of the back of the closed hook. A small bump on
+  it snaps into a recess on the back of the hook and gives gentle resistance when
+  unfolding. The block is anchored in the back wall so that it does not
+  "float".
+- **Notches and recesses as rotated cubes:** A diamond rotated by 45° on the
+  target surface produces V-grooves that are self-supporting when printed. The
+  grip recess is a cylinder segment whose depth is limited so that a grip lip
+  remains at the top.
+- **Relief on the outer surface:** Grooves, rings, dots or a diamond pattern are
+  cut out of the shell; the rings as the difference between a large and a
+  smaller stadium disc.
 
 ```mermaid
 flowchart LR
-    H[Hakenmaße] --> G[Gehäuse + Schale abgeleitet]
-    P[pin_d + Spiel] --> G
-    G --> A[Haken im Gehäuse: Ferse + Anschlag]
-    A --> S[Stift durch Gehäuse - Arm - Gehäuse]
-    S --> C[Außenschale schnappt über]
-    R[Relief-Parameter] --> C
-    C --> O[part: Vorschau / Einzelteil / alle Teile]
+    H[Hook dimensions] --> G[Housing + shell derived]
+    P[pin_d + clearance] --> G
+    G --> A[Hook in housing: heel + stop]
+    A --> S[Pin through housing - arm - housing]
+    S --> C[Outer shell snaps over]
+    R[Relief parameters] --> C
+    C --> O[part: preview / single part / all parts]
 ```
 
-### Modularität
+### Modularity
 
-Der Code trennt Hakenkörper, Ferse, Lagerloch, Schwenkbahn, Gehäuse (Tasche,
-Stiftloch, Anschlag, Noppen, Halte-Steg), Stift, Außenschale mit Mantel-Relief
-und die Montage (Klebeband oder Senkkopf-Schraube). Die Vorschau zeigt den
-Haken beliebig weit ausgeklappt, wahlweise ohne Schale oder mit durchscheinender
-Schale.
+The code separates the hook body, heel, bearing hole, swing path, housing
+(pocket, pin hole, stop, bumps, retaining bar), pin, outer shell with surface
+relief, and the mounting (adhesive tape or countersunk screw). The preview shows
+the hook folded out to any angle, optionally without the shell or with a
+translucent shell.
 
-### Druckoptimierungen
+### Print Optimisations
 
-- **Haken flach, Vorderseite oben:** Die Griffmulde ist eine nach oben offene
-  Rinne, die 45°-Kerben auf der Unterseite sind selbsttragend. Weil der Arm
-  separat liegt, gibt es keinen Scharnierspalt darunter.
-- **Gehäuse und Schale mit der Rückwand auf dem Bett,** offene Front nach oben.
-- **Stift stehend:** Jede Schicht ist ein Kreis, das ergibt einen präzisen
-  Rundquerschnitt; Fase oben als Einfädelhilfe, flacher Boden für die Haftung.
-- **Abrundungen nur als senkrechte Wände** (Ferse, Spitze), damit nichts
-  überhängt.
-- **Mulden statt Rippen** auf Flächen, die im Druck unten liegen würden.
+- **Hook flat, front side up:** The grip recess is a channel open at the top, and
+  the 45° notches on the underside are self-supporting. Because the arm lies
+  separately, there is no hinge gap underneath.
+- **Housing and shell with the back wall on the bed,** open front facing up.
+- **Pin standing upright:** Every layer is a circle, which gives a precise round
+  cross-section; chamfer at the top as an insertion aid, flat bottom for
+  adhesion.
+- **Roundings only as vertical walls** (heel, tip) so that nothing overhangs.
+- **Recesses instead of ribs** on surfaces that would face down during printing.
 
-## Druckempfehlungen
+## Print Recommendations
 
-Die mitgelieferten Profile sind für den **Bambu Lab P2S** mit **PETG-CF**
-erstellt und im Bambu Studio testgeslict (0,20 mm Layerhöhe, 3 Wände, Gyroid
-15 %). Sie unterscheiden sich im Relief: `rillen` (`relief_style` 1), `rautung`
-(4) und `punkte` (3).
+The supplied profiles are created for the **Bambu Lab P2S** with **PETG-CF** and
+test-sliced in Bambu Studio (0.20 mm layer height, 3 walls, gyroid 15 %). They
+differ in the relief: `rillen` (`relief_style` 1), `rautung` (4) and `punkte`
+(3).
 
-| Einstellung | Empfehlung |
+| Setting | Recommendation |
 |---|---|
-| Material | PETG-CF (Profile); PETG oder PLA sind ebenfalls denkbar |
-| Düse | 0,4 mm |
-| Layerhöhe | 0,20 mm |
-| Wände | 3–4 (Haken tragend: eher 4) |
-| Infill | 20–40 %, Haken und Stift höher; die Profile nutzen 15 % Gyroid |
-| Supports | keine |
-| Brim | beim stehenden Stift empfohlen |
-| Ausrichtung | Haken flach (Vorderseite oben), Gehäuse und Schale Rückwand auf dem Bett, Stift stehend |
+| Material | PETG-CF (profiles); PETG or PLA are also conceivable |
+| Nozzle | 0.4 mm |
+| Layer height | 0.20 mm |
+| Walls | 3–4 (load-bearing hook: rather 4) |
+| Infill | 20–40 %, hook and pin higher; the profiles use 15 % gyroid |
+| Supports | none |
+| Brim | recommended for the upright pin |
+| Orientation | Hook flat (front side up), housing and shell back wall on the bed, pin upright |
 
-**Besondere Hinweise**
+**Special notes**
 
-- **Alle Teile auf einer Platte:** Die Profile enthalten die vier Teile als ein
-  Objekt. In Bambu Studio rechtsklicken und „In Objekte aufteilen“ („Split to
-  Objects“) wählen, damit jedes Teil einzeln angeordnet werden kann.
-- **Zwei Farben:** Die Außenschale in Kontrastfarbe, Haken, Gehäuse und Stift in
-  einer Farbe. Ohne AMS in getrennten Drucken; Presssitz und Snap benötigen keinen
-  Kleber.
-- **Stift:** stehend drucken und einen Brim aktivieren, langsam drucken hilft. Für
-  die maximale Scherfestigkeit lässt sich der Stift im Slicer umlegen; dann
-  verlaufen die Schichten längs zur Last, der Querschnitt wird aber weniger rund.
-- **Zusammenbau:** Haken ins Gehäuse legen, Bohrung mit den Stiftlöchern
-  fluchten, Stift seitlich durchstecken (Fase voran), die Baugruppe von vorn in die
-  Außenschale drücken. Die Schale verdeckt die Stift-Enden.
-- **Montage:** Doppelseitiges Klebeband auf die flache Rückseite
-  (`mount_mode` 0) oder Senkkopf-Schrauben durch die zwei Bohrungen der Rückwand
-  (`mount_mode` 1).
-- Die Vorschau-Modi sind nur Anzeige und nicht für den Druck gedacht.
+- **All parts on one plate:** The profiles contain the four parts as a single
+  object. In Bambu Studio, right-click and choose "Split to Objects" so that each
+  part can be arranged individually.
+- **Two colours:** Outer shell in a contrasting colour; hook, housing and pin in
+  one colour. Without an AMS, in separate prints; press fit and snap need no
+  glue.
+- **Pin:** Print it upright and enable a brim; printing slowly helps. For maximum
+  shear strength, the pin can be laid down in the slicer; the layers then run
+  along the load, but the cross-section becomes less round.
+- **Assembly:** Place the hook in the housing, align the bore with the pin holes,
+  insert the pin from the side (chamfer first), and press the assembly from the
+  front into the outer shell. The shell covers the pin ends.
+- **Mounting:** Double-sided adhesive tape on the flat back (`mount_mode` 0) or
+  countersunk screws through the two holes in the back wall (`mount_mode` 1).
+- The preview modes are for display only and not intended for printing.
 
-## Anwendungsbeispiele
+## Use Cases
 
-- **Handtuchhaken im Bad,** der geschlossen bündig an der Wand sitzt.
-- **Platzsparender Jackenhaken im Flur,** ausgeklappt nur bei Bedarf.
-- **Beutel- und Taschenhaken in Werkstatt oder Büro.**
-- **Bügelhalter:** Mit den Sattelkerben (`hanger_notches`) liegt die Schlaufe
-  eines Bügels sicher im Haken.
-- **Wohnmobil und Camper:** ein Haken, der beim Fahren geschlossen bleibt.
-- **Eigene Größen:** breiter oder länger über `hook_width` und `hook_len`; Gehäuse
-  und Schale wachsen automatisch mit.
-- **Individuelles Aussehen:** Rillen, Ringe, Punkte oder Rautung auf der Schale.
+- **Towel hook in the bathroom** that sits flush against the wall when closed.
+- **Space-saving jacket hook in the hallway,** folded out only when needed.
+- **Bag and purse hook in the workshop or office.**
+- **Hanger holder:** With the saddle notches (`hanger_notches`), the loop of a
+  hanger sits securely in the hook.
+- **Motorhome and camper:** a hook that stays closed while driving.
+- **Custom sizes:** wider or longer via `hook_width` and `hook_len`; housing and
+  shell grow automatically.
+- **Individual look:** grooves, rings, dots or a diamond pattern on the shell.
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-| Symptom | Ursache | Fix |
+| Symptom | Cause | Fix |
 |---|---|---|
-| Fällt der Haken heraus? | Nein: Die Bewegung ist reine Drehung um den Stift, die Stift-Enden sind von der Schale verdeckt | – |
-| Lager zu schwergängig | Laufspiel zu klein | `pin_play` erhöhen |
-| Lager zu locker | Laufspiel zu groß | `pin_play` verringern |
-| Stift lässt sich schwer durchstecken | Durchsteck-Spiel zu klein | `holder_pin_clear` erhöhen |
-| Haken lässt sich zu schwer öffnen | Haltekräfte zu hoch | `detent_grip` und/oder `top_seat_grip` verkleinern (z. B. `detent_grip` 0,10) |
-| Haken hält zu locker | Haltekräfte zu niedrig | `detent_grip` und `top_seat_grip` erhöhen; Lage mit `detent_pos` ändern |
-| Fingermulde zu klein zum Greifen | Mulde zu flach oder schmal | `grip_notch_depth` und/oder `grip_notch_wfrac` erhöhen |
-| Öffnungswinkel passt nicht | Anschlagwinkel | `max_open_angle` ändern (Standard 60°) |
-| Schale sitzt zu locker oder zu stramm | Presssitz | `fit_clear` anpassen; Snap-Halt über `snap_protr` |
-| Dünne Schlitze im Gehäuse sichtbar | Snap-Rillen ohne Schale | `use_shell = 0`: Gehäuse umlaufend geschlossen |
-| Stift soll mehr tragen | Querschnitt zu klein | `pin_d` erhöhen; Gehäuse und Arm wachsen mit |
+| Does the hook fall out? | No: the movement is a pure rotation about the pin, and the pin ends are covered by the shell | – |
+| Bearing too stiff | Running clearance too small | Increase `pin_play` |
+| Bearing too loose | Running clearance too large | Decrease `pin_play` |
+| Pin is hard to insert | Insertion clearance too small | Increase `holder_pin_clear` |
+| Hook is too hard to open | Holding forces too high | Decrease `detent_grip` and/or `top_seat_grip` (e.g. `detent_grip` 0.10) |
+| Hook holds too loosely | Holding forces too low | Increase `detent_grip` and `top_seat_grip`; change the position with `detent_pos` |
+| Finger recess too small to grip | Recess too shallow or narrow | Increase `grip_notch_depth` and/or `grip_notch_wfrac` |
+| Opening angle does not fit | Stop angle | Change `max_open_angle` (default 60°) |
+| Shell sits too loose or too tight | Press fit | Adjust `fit_clear`; snap hold via `snap_protr` |
+| Thin slits visible in the housing | Snap grooves without a shell | `use_shell = 0`: fully enclosed housing |
+| Pin should carry more | Cross-section too small | Increase `pin_d`; housing and arm grow with it |
 
-## Entwicklungsgeschichte
+## Development History
 
-Die Entwicklung begann am 13. Juli 2026 mit einem Klapphaken als eine
-druckbare Einheit (Rahmen und Haken Print-in-Place) mit aufgeschobener
-Dekorschale. In den ersten Iterationen zeigten sich die typischen Probleme: Der
-Haken wanderte beim
-Ausklappen aus dem Lager, der Anschlag griff nicht, und die Sattelkerben
-druckten im Scharnierspalt zu Spaghetti. Am 14. Juli entstanden mehrere Varianten
-(drei Teile mit Einknips-Lager, Print-in-Place, zwei Teile), bis sich die
-**vierteilige Lösung mit separatem Stift** durchsetzte: Der Stift sichert das
-Lager, die Schale verdeckt seine Enden.
+Development began on 13 July 2026 with a folding hook as one printable unit
+(frame and hook print-in-place) with a slide-on decorative shell. The first
+iterations showed the typical problems: the hook worked its way out of the
+bearing when folding out, the stop did not engage, and the saddle notches turned
+into spaghetti in the hinge gap when printed. On 14 July, several variants were
+created (three parts with a snap-in bearing, print-in-place, two parts) until
+the **four-part solution with a separate pin** prevailed: the pin secures the
+bearing, and the shell covers its ends.
 
-Weitere Stationen: ein Ferse-Keil über die volle Breite statt eines dünnen
-Lappens, die Schwenkbahn als einmal extrudiertes 2D-Profil gegen
-nicht-manifolde Kanten und am 15. Juli die Einrast-Noppen und der obere
-Halte-Steg. Die
-drei Referenzvarianten und die Studio-Renderings entstanden am 5. August 2026. Eine
-bündige Variante, bei der der Arm die ganze Front abdeckt und per Druck löst,
-wurde als eigene Datei erkundet; dieses Repository dokumentiert die
-vierteilige Stift-Variante.
+Further milestones: a full-width heel wedge instead of a thin tab, the swing path
+as a once-extruded 2D profile against non-manifold edges and, on 15 July, the
+detent bumps and the upper retaining bar. The three reference variants and the
+studio renderings were created on 5 August 2026. A flush variant in which the
+arm covers the entire front and releases with a press was explored as a separate
+file; this repository documents the four-part pin variant.
 
-Die Bilder in diesem Repository sind Renderings der Modellgeometrie
-beziehungsweise daraus abgeleitete Szenenbilder; Druckfotos sind nicht dabei.
+The images in this repository are renderings of the model geometry or scene
+images derived from it; no photos of prints are included.
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: https://makerworld.com/en/models/3056446-parametric-foldable-wall-hook
+👉 MakerWorld link: https://makerworld.com/en/models/3056446-parametric-foldable-wall-hook
 
-Profil: <https://makerworld.com/en/@BetaHydri>
+Profile: <https://makerworld.com/en/@BetaHydri>
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository; Modell- und Druckdateien werden
-ausschließlich über MakerWorld verteilt. Dokumentation und Bilder: © BetaHydri.
-Das Modell (inkl. Quellcode) und alle Druckdateien stehen unter der auf
-MakerWorld angegebenen Lizenz. Dieses Repository enthält bewusst keine Modell-,
-Quellcode- oder Druckdateien.
+Documentation and images in this repository; model and print files are
+distributed exclusively via MakerWorld. Documentation and images: © BetaHydri.
+The model (including source code) and all print files are under the license
+stated on MakerWorld. This repository deliberately contains no model, source
+code or print files.

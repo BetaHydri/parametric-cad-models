@@ -1,399 +1,400 @@
-# Parametric Trashcan – Mülleimer mit selbstschließender Schwenkklappe, rund oder eckig
+# Parametric Trashcan – Trash Can with Self-Closing Swing Flap, Round or Rectangular
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Parametrischer Mülleimer für den FDM-Druck: runder oder rechteckiger Behälter
-mit aufschnappbarem Rahmen und einer Schwenkklappe, die durch Schwerkraft von
-selbst wieder schließt. Keine Feder, kein Magnet, keine Elektronik – und alle
-Teile drucken ohne Support. Alles stellst du im MakerWorld-Customizer ein.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/3276497-parametric-trash-can)
+Parametric trash can for FDM printing: a round or rectangular container with a
+snap-on frame and a swing flap that closes by itself again through gravity. No
+spring, no magnet, no electronics – and all parts print without support. You set
+everything in the MakerWorld Customizer.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/3276497-parametric-trash-can)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-P1S%20%7C%20P2S%20%7C%20H2C%20%7C%20H2D-green)
 ![Print files](https://img.shields.io/badge/Print%20files-MakerWorld%20only-blue)
 
-> **Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:**
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/3276497-parametric-trash-can](https://makerworld.com/en/models/3276497-parametric-trash-can)
+> **The model with all print profiles is available exclusively on MakerWorld:**
+> 👉 [MakerWorld link: https://makerworld.com/en/models/3276497-parametric-trash-can](https://makerworld.com/en/models/3276497-parametric-trash-can)
 >
-> ![Parametric Trashcan – vier Eimer mit Schwenkklappe in Rund und Eckig](images/01_hero.jpg)
+> ![Parametric Trashcan – four bins with swing flap in round and rectangular](images/01_hero.jpg)
 
-Der **Parametric Trashcan** besteht aus drei Teilen: dem **Eimer** (Körper), dem
-**Rahmen** (Kragen, der auf den Eimer schnappt) und der **Klappe**, die auf zwei
-Zapfen im Rahmen schwenkt. Der Drehpunkt liegt außermittig, die schwerere Hälfte
-zieht die Klappe immer nach unten – also zurück in die Schließstellung. Form,
-Maße, Wandstärken, Spiel, Rillenmuster und Beschriftung sind Parameter.
+The **Parametric Trashcan** consists of three parts: the **bin** (body), the
+**frame** (collar that snaps onto the bin) and the **flap**, which pivots on two
+pins in the frame. The pivot point is off-center, so the heavier half always pulls
+the flap down – that is, back into the closed position. Shape, dimensions, wall
+thicknesses, clearance, groove pattern and lettering are parameters.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Konstruktion](#konstruktion)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Parametric Options](#parametric-options)
+- [Design](#design)
+- [Print Recommendations](#print-recommendations)
+- [Use Cases](#use-cases)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Ein Mülleimer mit Deckel ist schnell gekauft – aber selten passend:
+A trash can with a lid is quickly bought – but rarely a good fit:
 
-- Offene Eimer sind unschön und riechen; Kippdeckel brauchen eine Hand.
-- Für Schreibtisch, Werkbank, Bad oder Wohnmobil sind die Maße der
-  Standardmodelle meist falsch.
-- Ein gedrucktes Gelenk, das erst nach dem Druck gelöst werden muss, oder ein
-  Deckel, der Support braucht, ist unpraktisch.
-- Gleiches Design in rund und eckig, mit Rillen oder Aufschrift, will man ohne
-  zweites Modell umschalten können.
+- Open bins are unsightly and smell; tilt lids need a hand.
+- For desk, workbench, bathroom or camper van, the dimensions of standard models
+  are usually wrong.
+- A printed hinge that has to be freed after printing, or a lid that needs
+  support, is impractical.
+- The same design in round and rectangular, with grooves or lettering, should be
+  switchable without needing a second model.
 
-## Die Idee
+## The Idea
 
-Das Prinzip stammt von einer vermessenen zweiteiligen Schwenkklappe: Der
-Drehpunkt sitzt nicht in der Mitte der Platte, sondern zur Druckseite
-(„Push-Seite“) hin versetzt. Die lange Hälfte ist schwerer und kippt von selbst
-nach unten, die Klappe kehrt in die Schließstellung zurück. Drückst du die
-kurze Hälfte nach unten, geht sie auf, der Müll fällt hinein und die Klappe
-schließt wieder.
+The principle comes from a measured two-part swing flap: the pivot point is not in
+the middle of the plate but offset toward the push side ("push side"). The long
+half is heavier and tips down by itself, so the flap returns to the closed
+position. If you push the short half down, it opens, the trash falls in and the
+flap closes again.
 
-Dieses Prinzip habe ich auf runde und rechteckige Eimer übertragen (nicht 1:1
-kopiert) und in drei Teile gegliedert, die alle ohne Support druckbar sind.
-Alle Maße in Millimetern, alle Werte als Customizer-Parameter.
+I transferred this principle to round and rectangular bins (not copied 1:1) and
+divided it into three parts, all of which can be printed without support. All
+dimensions are in millimeters, all values are Customizer parameters.
 
 ## Highlights
 
-- **Selbstschließende Klappe:** außermittiger Drehpunkt (`pivot_offset`), Rückkehr
-  allein durch Schwerkraft.
-- **Rund oder eckig:** `shape` wählt Zylinder oder Rechteck mit `corner_r`;
-  Durchmesser, Breite und Tiefe bis 300 mm, Höhe bis 400 mm.
-- **Drei Teile, kein Support:** Eimer aufrecht, Rahmen umgedreht (Ringfläche auf
-  dem Bett), Klappe mit der Oberseite nach unten.
-- **Rahmen mit Schnapp-Sitz:** Kragen sitzt bündig auf der abgesetzten Schulter
-  des Eimers, eine kleine Schnapp-Wulst hält ihn.
-- **Zapfen-Gelenk:** zwei runde Zapfen an der Klappe in Bohrungen der
-  Rahmen-Nocken, mit 45°-Einführfase an den Zapfen.
-- **Anschlag-Lippe und Öffnungsbegrenzung:** eine dünne Lippe fängt die geschlossene
-  Klappe; zwei kleine Anschlagblätter an den Gelenkflanken begrenzen das Öffnen
-  knapp unter 90°, damit die Klappe immer zurückfällt.
-- **Rillenmuster** mit drei Profilen (rechteckig, V-Nut, gerundet) und
-  **Drall** (`relief_angle`): Spirale beim runden, diagonal beim eckigen Eimer.
-- **Rillen laufen unter dem Kragen aus** (`relief_fade`), kein ausgefranstes
-  Rillenende.
-- **Beschriftung** an der Wand und auf der Klappe; Rillen weichen dem Text aus.
-- **Mehrfarb-Export** für Eimer, Rahmen, Klappe und Texte.
-- **Druckerprüfung:** Die Konsole warnt, wenn ein Teil nicht auf das gewählte
-  Druckbett passt (H2D, H2C, P2S, P1S).
-- **Sechs Referenzvarianten** mit Bambu-Studio-Profilen.
+- **Self-closing flap:** off-center pivot point (`pivot_offset`), return by gravity
+  alone.
+- **Round or rectangular:** `shape` selects cylinder or rectangle with `corner_r`;
+  diameter, width and depth up to 300 mm, height up to 400 mm.
+- **Three parts, no support:** bin upright, frame upside down (ring surface on the
+  bed), flap with the top side facing down.
+- **Frame with snap fit:** the collar sits flush on the stepped shoulder of the
+  bin, and a small snap bead holds it.
+- **Pin hinge:** two round pins on the flap in bores of the frame lugs, with a 45°
+  lead-in chamfer on the pins.
+- **Stop lip and opening limiter:** a thin lip catches the closed flap; two small
+  stop blades on the hinge flanks limit opening to just under 90°, so the flap
+  always falls back.
+- **Groove pattern** with three profiles (rectangular, V-groove, rounded) and
+  **twist** (`relief_angle`): spiral on the round bin, diagonal on the rectangular
+  bin.
+- **Grooves fade out under the collar** (`relief_fade`), no ragged groove end.
+- **Lettering** on the wall and on the flap; grooves make way for the text.
+- **Multicolor export** for bin, frame, flap and texts.
+- **Printer check:** the console warns if a part does not fit on the selected
+  print bed (H2D, H2C, P2S, P1S).
+- **Six reference variants** with Bambu Studio profiles.
 
-![Runder Eimer mit gerillter Spiralstruktur und Klappe](images/02_rund-120-gerillt.jpg)
+![Round bin with grooved spiral structure and flap](images/02_rund-120-gerillt.jpg)
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Namen entsprechen den Customizer-Parametern des Modells.
+The names correspond to the model's Customizer parameters.
 
-### Ausgabe
+### Output
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `part` | Ausgabe: `Preview assembled` (Klappe zu, nicht druckbar), `Preview open` (Klappe gekippt, nicht druckbar), `print all` (alle Teile flach), `Multicolor Export` (alle Teile mehrfarbig), `body`, `frame`, `flap` | `Preview open` | Auswahl |
-| `open_angle` | Kippwinkel der Klappe in der Vorschau `Preview open` | 55 | 0–90°, Schritt 5 |
+| `part` | Output: `Preview assembled` (flap closed, not printable), `Preview open` (flap tilted, not printable), `print all` (all parts flat), `Multicolor Export` (all parts multicolor), `body`, `frame`, `flap` | `Preview open` | Selection |
+| `open_angle` | Tilt angle of the flap in the `Preview open` preview | 55 | 0–90°, step 5 |
 
-### Form und Maße
+### Shape and Dimensions
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `shape` | `round` (Zylinder) oder `rect` (Rechteck) | `round` | Auswahl |
-| `diameter` | Außendurchmesser (rund) | 120 | 40–300 mm |
-| `width` | Breite X (eckig) | 140 | 40–300 mm |
-| `depth` | Tiefe Y (eckig); die Schwenkachse läuft quer zu X, versetzt entlang Y | 120 | 40–300 mm |
-| `height` | Außenhöhe des Eimers ohne Rahmen | 160 | 40–400 mm |
-| `corner_r` | Eckenradius (eckig) | 12 | 0–60 mm, Schritt 0,5 |
+| `shape` | `round` (cylinder) or `rect` (rectangle) | `round` | Selection |
+| `diameter` | Outer diameter (round) | 120 | 40–300 mm |
+| `width` | Width X (rectangular) | 140 | 40–300 mm |
+| `depth` | Depth Y (rectangular); the pivot axis runs across X, offset along Y | 120 | 40–300 mm |
+| `height` | Outer height of the bin without frame | 160 | 40–400 mm |
+| `corner_r` | Corner radius (rectangular) | 12 | 0–60 mm, step 0.5 |
 
-### Wände und Boden
+### Walls and Floor
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `wall` | Wandstärke | 2,4 | 1,6–6,0 mm, Schritt 0,1 |
-| `floor_t` | Bodenstärke | 2,4 | 1,6–6,0 mm, Schritt 0,1 |
+| `wall` | Wall thickness | 2.4 | 1.6–6.0 mm, step 0.1 |
+| `floor_t` | Floor thickness | 2.4 | 1.6–6.0 mm, step 0.1 |
 
-### Rahmen (Kragen)
+### Frame (Collar)
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `frame_wall` | Wandstärke des Kragens | 2,6 | 1,6–6,0 mm, Schritt 0,1 |
-| `frame_overlap` | Wie weit der Kragenrand nach unten über die Eimerwand reicht | 12,0 | 6,0–40,0 mm, Schritt 0,5 |
-| `frame_top` | Dicke des oberen Rings über dem Eimerrand | 3,0 | 2,0–6,0 mm, Schritt 0,1 |
-| `fit_clearance` | Spalt zwischen Kragenrand und Eimerwand je Seite | 0,20 | 0,05–0,5 mm, Schritt 0,05 |
-| `frame_chamfer` | Einführfase am Kragenrand | 1,2 | 0–3,0 mm, Schritt 0,1 |
-| `snap_enabled` | Schnapp-Wulst am Kragen | 1 | 0 = Nein, 1 = Ja |
-| `snap_depth` | Tiefe der Schnapp-Wulst | 0,6 | 0,3–1,2 mm, Schritt 0,1 |
+| `frame_wall` | Wall thickness of the collar | 2.6 | 1.6–6.0 mm, step 0.1 |
+| `frame_overlap` | How far the collar rim extends downward over the bin wall | 12.0 | 6.0–40.0 mm, step 0.5 |
+| `frame_top` | Thickness of the top ring above the bin rim | 3.0 | 2.0–6.0 mm, step 0.1 |
+| `fit_clearance` | Gap between collar rim and bin wall per side | 0.20 | 0.05–0.5 mm, step 0.05 |
+| `frame_chamfer` | Lead-in chamfer on the collar rim | 1.2 | 0–3.0 mm, step 0.1 |
+| `snap_enabled` | Snap bead on the collar | 1 | 0 = No, 1 = Yes |
+| `snap_depth` | Depth of the snap bead | 0.6 | 0.3–1.2 mm, step 0.1 |
 
-### Schwenkklappe
+### Swing Flap
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `flap_th` | Plattendicke der Klappe (wird intern auf mindestens `pin_d` + 0,4 angehoben) | 3,0 | 2,0–6,0 mm, Schritt 0,1 |
-| `flap_gap` | Spalt zwischen Klappenrand und Rahmenöffnung je Seite | 0,5 | 0,4–2,0 mm, Schritt 0,05 |
-| `pin_d` | Zapfendurchmesser | 3,6 | 2,5–6,0 mm, Schritt 0,1 |
-| `pin_len` | Zapfenlänge in die Bohrung | 3,2 | 2,0–6,0 mm, Schritt 0,1 |
-| `pivot_play` | Lagerspiel: Bohrung = `pin_d` + Wert; größer = freier | 0,5 | 0,25–1,0 mm, Schritt 0,05 |
-| `pivot_offset` | Versatz der Achse zur Push-Seite als Anteil des Radius bzw. der halben Tiefe; größer = stärkere Schließneigung | 0,16 | 0,06–0,32, Schritt 0,01 |
-| `stopper_w` | Überstand der Anschlag-Lippe nach innen; klein halten, muss größer als `flap_gap` sein | 0,8 | 0,4–1,2 mm, Schritt 0,1 |
-| `stopper_arc` | Bogen der Lippe an der schweren Kante (nur rund) | 90 | 60–180°, Schritt 5 |
-| `swing_limit` | Öffnungsbegrenzung durch zwei Anschlagblätter an den Gelenkflanken | 1 | 0 = Nein, 1 = Ja |
-| `stop_angle` | Maximaler Öffnungswinkel bis zum Anschlag; unter 90°, damit die Klappe zurückfällt | 85 | 78–90°, Schritt 1 |
+| `flap_th` | Plate thickness of the flap (internally raised to at least `pin_d` + 0.4) | 3.0 | 2.0–6.0 mm, step 0.1 |
+| `flap_gap` | Gap between flap edge and frame opening per side | 0.5 | 0.4–2.0 mm, step 0.05 |
+| `pin_d` | Pin diameter | 3.6 | 2.5–6.0 mm, step 0.1 |
+| `pin_len` | Pin length into the bore | 3.2 | 2.0–6.0 mm, step 0.1 |
+| `pivot_play` | Bearing clearance: bore = `pin_d` + value; larger = freer | 0.5 | 0.25–1.0 mm, step 0.05 |
+| `pivot_offset` | Offset of the axis toward the push side as a fraction of the radius or half the depth; larger = stronger tendency to close | 0.16 | 0.06–0.32, step 0.01 |
+| `stopper_w` | Inward overhang of the stop lip; keep small, must be larger than `flap_gap` | 0.8 | 0.4–1.2 mm, step 0.1 |
+| `stopper_arc` | Arc of the lip on the heavy edge (round only) | 90 | 60–180°, step 5 |
+| `swing_limit` | Opening limit via two stop blades on the hinge flanks | 1 | 0 = No, 1 = Yes |
+| `stop_angle` | Maximum opening angle up to the stop; below 90° so the flap falls back | 85 | 78–90°, step 1 |
 
-![Eckiger Eimer mit Aufschrift ECO](images/03_eckig-115-eco.jpg)
+![Rectangular bin with ECO lettering](images/03_eckig-115-eco.jpg)
 
-### Relief / Textur
+### Relief / Texture
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `relief_enabled` | Rillen an der Außenwand | 0 | 0 = Aus, 1 = An |
-| `relief_style` | Rillenform | 2 | 0 = Rechteck, 1 = V-Nut, 2 = Gerundet |
-| `relief_count` | Gesamtzahl der Rillen am Umfang | 100 | 4–500 |
-| `relief_depth` | Tiefe jeder Rille (wird auf `wall` − 0,8 mm begrenzt) | 0,6 | 0,2–1,2 mm, Schritt 0,1 |
-| `relief_width` | Breite jeder Rille | 1,2 | 0,5–4,0 mm, Schritt 0,1 |
-| `relief_angle` | Drall: rund = Spirale über die ganze Höhe, eckig = diagonale Rillen, 0 = gerade | 0 | −180–180°, Schritt 5 |
-| `relief_corner` | Nur eckig: freie Wand an jeder Ecke | 4,0 | 1,0–20 mm, Schritt 0,5 |
-| `relief_fade` | Länge, auf der die Rillen oben zu Null auslaufen, 0 = harter Rand | 8 | 0–25 mm, Schritt 0,5 |
+| `relief_enabled` | Grooves on the outer wall | 0 | 0 = Off, 1 = On |
+| `relief_style` | Groove shape | 2 | 0 = Rectangle, 1 = V-groove, 2 = Rounded |
+| `relief_count` | Total number of grooves around the circumference | 100 | 4–500 |
+| `relief_depth` | Depth of each groove (limited to `wall` − 0.8 mm) | 0.6 | 0.2–1.2 mm, step 0.1 |
+| `relief_width` | Width of each groove | 1.2 | 0.5–4.0 mm, step 0.1 |
+| `relief_angle` | Twist: round = spiral over the full height, rectangular = diagonal grooves, 0 = straight | 0 | −180–180°, step 5 |
+| `relief_corner` | Rectangular only: free wall at each corner | 4.0 | 1.0–20 mm, step 0.5 |
+| `relief_fade` | Length over which the grooves fade out to zero at the top, 0 = hard edge | 8 | 0–25 mm, step 0.5 |
 
-### Text – Eimerwand
+### Text – Bin Wall
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `body_text_enabled` | Text an der Wand | 0 | 0 = Aus, 1 = An |
-| `body_text` | Text | `TRASH` | Freitext |
-| `body_text_size` | Schriftgröße (0 = automatisch) | 0 | 0–60 mm, Schritt 0,5 |
-| `body_text_depth` | Gravurtiefe | 0,6 | 0,3–1,5 mm, Schritt 0,1 |
-| `body_text_side` | Wand für den Text (eckig) | `Front` | `Front`, `Back`, `Left`, `Right` |
-| `body_text_angle` | Winkelposition (rund), 0 = +X | 0 | 0–355°, Schritt 5 |
-| `body_text_vpos` | Vertikale Position | `Middle` | `Top`, `Middle`, `Bottom` |
-| `text_panel_margin` | Glatter Freiraum um den Text, frei von Rillen | 3 | 0–15 mm, Schritt 0,5 |
+| `body_text_enabled` | Text on the wall | 0 | 0 = Off, 1 = On |
+| `body_text` | Text | `TRASH` | Free text |
+| `body_text_size` | Font size (0 = automatic) | 0 | 0–60 mm, step 0.5 |
+| `body_text_depth` | Engraving depth | 0.6 | 0.3–1.5 mm, step 0.1 |
+| `body_text_side` | Wall for the text (rectangular) | `Front` | `Front`, `Back`, `Left`, `Right` |
+| `body_text_angle` | Angular position (round), 0 = +X | 0 | 0–355°, step 5 |
+| `body_text_vpos` | Vertical position | `Middle` | `Top`, `Middle`, `Bottom` |
+| `text_panel_margin` | Smooth clear area around the text, free of grooves | 3 | 0–15 mm, step 0.5 |
 
-### Text – Klappenoberseite
+### Text – Flap Top
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `flap_text_enabled` | Zeichen auf der Klappenoberseite | 0 | 0 = Aus, 1 = An |
-| `flap_text` | Text oder Symbol | `♻` | Freitext |
-| `flap_text_size` | Schriftgröße (0 = automatisch) | 0 | 0–60 mm, Schritt 0,5 |
-| `flap_text_depth` | Gravurtiefe | 0,6 | 0,3–1,5 mm, Schritt 0,1 |
+| `flap_text_enabled` | Character on the flap top | 0 | 0 = Off, 1 = On |
+| `flap_text` | Text or symbol | `♻` | Free text |
+| `flap_text_size` | Font size (0 = automatic) | 0 | 0–60 mm, step 0.5 |
+| `flap_text_depth` | Engraving depth | 0.6 | 0.3–1.5 mm, step 0.1 |
 
-### Qualität und Druckerprüfung
+### Quality and Printer Check
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `$fn` | Glätte der runden Flächen | 72 | 24–160, Schritt 8 |
-| `target_printer` | Zieldrucker für die Bauraumprüfung: `H2D` (350 × 320 × 325), `H2C` (325 × 320 × 320), `P2S`, `P1S` (je 256 × 256 × 256) | `H2D` | Auswahl |
+| `$fn` | Smoothness of round surfaces | 72 | 24–160, step 8 |
+| `target_printer` | Target printer for the build volume check: `H2D` (350 × 320 × 325), `H2C` (325 × 320 × 320), `P2S`, `P1S` (each 256 × 256 × 256) | `H2D` | Selection |
 
-![Runder Eimer mit V-Nut-Spirale und Aufschrift am Fuß](images/04_rund-150-v-nut.jpg)
+![Round bin with V-groove spiral and lettering at the base](images/04_rund-150-v-nut.jpg)
 
-## Konstruktion
+## Design
 
-### OpenSCAD-Ansatz
+### OpenSCAD Approach
 
-Das Modell ist reines OpenSCAD ohne externe Bibliotheken und läuft im
-MakerWorld-Customizer. Der `part`-Selektor entscheidet, ob Vorschau, ein
-Druck-Layout oder ein Einzelteil ausgegeben wird. Eingaben werden intern
-begrenzt: Wand, Boden und Kragen mindestens 1,6 mm, Höhe mindestens
-Boden + 30 mm, Durchmesser bzw. Breite und Tiefe mindestens 40 mm.
+The model is pure OpenSCAD without external libraries and runs in the MakerWorld
+Customizer. The `part` selector decides whether a preview, a print layout or a
+single part is output. Inputs are limited internally: wall, floor and collar at
+least 1.6 mm, height at least floor + 30 mm, diameter or width and depth at least
+40 mm.
 
-### Parametrische Logik
+### Parametric Logic
 
-| Größe | Formel / Regel |
+| Quantity | Formula / Rule |
 |---|---|
-| Innenradius (rund) | Außenradius − `wall` |
-| Achsversatz | `pivot_offset` × Innenradius bzw. halbe Innentiefe, Richtung Push-Seite (+Y) |
-| Bohrungsdurchmesser | `pin_d` + `pivot_play` |
-| Klappendicke | max(`flap_th`, `pin_d` + 0,4, 2,0) |
-| Klappenradius / -halbmaß | Öffnung − `flap_gap` je Seite |
-| Ringhöhe oben | max(`frame_top`, Klappendicke + 2 + 0,6) |
-| Sitz (Absatz am Eimerrand) | max(1, min(`frame_wall`, `wall` − `fit_clearance` − 0,9)) |
-| Schnapp-Wulst | min(`snap_depth`, Sitz − 0,4) |
-| Relief-Tiefe | begrenzt auf `wall` − 0,8 mm |
-| Rillen enden | `frame_overlap` unterhalb des Eimerrands, mit `relief_fade` Auslauf |
+| Inner radius (round) | outer radius − `wall` |
+| Axis offset | `pivot_offset` × inner radius or half the inner depth, toward the push side (+Y) |
+| Bore diameter | `pin_d` + `pivot_play` |
+| Flap thickness | max(`flap_th`, `pin_d` + 0.4, 2.0) |
+| Flap radius / half-dimension | opening − `flap_gap` per side |
+| Ring height at the top | max(`frame_top`, flap thickness + 2 + 0.6) |
+| Seat (step at the bin rim) | max(1, min(`frame_wall`, `wall` − `fit_clearance` − 0.9)) |
+| Snap bead | min(`snap_depth`, seat − 0.4) |
+| Relief depth | limited to `wall` − 0.8 mm |
+| Grooves end | `frame_overlap` below the bin rim, with `relief_fade` run-out |
 
-Mit den Voreinstellungen (rund, Ø 120 × 160 mm) ergeben sich: Achsversatz
-9,2 mm, Bohrung Ø 4,1 mm, Klappendicke 4,0 mm (die Zapfen bestimmen die Dicke),
-Klappen-Durchmesser 114,2 mm, Ringhöhe 6,6 mm, Sitz 1,3 mm und Außendurchmesser
-des Rahmens 125,6 mm.
+With the default settings (round, Ø 120 × 160 mm), this results in: axis offset
+9.2 mm, bore Ø 4.1 mm, flap thickness 4.0 mm (the pins determine the thickness),
+flap diameter 114.2 mm, ring height 6.6 mm, seat 1.3 mm and frame outer diameter
+125.6 mm.
 
-Die Werte sind aus den Formeln und den Standardwerten abgeleitet.
+The values are derived from the formulas and the default values.
 
-### Besondere Algorithmen
+### Special Algorithms
 
-- **Gravitationsrückkehr:** Der Drehpunkt liegt zur Push-Seite versetzt; die
-  längere, schwerere Hälfte der Klappe kippt nach unten. Einen eigenen Rückstell-
-  mechanismus braucht es nicht.
-- **Zapfen in Nocken:** Zwei Zapfen mit abgeschrägter Spitze an der Klappe laufen in
-  Bohrungen von Nocken im Rahmen. Die Nocken werden an der Außenfläche des Rahmens
-  abgeschnitten, damit nichts über die Wand hinausragt. Die Bohrung ist leicht
-  übergroß, damit sie beim waagerechten Druck rund bleibt.
-- **Anschlag-Lippe als Dünnring:** Die Lippe ist die Differenz aus der vergrößerten
-  Öffnung und einem massiven Innenkegel. Würde man zwei Ringe verhüllen, füllte
-  die Hülle die Mitte; mit massiven Scheiben bleibt die Öffnung frei und die Unterseite
-  wird zur selbsttragenden 45°-Fläche. Bei rund deckt die Lippe einen
-  Viertelkreis (`stopper_arc`), bei eckig die ganze Vorderseite.
-- **Anschlagblätter:** Zwei einseitige, radiale Blätter an den Gelenkflanken
-  (eines an der Klappe, eines am Rahmen) berühren sich flächig; der Anschlag
-  liegt exakt beim Winkel `stop_angle`, unabhängig von der Blattdicke.
-- **Sitz ohne Koinzidenz:** Der Absatz am Eimerrand wird mit einem Schnitt
-  erzeugt, dessen Außenkante 2 mm außerhalb der Wand liegt. So entsteht keine
-  deckungsgleiche Fläche, die im Druck Streifen erzeugen würde.
-- **Rillen:** Rund: eine Rillenreihe mit Verdrehung (Spirale) über die Höhe. Eckig:
-  jede Rille wird in der Wandebene gekippt (diagonal). Das Auslaufen erfolgt über
-  einen Kegelstumpf, der die Rillentiefe nach oben auf Null zieht.
-- **Text auf der Wand:** Größe und Position werden aus der Wandfläche, der
-  Rillenzone und `text_panel_margin` abgeleitet; Rillen sparen das Textfeld aus. Im
-  Mehrfarbmodus füllt eine Farbeinlage die Vertiefung, deren Tiefe min(`wall` − 0,6;
-  max(`body_text_depth`; 1,6)) beträgt.
+- **Gravity return:** The pivot point is offset toward the push side; the longer,
+  heavier half of the flap tips down. No separate return mechanism is needed.
+- **Pins in lugs:** Two pins with a chamfered tip on the flap run in bores of lugs
+  in the frame. The lugs are cut off at the outer surface of the frame so that
+  nothing protrudes beyond the wall. The bore is slightly oversized so that it
+  stays round when printed horizontally.
+- **Stop lip as a thin ring:** The lip is the difference between the enlarged
+  opening and a solid inner cone. If you hulled two rings, the hull would fill the
+  middle; with solid disks the opening stays free and the underside becomes a
+  self-supporting 45° surface. On the round version, the lip covers a quarter
+  circle (`stopper_arc`); on the rectangular version, the entire front.
+- **Stop blades:** Two one-sided, radial blades on the hinge flanks (one on the
+  flap, one on the frame) touch each other flat; the stop lies exactly at the
+  angle `stop_angle`, regardless of the blade thickness.
+- **Seat without coincidence:** The step at the bin rim is created with a cut whose
+  outer edge lies 2 mm outside the wall. This avoids a coincident surface that
+  would create streaks in the print.
+- **Grooves:** Round: a row of grooves with twist (spiral) over the height.
+  Rectangular: each groove is tilted in the wall plane (diagonal). The run-out is
+  achieved via a truncated cone that pulls the groove depth to zero toward the top.
+- **Text on the wall:** Size and position are derived from the wall surface, the
+  groove zone and `text_panel_margin`; grooves leave out the text field. In
+  multicolor mode, a color inlay fills the recess, whose depth is min(`wall` − 0.6;
+  max(`body_text_depth`; 1.6)).
 
 ```mermaid
 flowchart LR
-    S[shape + Maße] --> B[Eimer]
+    S[shape + dimensions] --> B[Bin]
     W[wall / floor_t] --> B
-    B --> F[Rahmen: Ring + Kragen + Nocken + Lippe]
-    F --> K[Klappe auf Zapfen, Achse versetzt]
-    R[Relief-Parameter] --> B
-    T[Text-Parameter] --> B
+    B --> F[Frame: ring + collar + lugs + lip]
+    F --> K[Flap on pins, axis offset]
+    R[Relief parameters] --> B
+    T[Text parameters] --> B
     T --> K
-    B --> O[part: Vorschau / print all / Multicolor / body / frame / flap]
+    B --> O[part: preview / print all / Multicolor / body / frame / flap]
     F --> O
     K --> O
 ```
 
-### Modularität
+### Modularity
 
-Der Code trennt Eimer, Sitzabsatz, Rillen (mit Auslauf), Text-Volumen, Rahmen
-(Ring, Kragenrand, Einführfase, Nocken, Lippe, Anschlagblätter), Klappe (Platte,
-Zapfen, Griffrillen, Text) und die Farb-Wrapper für Vorschau und Mehrfarb-Export.
-Ein Vorschau-Banner und eine Start-Kamera zeigen die Teile zentriert.
+The code separates the bin, seat step, grooves (with run-out), text volumes, frame
+(ring, collar rim, lead-in chamfer, lugs, lip, stop blades), flap (plate, pins,
+grip grooves, text) and the color wrappers for preview and multicolor export. A
+preview banner and a start camera show the parts centered.
 
-### Druckoptimierungen
+### Print Optimizations
 
-- **Eimer aufrecht:** Boden auf dem Bett, keine Überhänge.
-- **Rahmen umgedreht:** Die flache Ringfläche liegt auf dem Bett; Nocken sind an
-  die Ringebene beschnitten, damit nichts unter den Bodenpunkt ragt.
-- **Klappe mit der Oberseite nach unten:** Die sichtbare Fläche und die Beschriftung
-  liegen am Bett und werden besonders sauber; ein Farbwechsel fällt in die erste
-  Lage. Die Drehung um 180° ist eine starre Drehung, die Schrift bleibt auf der
-  fertigen Fläche lesbar.
-- **Lippe mit 45°-Unterseite** und Rillen, die zu Null auslaufen.
-- **Rillentiefe begrenzt:** mindestens 0,8 mm Wand bleiben stehen.
-- **Griffrillen** (vier flache Linien) markieren, wo man auf die Klappe drückt.
+- **Bin upright:** floor on the bed, no overhangs.
+- **Frame upside down:** The flat ring surface lies on the bed; lugs are trimmed to
+  the ring plane so that nothing protrudes below the base point.
+- **Flap with the top side facing down:** The visible surface and the lettering lie
+  on the bed and come out especially clean; a color change falls into the first
+  layer. The 180° rotation is a rigid rotation, and the lettering remains legible
+  on the finished surface.
+- **Lip with 45° underside** and grooves that fade out to zero.
+- **Groove depth limited:** at least 0.8 mm of wall remains.
+- **Grip grooves** (four shallow lines) mark where to press on the flap.
 
-![Eckiger Eimer mit Aufschrift RECYCLE](images/05_eckig-150-recycle.jpg)
+![Rectangular bin with RECYCLE lettering](images/05_eckig-150-recycle.jpg)
 
-## Druckempfehlungen
+## Print Recommendations
 
-Die mitgelieferten Profile liegen als je ein Druckplan mit allen drei Teilen vor
-und sind im Bambu Studio testgeslict (0,20 mm Layerhöhe, Gyroid 15 %, Bambu PLA).
-Die sechs Varianten decken P1S, P2S, H2C und H2D ab:
+The supplied profiles are each provided as one print plan with all three parts and
+are test-sliced in Bambu Studio (0.20 mm layer height, gyroid 15 %, Bambu PLA).
+The six variants cover P1S, P2S, H2C and H2D:
 
-| Variante | Drucker | Form | Maße (mm) | Textur | Beschriftung |
+| Variant | Printer | Shape | Dimensions (mm) | Texture | Lettering |
 |---|---|---|---|---|---|
-| `round-120-fluted` | P1S | rund | Ø 120 × 160 | gerundet, 25° Spirale | Zeichen auf der Klappe |
-| `rect-115-eco` | P2S | eckig | 115 × 105 × 150 | rechteckig, 20° diagonal | „ECO“ |
-| `round-150-vgroove` | H2C | rund | Ø 150 × 210 | V-Nut, 40° Spirale | „WASTE“ unten, Zeichen auf der Klappe |
-| `rect-150-recycle` | H2C | eckig | 150 × 128 × 185 | gerundet, 30° diagonal | „RECYCLE“ |
-| `round-160-ribbed` | H2D | rund | Ø 160 × 240 | gerade Rippen | Zeichen auf der Klappe |
-| `rect-118-paper` | P1S | eckig | 118 × 108 × 140 | gerundet, gerade | „PAPER“ |
+| `round-120-fluted` | P1S | round | Ø 120 × 160 | rounded, 25° spiral | Character on the flap |
+| `rect-115-eco` | P2S | rectangular | 115 × 105 × 150 | rectangular, 20° diagonal | "ECO" |
+| `round-150-vgroove` | H2C | round | Ø 150 × 210 | V-groove, 40° spiral | "WASTE" at the bottom, character on the flap |
+| `rect-150-recycle` | H2C | rectangular | 150 × 128 × 185 | rounded, 30° diagonal | "RECYCLE" |
+| `round-160-ribbed` | H2D | round | Ø 160 × 240 | straight ribs | Character on the flap |
+| `rect-118-paper` | P1S | rectangular | 118 × 108 × 140 | rounded, straight | "PAPER" |
 
-| Einstellung | Empfehlung |
+| Setting | Recommendation |
 |---|---|
-| Material | PLA (Profile); PETG/ASA auf P2S, H2C, H2D möglich |
-| Layerhöhe | 0,20 mm |
-| Wände | 2–3 |
-| Infill | 15 % Gyroid |
-| Supports | keine |
-| Ausrichtung | Eimer aufrecht, Rahmen umgedreht (Ring auf dem Bett), Klappe Oberseite nach unten |
+| Material | PLA (profiles); PETG/ASA possible on P2S, H2C, H2D |
+| Layer height | 0.20 mm |
+| Walls | 2–3 |
+| Infill | 15 % gyroid |
+| Supports | none |
+| Orientation | Bin upright, frame upside down (ring on the bed), flap top side down |
 
-**Besondere Hinweise**
+**Special notes**
 
-- **Zusammenbau:** Klappe leicht biegen und die beiden Zapfen in die Bohrungen des
-  Rahmens einrasten lassen; prüfen, dass sie frei schwenkt und von selbst schließt.
-  Dann den Rahmen auf den Eimer drücken, bis der Kragen bündig auf dem Absatz sitzt
-  und die Schnapp-Wulst hält.
-- **Zu groß für eine Platte:** Eimer, Rahmen und Klappe sind unabhängig und lassen
-  sich getrennt drucken.
-- **Zweifarb-Look:** Beschriftung im Slicer färben oder die Klappe in einem zweiten
-  Filament drucken.
-- **Mehrfarb-Export** (`Multicolor Export`): STL **direkt aus der
-  OpenSCAD-Vorschau** exportieren, ohne F6/Render und ohne Kommandozeile –
-  sonst werden die Farbgruppen vereinigt.
-- **Vorschau-Modi** sind nicht druckbar (rotes „NOT FOR PRINTING“-Banner).
-- **Einlaufzeit:** Ein neuer Zapfen läuft anfangs stramm; ein paarmal hin- und
-  herbewegen.
-- **Spiralrillen:** 20–40° bei 60–110 Rillen sehen am besten aus.
+- **Assembly:** Flex the flap slightly and let the two pins snap into the bores of
+  the frame; check that it swings freely and closes by itself. Then press the
+  frame onto the bin until the collar sits flush on the step and the snap bead
+  holds.
+- **Too large for one plate:** Bin, frame and flap are independent and can be
+  printed separately.
+- **Two-color look:** Color the lettering in the slicer or print the flap in a
+  second filament.
+- **Multicolor export** (`Multicolor Export`): export the STL **directly from the
+  OpenSCAD preview**, without F6/Render and without the command line –
+  otherwise the color groups are merged.
+- **Preview modes** are not printable (red "NOT FOR PRINTING" banner).
+- **Break-in period:** A new pin initially runs tight; move it back and forth a
+  few times.
+- **Spiral grooves:** 20–40° with 60–110 grooves look best.
 
-## Anwendungsbeispiele
+## Use Cases
 
-- **Schreibtisch und Büro:** kleiner, geschlossener Papierkorb mit Rillenstruktur.
-- **Werkbank und Werkstatt:** Eimer für Späne und Verpackungen, Aufschrift
+- **Desk and office:** small, closed wastepaper bin with groove structure.
+- **Workbench and workshop:** bin for shavings and packaging, lettering
   `WASTE`.
-- **Wohnmobil und Camper:** rattelfreier, selbstschließender Eimer in Wunschmaß.
-- **Küche und Bad:** schmale, eckige Eimer mit Beschriftung wie `PAPER` oder `ECO`.
-- **Mülltrennung:** mehrere Eimer in Rund und Eckig mit `RECYCLE`, `PAPER` und
-  anderen Aufschriften.
-- **Eigene Größen:** Maße über `diameter` bzw. `width`, `depth` und `height`; die
-  Konsole meldet, ob es auf das gewählte Druckbett passt.
+- **Camper van and motorhome:** rattle-free, self-closing bin in any size you
+  like.
+- **Kitchen and bathroom:** narrow, rectangular bins with lettering such as
+  `PAPER` or `ECO`.
+- **Waste separation:** several bins in round and rectangular with `RECYCLE`,
+  `PAPER` and other lettering.
+- **Custom sizes:** dimensions via `diameter` or `width`, `depth` and `height`; the
+  console reports whether it fits on the selected print bed.
 
-![Runder Eimer mit geraden Rippen](images/06_rund-160-rippen.jpg)
+![Round bin with straight ribs](images/06_rund-160-rippen.jpg)
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-| Symptom | Ursache | Fix |
+| Symptom | Cause | Fix |
 |---|---|---|
-| Klappe schließt zu zögerlich | Achsversatz zu klein oder Reibung | `pivot_offset` erhöhen; `pivot_play` erhöhen, falls der Zapfen stramm läuft |
-| Frische Zapfen sind schwergängig | Druckmaß, noch keine Einlaufzeit | mehrfach bewegen; `pivot_play` erhöhen |
-| Klappe klemmt im Rahmen | Spalt zu klein | `flap_gap` erhöhen |
-| Klappe liegt nicht bündig auf | Lippe zu klein | `stopper_w` erhöhen; sie muss größer als `flap_gap` sein |
-| Rahmen sitzt zu locker oder klemmt | Spiel des Kragens | `fit_clearance` verringern bzw. erhöhen |
-| Rahmen hält nicht auf dem Eimer | Schnapp-Wulst zu flach | `snap_depth` erhöhen oder `snap_enabled` prüfen |
-| Rillen wirken zu flach oder fehlen | `relief_depth` wird auf `wall` − 0,8 mm begrenzt | `wall` erhöhen oder `relief_depth` verringern |
-| Rillenenden unter dem Kragen sichtbar | kein Auslauf | `relief_fade` erhöhen |
-| Text sitzt nicht, wo er soll | Position falsch gewählt | `body_text_side` (eckig), `body_text_angle` (rund), `body_text_vpos` anpassen |
-| Konsole meldet „does NOT fit“ | Teil größer als das Druckbett | Maße verringern oder Zieldrucker wechseln |
-| Zweifarb-STL hat nur eine Farbe | Export über F6/Render oder Kommandozeile | STL direkt aus der Vorschau exportieren |
+| Flap closes too hesitantly | Axis offset too small or friction | Increase `pivot_offset`; increase `pivot_play` if the pin runs tight |
+| Fresh pins are stiff | Print dimension, no break-in yet | Move several times; increase `pivot_play` |
+| Flap jams in the frame | Gap too small | Increase `flap_gap` |
+| Flap does not sit flush | Lip too small | Increase `stopper_w`; it must be larger than `flap_gap` |
+| Frame sits too loose or jams | Clearance of the collar | Decrease or increase `fit_clearance` respectively |
+| Frame does not hold on the bin | Snap bead too shallow | Increase `snap_depth` or check `snap_enabled` |
+| Grooves look too shallow or are missing | `relief_depth` is limited to `wall` − 0.8 mm | Increase `wall` or decrease `relief_depth` |
+| Groove ends visible under the collar | No run-out | Increase `relief_fade` |
+| Text is not where it should be | Wrong position selected | Adjust `body_text_side` (rectangular), `body_text_angle` (round), `body_text_vpos` |
+| Console reports "does NOT fit" | Part larger than the print bed | Reduce dimensions or change the target printer |
+| Two-color STL has only one color | Export via F6/Render or command line | Export the STL directly from the preview |
 
-## Entwicklungsgeschichte
+## Development History
 
-Am 3. September 2026 begann die Entwicklung: Ein bestehendes parametrisches
-Boxmodell (rund oder eckig, Relief, Text) sollte um eine selbstschließende
-Schwenkklappe zu einem Mülleimer erweitert werden. Als Vorlage diente eine
-vermessene zweiteilige Klappe; übernommen wurde nur das Prinzip des
-außermittigen Drehpunkts, nicht die Geometrie.
+Development began on September 3, 2026: an existing parametric box model (round or
+rectangular, relief, text) was to be extended with a self-closing swing flap to
+make a trash can. A measured two-part flap served as a template; only the
+principle of the off-center pivot point was adopted, not the geometry.
 
-Am selben Tag entstanden die drei Teile, die Anschlag-Lippe (zuerst als großer
-Halbring, dann auf rund 0,8 mm Überstand reduziert) und die Rillen mit Drall
-(`relief_angle`). Ein auffälliges Streifenband unter dem Kragen stellte sich als
-deckungsgleiche Fläche im Sitzabsatz heraus; seitdem überragt der Schnitt die Wand.
-Am 4. September 2026 folgten der Auslauf der Rillen (`relief_fade`), die
-Öffnungsbegrenzung durch Anschlagblätter und sechs Referenzvarianten für P1S,
-P2S, H2C und H2D mit Szenenbildern.
+On the same day, the three parts, the stop lip (first as a large half ring, then
+reduced to around 0.8 mm overhang) and the grooves with twist (`relief_angle`)
+were created. A conspicuous band of streaks under the collar turned out to be a
+coincident surface in the seat step; since then, the cut extends beyond the wall.
+On September 4, 2026, the groove run-out (`relief_fade`), the opening limit via
+stop blades and six reference variants for P1S, P2S, H2C and H2D with scene
+images followed.
 
-Ende September und Anfang Oktober 2026 folgten mehrere Testdruck-Runden zu
-Gelenk, Lagerspiel und Sitz des Rahmens. Die Beschreibungsdatei wurde zuletzt am
-2. Oktober 2026 geändert, die Modelldatei am 12. Oktober 2026.
+At the end of September and the beginning of October 2026, several test-print
+rounds on the hinge, bearing clearance and frame seat followed. The description
+file was last changed on October 2, 2026, the model file on October 12, 2026.
 
-Die Bilder in diesem Repository sind Renderings der Modellgeometrie
-beziehungsweise daraus abgeleitete Szenenbilder; Druckfotos sind nicht dabei.
+The images in this repository are renderings of the model geometry or scene
+images derived from it; there are no print photos.
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: https://makerworld.com/en/models/3276497-parametric-trash-can
+👉 MakerWorld link: https://makerworld.com/en/models/3276497-parametric-trash-can
 
-Profil: <https://makerworld.com/en/@BetaHydri>
+Profile: <https://makerworld.com/en/@BetaHydri>
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository; Modell- und Druckdateien werden
-ausschließlich über MakerWorld verteilt. Dokumentation und Bilder: © BetaHydri.
-Das Modell (inkl. Quellcode) und alle Druckdateien stehen unter der auf
-MakerWorld angegebenen Lizenz. Dieses Repository enthält bewusst keine Modell-,
-Quellcode- oder Druckdateien.
+Documentation and images in this repository; model and print files are distributed
+exclusively via MakerWorld. Documentation and images: © BetaHydri.
+The model (including source code) and all print files are under the license
+stated on MakerWorld. This repository intentionally contains no model, source
+code or print files.

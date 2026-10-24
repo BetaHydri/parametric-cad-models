@@ -1,379 +1,373 @@
-# Parametric Box – Box mit Überstülp-Deckel, Text, Rillen und Tragegriffen
+# Parametric Box – Box with Slip-Over Lid, Text, Grooves and Carry Handles
 
-[← Alle Modelle im Überblick](../../README.md)
+[← All models](../../README.md)
 
-Parametrische Aufbewahrungsbox für den FDM-Druck: rund oder rechteckig, mit
-einem Deckel, der von außen über die Box greift (Überstülp-Deckel),
-optionaler Beschriftung, Rillenstruktur und stützenfreien Grifföffnungen –
-alles im MakerWorld-Customizer einstellbar.
+🌐 **English** | [Deutsch](README.de.md)
 
-[![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/3191584-your-parametric-box-generator)
+Parametric storage box for FDM printing: round or rectangular, with a lid that
+fits over the box from the outside (slip-over lid), optional lettering, groove
+texture and support-free handle openings – all adjustable in the MakerWorld
+Customizer.
+
+[![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/3191584-your-parametric-box-generator)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
 ![Bambu Lab](https://img.shields.io/badge/Bambu%20Lab-P1S%20%7C%20P2S%20%7C%20H2C-green)
 ![Print files](https://img.shields.io/badge/Print%20files-MakerWorld%20only-blue)
 
-> **Das Modell mit allen Druckprofilen gibt es ausschließlich auf MakerWorld:**
-> 👉 [MakerWorld-Link: https://makerworld.com/en/models/3191584-your-parametric-box-generator](https://makerworld.com/en/models/3191584-your-parametric-box-generator)
+> **The model with all print profiles is available exclusively on MakerWorld:**
+> 👉 [MakerWorld link: https://makerworld.com/en/models/3191584-your-parametric-box-generator](https://makerworld.com/en/models/3191584-your-parametric-box-generator)
 >
-> ![Parametric Box – vier Boxen mit farbigen Deckeln: mit Griffen, glatt, mit Rillen und mit Aufschrift PARTS](images/01_hero.jpg)
+> ![Parametric Box – four boxes with colored lids: with handles, smooth, with grooves and with the lettering PARTS](images/01_hero.jpg)
 
-Die **Parametric Box** erzeugt eine Box und einen Deckel, der **von außen**
-über die Wand greift. Du wählst zwischen rund (Zylinder) und rechteckig (mit
-Eckenradius), stellst Maße, Wandstärken, Überlappung und Deckelspiel ein und
-kannst Text auf Deckel und Wand, Rillen und Tragegriffe zuschalten. Die Box
-steht beim Drucken auf ihrem Boden, der Deckel liegt flach auf seiner
-Oberseite: ohne Stützen.
+The **Parametric Box** produces a box and a lid that fits **over the outside**
+of the wall. You choose between round (cylinder) and rectangular (with corner
+radius), set dimensions, wall thicknesses, overlap and lid clearance, and can
+enable text on lid and wall, grooves and carry handles. The box stands on its
+floor when printing, the lid lies flat on its top side: no supports.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Das Problem](#das-problem)
-- [Die Idee](#die-idee)
+- [The Problem](#the-problem)
+- [The Idea](#the-idea)
 - [Highlights](#highlights)
-- [Parametrische Optionen](#parametrische-optionen)
-- [Konstruktion](#konstruktion)
-- [Druckempfehlungen](#druckempfehlungen)
-- [Anwendungsbeispiele](#anwendungsbeispiele)
-- [Fehlersuche / FAQ](#fehlersuche--faq)
-- [Entwicklungsgeschichte](#entwicklungsgeschichte)
+- [Parametric Options](#parametric-options)
+- [Design](#design)
+- [Print Recommendations](#print-recommendations)
+- [Use Cases](#use-cases)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Development History](#development-history)
 - [Downloads](#downloads)
-- [Lizenz](#lizenz)
+- [License](#license)
 
-## Das Problem
+## The Problem
 
-Große Aufbewahrungsboxen für Werkstatt, Keller oder Regal gibt es fertig –
-aber nur selten im passenden Maß und mit einem Deckel, der gut sitzt:
+Large storage boxes for the workshop, basement or shelf are available
+ready-made – but only rarely in the right size and with a lid that sits well:
 
-- Das Regal nimmt Boxen mit 180 mm Breite, die Box aus dem Laden hat 200 mm.
-- Ein Deckel, der nur aufliegt, rutscht; ein Innen-Deckel nimmt Platz in der
-  Box weg und lässt die obere Kante sichtbar.
-- Tragegriffe in der Wand brauchen beim Drucken meist Stützen oder sehen
-  grob aus.
-- Aufkleber lösen sich, und Gravuren im Slicer sind umständlich.
+- The shelf takes boxes 180 mm wide; the box from the store is 200 mm.
+- A lid that merely rests on top slips; an inner lid takes up space in the box
+  and leaves the top edge visible.
+- Carry handles in the wall usually need supports when printing or look rough.
+- Stickers come off, and engravings in the slicer are cumbersome.
 
-## Die Idee
+## The Idea
 
-Der Deckel wird aus den Körpermaßen abgeleitet und greift mit einem
-Rand (Skirt) von außen über die Wand. Dadurch verdeckt er die obere Kante
-und hält auch bei großen Öffnungen sicher. Das Spiel (`fit_clearance`) und
-die Überlappung (`lid_overlap`) sind einstellbar. Rillen enden unterhalb des
-Deckelgriffbereichs, damit die Reibfläche glatt bleibt. Die Griffe sind
-Öffnungen mit spitzem 45°-Dach, die ohne Stützen druckbar sind. Alle Maße
-in Millimetern, alle Werte als Customizer-Parameter.
+The lid is derived from the body dimensions and reaches over the wall from the
+outside with a rim (skirt). This way it covers the top edge and holds securely
+even with large openings. The clearance (`fit_clearance`) and the overlap
+(`lid_overlap`) are adjustable. Grooves end below the lid grip area so that the
+friction surface stays smooth. The handles are openings with a pointed 45° roof
+that can be printed without supports. All dimensions in millimeters, all values
+as Customizer parameters.
 
 ## Highlights
 
-- **Überstülp-Deckel:** greift von außen über die Box; Standard 10 mm
-  Überlappung (`lid_overlap`) und 0,15 mm Spiel je Seite (`fit_clearance`).
-- **Zwei Formen:** `round` (Zylinder) und `rect` (Rechteck mit `corner_r`).
-- **Freie Maße:** `diameter`, `width`, `depth` und `height` bis 320 mm.
-- **Text auf Deckel und Wand:** als saubere Vertiefung oder als bündige
-  Farbeinlage im Mehrfarbdruck; nie erhaben. Bei runden Boxen folgt jeder
-  Buchstabe der Krümmung.
-- **Rillenstruktur:** rechteckig, V-förmig oder gerundet; die Rillen enden
-  unterhalb des Deckelbereichs und lassen um den Text ein glattes Feld frei.
-- **Tragegriffe:** Grifföffnungen durch gegenüberliegende Wände (oder alle
-  vier Seiten), mit selbsttragendem Dach.
-- **Mehrfarbmodus:** Box, Deckel und Text als getrennte Farbgruppen
+- **Slip-over lid:** fits over the box from the outside; default 10 mm overlap
+  (`lid_overlap`) and 0.15 mm clearance per side (`fit_clearance`).
+- **Two shapes:** `round` (cylinder) and `rect` (rectangle with `corner_r`).
+- **Free dimensions:** `diameter`, `width`, `depth` and `height` up to 320 mm.
+- **Text on lid and wall:** as a clean recess or as a flush color inlay in
+  multicolor printing; never raised. On round boxes, each letter follows the
+  curvature.
+- **Groove texture:** rectangular, V-shaped or rounded; the grooves end below
+  the lid area and leave a smooth field around the text.
+- **Carry handles:** handle openings through opposite walls (or all four sides),
+  with a self-supporting roof.
+- **Multicolor mode:** box, lid and text as separate color groups
   (`Multicolor Export`).
-- **Vorschau-Modi:** zusammengebaut und geöffnet, mit rotem „NOT FOR
-  PRINTING“-Banner.
-- **Druckfreundlich:** Fase gegen Elefantenfuß, Deckel mit Einführfase, ohne
-  Stützen.
-- **Vier fertige Varianten** mit Bambu-Studio-Profilen für den P1S (Box und
-  Deckel auf zwei Platten).
+- **Preview modes:** assembled and open, with a red "NOT FOR PRINTING" banner.
+- **Print-friendly:** chamfer against elephant's foot, lid with lead-in chamfer,
+  no supports.
+- **Four ready-made variants** with Bambu Studio profiles for the P1S (box and
+  lid on two plates).
 
-![Rechteckige Box mit Überstülp-Deckel](images/02_variante-rechteckig.jpg)
+![Rectangular box with slip-over lid](images/02_variante-rechteckig.jpg)
 
-## Parametrische Optionen
+## Parametric Options
 
-Die Namen entsprechen den Customizer-Parametern des Modells.
+The names correspond to the model's Customizer parameters.
 
-### Ausgabe
+### Output
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `part` | Ausgabe: `Preview assembled` (Deckel aufgesetzt, nicht druckbar), `Preview open` (Deckel daneben, nicht druckbar), `both` (Box und Deckel flach, einfarbig), `Multicolor Export` (beide flach, mehrfarbig), `body`, `lid` | `Preview open` | Auswahl |
+| `part` | Output: `Preview assembled` (lid on, not printable), `Preview open` (lid beside, not printable), `both` (box and lid flat, single-color), `Multicolor Export` (both flat, multicolor), `body`, `lid` | `Preview open` | Selection |
 
-### Form und Maße
+### Shape and Dimensions
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `shape` | `round` (Zylinder) oder `rect` (Rechteck) | `rect` | Auswahl |
-| `diameter` | Außendurchmesser (rund) | 90 | 20–320 mm |
-| `width` | Breite X (rechteckig) | 120 | 20–320 mm |
-| `depth` | Tiefe Y (rechteckig) | 80 | 20–320 mm |
-| `height` | Außenhöhe der Box ohne Deckel | 70 | 20–320 mm |
-| `corner_r` | Eckenradius (rechteckig), 0 = scharfe Ecken | 6 | 0–40 mm, Schritt 0,5 |
+| `shape` | `round` (cylinder) or `rect` (rectangle) | `rect` | Selection |
+| `diameter` | Outer diameter (round) | 90 | 20–320 mm |
+| `width` | Width X (rectangular) | 120 | 20–320 mm |
+| `depth` | Depth Y (rectangular) | 80 | 20–320 mm |
+| `height` | Outer height of the box without lid | 70 | 20–320 mm |
+| `corner_r` | Corner radius (rectangular), 0 = sharp corners | 6 | 0–40 mm, step 0.5 |
 
-### Wände und Boden
+### Walls and Floor
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `wall` | Wandstärke, mindestens 1,6 | 2,4 | 1,6–6,0 mm, Schritt 0,1 |
-| `floor_t` | Bodenstärke, mindestens 1,6 | 2,0 | 1,6–6,0 mm, Schritt 0,1 |
+| `wall` | Wall thickness, at least 1.6 | 2.4 | 1.6–6.0 mm, step 0.1 |
+| `floor_t` | Floor thickness, at least 1.6 | 2.0 | 1.6–6.0 mm, step 0.1 |
 
-### Deckel
+### Lid
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `lid_enabled` | Überstülp-Deckel erzeugen | 1 | 0 = Nein, 1 = Ja |
-| `lid_overlap` | Wie weit der Deckelrand über die Boxwand nach unten reicht | 10,0 | 4,0–40,0 mm, Schritt 0,5 |
-| `lid_wall` | Wandstärke des Deckels | 2,4 | 1,6–6,0 mm, Schritt 0,1 |
-| `lid_top` | Dicke der Deckelplatte | 2,0 | 1,6–6,0 mm, Schritt 0,1 |
+| `lid_enabled` | Generate slip-over lid | 1 | 0 = No, 1 = Yes |
+| `lid_overlap` | How far the lid rim reaches down over the box wall | 10.0 | 4.0–40.0 mm, step 0.5 |
+| `lid_wall` | Wall thickness of the lid | 2.4 | 1.6–6.0 mm, step 0.1 |
+| `lid_top` | Thickness of the lid plate | 2.0 | 1.6–6.0 mm, step 0.1 |
 
-### Deckelsitz
+### Lid Fit
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `fit_clearance` | Spalt zwischen Deckelrand und Boxwand je Seite; kleiner = fester | 0,15 | 0,05–0,5 mm, Schritt 0,05 |
-| `lid_chamfer` | Einführfase an der Deckelöffnung | 1,0 | 0–3,0 mm, Schritt 0,1 |
+| `fit_clearance` | Gap between lid rim and box wall per side; smaller = tighter | 0.15 | 0.05–0.5 mm, step 0.05 |
+| `lid_chamfer` | Lead-in chamfer at the lid opening | 1.0 | 0–3.0 mm, step 0.1 |
 
-### Griffe (Handöffnungen)
+### Handles (Hand Openings)
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `handle_enabled` | Selbsttragende Griffe durch die Wände | 0 | 0 = Aus, 1 = An |
-| `handle_w` | Breite der Öffnung | 40 | 15–150 mm |
-| `handle_side_h` | Gerade Seitenhöhe unter dem Dachspitz | 8 | 2–60 mm |
-| `handle_corner` | Eckenradius unten | 6 | 1–25 mm, Schritt 0,5 |
-| `handle_tip_r` | Rundung der oberen Spitze für die Finger; 0 = scharfe Spitze | 4 | 0–15 mm, Schritt 0,5 |
-| `handle_z` | Vertikale Mitte der Öffnung ab Boden; 0 = automatisch | 0 | 0–300 mm |
-| `handle_count` | Rund: Anzahl der Griffe am Umfang | 2 | 1–6 |
-| `handle_angle` | Rund: Winkel des ersten Griffs, 0 = +X / vorn | 0 | 0–355°, Schritt 5 |
-| `handle_faces` | Rechteckig: Wände mit Griff | `LR` | `LR` (links + rechts), `FB` (vorn + hinten), `ALL` |
+| `handle_enabled` | Self-supporting handles through the walls | 0 | 0 = Off, 1 = On |
+| `handle_w` | Width of the opening | 40 | 15–150 mm |
+| `handle_side_h` | Straight side height below the roof apex | 8 | 2–60 mm |
+| `handle_corner` | Corner radius at the bottom | 6 | 1–25 mm, step 0.5 |
+| `handle_tip_r` | Rounding of the upper apex for the fingers; 0 = sharp apex | 4 | 0–15 mm, step 0.5 |
+| `handle_z` | Vertical center of the opening from the floor; 0 = automatic | 0 | 0–300 mm |
+| `handle_count` | Round: number of handles around the circumference | 2 | 1–6 |
+| `handle_angle` | Round: angle of the first handle, 0 = +X / front | 0 | 0–355°, step 5 |
+| `handle_faces` | Rectangular: walls with handle | `LR` | `LR` (left + right), `FB` (front + back), `ALL` |
 
-### Relief / Textur
+### Relief / Texture
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `relief_enabled` | Senkrechte Rillen an der Außenwand | 0 | 0 = Aus, 1 = An |
-| `relief_style` | Rillenform | 2 | 0 = Rechteck, 1 = V-Rille, 2 = Gerundet |
-| `relief_count` | Gesamtzahl der Rillen am Umfang | 90 | 4–500 |
-| `relief_depth` | Tiefe jeder Rille | 0,6 | 0,2–1,2 mm, Schritt 0,1 |
-| `relief_width` | Breite jeder Rille | 1,2 | 0,5–4,0 mm, Schritt 0,1 |
-| `relief_corner` | Rechteckig: Mindestabstand der Rillen zu den Ecken | 3,0 | 1,0–20,0 mm, Schritt 0,5 |
+| `relief_enabled` | Vertical grooves on the outer wall | 0 | 0 = Off, 1 = On |
+| `relief_style` | Groove shape | 2 | 0 = Rectangle, 1 = V-groove, 2 = Rounded |
+| `relief_count` | Total number of grooves around the circumference | 90 | 4–500 |
+| `relief_depth` | Depth of each groove | 0.6 | 0.2–1.2 mm, step 0.1 |
+| `relief_width` | Width of each groove | 1.2 | 0.5–4.0 mm, step 0.1 |
+| `relief_corner` | Rectangular: minimum distance of the grooves from the corners | 3.0 | 1.0–20.0 mm, step 0.5 |
 
-### Text – Deckeloberseite
+### Text – Lid Top
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `lid_text_enabled` | Text auf der Deckeloberseite | 0 | 0 = Aus, 1 = An |
-| `lid_text` | Text (leer = keiner) | `BOX` | Freitext |
-| `lid_text_size` | Schriftgröße (0 = automatisch) | 0 | 0–60 mm, Schritt 0,5 |
-| `lid_text_depth` | Gravurtiefe | 0,6 | 0,3–1,5 mm, Schritt 0,1 |
+| `lid_text_enabled` | Text on the lid top | 0 | 0 = Off, 1 = On |
+| `lid_text` | Text (empty = none) | `BOX` | Free text |
+| `lid_text_size` | Font size (0 = automatic) | 0 | 0–60 mm, step 0.5 |
+| `lid_text_depth` | Engraving depth | 0.6 | 0.3–1.5 mm, step 0.1 |
 
-### Text – Boxwand
+### Text – Box Wall
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `body_text_enabled` | Text auf der Wand | 0 | 0 = Aus, 1 = An |
-| `body_text` | Text (leer = keiner) | `TEXT` | Freitext |
-| `body_text_size` | Schriftgröße (0 = automatisch) | 0 | 0–60 mm, Schritt 0,5 |
-| `body_text_depth` | Gravurtiefe | 0,6 | 0,3–1,5 mm, Schritt 0,1 |
-| `body_text_side` | Wand für den Text (rechteckig) | `Front` | `Front`, `Back`, `Left`, `Right` |
-| `body_text_angle` | Winkelposition des Texts (rund), 0 = +X / vorn | 0 | 0–355°, Schritt 5 |
-| `body_text_vpos` | Vertikale Position | `Middle` | `Top`, `Middle`, `Bottom` |
-| `body_text_z` | Genaue Höhe der Textmitte ab Boden (0 = Position oben verwenden) | 0 | 0–300 mm, Schritt 1 |
-| `text_panel_margin` | Glatter Freiraum um den Text, frei von Rillen | 3 | 0–15 mm, Schritt 0,5 |
+| `body_text_enabled` | Text on the wall | 0 | 0 = Off, 1 = On |
+| `body_text` | Text (empty = none) | `TEXT` | Free text |
+| `body_text_size` | Font size (0 = automatic) | 0 | 0–60 mm, step 0.5 |
+| `body_text_depth` | Engraving depth | 0.6 | 0.3–1.5 mm, step 0.1 |
+| `body_text_side` | Wall for the text (rectangular) | `Front` | `Front`, `Back`, `Left`, `Right` |
+| `body_text_angle` | Angular position of the text (round), 0 = +X / front | 0 | 0–355°, step 5 |
+| `body_text_vpos` | Vertical position | `Middle` | `Top`, `Middle`, `Bottom` |
+| `body_text_z` | Exact height of the text center from the floor (0 = use position above) | 0 | 0–300 mm, step 1 |
+| `text_panel_margin` | Smooth clearance around the text, free of grooves | 3 | 0–15 mm, step 0.5 |
 
-### Qualität
+### Quality
 
-| Parameter | Bedeutung | Standard | Bereich / Einheit |
+| Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `$fn` | Glätte der runden Flächen | 72 | 24–160, Schritt 8 |
+| `$fn` | Smoothness of the round surfaces | 72 | 24–160, step 8 |
 
-![Rechteckige Box mit Grifföffnung in der Seitenwand](images/03_variante-tragegriffe.jpg)
+![Rectangular box with handle opening in the side wall](images/03_variante-tragegriffe.jpg)
 
-## Konstruktion
+## Design
 
-### OpenSCAD-Ansatz
+### OpenSCAD Approach
 
-Das Modell ist reines OpenSCAD ohne externe Bibliotheken und läuft im
-MakerWorld-Customizer. Ein `part`-Selektor entscheidet, ob eine Vorschau, ein
-Druck-Layout oder ein Einzelteil ausgegeben wird. Eingaben werden intern
-begrenzt: Wand, Boden, Deckelwand und Deckelplatte mindestens 1,6 mm, die
-Überlappung mindestens 3 mm, der Durchmesser mindestens `2 × Wand + 8` und
-die Höhe mindestens `Boden + 12`.
+The model is pure OpenSCAD without external libraries and runs in the
+MakerWorld Customizer. A `part` selector decides whether a preview, a print
+layout or an individual part is output. Inputs are limited internally: wall,
+floor, lid wall and lid plate at least 1.6 mm, the overlap at least 3 mm, the
+diameter at least `2 × wall + 8` and the height at least `floor + 12`.
 
-### Parametrische Logik
+### Parametric Logic
 
-| Größe | Formel / Regel |
+| Quantity | Formula / Rule |
 |---|---|
-| Innenradius (rund) | Außenradius − `wall` |
-| Deckel-Innenmaß | Boxmaß + 2 × `fit_clearance` |
-| Deckel-Außenmaß | Deckel-Innenmaß + 2 × `lid_wall` |
-| Eckenradius Deckel (rechteckig) | `corner_r` + `fit_clearance` innen, + `lid_wall` außen |
-| Rillentiefe | begrenzt auf `wall` − 0,8 mm, damit mindestens 0,8 mm Wand bleiben |
-| Rillen-Obergrenze | `height` − `lid_overlap` (bei aktivem Deckel) |
-| Griff-Spitze | `handle_side_h` + `handle_w` / 2 (45°-Dach) |
-| Text-Einlage (Mehrfarb) | min(`wall` − 0,6 mm, max(`body_text_depth`, 1,6 mm)) |
-| Platte neben der Box | Versatz = Boxbreite / 2 + Deckelbreite / 2 + 18 mm |
+| Inner radius (round) | Outer radius − `wall` |
+| Lid inner dimension | Box dimension + 2 × `fit_clearance` |
+| Lid outer dimension | Lid inner dimension + 2 × `lid_wall` |
+| Lid corner radius (rectangular) | `corner_r` + `fit_clearance` inside, + `lid_wall` outside |
+| Groove depth | Limited to `wall` − 0.8 mm so that at least 0.8 mm of wall remains |
+| Groove upper limit | `height` − `lid_overlap` (with lid enabled) |
+| Handle apex | `handle_side_h` + `handle_w` / 2 (45° roof) |
+| Text inlay (multicolor) | min(`wall` − 0.6 mm, max(`body_text_depth`, 1.6 mm)) |
+| Plate next to the box | Offset = box width / 2 + lid width / 2 + 18 mm |
 
-Mit den Voreinstellungen (rechteckig 120 × 80 × 70 mm) ergeben sich ein
-Deckel-Außenmaß von 125,1 × 85,1 mm und eine Rillen-Obergrenze von 60 mm
-Höhe. Die Griffspitze liegt bei 28 mm über der Öffnungsunterkante.
+With the default settings (rectangular 120 × 80 × 70 mm), this results in a lid
+outer dimension of 125.1 × 85.1 mm and a groove upper limit of 60 mm height. The
+handle apex is 28 mm above the lower edge of the opening.
 
-Die Werte sind aus den Formeln und den Standardwerten abgeleitet.
+The values are derived from the formulas and the default values.
 
-### Besondere Algorithmen
+### Special Algorithms
 
-- **Überstülp-Deckel statt Innenrand:** Der Deckel ist ein Rohr aus
-  `lid_wall`, dessen Innenmaß die Box plus Spiel umfasst. Er wird mit der
-  Platte nach unten gedruckt; am offenen Ende (beim Drucken oben) sitzt eine
-  Einführfase.
-- **Griffe mit selbsttragendem Dach:** Die Öffnung ist ein Langloch mit
-  gerundeten unteren Ecken und einem spitzen Dach, dessen Flanken steiler als
-  45° stehen. Jede Schicht überhängt die darunter um weniger als eine
-  Schichthöhe. Die Spitze kann mit `handle_tip_r` für die Finger gerundet
-  werden; es entsteht nur eine kurze Krone oben.
-- **Griffposition automatisch:** Ohne `handle_z` sitzt die Öffnung unterhalb
-  der Deckelüberlappung und über dem Boden.
-- **Rillen enden unter dem Deckel:** Der Bereich, in dem der Deckel greift,
-  bleibt glatt. Das gibt eine saubere Reibfläche.
-- **Rillen am Rechteck:** Rillen werden je Wand gleichmäßig verteilt. Der
-  Abstand ergibt sich aus Umfang / `relief_count`; um die Ecken bleibt
-  `relief_corner` frei.
-- **Text auf runder Wand:** Jeder Buchstabe sitzt auf seiner eigenen
-  Tangentialebene an seiner Bogenposition und wird radial in die Wand
-  geschnitten. Die Gesamtbreite ist auf einen Bogen von 90° begrenzt.
-- **Glatte Zone um den Text:** Aus den Rillen wird ein Feld um den Text
-  (plus `text_panel_margin`) herausgeschnitten. Bei rechteckigen Boxen
-  entsteht es aus der Hülle der Textkontur, damit es den Text sicher umfasst.
-- **Text auf dem Deckel:** Der Text ist gespiegelt modelliert, damit er nach
-  dem Umdrehen richtig lesbar auf der Oberseite sitzt.
-- **Farbeinlage:** Im Mehrfarbmodus füllt eine eigene Farbgruppe exakt die
-  Vertiefung. Die Einlage ist tiefer als die Einzelfarb-Gravur, weil eine
-  0,6 mm dünne Haut an einer senkrechten Wand fadig druckt.
-- **Automatische Textgröße:** Die Größe berücksichtigt Wandhöhe,
-  Eckenradius und bei runden Boxen den Bogen; der Text bleibt unter dem
-  Deckelbereich.
+- **Slip-over lid instead of inner rim:** The lid is a tube of `lid_wall` whose
+  inner dimension encloses the box plus clearance. It is printed with the plate
+  facing down; a lead-in chamfer sits at the open end (at the top when
+  printing).
+- **Handles with self-supporting roof:** The opening is a slot with rounded
+  lower corners and a pointed roof whose flanks are steeper than 45°. Each layer
+  overhangs the one below by less than one layer height. The apex can be rounded
+  for the fingers with `handle_tip_r`; only a short crown results at the top.
+- **Automatic handle position:** Without `handle_z`, the opening sits below the
+  lid overlap and above the floor.
+- **Grooves end under the lid:** The area where the lid grips stays smooth. This
+  gives a clean friction surface.
+- **Grooves on the rectangle:** Grooves are distributed evenly per wall. The
+  spacing results from circumference / `relief_count`; `relief_corner` stays
+  free around the corners.
+- **Text on a round wall:** Each letter sits on its own tangent plane at its arc
+  position and is cut radially into the wall. The total width is limited to an
+  arc of 90°.
+- **Smooth zone around the text:** A field around the text (plus
+  `text_panel_margin`) is cut out of the grooves. On rectangular boxes, it is
+  created from the hull of the text outline so that it reliably encloses the
+  text.
+- **Text on the lid:** The text is modeled mirrored so that it sits correctly
+  readable on the top side after flipping.
+- **Color inlay:** In multicolor mode, a separate color group exactly fills the
+  recess. The inlay is deeper than the single-color engraving because a 0.6 mm
+  thin skin prints stringy on a vertical wall.
+- **Automatic text size:** The size takes wall height, corner radius and, for
+  round boxes, the arc into account; the text stays below the lid area.
 
 ```mermaid
 flowchart LR
-    S[shape + Maße] --> B[Box]
+    S[shape + dimensions] --> B[Box]
     W[wall / floor_t] --> B
-    B --> L[Deckel: Platte + Überstülp-Rand mit fit_clearance]
-    R[Relief-Parameter] --> B
-    H[Griff-Parameter] --> B
-    T[Text-Parameter] --> B
+    B --> L[Lid: plate + slip-over rim with fit_clearance]
+    R[Relief parameters] --> B
+    H[Handle parameters] --> B
+    T[Text parameters] --> B
     T --> L
-    B --> O[part: Vorschau / both / Multicolor / body / lid]
+    B --> O[part: preview / both / Multicolor / body / lid]
     L --> O
 ```
 
-### Modularität
+### Modularity
 
-Der Code trennt runde und rechteckige Box, Bodenfase, Rillengeneratoren,
-Rillenprofil, Griffprofil und -schneider, Deckel (rund und rechteckig),
-Text-Volumen und die Farb-Wrapper für Einzel- und Mehrfarbausgabe. Für die
-Vorschau gibt es ein Banner-Modul und eine Start-Kamera, die beide Teile
-zentriert zeigt.
+The code separates round and rectangular box, bottom chamfer, groove
+generators, groove profile, handle profile and cutter, lid (round and
+rectangular), text volume and the color wrappers for single-color and
+multicolor output. For the preview there is a banner module and a start camera
+that shows both parts centered.
 
-### Druckoptimierungen
+### Print Optimizations
 
-- **Box aufrecht, Deckel auf der flachen Oberseite:** Das Rohr des Deckels
-  zeigt nach oben; es sind keine Stützen nötig.
-- **Fase unten** (0,6 mm) gegen Elefantenfuß.
-- **Mindestwände:** Wand und Boden mindestens 1,6 mm, Rillen lassen
-  mindestens 0,8 mm Wand stehen.
-- **Griffe ohne Stützen:** Dach steiler als 45°.
-- **Einlage statt dünner Haut:** Mehrfarb-Text als tiefer Farbblock.
+- **Box upright, lid on the flat top side:** The lid's tube points upward; no
+  supports are needed.
+- **Chamfer at the bottom** (0.6 mm) against elephant's foot.
+- **Minimum walls:** Wall and floor at least 1.6 mm, grooves leave at least
+  0.8 mm of wall.
+- **Handles without supports:** Roof steeper than 45°.
+- **Inlay instead of thin skin:** Multicolor text as a deep color block.
 
-![Runde Box mit gerundeten Rillen und grünem Deckel](images/04_variante-rund-rillen.jpg)
+![Round box with rounded grooves and green lid](images/04_variante-rund-rillen.jpg)
 
-## Druckempfehlungen
+## Print Recommendations
 
-Die mitgelieferten Profile sind für **Bambu Lab P1S** mit Bambu PLA Basic
-erstellt und im Bambu Studio testgeslict (0,20 mm Layerhöhe, 3 Wände, Gyroid
-15 %). Das Modell lässt sich auch auf P2S und H2C drucken.
+The supplied profiles are created for the **Bambu Lab P1S** with Bambu PLA Basic
+and test-sliced in Bambu Studio (0.20 mm layer height, 3 walls, gyroid 15%). The
+model can also be printed on the P2S and H2C.
 
-| Einstellung | Empfehlung |
+| Setting | Recommendation |
 |---|---|
-| Material | PLA (Profile) |
-| Layerhöhe | 0,20 mm |
-| Wände | 3 (Profile) |
-| Infill | 15 % Gyroid (Profile) |
-| Supports | keine |
-| Ausrichtung | Box aufrecht auf dem Boden, Deckel auf der flachen Oberseite |
-| Deckelspiel (`fit_clearance`) | Standard 0,15 mm je Seite; bei lockerem Sitz verringern |
+| Material | PLA (profiles) |
+| Layer height | 0.20 mm |
+| Walls | 3 (profiles) |
+| Infill | 15% gyroid (profiles) |
+| Supports | none |
+| Orientation | Box upright on its floor, lid on the flat top side |
+| Lid clearance (`fit_clearance`) | Default 0.15 mm per side; decrease if the fit is loose |
 
-**Besondere Hinweise**
+**Special notes**
 
-- **Zwei Platten bei großen Boxen:** Die vier Referenzvarianten sind große
-  Boxen (etwa 175–200 mm Breite bzw. Ø 160 mm). Box und Deckel passen dort
-  nicht auf eine Platte; die Profile enthalten deshalb Platte 1 (Box) und
-  Platte 2 (Deckel). Kleinere Boxen passen im Layout `both` nebeneinander
-  auf eine Platte.
-- **Mehrfarbig:** `Multicolor Export` exportierst du **direkt aus der
-  OpenSCAD-Vorschau**, ohne F6/Render und ohne Kommandozeile – sonst werden
-  alle Gruppen zu einem Körper vereinigt und die Farben gehen verloren. Im
-  Bambu Studio erscheinen Box, Deckel und Text als getrennte Teile mit je
-  einem Filament.
-- Die Vorschau-Modi sind absichtlich nicht druckbar (rotes
-  „NOT FOR PRINTING“-Banner).
-- Für kleine Behälter mit Innen-Steckdeckel gibt es das Schwesterprojekt
+- **Two plates for large boxes:** The four reference variants are large boxes
+  (about 175–200 mm wide or Ø 160 mm). Box and lid don't fit on one plate
+  there; the profiles therefore contain plate 1 (box) and plate 2 (lid). Smaller
+  boxes fit side by side on one plate in the `both` layout.
+- **Multicolor:** You export `Multicolor Export` **directly from the OpenSCAD
+  preview**, without F6/Render and without the command line – otherwise all
+  groups are merged into one body and the colors are lost. In Bambu Studio, box,
+  lid and text appear as separate parts with one filament each.
+- The preview modes are intentionally not printable (red "NOT FOR PRINTING"
+  banner).
+- For small containers with an inner push-fit lid, there is the sister project
   *Parametric Storage Vessel*.
 
-## Anwendungsbeispiele
+## Use Cases
 
-- **Werkstattbox:** große Box mit Griffen (`handle_enabled`) für Werkzeug und
-  Kleinteile.
-- **Regalbox nach Maß:** Box, die exakt in ein Fach passt, über `width`,
-  `depth` und `height`.
-- **Beschriftete Organizer-Box:** Aufschrift an der Wand und auf dem Deckel
-  (z. B. `PARTS`), einfarbig graviert oder in Kontrastfarbe.
-- **Runde Kanister:** zylindrische Box mit gerundeten Rillen.
-- **Homelab:** Boxen für Kabel, Netzteile, Patchkabel und SSDs mit
-  Aufschrift auf dem Deckel.
-- **Farbset:** Mehrere Boxen mit farbigen Deckeln über `Multicolor Export`.
+- **Workshop box:** large box with handles (`handle_enabled`) for tools and
+  small parts.
+- **Custom-size shelf box:** Box that fits exactly into a compartment, via
+  `width`, `depth` and `height`.
+- **Labeled organizer box:** Lettering on the wall and on the lid (e.g.
+  `PARTS`), engraved single-color or in a contrast color.
+- **Round canisters:** cylindrical box with rounded grooves.
+- **Homelab:** Boxes for cables, power supplies, patch cables and SSDs with
+  lettering on the lid.
+- **Color set:** Several boxes with colored lids via `Multicolor Export`.
 
-![Rechteckige Box mit graviertem PARTS-Schriftzug auf Wand und Deckel](images/05_variante-beschriftung.jpg)
+![Rectangular box with engraved PARTS lettering on wall and lid](images/05_variante-beschriftung.jpg)
 
-## Fehlersuche / FAQ
+## Troubleshooting / FAQ
 
-| Symptom | Ursache | Fix |
+| Symptom | Cause | Fix |
 |---|---|---|
-| Deckel sitzt zu locker | `fit_clearance` zu groß für den Drucker | `fit_clearance` verringern (z. B. 0,10 mm) |
-| Deckel klemmt oder lässt sich nicht aufsetzen | Spiel zu klein, Druck fällt etwas größer aus | `fit_clearance` erhöhen (z. B. 0,25 mm) |
-| Deckel lässt sich schlecht aufsetzen | Einführfase zu klein | `lid_chamfer` erhöhen |
-| Deckel hält nicht fest | Überlappung zu kurz | `lid_overlap` erhöhen |
-| Rillen enden weit unter dem Rand | Rillen-Obergrenze = `height` − `lid_overlap` | `lid_overlap` verringern |
-| Rillen wirken zu flach | `relief_depth` wird auf `wall` − 0,8 mm begrenzt | `wall` erhöhen oder `relief_depth` verringern |
-| Griff sitzt zu hoch oder tief | Automatische Position | `handle_z` setzen |
-| Griff ist zu spitz | `handle_tip_r` = 0 | `handle_tip_r` erhöhen |
-| Zweifarb-STL hat nur eine Farbe | Export über F6/Render oder Kommandozeile | STL direkt aus der Vorschau exportieren |
-| Vorschau zeigt „NOT FOR PRINTING“ | Vorschau-Modus aktiv | `part` auf `both`, `Multicolor Export`, `body` oder `lid` setzen |
-| Text ist zu groß oder zu klein | Automatische Größe | `body_text_size` bzw. `lid_text_size` setzen |
-| Langer Text auf runder Wand wird sehr klein | Textbreite ist auf einen Bogen von 90° begrenzt | Text kürzen |
+| Lid sits too loosely | `fit_clearance` too large for the printer | Decrease `fit_clearance` (e.g. 0.10 mm) |
+| Lid jams or can't be put on | Clearance too small, print comes out slightly larger | Increase `fit_clearance` (e.g. 0.25 mm) |
+| Lid is hard to put on | Lead-in chamfer too small | Increase `lid_chamfer` |
+| Lid doesn't hold firmly | Overlap too short | Increase `lid_overlap` |
+| Grooves end far below the edge | Groove upper limit = `height` − `lid_overlap` | Decrease `lid_overlap` |
+| Grooves look too shallow | `relief_depth` is limited to `wall` − 0.8 mm | Increase `wall` or decrease `relief_depth` |
+| Handle sits too high or low | Automatic position | Set `handle_z` |
+| Handle is too pointed | `handle_tip_r` = 0 | Increase `handle_tip_r` |
+| Two-color STL has only one color | Export via F6/Render or command line | Export the STL directly from the preview |
+| Preview shows "NOT FOR PRINTING" | Preview mode active | Set `part` to `both`, `Multicolor Export`, `body` or `lid` |
+| Text is too large or too small | Automatic size | Set `body_text_size` or `lid_text_size` |
+| Long text on a round wall becomes very small | Text width is limited to an arc of 90° | Shorten the text |
 
-## Entwicklungsgeschichte
+## Development History
 
-Das Modell ist im August 2026 entstanden. Am 18. August 2026 gab es die
-ersten Vorschau- und Prüfskripte, am 19. August 2026 die vier Referenzvarianten
-mit Bambu-Studio-Profilen für den P1S, die Renderings und die Beschreibung.
-Die Modelldatei wurde zuletzt am 29. August 2026 geändert.
+The model originated in August 2026. On 18 August 2026 came the first preview
+and check scripts, on 19 August 2026 the four reference variants with Bambu
+Studio profiles for the P1S, the renderings and the description. The model file
+was last changed on 29 August 2026.
 
-Die Box ist als Gegenstück zum *Parametric Storage Vessel* gedacht: Das Vessel
-nutzt einen Innen-Steckdeckel für kleinere Behälter, die Box einen
-Überstülp-Deckel für große Öffnungen, mit Griffen und Rillen, die unterhalb des
-Deckelbereichs enden.
+The box is intended as a counterpart to the *Parametric Storage Vessel*: the
+vessel uses an inner push-fit lid for smaller containers, the box a slip-over
+lid for large openings, with handles and grooves that end below the lid area.
 
-Die Bilder in diesem Repository sind Renderings der Modellgeometrie; Druckfotos
-sind nicht dabei.
+The images in this repository are renderings of the model geometry; no photos of
+prints are included.
 
-![Rechteckige Box mit PARTS-Schriftzug als farbige Einlage](images/06_zweifarb-text.jpg)
+![Rectangular box with PARTS lettering as a colored inlay](images/06_zweifarb-text.jpg)
 
 ## Downloads
 
 Print files are intentionally available exclusively on MakerWorld.
 
-👉 MakerWorld-Link: https://makerworld.com/en/models/3191584-your-parametric-box-generator
+👉 MakerWorld link: https://makerworld.com/en/models/3191584-your-parametric-box-generator
 
-Profil: <https://makerworld.com/en/@BetaHydri>
+Profile: <https://makerworld.com/en/@BetaHydri>
 
-## Lizenz
+## License
 
-Dokumentation und Bilder in diesem Repository: © BetaHydri. Das Modell (inkl.
-Quellcode) und alle Druckdateien werden ausschließlich über MakerWorld unter
-der dort angegebenen Lizenz verteilt. Dieses Repository enthält bewusst keine
-Modell-, Quellcode- oder Druckdateien.
+Documentation and images in this repository: © BetaHydri. The model (including
+source code) and all print files are distributed exclusively via MakerWorld
+under the license stated there. This repository intentionally contains no
+model, source code or print files.
