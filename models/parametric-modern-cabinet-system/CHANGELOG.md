@@ -9,6 +9,20 @@ folgt [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+
+- Customizer: Die parametrische Datei verteilt jede Schrankgröße selbst auf
+  Druckplatten und exportiert eine 3MF mit einer Platte je Druckauftrag (bis zu
+  36 Platten), alle Teile mittig auf dem Bett; der Drucker muss vor dem Download
+  im Betten-Menü von MakerWorld gewählt werden.
+- Neue Option `two_colors` (Türen und eingebauter Griff in einer zweiten Farbe);
+  Tür- und Korpusteile liegen auf getrennten Platten, keine Platte mischt Farben.
+
+### Known issues
+
+- Ein Customizer-Download enthält keine Verstärkungs-Modifier; die fertigen
+  3MF-Dateien der Bausätze enthalten sie.
+
 ## [1.0.0] - 2026-10-27
 
 Hinweis: Eine Versionsnummer ist in den Quellen nicht belegt. Das Datum ist der

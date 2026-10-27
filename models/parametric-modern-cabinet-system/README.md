@@ -22,7 +22,9 @@ Shelves slide into dovetail grooves, doors hang on **hidden, printed hinges**.
 
 You set the size, the number of shelves, the door type and the handle in the
 MakerWorld Customizer. The model calculates tiles, seams, joints, doors and
-hinges to match and the kits come as ready-made multi-plate 3MF projects.
+hinges to match, **packs every part onto build plates automatically** and
+exports **one 3MF with one plate per print job**. Three tested kits are also
+available as ready-made 3MF projects.
 
 ## Table of Contents
 
@@ -80,7 +82,26 @@ hinges to match and the kits come as ready-made multi-plate 3MF projects.
 | `sideboard-2door-580x500-h2c` | 580 × 500 × 270 | H2C | 18 | 145 h | 5.8 kg | dovetail + thumbscrews | 2, hidden hinges, finger scoops, magnets |
 
 PETG, 3 walls, 15 % gyroid, 0.2 mm, sliced with Bambu Studio presets. Any other
-size: set the parameters in the Customizer.
+size: set the parameters in the Customizer (see below).
+
+### Order your own size in the Customizer
+
+1. Set size, shelves, doors, hinge style, handle and joints.
+2. Choose the **printer** (parameter `printer`) **and select the same printer in
+   the bed menu of the MakerWorld preview BEFORE you download** (again in the
+   download dialog). The 3MF carries that printer profile. P2S = every 256 mm bed
+   (P2S, P1S, X1C …), H2C = large bed. MakerWorld only checks the bed: on a smaller
+   bed (A1 mini …) it shows "Model cannot fit in plates".
+3. Optional **two colours** (`two_colors`): doors and the built-in pull get a
+   second colour, every colour is one filament in Bambu Studio. Door parts and
+   carcass parts are packed on **separate plates**, so each plate has a single
+   colour and needs no prime tower.
+4. **Generate, then Download.** You get **one 3MF with one plate per print job**
+   (up to 36 plates, the Bambu Studio limit), all parts centred on the plates. The
+   *Assemble View* shows the finished cabinet with the door open. A 500 × 800 mm
+   cabinet with one door needs about 27 plates; very large sizes exceed 36 plates
+   and must be reduced.
+5. In Bambu Studio switch the filament to **PETG** (the presets default to PLA).
 
 ![Open shelf in a living room](images/03_regal-wohnzimmer.jpg)
 
@@ -117,16 +138,16 @@ two hinges and an M3 boss, so you can check your filament before printing the ki
 
 | Section | Parameters |
 |---|---|
+| Plates and colours | `two_colors`, `body_color`, `door_color` (second colour for doors and built-in pull), `door_open` (preview angle 0–110°, default 60°) |
 | Cabinet size | `cab_w`, `cab_h`, `cab_d`, `panel_t` (sides, doors), `shelf_t` (shelves, top, bottom), `shelf_count`, `plinth_h`, `kick_d`, `back_panel`, `back_t`, `wall_anchor` |
 | Doors | `doors` (none / single_left / single_right / double), `door_comp` (compartments with doors), `door_rows`, `reveal`, `handle` (none / bar = holes for your handles / knob / scoop / integrated), `handle_cc`, `handle_screw`, `handle_orient`, `handle_v`, `handle_edge`, `hp_*` (built-in pull), `magnets`, `magnet_d`, `magnet_h` |
 | Joints | `joint` (plug / screw / thumbscrew), `dt_depth`, `dt_angle`, `fit`, `tenon_len`, `tenon_gap`, `seam_keys`, `back_fix` |
 | Hinges | `hinge_style` (**leaf** = hidden print-in-place hinge, default / pivot / knuckle), `hinge_len`, `hl_gap` (hinge clearance), `hinge_inserts` (M3 heat-set inserts instead of self-cutting screws), `insert_d`, `insert_len`, `pin_d`, `hinge_fit`, `hinge_pitch` (knuckle) |
-| Printer | `printer` (P2S = tiles up to 248 mm, fits any 256 mm bed such as P1S / X1C; H2C = tiles up to 296 mm for the large bed), sets the tile size |
-| Output | `part`: assembly and exploded previews, `zones` (reinforced screw zones in red), `print_all` (every part of your cabinet in one go), `tile`, `kind_tiles`, `key_strip`, `hinge_strip`, `cap_strip`, `fit_test`, `bom` (bill of materials); `door_open` (preview angle 0–110°, default 60°) |
+| Printer | `printer` (P2S = tiles up to 248 mm, fits any 256 mm bed such as P1S / X1C; H2C = tiles up to 296 mm for the large bed), sets the tile size and the plate size |
 
-**Print everything:** `part = print_all` puts all tiles, the bow-tie keys (+12 %
-spare), hinges and built-in pulls on a grid as separate objects. In Bambu
-Studio: import, right-click, **Split to objects**, then **Arrange**.
+**Automatic plates:** every setting is packed again: tiles, bow-tie keys (+12 %
+spare), pin segments, hinges, pulls and caps are placed row by row on the usable
+bed (248 mm P2S, 296 mm H2C, 8 mm spacing) and each plate is centred on the bed.
 Print the **bow-tie keys in the cabinet colour** so they stay almost invisible
 inside open shelves.
 
@@ -207,7 +228,9 @@ assumptions. Print the coupon and load-test your own build before relying on it.
 ## Print Recommendations
 
 - **Material:** PETG, 3 wall loops, 15 % gyroid, 0.2 mm layers. No supports needed.
-- **Use the 3MF** (reinforced screw zones, one project per kit with all plates).
+- **Use the ready-made 3MF of the kits** for reinforced screw zones: a Customizer
+  download cannot store modifier volumes, so set **4–5 walls** (and ≥ 40 % infill)
+  around the hinge screws yourself, or print the hinge-side panels with 5 walls.
 - Print the **fit-test coupon first**: dovetail block (light friction), bow-tie
   key (presses in with your thumb), hinge (swings freely), M3 boss (screw cuts in).
   Adjust `fit` and `hl_gap` in the Customizer if needed.

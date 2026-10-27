@@ -23,7 +23,9 @@ hängen an **verdeckten, gedruckten Scharnieren**.
 
 Im MakerWorld-Customizer stellst du Größe, Anzahl der Böden, Türtyp und Griff
 ein. Das Modell berechnet Kacheln, Fugen, Verbindungen, Türen und Scharniere
-passend dazu, und die Bausätze liegen als fertige Mehrplatten-3MF-Projekte vor.
+passend dazu, **verteilt alle Teile selbst auf Druckplatten** und exportiert
+**eine 3MF mit einer Platte je Druckauftrag**. Drei geprüfte Bausätze gibt es
+zusätzlich als fertige 3MF-Projekte.
 
 ## Inhaltsverzeichnis
 
@@ -82,7 +84,26 @@ passend dazu, und die Bausätze liegen als fertige Mehrplatten-3MF-Projekte vor.
 | `sideboard-2door-580x500-h2c` | 580 × 500 × 270 | H2C | 18 | 145 h | 5,8 kg | Schwalbenschwanz + Flügelschrauben | 2, verdeckte Scharniere, Griffmulden, Magnete |
 
 PETG, 3 Wände, 15 % Gyroid, 0,2 mm, mit Bambu-Studio-Presets gesliced. Andere
-Größen: Parameter im Customizer einstellen.
+Größen: Parameter im Customizer einstellen (siehe unten).
+
+### Eigene Größe im Customizer bestellen
+
+1. Größe, Böden, Türen, Scharnierart, Griff und Verbindungen einstellen.
+2. **Drucker** wählen (Parameter `printer`) **und denselben Drucker im Betten-Menü
+   der MakerWorld-Vorschau auswählen, BEVOR du herunterlädst** (noch einmal im
+   Download-Dialog). Die 3MF trägt dieses Druckerprofil. P2S = jedes 256-mm-Bett
+   (P2S, P1S, X1C …), H2C = großes Bett. MakerWorld prüft nur das Bett: auf einem
+   kleineren Bett (A1 mini …) erscheint „Model cannot fit in plates".
+3. Optional **zwei Farben** (`two_colors`): Türen und eingebauter Griff bekommen
+   eine zweite Farbe, jede Farbe ist ein Filament in Bambu Studio. Türteile und
+   Korpusteile liegen auf **getrennten Platten**, damit jede Platte einfarbig ist
+   und keinen Reinigungsturm braucht.
+4. **Generate, dann Download.** Du bekommst **eine 3MF mit einer Platte je
+   Druckauftrag** (bis zu 36 Platten, Grenze von Bambu Studio), alle Teile mittig
+   auf den Platten. Die *Assemble View* zeigt den fertigen Schrank mit offener
+   Tür. Ein Schrank 500 × 800 mm mit einer Tür braucht etwa 27 Platten; sehr
+   große Maße überschreiten 36 Platten und müssen verkleinert werden.
+5. In Bambu Studio das Filament auf **PETG** stellen (die Presets starten mit PLA).
 
 ![Offenes Regal im Wohnzimmer](images/03_regal-wohnzimmer.jpg)
 
@@ -120,18 +141,18 @@ Filament prüfen kannst, bevor du den Bausatz druckst.
 
 | Bereich | Parameter |
 |---|---|
+| Platten und Farben | `two_colors`, `body_color`, `door_color` (zweite Farbe für Türen und eingebauten Griff), `door_open` (Vorschauwinkel 0–110°, Standard 60°) |
 | Schrankgröße | `cab_w`, `cab_h`, `cab_d`, `panel_t` (Seiten, Türen), `shelf_t` (Böden, Deckel, Boden), `shelf_count`, `plinth_h`, `kick_d`, `back_panel`, `back_t`, `wall_anchor` |
 | Türen | `doors` (none / single_left / single_right / double), `door_comp` (Fächer mit Tür), `door_rows`, `reveal`, `handle` (none / bar = Löcher für eigene Griffe / knob / scoop / integrated), `handle_cc`, `handle_screw`, `handle_orient`, `handle_v`, `handle_edge`, `hp_*` (eingebauter Griff), `magnets`, `magnet_d`, `magnet_h` |
 | Verbindungen | `joint` (plug / screw / thumbscrew), `dt_depth`, `dt_angle`, `fit`, `tenon_len`, `tenon_gap`, `seam_keys`, `back_fix` |
 | Scharniere | `hinge_style` (**leaf** = verdecktes Print-in-Place-Scharnier, Standard / pivot / knuckle), `hinge_len`, `hl_gap` (Scharnierspiel), `hinge_inserts` (M3-Heat-Set-Einsätze statt selbstschneidender Schrauben), `insert_d`, `insert_len`, `pin_d`, `hinge_fit`, `hinge_pitch` (knuckle) |
-| Drucker | `printer` (P2S = Kacheln bis 248 mm, passt auf jedes 256-mm-Bett wie P1S / X1C; H2C = Kacheln bis 296 mm für das große Bett), legt die Kachelgröße fest |
-| Ausgabe | `part`: Montage- und Explosionsvorschau, `zones` (verstärkte Schraubzonen rot), `print_all` (alle Teile deines Schranks auf einmal), `tile`, `kind_tiles`, `key_strip`, `hinge_strip`, `cap_strip`, `fit_test`, `bom` (Stückliste); `door_open` (Vorschauwinkel 0–110°, Standard 60°) |
+| Drucker | `printer` (P2S = Kacheln bis 248 mm, passt auf jedes 256-mm-Bett wie P1S / X1C; H2C = Kacheln bis 296 mm für das große Bett), legt Kachel- und Plattengröße fest |
 
-**Alles drucken:** `part = print_all` legt alle Kacheln, Schmetterlingsschlüssel
-(+12 % Reserve), Scharniere und eingebaute Griffe als einzelne Objekte auf ein
-Raster. In Bambu Studio: importieren, Rechtsklick, **In Objekte teilen**, dann
-**Anordnen**. Die **Schlüssel in Schrankfarbe drucken**, dann fallen sie im
-offenen Regal kaum auf.
+**Automatische Platten:** Bei jeder Einstellung wird neu gepackt: Kacheln,
+Schmetterlingsschlüssel (+12 % Reserve), Stiftsegmente, Scharniere, Griffe und
+Kappen liegen zeilenweise auf dem nutzbaren Bett (248 mm P2S, 296 mm H2C, 8 mm
+Abstand), jede Platte ist mittig zum Bett. Die **Schlüssel in Schrankfarbe
+drucken**, dann fallen sie im offenen Regal kaum auf.
 
 ## Welche Option wähle ich?
 
@@ -213,7 +234,10 @@ belasten, bevor du dich darauf verlässt.
 ## Druckempfehlungen
 
 - **Material:** PETG, 3 Wandlinien, 15 % Gyroid, 0,2 mm Schichthöhe. Keine Stützen nötig.
-- **Die 3MF verwenden** (verstärkte Schraubzonen, ein Projekt je Bausatz mit allen Platten).
+- **Die fertigen 3MF der Bausätze verwenden** für verstärkte Schraubzonen: ein
+  Customizer-Download kann keine Modifier-Volumen speichern, stelle um die
+  Scharnierschrauben selbst **4–5 Wände** (und ≥ 40 % Füllung) ein oder drucke die
+  Scharnierseiten mit 5 Wänden.
 - **Zuerst den Passungstest** drucken: Schwalbenschwanz-Block (leichte Reibung),
   Schmetterlingsschlüssel (mit dem Daumen einzudrücken), Scharnier (schwenkt frei),
   M3-Dom (Schraube schneidet ein). Bei Bedarf `fit` und `hl_gap` im Customizer anpassen.
