@@ -25,13 +25,16 @@ In the MakerWorld Customizer you enter the dimensions of your niche (depth,
 width at the back and front, height, optionally the position of a hose), and
 the model calculates the trays, posts, feet, wall plates and cover to match.
 The system works in **straight and sloped niches** and offers **five mounting
-options** – from a free-standing shelf to wall mounting.
+options** – from a free-standing shelf to wall mounting. Each mounting option
+(and the hose cover) is its own Customizer file, so you only see the settings
+that matter for it.
 
 ## Table of Contents
 
 - [The Problem](#the-problem)
 - [The Idea](#the-idea)
 - [Highlights](#highlights)
+- [Choose Your Customizer File](#choose-your-customizer-file)
 - [Ready-Made Sets](#ready-made-sets)
 - [Parametric Options](#parametric-options)
 - [Sloped Niche](#sloped-niche)
@@ -97,7 +100,35 @@ with a clear message instead of silently delivering bad geometry.
   wall screws.
 - **Load estimate** for wall brackets (weight per tray, factor for driving).
 - **Checks and hints** in the console: height reserve per compartment, post
-  lengths, shopping list for exactly your settings.
+  lengths, shopping list for exactly your settings. Invalid combinations show a
+  **red message in the preview** instead of an empty model.
+
+## Choose Your Customizer File
+
+On MakerWorld, **Customize** offers six `.scad` files. Pick the one that matches
+how the shelf is held; each shows only its own settings (about 30 to 80 instead
+of about 120) and a `part` menu with the useful entries only. The shapes are
+identical to the former all-in-one file (compared mesh by mesh).
+
+| # | File | How the trays are held | Preview |
+|---|---|---|---|
+| 1 | `1-posts-backwall-screws` (default) | printed posts and adjustable feet; back plates screwed to the wall | ![File 1](images/12_datei-1-posts-backwall-screws.jpg) |
+| 2 | `2-posts-wall-brackets` | posts and feet plus wall brackets under the trays | ![File 2](images/13_datei-2-posts-wall-brackets.jpg) |
+| 3 | `3-freestanding-posts` | posts and feet only, nothing in the wall | ![File 3](images/14_datei-3-freestanding-posts.jpg) |
+| 4 | `4-brackets-no-posts` | no posts, trays hang on wall brackets | ![File 4](images/15_datei-4-brackets-no-posts.jpg) |
+| 5 | `5-backwall-no-posts` | no posts, trays hang on the back wall screws only – **shallow trays only** | ![File 5](images/16_datei-5-backwall-no-posts.jpg) |
+| 6 | `6-hose-cover` | the optional hose cover, standalone; combine with any of 1 to 5 | ![File 6](images/17_datei-6-hose-cover.jpg) |
+
+- **Hose cover with trays:** the tray files do not know the hose. Keep the
+  underside of the top tray below *arms_from − 3 − reach* (`arms_from` is shown
+  in the console of file 6; reach is 45 mm for the back wall, 19 mm for brackets,
+  3 mm free-standing). For the default niche that is **≤ 187 mm** (files 1 and 5),
+  **≤ 213 mm** (files 2 and 4) and **≤ 229 mm** (file 3).
+- **Settings are not shared between files:** enter the niche dimensions in each
+  file you use.
+- **File 5:** a tray hanging only on its wall screws is a cantilever. With
+  2 screws and 2 kg (factor 4) it may be about 181 mm deep, with 4 screws about
+  365 mm; the console shows the pull-out force and warns.
 
 ## Ready-Made Sets
 
@@ -117,9 +148,27 @@ available on MakerWorld. Each set is a 3MF with four plates.
 
 You export your own dimensions and other mounting options from the Customizer.
 
+**Set C – three trays, staggered depth (new):** niche 160 × 223 × 400 mm, trays 220 / 180 / 120 mm deep, printed posts
+and short printed feet under the lower tray. One 3MF for the Bambu Lab H2C (ASA) with **each part group on its own
+plate** (lower tray, middle tray, upper tray, posts and feet; about 14 h and 495 g in total), plus a fit-test plate.
+Customizer settings (file 1): `tray_count` = 3, `niche_depth` = 223, `niche_w_back` = `niche_w_front` = 160,
+`niche_h` = 400, `tray_depth_limit` = [0, 181, 121], `tray_z` = [0, 150, 290].
+
+**Set D – the same with printed wall brackets (new):** Customizer file 2, niche 160 × 228 × 400 mm (the bracket wall plates take
+5 mm), one 3MF for the Bambu Lab P2S (ASA) with **5 plates**: lower, middle and upper tray, posts and feet, and 6 wall brackets
+(about 16.7 h and 579 g). Every plate of Sets C and D fits the 256 × 256 mm bed of the P2S and P1S.
+
+**Printed screw-foot thread:** the feet use a real trapezoidal thread (60° flanks, pitch 3.5 mm, tooth 1.0–2.2 mm thick, 0.25 mm
+clearance, measured in CAD with OpenCascade). The earlier thread had teeth of only about 0.2 mm and is replaced in all files and sets.
+
+![Set C – three trays, staggered depth](images/19_hero-set-c-gestaffelt.jpg)
+
+![Set D – three trays with printed wall brackets](images/20_hero-set-d-winkel.jpg)
+
 ## Parametric Options
 
-The options in the Customizer are arranged in groups:
+The options in the Customizer are arranged in groups (the list shows all
+options of the all-in-one view; each of the six files shows the relevant subset):
 
 | Group | What you set |
 |---|---|
@@ -154,6 +203,12 @@ wedge instead of a rectangle.
 
 - Works with all five mounting options and with 1 to 4 trays
   (verified in the design for 160 → 110 mm).
+- **Wall brackets** stay straight and always run under the tray over their whole
+  length. If the tray is narrow at the bracket tip they become thinner (down to
+  about 22 mm, the web gets taller), then fewer, and under shallow trays
+  shorter – no supports needed. Only when not even one bracket fits (file 2:
+  tray narrower than about 82 mm at the bracket tip) a red message appears; use
+  file 4 or 5 then.
 - The tray width is limited by `tray_max_w` (default 170 mm) and must be at
   least 40 mm, otherwise a message appears.
 - If something protrudes at only one spot, use the **smaller** value or
@@ -161,11 +216,14 @@ wedge instead of a rectangle.
 - Wedge-shaped trays are not rectangular: print the **fit test** first, it
   shows the exact contour.
 
+![Straight and slanted niche side by side](images/18_hero-schraege-nische.jpg)
+
 ![Sloped niche: 160 mm at the back, 110 mm at the front](images/06_schraege-nische.jpg)
 
 ## Mounting Options
 
-One setting (`mounting`), no contradictory combinations:
+One setting (`mounting`), no contradictory combinations. On MakerWorld the
+choice is made by the file you open (files 1 to 5):
 
 | Option | Support | Additionally required | Suitable for |
 |---|---|---|---|
@@ -173,7 +231,7 @@ One setting (`mounting`), no contradictory combinations:
 | **Posts and feet + wall brackets** | as above, plus printed wall brackets under the trays | 4 wall screws per bracket, 1 × M3 × 8 as tray lock | heavier loads, more rigidity |
 | **Posts and feet only** | free-standing, **nothing in the wall** | only the M4 screws | rental apartment, tiles, stationary use |
 | **Wall brackets only without posts** | no posts or feet, each tray hangs on wall brackets (tray 1 stands on the floor) | 4 wall screws per bracket (`bracket_count` 2–3) | maximum freedom between the compartments |
-| **Back wall screws only without posts** | trays hang only on the wall screws (console warns) | wall screws | light loads, solid wall |
+| **Back wall screws only without posts** | trays hang only on the wall screws (console warns); **only for shallow trays** | wall screws | light loads, shallow trays, solid wall |
 
 Further settings for this:
 
@@ -277,8 +335,8 @@ Set A and 14.75 h and 420 g for Set B.
   85 × 290 mm.
 - **Sloped niche in a bathroom or van:** different `niche_w_back` and
   `niche_w_front`.
-- **Rental apartment:** `mounting = Posts and feet only`, nothing in the wall.
-- **Little space between the compartments:** wall brackets without posts.
+- **Rental apartment:** file 3 (`3-freestanding-posts`), nothing in the wall.
+- **Little space between the compartments:** file 4 (wall brackets without posts).
 
 ## Troubleshooting / FAQ
 
@@ -295,11 +353,17 @@ Trays wider than 200 mm rest on only four posts: increase `tray_t` to 4 to
 5 mm and add dividers (`tray_dividers`).
 
 **Why is the upper tray with cover only about 187 mm high?**
-The wall arms of the cover need space; the console shows the limit.
+The wall arms of the cover need space. The tray files do not know the hose: keep
+the underside of the top tray below the limit given in "Choose Your Customizer
+File" (187 / 213 / 229 mm in the default niche).
+
+**Red text appears instead of the model.**
+A setting is not possible (for example tray too narrow or shelves too close).
+The text says what to change.
 
 **A red sign says "NO POSTS", "NO BRACKETS" or "NO HOSE COVER".**
 The selected entry is not used with your settings. Choose a different entry or
-change `mounting`, `hose_enable` or `cover_enable`.
+open the matching file.
 
 **The preview cannot be printed.**
 Correct: the two preview entries are for viewing only and show a red "NOT FOR
@@ -330,7 +394,7 @@ derived from it; the niche photo is a real photograph.
 
 ## Downloads
 
-Print files are intentionally available exclusively on MakerWorld.
+Print files are intentionally available exclusively on MakerWorld (the six Customizer files are part of the MakerWorld listing).
 
 👉 MakerWorld link: https://makerworld.com/en/models/3464475-parametric-niche-shelf-system
 

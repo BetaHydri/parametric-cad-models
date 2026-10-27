@@ -25,13 +25,16 @@ Du gibst im MakerWorld-Customizer die Maße deiner Nische ein (Tiefe, Breite
 hinten und vorn, Höhe, optional die Lage eines Schlauchs), und das Modell
 berechnet Schalen, Pfosten, Füße, Wandplatten und Abdeckung dazu. Das System
 funktioniert in **geraden und schrägen Nischen** und kennt **fünf
-Befestigungsarten** – vom freistehenden Regal bis zur Wandmontage.
+Befestigungsarten** – vom freistehenden Regal bis zur Wandmontage. Jede
+Befestigungsart (und die Schlauchabdeckung) ist eine eigene Customizer-Datei,
+du siehst also nur die Einstellungen, die dafür wichtig sind.
 
 ## Inhaltsverzeichnis
 
 - [Das Problem](#das-problem)
 - [Die Idee](#die-idee)
 - [Highlights](#highlights)
+- [Customizer-Datei wählen](#customizer-datei-wählen)
 - [Fertige Sets](#fertige-sets)
 - [Parametrische Optionen](#parametrische-optionen)
 - [Schräge Nische](#schräge-nische)
@@ -97,7 +100,36 @@ mit einer klaren Meldung, statt stillschweigend schlechte Geometrie zu liefern.
   Wandschrauben.
 - **Lastabschätzung** für Wandwinkel (Gewicht je Schale, Faktor für Fahrbetrieb).
 - **Prüfungen und Hinweise** in der Konsole: Höhenreserve je Fach,
-  Pfostenlängen, Einkaufsliste für genau deine Einstellungen.
+  Pfostenlängen, Einkaufsliste für genau deine Einstellungen. Unmögliche
+  Kombinationen zeigen eine **rote Meldung in der Vorschau** statt eines leeren
+  Modells.
+
+## Customizer-Datei wählen
+
+Auf MakerWorld bietet **Customize** sechs `.scad`-Dateien an. Wähle die, die zu
+deiner Befestigung passt; jede zeigt nur ihre eigenen Einstellungen (etwa 30 bis
+80 statt rund 120) und ein `part`-Menü mit den sinnvollen Einträgen. Die Formen
+sind mit der früheren Einzeldatei identisch (Mesh für Mesh verglichen).
+
+| Nr. | Datei | Haltung der Schalen | Vorschau |
+|---|---|---|---|
+| 1 | `1-posts-backwall-screws` (Standard) | gedruckte Pfosten und verstellbare Füße; Rückwandplatten an die Wand geschraubt | ![Datei 1](images/12_datei-1-posts-backwall-screws.jpg) |
+| 2 | `2-posts-wall-brackets` | Pfosten und Füße plus Wandwinkel unter den Schalen | ![Datei 2](images/13_datei-2-posts-wall-brackets.jpg) |
+| 3 | `3-freestanding-posts` | nur Pfosten und Füße, nichts in der Wand | ![Datei 3](images/14_datei-3-freestanding-posts.jpg) |
+| 4 | `4-brackets-no-posts` | keine Pfosten, Schalen hängen an Wandwinkeln | ![Datei 4](images/15_datei-4-brackets-no-posts.jpg) |
+| 5 | `5-backwall-no-posts` | keine Pfosten, Schalen hängen nur an den Rückwandschrauben – **nur flache Schalen** | ![Datei 5](images/16_datei-5-backwall-no-posts.jpg) |
+| 6 | `6-hose-cover` | die optionale Schlauchabdeckung, eigenständig; mit 1 bis 5 kombinierbar | ![Datei 6](images/17_datei-6-hose-cover.jpg) |
+
+- **Abdeckung mit Schalen:** Die Schalen-Dateien kennen den Schlauch nicht. Die
+  Unterkante der obersten Schale muss unter *arms_from − 3 − Reichweite* bleiben
+  (`arms_from` zeigt die Konsole von Datei 6; Reichweite 45 mm Rückwand, 19 mm
+  Winkel, 3 mm freistehend). In der Standard-Nische: **≤ 187 mm** (Dateien 1
+  und 5), **≤ 213 mm** (2 und 4), **≤ 229 mm** (3).
+- **Einstellungen werden nicht zwischen den Dateien geteilt:** Trage die
+  Nischenmaße in jeder verwendeten Datei ein.
+- **Datei 5:** Eine nur an den Wandschrauben hängende Schale ist ein Ausleger.
+  Mit 2 Schrauben und 2 kg (Faktor 4) darf sie etwa 181 mm tief sein, mit 4
+  Schrauben etwa 365 mm; die Konsole zeigt die Auszugskraft und warnt.
 
 ## Fertige Sets
 
@@ -117,9 +149,27 @@ H2C, ASA) liegen auf MakerWorld bereit. Jedes Set ist ein 3MF mit vier Platten.
 
 Eigene Maße und andere Befestigungsarten exportierst du aus dem Customizer.
 
+**Set C – drei Schalen, gestaffelte Tiefe (neu):** Nische 160 × 223 × 400 mm, Schalen 220 / 180 / 120 mm tief, gedruckte
+Pfosten und kurze gedruckte Füße unter der untersten Schale. Ein 3MF für den Bambu Lab H2C (ASA), **jede Teilegruppe auf
+einer eigenen Bauplatte** (untere, mittlere, obere Schale, Pfosten und Füße; zusammen etwa 14 h und 495 g) plus Passprobe.
+Customizer-Einstellungen (Datei 1): `tray_count` = 3, `niche_depth` = 223, `niche_w_back` = `niche_w_front` = 160,
+`niche_h` = 400, `tray_depth_limit` = [0, 181, 121], `tray_z` = [0, 150, 290].
+
+**Set D – dasselbe mit gedruckten Wandwinkeln (neu):** Customizer-Datei 2, Nische 160 × 228 × 400 mm (die Wandplatten der Winkel
+brauchen 5 mm), ein 3MF für den Bambu Lab P2S (ASA) mit **5 Platten**: untere, mittlere und obere Schale, Pfosten und Füße sowie
+6 Wandwinkel (zusammen etwa 16,7 h und 579 g). Jede Platte der Sets C und D passt auf das 256-mm-Bett von P2S und P1S.
+
+**Gewinde der Schraubfüße:** echtes Trapezgewinde (60° Flanken, Steigung 3,5 mm, Zahn 1,0–2,2 mm dick, 0,25 mm Spiel, in CAD mit
+OpenCascade gemessen). Das frühere Gewinde hatte nur etwa 0,2 mm dicke Zähne und ist in allen Dateien und Sets ersetzt.
+
+![Set C – drei Schalen, gestaffelte Tiefe](images/19_hero-set-c-gestaffelt.jpg)
+
+![Set D – drei Schalen mit gedruckten Wandwinkeln](images/20_hero-set-d-winkel.jpg)
+
 ## Parametrische Optionen
 
-Die Optionen im Customizer sind in Gruppen geordnet:
+Die Optionen im Customizer sind in Gruppen geordnet (die Liste zeigt alle
+Optionen der Gesamtansicht; jede der sechs Dateien zeigt die passende Auswahl):
 
 | Gruppe | Was du einstellst |
 |---|---|
@@ -154,6 +204,12 @@ Keil statt zum Rechteck.
 
 - Funktioniert mit allen fünf Befestigungsarten und mit 1 bis 4 Schalen
   (in der Konstruktion für 160 → 110 mm geprüft).
+- **Wandwinkel** bleiben gerade und liegen immer über ihre ganze Länge unter der
+  Schale. Ist die Schale an der Winkelspitze schmal, werden sie dünner (bis etwa
+  22 mm, die Rippe wird höher), dann weniger, und unter flachen Schalen kürzer –
+  ohne Stützmaterial. Nur wenn nicht einmal ein Winkel passt (Datei 2: Schale
+  an der Winkelspitze schmaler als etwa 82 mm), erscheint eine rote Meldung;
+  nimm dann Datei 4 oder 5.
 - Die Schalenbreite ist durch `tray_max_w` (Standard 170 mm) begrenzt und muss
   mindestens 40 mm betragen, sonst erscheint eine Meldung.
 - Ragt etwas nur an einer Stelle vor, nimmst du den **kleineren** Wert oder
@@ -161,11 +217,14 @@ Keil statt zum Rechteck.
 - Keilförmige Schalen sind nicht rechteckig: Drucke zuerst den
   **Passungstest**, er zeigt die genaue Kontur.
 
+![Gerade und schräge Nische nebeneinander](images/18_hero-schraege-nische.jpg)
+
 ![Schräge Nische: 160 mm hinten, 110 mm vorn](images/06_schraege-nische.jpg)
 
 ## Befestigungsarten
 
-Eine Einstellung (`mounting`), keine widersprüchlichen Kombinationen:
+Eine Einstellung (`mounting`), keine widersprüchlichen Kombinationen. Auf
+MakerWorld bestimmt die geöffnete Datei die Wahl (Dateien 1 bis 5):
 
 | Option | Haltung | Zusätzlich nötig | Geeignet für |
 |---|---|---|---|
@@ -173,7 +232,7 @@ Eine Einstellung (`mounting`), keine widersprüchlichen Kombinationen:
 | **Posts and feet + wall brackets** | wie oben, zusätzlich gedruckte Wandwinkel unter den Schalen | je Winkel 4 Wandschrauben, 1 × M3 × 8 als Schalenverriegelung | schwerere Lasten, mehr Steifigkeit |
 | **Posts and feet only** | freistehend, **nichts in der Wand** | nur die M4-Schrauben | Mietwohnung, Fliesen, ortsfeste Nutzung |
 | **Wall brackets only without posts** | keine Pfosten oder Füße, jede Schale hängt an Wandwinkeln (Schale 1 steht auf dem Boden) | je Winkel 4 Wandschrauben (`bracket_count` 2–3) | maximale Freiheit zwischen den Fächern |
-| **Back wall screws only without posts** | Schalen hängen nur an den Wandschrauben (Konsole warnt) | Wandschrauben | leichte Lasten, feste Wand |
+| **Back wall screws only without posts** | Schalen hängen nur an den Wandschrauben (Konsole warnt); **nur für flache Schalen** | Wandschrauben | leichte Lasten, flache Schalen, feste Wand |
 
 Weitere Einstellungen dazu:
 
@@ -281,8 +340,8 @@ für Set A sowie 14,75 h und 420 g für Set B.
   zum Beispiel 85 × 290 mm.
 - **Schräge Nische im Bad oder Van:** `niche_w_back` und `niche_w_front`
   unterschiedlich.
-- **Mietwohnung:** `mounting = Posts and feet only`, nichts in der Wand.
-- **Wenig Platz zwischen den Fächern:** Wandwinkel ohne Pfosten.
+- **Mietwohnung:** Datei 3 (`3-freestanding-posts`), nichts in der Wand.
+- **Wenig Platz zwischen den Fächern:** Datei 4 (Wandwinkel ohne Pfosten).
 
 ## Fehlersuche / FAQ
 
@@ -299,11 +358,17 @@ Schalen über 200 mm Breite ruhen nur auf vier Pfosten: `tray_t` auf 4 bis
 5 mm erhöhen und Trennwände (`tray_dividers`) einsetzen.
 
 **Warum ist die obere Schale mit Abdeckung nur etwa 187 mm hoch?**
-Die Wandarme der Abdeckung brauchen Platz; die Konsole zeigt die Grenze.
+Die Wandarme der Abdeckung brauchen Platz. Die Schalen-Dateien kennen den
+Schlauch nicht: Halte die Unterkante der obersten Schale unter dem Grenzwert aus
+„Customizer-Datei wählen“ (187 / 213 / 229 mm in der Standard-Nische).
+
+**Statt des Modells erscheint roter Text.**
+Eine Einstellung ist nicht möglich (zum Beispiel Schale zu schmal oder Böden zu
+dicht). Der Text sagt, was du ändern musst.
 
 **Ein rotes Schild sagt „NO POSTS“, „NO BRACKETS“ oder „NO HOSE COVER“.**
 Der gewählte Eintrag wird mit deinen Einstellungen nicht benutzt. Wähle einen
-anderen Eintrag oder ändere `mounting`, `hose_enable` oder `cover_enable`.
+anderen Eintrag oder öffne die passende Datei.
 
 **Die Vorschau lässt sich nicht drucken.**
 Richtig: Die beiden Vorschau-Einträge dienen nur zum Ansehen und zeigen ein
@@ -336,7 +401,7 @@ daraus abgeleitete Szenenbilder; das Nischenfoto ist eine echte Aufnahme.
 
 ## Downloads
 
-Print files are intentionally available exclusively on MakerWorld.
+Print files are intentionally available exclusively on MakerWorld (die sechs Customizer-Dateien gehören zum MakerWorld-Eintrag).
 
 👉 MakerWorld-Link: https://makerworld.com/en/models/3464475-parametric-niche-shelf-system
 
