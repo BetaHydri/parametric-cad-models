@@ -121,7 +121,7 @@ two hinges and an M3 boss, so you can check your filament before printing the ki
 | Doors | `doors` (none / single_left / single_right / double), `door_comp` (compartments with doors), `door_rows`, `reveal`, `handle` (none / bar = holes for your handles / knob / scoop / integrated), `handle_cc`, `handle_screw`, `handle_orient`, `handle_v`, `handle_edge`, `hp_*` (built-in pull), `magnets`, `magnet_d`, `magnet_h` |
 | Joints | `joint` (plug / screw / thumbscrew), `dt_depth`, `dt_angle`, `fit`, `tenon_len`, `tenon_gap`, `seam_keys`, `back_fix` |
 | Hinges | `hinge_style` (**leaf** = hidden print-in-place hinge, default / pivot / knuckle), `hinge_len`, `hl_gap` (hinge clearance), `hinge_inserts` (M3 heat-set inserts instead of self-cutting screws), `insert_d`, `insert_len`, `pin_d`, `hinge_fit`, `hinge_pitch` (knuckle) |
-| Printer | `printer` (P2S / H2C), sets the tile size |
+| Printer | `printer` (P2S = tiles up to 248 mm, fits any 256 mm bed such as P1S / X1C; H2C = tiles up to 296 mm for the large bed), sets the tile size |
 | Output | `part`: assembly and exploded previews, `zones` (reinforced screw zones in red), `print_all` (every part of your cabinet in one go), `tile`, `kind_tiles`, `key_strip`, `hinge_strip`, `cap_strip`, `fit_test`, `bom` (bill of materials); `door_open` (preview angle 0–110°, default 60°) |
 
 **Print everything:** `part = print_all` puts all tiles, the bow-tie keys (+12 %

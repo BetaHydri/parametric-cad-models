@@ -124,7 +124,7 @@ Filament prüfen kannst, bevor du den Bausatz druckst.
 | Türen | `doors` (none / single_left / single_right / double), `door_comp` (Fächer mit Tür), `door_rows`, `reveal`, `handle` (none / bar = Löcher für eigene Griffe / knob / scoop / integrated), `handle_cc`, `handle_screw`, `handle_orient`, `handle_v`, `handle_edge`, `hp_*` (eingebauter Griff), `magnets`, `magnet_d`, `magnet_h` |
 | Verbindungen | `joint` (plug / screw / thumbscrew), `dt_depth`, `dt_angle`, `fit`, `tenon_len`, `tenon_gap`, `seam_keys`, `back_fix` |
 | Scharniere | `hinge_style` (**leaf** = verdecktes Print-in-Place-Scharnier, Standard / pivot / knuckle), `hinge_len`, `hl_gap` (Scharnierspiel), `hinge_inserts` (M3-Heat-Set-Einsätze statt selbstschneidender Schrauben), `insert_d`, `insert_len`, `pin_d`, `hinge_fit`, `hinge_pitch` (knuckle) |
-| Drucker | `printer` (P2S / H2C), legt die Kachelgröße fest |
+| Drucker | `printer` (P2S = Kacheln bis 248 mm, passt auf jedes 256-mm-Bett wie P1S / X1C; H2C = Kacheln bis 296 mm für das große Bett), legt die Kachelgröße fest |
 | Ausgabe | `part`: Montage- und Explosionsvorschau, `zones` (verstärkte Schraubzonen rot), `print_all` (alle Teile deines Schranks auf einmal), `tile`, `kind_tiles`, `key_strip`, `hinge_strip`, `cap_strip`, `fit_test`, `bom` (Stückliste); `door_open` (Vorschauwinkel 0–110°, Standard 60°) |
 
 **Alles drucken:** `part = print_all` legt alle Kacheln, Schmetterlingsschlüssel
