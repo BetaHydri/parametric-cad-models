@@ -2,7 +2,7 @@
 
 🌐 **English** | [Deutsch](README.de.md)
 
-Documentation, images and links for my parametric OpenSCAD models for FDM printing. All 28 models are fully parametric and are configured in the MakerWorld Customizer; the models including print profiles are available exclusively on MakerWorld.
+Documentation, images and links for my parametric OpenSCAD models for FDM printing. All 29 models are fully parametric and are configured in the MakerWorld Customizer; the models including print profiles are available exclusively on MakerWorld.
 
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-BetaHydri-00AE42)](https://makerworld.com/en/@BetaHydri)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
@@ -18,7 +18,7 @@ Click the image or **Details** to open the full description with options, varian
 
 - [Storage and organization](#storage-and-organization) (12)
 - [Kitchen and household](#kitchen-and-household) (3)
-- [Home, furniture and lighting](#home-furniture-and-lighting) (6)
+- [Home, furniture and lighting](#home-furniture-and-lighting) (7)
 - [Technology and electronics](#technology-and-electronics) (2)
 - [Mechanics](#mechanics) (3)
 - [Pets](#pets) (2)
@@ -59,6 +59,7 @@ Click the image or **Details** to open the full description with options, varian
 | [<img src="docs/thumbs/parametric-candlestick.jpg" width="220" alt="Parametric Candlestick">](models/parametric-candlestick/README.md) | **Parametric Candlestick**<br>Candlestick in seven shapes and seven surface styles with a deep, tip-resistant candle socket. | [Details](models/parametric-candlestick/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3077107-parametric-candlestick) |
 | [<img src="docs/thumbs/parametric-lampshade.jpg" width="220" alt="Parametric Lampshade">](models/parametric-lampshade/README.md) | **Parametric Lampshade**<br>Lampshade for LED pucks as table or hanging lamp from a single file. | [Details](models/parametric-lampshade/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3062645-parametric-table-lamp-ceiling-lamp) |
 | [<img src="docs/thumbs/parametric-wall-lamp.jpg" width="220" alt="Parametric Imperial Lamp">](models/parametric-wall-lamp/README.md) | **Parametric Imperial Lamp**<br>Wall lamp in an Imperial sci-fi look for E14 socket or LED puck with slotted windows and emblem. | [Details](models/parametric-wall-lamp/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3416896-parametric-imperial-lamp) |
+| [<img src="docs/thumbs/parametric-modern-cabinet-system.jpg" width="220" alt="Parametric Modern Cabinet System">](models/parametric-modern-cabinet-system/README.md) | **Parametric Modern Cabinet System**<br>Open shelves and door cabinets as a multi-plate kit for P2S and H2C: dovetail joints, hidden print-in-place hinges, reinforced screw holes, verified assembly and PDF guides. | [Details](models/parametric-modern-cabinet-system/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3501978-parametric-modern-cabinet-system) |
 
 ## Technology and electronics
 

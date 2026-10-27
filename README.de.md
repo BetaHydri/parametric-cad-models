@@ -2,7 +2,7 @@
 
 🌐 [English](README.md) | **Deutsch**
 
-Dokumentation, Bilder und Links zu meinen parametrischen OpenSCAD-Modellen für den FDM-Druck. Die 28 Modelle sind parametrisch aufgebaut und werden im MakerWorld-Customizer eingestellt; die Modelle samt Druckprofilen gibt es ausschließlich auf MakerWorld.
+Dokumentation, Bilder und Links zu meinen parametrischen OpenSCAD-Modellen für den FDM-Druck. Die 29 Modelle sind parametrisch aufgebaut und werden im MakerWorld-Customizer eingestellt; die Modelle samt Druckprofilen gibt es ausschließlich auf MakerWorld.
 
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-BetaHydri-00AE42)](https://makerworld.com/en/@BetaHydri)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
@@ -18,7 +18,7 @@ Ein Klick auf das Bild oder auf **Details** öffnet die ausführliche Beschreibu
 
 - [Aufbewahrung und Ordnung](#aufbewahrung-und-ordnung) (12)
 - [Küche und Haushalt](#küche-und-haushalt) (3)
-- [Haus, Möbel und Licht](#haus-möbel-und-licht) (6)
+- [Haus, Möbel und Licht](#haus-möbel-und-licht) (7)
 - [Technik und Elektronik](#technik-und-elektronik) (2)
 - [Mechanik](#mechanik) (3)
 - [Tier](#tier) (2)
@@ -59,6 +59,7 @@ Ein Klick auf das Bild oder auf **Details** öffnet die ausführliche Beschreibu
 | [<img src="docs/thumbs/parametric-candlestick.jpg" width="220" alt="Parametric Candlestick">](models/parametric-candlestick/README.de.md) | **Parametric Candlestick**<br>Kerzenständer in sieben Formen und sieben Oberflächenstilen mit tiefer, kippsicherer Kerzenaufnahme. | [Details](models/parametric-candlestick/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3077107-parametric-candlestick) |
 | [<img src="docs/thumbs/parametric-lampshade.jpg" width="220" alt="Parametric Lampshade">](models/parametric-lampshade/README.de.md) | **Parametric Lampshade**<br>Lampenschirm für LED-Pucks als Tisch- oder Hängelampe aus einer Datei. | [Details](models/parametric-lampshade/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3062645-parametric-table-lamp-ceiling-lamp) |
 | [<img src="docs/thumbs/parametric-wall-lamp.jpg" width="220" alt="Parametric Imperial Lamp">](models/parametric-wall-lamp/README.de.md) | **Parametric Imperial Lamp**<br>Wandlampe im Imperial-Sci-Fi-Look für E14-Fassung oder LED-Puck mit Schlitzfenstern und Emblem. | [Details](models/parametric-wall-lamp/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3416896-parametric-imperial-lamp) |
+| [<img src="docs/thumbs/parametric-modern-cabinet-system.jpg" width="220" alt="Parametric Modern Cabinet System">](models/parametric-modern-cabinet-system/README.de.md) | **Parametric Modern Cabinet System**<br>Offene Regale und Türschränke als Mehrplatten-Bausatz für P2S und H2C: Schwalbenschwanz-Verbindungen, verdeckte Print-in-Place-Scharniere, verstärkte Schraublöcher, verifizierte Montage und PDF-Anleitungen. | [Details](models/parametric-modern-cabinet-system/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3501978-parametric-modern-cabinet-system) |
 
 ## Technik und Elektronik
 
