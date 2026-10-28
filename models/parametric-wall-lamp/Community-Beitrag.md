@@ -33,7 +33,8 @@ keiner Verbindung zu den Rechteinhabern einer entsprechenden Filmreihe.
   Seiten.
 - **Emblem:** Zahnrad als Speichenrad, vorne und optional an den Seiten.
 - **Verdeckte Aufhängung:** Zwei Schlüssellöcher in einer Teil-Rückwand.
-- **Loser Diffusor:** Farbe wechseln, ohne den Schirm neu zu drucken.
+- **Loser Diffusor in eigener Farbe:** Farbe wechseln, ohne den Schirm neu zu drucken.
+- **Halterung ohne Kleber:** Zwei Schwalbenschwanz-Schienen halten die Platte, sie schließt bündig ab.
 - **Druckt ohne Stützen:** Schirm mit dem Dach auf dem Bett.
 
 ![Lampen mit Imperial-Fenstern und mit gleichmäßigen Schlitzen im Vergleich](images/03_wandszene.jpg)
@@ -59,9 +60,9 @@ den gerundeten Ecken diagonal über die Außenwand, verdünnt sie auf nahezu nul
 und öffnet einen Spalt, durch den das Licht des Diffusors scheint. Deshalb
 entsteht der Hohlraum aus der versetzten Außenkontur.
 
-**Der Auflagerand ohne Stützen.** Die Halterplatte liegt auf einem 3 mm breiten
-Absatz. Seine Oberseite besteht aus Scheiben von 0,2 mm Höhe, die jeweils 0,2 mm
-schmaler werden – eine 45°-Fase, die mit dem Dach nach unten ohne Stütze druckt.
+**Der Halter ohne Kleber.** Die Halterplatte sitzt auf zwei 45°-Schwalbenschwanz-Schienen. Die
+Schienenflächen sind 45°-Schrägen, sodass der Schirm mit dem Dach nach unten ohne
+Stütze druckt.
 
 **Das Emblem.** Das Emblem ist eine Scheibe, von der ein massives Speichenrad
 abgezogen wird: Zahnkranz, Nabe und Speichen überlappen. Die Lücken leuchten.
@@ -79,19 +80,30 @@ Standardwerten sind es sechs Spalten vorne und fünf seitlich.
 und Schaftloch plus 9 mm Schlitz bei ±28 % der Innenbreite. Beim Druck mit dem
 Dach unten steht sie senkrecht nahe am Bett und braucht keine Stützen.
 
-**Das Einsetzen.** Der Diffusor (Wand 1,0 mm, Standardhöhe ca. 228 mm) wird von
-unten hochgeschoben, die Halterung von hinten untergeschoben, dann sinkt der
-Diffusor auf die Platte. Dafür bleiben 2 mm Hubweg unter dem Dach.
+**Das Einsetzen.** Die Halterung braucht keinen Kleber mehr: Zwei 45°-Schienen im
+Schirm greifen über die angefasten Längskanten der Platte. Hinten hat sie etwa
+0,5 mm Spiel und setzt sich leicht an, eingeschoben sind es 0,2 mm, und sie
+klemmt. Sie schließt bündig mit der Unterkante ab; an der Wand verschließt die
+Wand den offenen Rücken, sodass nichts herausrutschen kann. Der Diffusor (Wand
+1,0 mm, Standardhöhe ca. 233 mm) wird von unten hochgeschoben, die Halterung von
+hinten eingeschoben, dann sinkt der Diffusor auf die Platte. Dafür bleiben 2 mm
+Hubweg unter dem Dach. Ich habe beide Wege in 2-mm-Schritten für Schraubfassung,
+kleinen Konverter, Puck und eine kleine Lampe nachgerechnet: keine Kollision.
+
+![Querschnitt des Schwalbenschwanzes: Halterung zwischen den Schienen](images/05_dovetail-section.png)
 
 ![Hochformat-Titelbild der Wandlampe](images/02_hero-hochformat.jpg)
 
 ## Druck-Erfahrungen und Empfehlungen
 
 Die Profile sind für den **P1S** mit PLA gebaut (0,20 mm Layerhöhe, Gyroid
-15 %). Der Schirm druckt mit dem Dach auf dem Bett, die Halterung flach, der
-Diffusor stehend. Für den Schirm empfehle ich dunkles Filament, für den Diffusor
-ein transluzentes oder helles (z. B. rotes PETG). Dünne Wände (1,2–1,6 mm)
-schimmern zusätzlich durch.
+15 %) und zweifarbig: Platte 1 mit Schirm und Halterung (Filament 1), Platte 2
+mit dem Diffusor (Filament 2), jeweils nur eine Farbe pro Platte, also ohne
+Prime-Tower. Der Schirm druckt mit dem Dach auf dem Bett, die Halterung flach,
+der Diffusor stehend. Für den Schirm empfehle ich dunkles Filament, für den
+Diffusor transluzentes PETG in Rot, Blau oder Grün. Dünne Wände (1,2–1,6 mm)
+schimmern zusätzlich durch. Sitzt die Halterung zu stramm oder zu locker, hilft
+`dt_clear` (0,25–0,3 bzw. 0,15 mm).
 
 Nimm ausschließlich LED-Leuchtmittel; PLA erweicht ab etwa 50–60 °C. Die
 Voreinstellungen passen zu einer E14-Schraubfassung mit Körper ca. 28 mm und
@@ -130,7 +142,7 @@ verbessern. Schreib einfach einen Kommentar auf MakerWorld.
 5. Verdeckte Schlüssellochaufhängung an einer gedruckten Wandlampe
 6. Diffusor wechseln: Leuchtfarbe ändern ohne neuen Lampenschirm
 7. Parametric Imperial Lamp: Wandlampe im Sci-Fi-Look für Bambu Lab
-8. 45°-Fase statt Stützmaterial: Halterplatte einer 3D-gedruckten Lampe
+8. Halterplatte ohne Kleber: Schwalbenschwanz-Führung in einer 3D-gedruckten Lampe
 9. Wandlampe mit Kabel von hinten: Zugentlastung im Halter
 10. Lampe im Imperial-Look selbst bauen: OpenSCAD-Customizer auf MakerWorld
 
@@ -174,8 +186,8 @@ verbessern. Schreib einfach einen Kommentar auf MakerWorld.
 
 1. „Der Hohlraum folgt der Kontur“: Warum ein quaderförmiger Innenraum einen
    Lichtspalt in gerundeten Ecken erzeugt.
-2. „45° statt Stützmaterial“: Wie ein gestufter Auflagerand einen Überhang
-   überflüssig macht.
+2. „Schwalbenschwanz statt Kleber“: Wie zwei 45°-Schienen die Halterplatte
+   ohne Stütze und ohne Klebstoff halten.
 3. „Hardware als Parameter“: Wie Fassungsmaße und Puck-Abstände das Modell
    an echte Teile anpassen.
 4. „Zufall, der reproduzierbar ist“: Fensterlängen aus einer deterministischen

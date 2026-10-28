@@ -9,6 +9,40 @@ folgt [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-10-28
+
+### Added
+
+- Klebefreie Schwalbenschwanz-Halterung: zwei 45°-Schienen im Schirm greifen
+  über die angefasten Längskanten der Halterplatte; leicht konisch, damit sich
+  die Platte hinten leicht ansetzen lässt und beim Einschieben klemmt
+  (`dovetail`, `flush_bracket`, `dt_bevel`, `dt_bevel_lo`, `dt_clear`,
+  `dt_taper`, `dt_rail_tip`, `dt_front_stop`).
+- Zweifarbiger Druck: Der Diffusor hat eine eigene Farbe auf einer eigenen
+  Platte (`two_colors`, `color_shell`, `color_diffuser`), gedacht für
+  transluzentes PETG in Rot, Blau oder Grün. Jede Platte hat nur eine Farbe,
+  damit kein Prime-Tower entsteht.
+- MakerWorld-Platten: eine Platte für Schirm und Halterung, eine für den
+  Diffusor (bei sehr breiten Lampen automatisch mehr) sowie eine
+  Zusammenbauansicht; `part` steht standardmäßig auf `none`.
+- Prüfskripte für den Zusammenbau (Diffusor von unten einschieben, Halterung von
+  hinten einschieben) und für die Platten (Bettgrenzen, eine Farbe je Platte).
+
+### Changed
+
+- Die Halterplatte schließt bündig mit der Unterkante des Schirms ab; der
+  Absatz und der 5 mm zurückgesetzte Hals entfallen, der Diffusor sitzt
+  entsprechend tiefer (233 statt 228 mm hoch).
+- Die drei Beispielvarianten sind zweifarbige Zwei-Platten-Profile für den P1S.
+- Der Schirm hat im Schienenbereich keinen Überhang über 45° mehr; insgesamt
+  sank die Fläche steiler Überhänge am Schirm von etwa 1790 auf 1110 mm².
+- Der Schirm außen bleibt unverändert; alle Änderungen liegen innerhalb der
+  Innenwand.
+
+### Removed
+
+- Der Absatz mit 45°-Fase für die Halterplatte (ersetzt durch die Schienen).
+
 ## [1.0.0] - 2026-10-09
 
 Hinweis: Eine Versionsnummer ist in den Quellen nicht belegt. Das Datum

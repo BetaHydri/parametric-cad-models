@@ -6,9 +6,9 @@
 
 Parametric wall lamp for FDM printing in an "Imperial" sci-fi look: a tall,
 square half-tower with vertical slotted windows and a gear emblem, whose open
-back sits flat against the wall. A slide-in bracket holds either an E14 socket
-or the Bambu LED kit puck; a loose diffuser determines the light colour. You set
-everything in the MakerWorld Customizer.
+back sits flat against the wall. A **glue-free dovetail bracket** holds either an
+E14 socket or the Bambu LED kit puck; a loose diffuser in **its own colour**
+determines the light colour. You set everything in the MakerWorld Customizer.
 
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/3416896-parametric-imperial-lamp)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
@@ -66,11 +66,13 @@ details around it:
 ## The Idea
 
 The shade is a half-tower with an open back wall that sits flat against the
-wall. The light source sits on a separate bracket plate that is slid from behind
-onto a ledge at the bottom of the shade. The diffuser is a third, loose part.
-All dimensions, windows, emblem and light source are Customizer parameters. The
-lamp prints with the roof facing down, so the windows stand vertically and
-nothing hangs freely in the air. All dimensions in millimetres.
+wall. The light source sits on a separate bracket plate that is slid in from
+behind on two 45° dovetail rails inside the shade and ends flush with the lower
+edge; no glue is needed. The diffuser is a third, loose part and is printed in its own
+colour on its own plate. All dimensions, windows, emblem and light source are
+Customizer parameters. The lamp prints with the roof facing down, so the windows
+stand vertically and nothing hangs freely in the air. All dimensions in
+millimetres.
 
 ## Highlights
 
@@ -86,12 +88,19 @@ nothing hangs freely in the air. All dimensions in millimetres.
   keyholes that cannot be seen from the front or the side.
 - **Cable from behind:** A cable channel with strain relief guides the cable
   from the wall side to the socket.
-- **Loose diffuser:** Thin U-shell, printable in any colour and replaceable.
-- **Support-free:** Shade with the roof on the bed; the bearing edge of the
-  bracket is a 45° chamfer.
+- **Loose diffuser in its own colour:** Thin U-shell, printed on its own plate in
+  a second colour (for example translucent red, blue or green PETG) and
+  replaceable.
+- **Glue-free dovetail bracket:** Two 45° rails hook over the bevelled edges of
+  the bracket plate. It starts easily at the open back, wedges snug as you push
+  it home and ends flush with the lower edge of the shade. On the wall, the wall
+  itself closes the back, so the bracket cannot slide out.
+- **Support-free:** Shade with the roof on the bed; the dovetail rails are 45°
+  slopes.
 - **Rounded front:** `corner_radius` rounds the front corners; the back stays
   square for contact with the wall.
-- **Three ready-made variants** with Bambu Studio profiles for the P1S.
+- **Three ready-made variants** with two-colour, two-plate Bambu Studio profiles
+  for the P1S (shade and bracket on plate 1, diffuser on plate 2; no prime tower).
 
 ![Three lamps on a wall: left and centre Imperial windows, right even slots](images/03_wandszene.jpg)
 
@@ -103,7 +112,7 @@ The names correspond to the model's Customizer parameters.
 
 | Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `part` | Output: `Preview assembled`, `Preview exploded`, `DRUCK Schirm`, `DRUCK LED-Halter`, `DRUCK Diffusor` | `Preview assembled` | Selection |
+| `part` | Output: `none` (MakerWorld: assembly view and one plate per colour), `Preview assembled`, `Preview exploded`, `DRUCK Schirm`, `DRUCK LED-Halter`, `DRUCK Diffusor`, `DRUCK Alles auf Platte` | `none` | Selection |
 | `led_mode` | Light source | `e14` | `e14`, `puck`, `none` |
 
 ### Overall Dimensions
@@ -164,6 +173,19 @@ The names correspond to the model's Customizer parameters.
 | `cable_d` | Outer diameter of the mains cable | 6.5 | 3–12 mm, step 0.5 |
 | `cable_strain` | Strain relief at the bracket end | on | on / off |
 
+### Dovetail Bracket
+
+| Parameter | Meaning | Default | Range / Unit |
+|---|---|---|---|
+| `dovetail` | Hold the bracket on dovetail rails (off = loose plate, needs glue) | on | on / off |
+| `flush_bracket` | Bracket ends flush with the lower edge; no ledge, no recessed neck | on | on / off |
+| `dt_bevel` | Bevel width on the upper edge of the bracket = overlap of the upper rails | 1.5 | 1–2.5 mm, step 0.25 |
+| `dt_bevel_lo` | Bevel width on the lower edge of the bracket (seat on the lower rails) | 1.0 | 0.5–2 mm, step 0.25 |
+| `dt_clear` | Vertical play when fully seated; smaller is snugger | 0.2 | 0.05–0.5 mm, step 0.05 |
+| `dt_taper` | Extra play at the open back; the wedge tightens while pushing in | 0.3 | 0–0.8 mm, step 0.05 |
+| `dt_rail_tip` | Thickness of the rail tip | 1.0 | 0.8–2 mm, step 0.1 |
+| `dt_front_stop` | The rails end this far before the rounded front corners | 2.0 | 0–6 mm, step 0.5 |
+
 ### Wall Mounting
 
 | Parameter | Meaning | Default | Range / Unit |
@@ -174,13 +196,14 @@ The names correspond to the model's Customizer parameters.
 | `mount_screw_d` | Shank diameter of the wall screw (slot) | 4.2 | 3–8 mm, step 0.1 |
 | `mount_head_d` | Head diameter of the wall screw (large end) | 8.5 | 5–16 mm, step 0.1 |
 
-### Preview Colours and Quality
+### Colours, Preview and Quality
 
 | Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
+| `two_colors` | Diffuser in its own colour on its own plate (off = everything one colour) | on | on / off |
+| `color_shell` | Colour of the shade and the bracket | `#2c2d33` | Colour value |
+| `color_diffuser` | Colour of the diffuser, for example translucent red, blue or green PETG | `#d32f2f` | Colour value |
 | `show_warning` | Red "NOT FOR PRINTING" banner in the previews | on | on / off |
-| `color_shell` | Colour of the shade in the preview | `#2c2d33` | Colour value |
-| `color_diffuser` | Colour of the diffuser in the preview | `#f3ead2` | Colour value |
 | `color_led` | Colour of the light source in the preview | `#ffd77a` | Colour value |
 | `$fn` | Smoothness of the round surfaces | 48 | 24–160, step 8 |
 
@@ -192,7 +215,8 @@ The names correspond to the model's Customizer parameters.
 
 The model is pure OpenSCAD without external libraries and runs in the
 MakerWorld Customizer. A `part` selector outputs the preview (assembled or
-exploded), shade, bracket or diffuser. All parts are created from the same 2D
+exploded), shade, bracket or diffuser; with `none` the file provides one plate
+per colour for MakerWorld. All parts are created from the same 2D
 contour and therefore fit together: if you change the width, depth or corner
 radius, the shade, bracket plate and diffuser are recalculated along with it.
 
@@ -202,9 +226,10 @@ radius, the shade, bracket plate and diffuser are recalculated along with it.
 |---|---|
 | Contour | Rectangle with two rounded front corners (radius `corner_radius`, limited to width/2 − 1 and depth − 1); back square |
 | Interior | Contour offset inwards by `wall_t`; roof stays closed, back wall and floor are open |
-| Bearing edge of the bracket | Ledge 3 mm above the floor, 2 mm high, 3 mm wide; the top is a 45° chamfer made of 0.2 mm steps |
-| Bracket plate | Contour offset inwards by `wall_t` + 0.3 mm clearance, thickness `bracket_t` |
-| Diffuser | U-shell, wall 1.0 mm, distance to the ledge 0.4 mm, 2 mm below the roof |
+| Dovetail rails | Upper rails: 45° underside parallel to the bevel on the bracket, 1.0 mm tip, 45° top; lower rails: 45° seat for the lower bevel; both run along the straight side walls and stop 2 mm before the rounded corners |
+| Bracket plate | Contour offset inwards by `wall_t` + 0.3 mm clearance, thickness `bracket_t`, flush with the lower edge; the long edges carry a 1.5 mm upper and a 1.0 mm lower 45° bevel |
+| Play of the dovetail | `dt_clear` (0.2 mm) when fully seated, plus `dt_taper` (0.3 mm) at the open back, plus 0.1 mm on the lower seat |
+| Diffuser | U-shell, wall 1.0 mm, 1.6 mm clearance to the rail tips, 2 mm below the roof |
 | Emblem | Diameter = min(`emblem_diameter`, front width − 2 × `margin_side` − 2 × `wall_t`); upper band = max(`margin_top`, diameter + 16 mm + `wall_t`) |
 | Window columns | Count = ⌊(usable width + `slot_gap_x`) / (`slot_width` + `slot_gap_x`)⌋; the columns are arranged centred |
 | Keyhole | Head hole and shank hole plus 9 mm slot, at ±28 % of the interior width, 24 mm above the lower edge of the back wall |
@@ -212,9 +237,11 @@ radius, the shade, bracket plate and diffuser are recalculated along with it.
 With the default settings (90 × 240 × 80 mm, wall 1.6 mm) this gives: interior
 width 86.8 mm, emblem diameter 52 mm, upper front band approx. 69.6 mm, six
 window columns at the front and five on each side, diffuser height approx.
-228 mm.
+233 mm.
 
 The values are derived from the formulas and the default values.
+
+![Cross-section of the dovetail: bracket (orange) between the rails of the shade, left at the open back, right fully seated](images/05_dovetail-section.png)
 
 ### Special Algorithms
 
@@ -222,10 +249,18 @@ The values are derived from the formulas and the default values.
   outer contour, not from a cuboid. A square cavity would protrude diagonally
   across the outer wall in the rounded corners, thin the wall there to almost
   zero and open a gap through which the light of the diffuser shines.
-- **Bearing edge without supports:** The ledge for the bracket plate consists of
-  stacked thin discs (0.2 mm high, each 0.2 mm narrower). This gives a 45°
-  chamfer that prints without support with the roof facing down. The rear part of
-  the ledge is missing so that the bracket plate can be slid in from behind.
+- **Dovetail instead of glue:** The bracket plate has a 45° bevel on both long
+  edges, the shade has matching 45° rails. The upper rails hook over the bevel
+  and stop the plate from lifting, the lower rails carry it. Because the rails
+  are slightly tapered, the play is about 0.5 mm at the open back and 0.2 mm when
+  fully seated: the plate starts easily and wedges in. The rail faces are 45°
+  slopes, so the shade prints with the roof down and without supports. The
+  bracket ends flush with the lower edge, so the former ledge and the recessed
+  neck are no longer needed.
+  The diffuser can still be pushed up from below and the bracket slid in from
+  behind: this was checked in 2 mm steps for the screw socket, the small
+  converter, the puck and a small lamp, without any collision.
+
 - **Windows as capsules:** Each window is a capsule (hull of two circles). The
   `imperial` style fills each column with capsules of random length (10 to
   34 mm). The "random number" comes from a deterministic sine-hash function per
@@ -243,7 +278,7 @@ The values are derived from the formulas and the default values.
 - **Cable path:** A channel in the bracket plate leads from the wall side to the
   socket; two pegs form the strain relief.
 - **Diffuser as an offset:** The diffuser is the contour offset inwards by the
-  wall, ledge width and clearance, with an open back. It is pushed up from below,
+  wall, rail width and clearance, with an open back. It is pushed up from below,
   the bracket is slid in from behind underneath, then it sinks onto the plate.
 
 ```mermaid
@@ -261,17 +296,20 @@ flowchart LR
 
 ### Modularity
 
-The code separates the contour, shell, bearing edge, back wall and keyhole,
+The code separates the contour, shell, dovetail rails, back wall and keyhole,
 window field (three styles), emblem, bracket plate (three light sources),
-diffuser and preview. The socket dimensions are separate parameters so that the
+diffuser, colours/plates and preview. The socket dimensions are separate parameters so that the
 bracket can be adapted to your own hardware.
 
 ### Print Optimisations
 
 - **Shade with the roof on the bed:** Mouth up, windows vertical, no bridges.
-- **45° chamfer on the bearing edge:** no overhangs, no supports.
+- **45° dovetail rails:** no overhang steeper than 45° in the rail area, no supports.
 - **No point contacts** in the emblem, no corner gap in the interior.
-- **Bracket plate flat, diffuser upright:** both without supports.
+- **Bracket plate flat, diffuser upright:** both without supports; the bevelled
+  plate edges print as 45° slopes.
+- **One colour per plate:** Shade and bracket on plate 1, diffuser on plate 2, so
+  the slicer needs no prime tower.
 - **Window width 7 mm:** below the usual bridging limit of approx. 10 mm.
 
 ![Portrait cover image: Imperial lamps on a wall](images/02_hero-hochformat.jpg)
@@ -280,12 +318,13 @@ bracket can be adapted to your own hardware.
 
 The profiles are built for the **Bambu Lab P1S** with PLA (0.20 mm layer height,
 gyroid 15 %) and test-sliced in Bambu Studio. The shade is 240 mm tall and thus
-fits on the 256 mm build plate of the P1S and P2S.
+fits on the 256 mm build plate of the P1S and P2S. Choose the same printer in the
+MakerWorld preview, because MakerWorld only checks the selected bed.
 
 | Setting | Recommendation |
 |---|---|
-| Shade material | PLA, dark (anthracite) |
-| Diffuser material | translucent or light (e.g. red PETG) |
+| Shade and bracket material (filament 1) | PLA, dark (anthracite) |
+| Diffuser material (filament 2) | translucent or light, for example red, blue or green PETG |
 | Layer height | 0.20 mm |
 | Walls | 2–3 perimeters |
 | Infill | 0 % or gyroid 15 % (thin, glowing walls) |
@@ -294,10 +333,15 @@ fits on the 256 mm build plate of the P1S and P2S.
 
 **Special notes**
 
-- **Three objects per variant:** shade, LED bracket and diffuser. In the slicer,
-  each object gets its own filament.
-- **Diffuser:** thin U-shell with a 1 mm wall, approx. 228 mm tall. Print it
+- **Two colours, two plates:** Plate 1 holds the shade and the LED bracket
+  (filament 1), plate 2 the diffuser (filament 2). Each plate uses only one
+  colour, so there is no prime tower: print plate 1, swap the filament, print
+  plate 2. If you switch the diffuser to PETG, also pick a PETG-capable build
+  plate for plate 2.
+- **Diffuser:** thin U-shell with a 1 mm wall, approx. 233 mm tall. Print it
   upright, 2 perimeters, 0 % infill; a brim is optional.
+- **Bracket plate:** print it exactly as exported; the bevelled long edges are
+  the tongues of the dovetail and need no support.
 - **Lighting effect:** The light passes through windows and emblem; a thin wall
   (1.2–1.6 mm) additionally glimmers through.
 - **Light source:** LED bulbs are intended; the socket dimensions refer to a
@@ -317,21 +361,23 @@ fits on the 256 mm build plate of the P1S and P2S.
 
 **Assembly**
 
-1. Print the shade (roof down), LED bracket (flat) and diffuser.
+1. Print the shade (roof down) and the LED bracket (flat) in colour 1, then the
+   diffuser in colour 2.
 2. Insert the light source into the bracket: fix the screw socket in the collar
    with the M10 nut, press the small converter into the dome, or fasten the puck
    in the ring with two screws.
 3. Route the cable from the wall side through the cable channel and press it
    into the strain relief.
 4. Slide the diffuser into the shade from below and raise it by about 2 mm.
-5. Slide the bracket in from behind along the ledge under the diffuser until it
-   rests against the front; let the diffuser sink onto the bracket plate.
+5. Slide the bracket in from behind with its bevelled edges into the dovetail
+   rails until it rests against the front. It ends flush with the lower edge of
+   the shade, no glue needed. Let the diffuser sink onto the bracket plate.
 6. Put two screws into the wall and hang the shade on the keyholes, then pull it
-   downwards.
+   downwards. The wall now closes the open back, so the bracket is locked in.
 7. Test the lamp before closing off the cable routes.
 
-For a different light colour, pull out the bracket, take the diffuser out
-downwards and insert another one.
+For a different light colour, take the lamp off the wall, pull out the bracket to
+the back, take the diffuser out downwards and insert another one.
 
 ![Wall scene in landscape format: lamps with different window styles](images/03_wandszene.jpg)
 
@@ -362,9 +408,12 @@ downwards and insert another one.
 | Emblem looks too small | Front width limits the diameter | Increase `lamp_width` or decrease `margin_side` |
 | Too few windows | Usable width or height too small | Decrease `slot_gap_x`/`slot_gap_z` or reduce the margins (`margin_*`) |
 | Side walls have no windows | Side windows turned off | Turn on `windows_sides` |
-| Bracket cannot be slid in | The plate has only 0.3 mm clearance, the print comes out slightly larger | Deburr the edges and elephant's foot of the plate |
+| Bracket cannot be slid in, or is too tight | The rails have 0.2 mm play and the print comes out slightly larger | Deburr the bevelled edges and the elephant's foot of the plate, or raise `dt_clear` to 0.25–0.3 mm |
+| Bracket sits loose | The print comes out slightly smaller | Lower `dt_clear` to 0.15 mm or raise `dt_taper` |
+| Bracket or diffuser collides in a very small lamp | Interior too small for the puck, or the back wall reaches down to the bulb | `lamp_depth` at least about `puck_d` + 16 mm; for an E14 bulb `lamp_height` − `back_panel_len` at least 90 mm |
+| Plate 1 or 2 is too big for the bed | Wide lamp or a smaller printer | Wide lamps are laid out on more plates automatically; choose the matching printer in the MakerWorld preview |
 | The shade does not fit on the plate | Height over 256 mm | Decrease `lamp_height` or use a larger printer |
-| Preview shows "NOT FOR PRINTING" | Preview mode active | Set `part` to `DRUCK Schirm`, `DRUCK LED-Halter` or `DRUCK Diffusor` |
+| Preview shows "NOT FOR PRINTING" | Preview mode active | Set `part` to `none` (MakerWorld plates), `DRUCK Schirm`, `DRUCK LED-Halter` or `DRUCK Diffusor` |
 
 ## Development History
 
@@ -377,6 +426,12 @@ the corner gap), and the emblem became a solid spoked wheel (because of
 non-manifold point contacts). By 9 October 2026, the three reference variants
 with three objects each (shade, bracket, diffuser), the profiles for the P1S and
 the cover images were created.
+
+On 28 October 2026 (version 1.1.0) the bracket lost its glue: the ledge was
+replaced by two 45° dovetail rails, the bracket now ends flush with the lower
+edge, and the diffuser got its own colour on its own plate. The assembly was
+re-checked step by step (diffuser pushed in from below, bracket slid in from
+behind), and the profiles were rebuilt as two-colour, two-plate projects.
 
 The images in this repository are renderings of the model geometry or scene
 images derived from it; no photos of prints are included.
