@@ -2,7 +2,7 @@
 
 🌐 **English** | [Deutsch](README.de.md)
 
-Documentation, images and links for my parametric OpenSCAD models for FDM printing. All 29 models are fully parametric and are configured in the MakerWorld Customizer; the models including print profiles are available exclusively on MakerWorld.
+Documentation, images and links for my parametric OpenSCAD models for FDM printing. All 30 models are fully parametric and are configured in the MakerWorld Customizer; the models including print profiles are available exclusively on MakerWorld.
 
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-BetaHydri-00AE42)](https://makerworld.com/en/@BetaHydri)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
@@ -19,7 +19,7 @@ Click the image or **Details** to open the full description with options, varian
 - [Storage and organization](#storage-and-organization) (12)
 - [Kitchen and household](#kitchen-and-household) (3)
 - [Home, furniture and lighting](#home-furniture-and-lighting) (7)
-- [Technology and electronics](#technology-and-electronics) (2)
+- [Technology and electronics](#technology-and-electronics) (3)
 - [Mechanics](#mechanics) (3)
 - [Pets](#pets) (2)
 - [About this repository](#about-this-repository)
@@ -67,6 +67,7 @@ Click the image or **Details** to open the full description with options, varian
 |---|---|---|
 | [<img src="docs/thumbs/parametric-cable-clip-generator.jpg" width="220" alt="Parametric Cable Clip Generator">](models/parametric-cable-clip-generator/README.md) | **Parametric Cable Clip Generator**<br>Snap-in cable clips for 1 to 10 cables, for gluing, screwing, with magnets or for the table edge. | [Details](models/parametric-cable-clip-generator/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3435533-parametric-cable-clip-generator) |
 | [<img src="docs/thumbs/parametric-din-rail-adapter.jpg" width="220" alt="Parametric DIN-Rail Adapter">](models/parametric-din-rail-adapter/README.md) | **Parametric DIN-Rail Adapter**<br>Mounting plate for DIN top-hat rails with snap-on or slide-on clip and flexible hole pattern. | [Details](models/parametric-din-rail-adapter/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3113271-parametric-din-rail-adapter-top-hat-rail) |
+| [<img src="docs/thumbs/parametric-cable-management-box.jpg" width="220" alt="Parametric Cable Management Box">](models/parametric-cable-management-box/README.md) | **Parametric Cable Management Box**<br>Box that hides a power strip with its plugs: snap-in cable gates in a diamond-shaped seat, friction-fit vented lid, automatic split into bed-sized segments for P2S, H2C and A1 mini, two colours. | [Details](models/parametric-cable-management-box/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3512557-cable-management-box#profileId-4013773) |
 
 ## Mechanics
 

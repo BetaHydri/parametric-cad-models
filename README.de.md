@@ -2,7 +2,7 @@
 
 🌐 [English](README.md) | **Deutsch**
 
-Dokumentation, Bilder und Links zu meinen parametrischen OpenSCAD-Modellen für den FDM-Druck. Die 29 Modelle sind parametrisch aufgebaut und werden im MakerWorld-Customizer eingestellt; die Modelle samt Druckprofilen gibt es ausschließlich auf MakerWorld.
+Dokumentation, Bilder und Links zu meinen parametrischen OpenSCAD-Modellen für den FDM-Druck. Die 30 Modelle sind parametrisch aufgebaut und werden im MakerWorld-Customizer eingestellt; die Modelle samt Druckprofilen gibt es ausschließlich auf MakerWorld.
 
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-BetaHydri-00AE42)](https://makerworld.com/en/@BetaHydri)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
@@ -19,7 +19,7 @@ Ein Klick auf das Bild oder auf **Details** öffnet die ausführliche Beschreibu
 - [Aufbewahrung und Ordnung](#aufbewahrung-und-ordnung) (12)
 - [Küche und Haushalt](#küche-und-haushalt) (3)
 - [Haus, Möbel und Licht](#haus-möbel-und-licht) (7)
-- [Technik und Elektronik](#technik-und-elektronik) (2)
+- [Technik und Elektronik](#technik-und-elektronik) (3)
 - [Mechanik](#mechanik) (3)
 - [Tier](#tier) (2)
 - [Über dieses Repository](#über-dieses-repository)
@@ -67,6 +67,7 @@ Ein Klick auf das Bild oder auf **Details** öffnet die ausführliche Beschreibu
 |---|---|---|
 | [<img src="docs/thumbs/parametric-cable-clip-generator.jpg" width="220" alt="Parametric Cable Clip Generator">](models/parametric-cable-clip-generator/README.de.md) | **Parametric Cable Clip Generator**<br>Einrast-Kabelclips für 1 bis 10 Kabel zum Kleben, Schrauben, mit Magneten oder für die Tischkante. | [Details](models/parametric-cable-clip-generator/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3435533-parametric-cable-clip-generator) |
 | [<img src="docs/thumbs/parametric-din-rail-adapter.jpg" width="220" alt="Parametric DIN-Rail Adapter">](models/parametric-din-rail-adapter/README.de.md) | **Parametric DIN-Rail Adapter**<br>Montageplatte für DIN-Hutschienen mit Snap-on- oder Slide-on-Clip und flexiblem Lochbild. | [Details](models/parametric-din-rail-adapter/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3113271-parametric-din-rail-adapter-top-hat-rail) |
+| [<img src="docs/thumbs/parametric-cable-management-box.jpg" width="220" alt="Parametric Cable Management Box">](models/parametric-cable-management-box/README.de.md) | **Parametric Cable Management Box**<br>Box, die eine Steckdosenleiste samt Steckern versteckt: einrastende Kabelgates im rautenförmigen Sitz, Lüftungsdeckel mit Reibungssitz, automatische Teilung in bettgroße Segmente für P2S, H2C und A1 mini, zwei Farben. | [Details](models/parametric-cable-management-box/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3512557-cable-management-box#profileId-4013773) |
 
 ## Mechanik
 
