@@ -2,7 +2,7 @@
 
 🌐 **English** | [Deutsch](README.de.md)
 
-Documentation, images and links for my parametric OpenSCAD models for FDM printing. All 30 models are fully parametric and are configured in the MakerWorld Customizer; the models including print profiles are available exclusively on MakerWorld.
+Documentation, images and links for my parametric OpenSCAD models for FDM printing. All 36 models are parametric and are configured in the MakerWorld Customizer (only the Dometic Cooker Grommet is a ready-made print model); the models including print profiles are available exclusively on MakerWorld.
 
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-BetaHydri-00AE42)](https://makerworld.com/en/@BetaHydri)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
@@ -16,11 +16,12 @@ Click the image or **Details** to open the full description with options, varian
 
 ## Table of contents
 
-- [Storage and organization](#storage-and-organization) (12)
-- [Kitchen and household](#kitchen-and-household) (3)
+- [Storage and organization](#storage-and-organization) (14)
+- [Kitchen, household and garden](#kitchen-household-and-garden) (5)
 - [Home, furniture and lighting](#home-furniture-and-lighting) (7)
 - [Technology and electronics](#technology-and-electronics) (3)
 - [Mechanics](#mechanics) (3)
+- [Camping and outdoor](#camping-and-outdoor) (2)
 - [Pets](#pets) (2)
 - [About this repository](#about-this-repository)
 
@@ -40,14 +41,18 @@ Click the image or **Details** to open the full description with options, varian
 | [<img src="docs/thumbs/parametric-bowl.jpg" width="220" alt="Parametric Bowl">](models/parametric-bowl/README.md) | **Parametric Bowl**<br>Lidded bowl with lattice wall, friction-fit lid and glue-in knob. | [Details](models/parametric-bowl/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3006569-parametric-bowl-with-friction-fit-lid) |
 | [<img src="docs/thumbs/parametric-coin-inlets.jpg" width="220" alt="Ultimate Parametric Coin Sorter and Drop-in">](models/parametric-coin-inlets/README.md) | **Ultimate Parametric Coin Sorter and Drop-in**<br>Coin sorter made of vessel, insert and lid, automatically sized to your coins. | [Details](models/parametric-coin-inlets/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3248811-ultimate-parametric-coin-sorter-drop-in-vessel) |
 | [<img src="docs/thumbs/parametric-niche-shelf-system.jpg" width="220" alt="Parametric Niche Shelf System">](models/parametric-niche-shelf-system/README.md) | **Parametric Niche Shelf System**<br>Shelf for narrow, including slanted, niches with 1–4 trays, corner posts, printed screw feet, five mounting options and optional hose cover. | [Details](models/parametric-niche-shelf-system/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3464475-parametric-niche-shelf-system) |
+| [<img src="docs/thumbs/parametric-label-holder-generator.jpg" width="220" alt="Parametric Label Holder Generator">](models/parametric-label-holder-generator/README.md) | **Parametric Label Holder Generator**<br>Label holders for any flat wall: snap-on clip (1–9 mm), glue-on plate or both, with slide-in paper pocket, printed tile or engraved text; no supports. | [Details](models/parametric-label-holder-generator/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3444426-label-holder-generator) |
+| [<img src="docs/thumbs/parametric-tool-wall.jpg" width="220" alt="Parametric Tool Wall">](models/parametric-tool-wall/README.md) | **Parametric Tool Wall**<br>French-cleat wall plate on a 42 mm grid with hang-on tool holders: round holes, hex pockets, slots, Gridfinity tray and hooks, in two colours. | [Details](models/parametric-tool-wall/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3526950-parametric-tool-wall#profileId-4032192) |
 
-## Kitchen and household
+## Kitchen, household and garden
 
 | Preview | Model | Links |
 |---|---|---|
 | [<img src="docs/thumbs/parametric-egg-cups.jpg" width="220" alt="Parametric Egg Cups">](models/parametric-egg-cups/README.md) | **Parametric Egg Cups**<br>Egg cups in three body shapes with 13 relief textures, one piece and no supports. | [Details](models/parametric-egg-cups/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3137233-ultimate-parametric-egg-cup) |
 | [<img src="docs/thumbs/parametric-paper-towel-roll-holder.jpg" width="220" alt="Parametric Kitchen Paper Towel Roll Holder">](models/parametric-paper-towel-roll-holder/README.md) | **Parametric Kitchen Paper Towel Roll Holder**<br>Paper towel roll holder for wall, under-cabinet or table with spring brake. | [Details](models/parametric-paper-towel-roll-holder/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3143928-parametric-kitchen-paper-towel-roll-holder) |
 | [<img src="docs/thumbs/parametric-trashcan.jpg" width="220" alt="Parametric Trashcan">](models/parametric-trashcan/README.md) | **Parametric Trashcan**<br>Round or square trash can with self-closing swing lid, no spring and no supports. | [Details](models/parametric-trashcan/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3276497-parametric-trash-can) |
+| [<img src="docs/thumbs/parametric-bottle-holder.jpg" width="220" alt="Parametric Bottle & Can Holder">](models/parametric-bottle-holder/README.md) | **Parametric Bottle & Can Holder**<br>Holder for any bottle or can with a snap-in C-clip cup for wall, bike or car cup holder; seven presets plus custom diameter, no supports. | [Details](models/parametric-bottle-holder/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3515395-parametric-bottle-holder#profileId-4017647) |
+| [<img src="docs/thumbs/parametric-self-watering-pot.jpg" width="220" alt="Parametric Self-Watering Pot">](models/parametric-self-watering-pot/README.md) | **Parametric Self-Watering Pot**<br>Self-watering plant pot with water reservoir, dipstick and cotton wick cords: four size presets or custom, smooth, fluted or faceted, two colours. | [Details](models/parametric-self-watering-pot/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3517470-parametric-self-watering-pot#profileId-4020169) |
 
 ## Home, furniture and lighting
 
@@ -77,6 +82,13 @@ Click the image or **Details** to open the full description with options, varian
 | [<img src="docs/thumbs/parametric-hinge-designer.jpg" width="220" alt="Parametric Print-in-Place Hinge Designer">](models/parametric-hinge-designer/README.md) | **Parametric Print-in-Place Hinge Designer**<br>Print-in-place hinge, printed flat without supports, with freely definable hole pattern. | [Details](models/parametric-hinge-designer/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3160240-parametric-print-in-place-hinge-generator) |
 | [<img src="docs/thumbs/parametric-spring-generator.jpg" width="220" alt="Parametric Spring Generator">](models/parametric-spring-generator/README.md) | **Parametric Spring Generator**<br>Four spring types: serpentine, compression, leaf and spiral spring with flexible mounts. | [Details](models/parametric-spring-generator/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3188130-parametric-springs-with-flexible-mounting-options) |
 
+## Camping and outdoor
+
+| Preview | Model | Links |
+|---|---|---|
+| [<img src="docs/thumbs/parametric-airpump-adapters.jpg" width="220" alt="Parametric Airpump Adapters">](models/parametric-airpump-adapters/README.md) | **Parametric Airpump Adapters**<br>Pump hose adapters with a thread matched to your sample and cone, stepped cone, plug or ball-needle valve ends for SUP, boat, tent and air bed; seven presets or custom sizes. | [Details](models/parametric-airpump-adapters/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3525378-parametric-airpump-adapters#profileId-4030222) |
+| [<img src="docs/thumbs/dometic-cooker-grommet.jpg" width="220" alt="Dometic Cooker Grommet">](models/dometic-cooker-grommet/README.md) | **Dometic Cooker Grommet**<br>Soft TPU grate spacers that snap into a Dometic camper-van cooker grate and stop it rattling; ready-made print model (remix). | [Details](models/dometic-cooker-grommet/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3515779-dometic-cooker-grommet#profileId-4018201) |
+
 ## Pets
 
 | Preview | Model | Links |
@@ -92,4 +104,4 @@ The images are renderings of the model geometry or scene images derived from it;
 
 ## License
 
-Documentation and images in this repository: © BetaHydri. The models (including source code) and all print files are distributed exclusively via MakerWorld under the license stated there for each model.
+Documentation and images in this repository: © BetaHydri. The models (including source code) and all print files are distributed exclusively via MakerWorld under the license stated there for each model. The Dometic Cooker Grommet is a remix of another creator's model and is credited and licensed as stated in its folder and on MakerWorld.
