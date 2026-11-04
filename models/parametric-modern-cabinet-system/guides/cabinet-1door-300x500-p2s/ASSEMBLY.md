@@ -52,6 +52,22 @@ Slide the back panel into the rabbet from the rear and fix it with the M3 screws
 
 ![step 3](assembly/step3.png)
 
+![back_tiles](assembly/back_tiles.png)
+
+*5a  Lay the tiles of the back panel face-down in the arrangement shown and push them together (arrows): tongue into groove. A few drops of glue or a strip of tape on the rear make the seams permanent.*
+
+![back_rabbet](assembly/back_rabbet.png)
+
+*5b  Section from above: the finished back panel slides from the rear (arrow) into the rabbet at the rear edge of both side panels and ends flush with them.*
+
+![back_screw](assembly/back_screw.png)
+
+*5c  Section through one screw: the M3 x 16 screw (red) goes from the rear through the 3.4 mm hole in the back panel into the pilot hole in the rear edge of the shelf and cuts its own thread.*
+
+![back_rear](assembly/back_rear.png)
+
+*5d  Rear view: one screw (red) at every shelf, top and bottom panel - 3 per edge, 1 on narrow cabinets.*
+
 ### 6  Fasten the dovetails (optional but recommended for heavy loads)
 From the outside drive the **M4 x 25 button-head screws** through the side panel into the captive nuts (2.5 mm hex key). The head sits flush in its recess.
 
@@ -60,8 +76,16 @@ From the outside drive the **M4 x 25 button-head screws** through the side panel
 ### 7  Hang the doors
 **Hinges:** every hinge is one print-in-place part (two leaves joined by a printed pin) - do not pull it apart. Lay the door face-down, press a hinge leaf into its pocket on the back of the door and fix it with **two M3 x 10 countersunk screws** (the screws cut their own thread in the reinforced boss; with `hinge_inserts=true` press M3 heat-set inserts in first). Swing the hinge open, push the other leaf **from the front** into the pocket in the front edge of the side panel and fix it with two M3 x 10 screws. Repeat for every hinge, then close the door: it covers the opening as an overlay door and the hinges are hidden behind it. Check that the door swings freely; if a screw head stands proud the countersink is too shallow, re-print the leaf or lower `hinge_fit`.
 
-![hinge into its pocket](assembly/detail_hinge.png)
-![hinge into its pocket](assembly/detail_hinge_done.png)
+![door_hinge](assembly/door_hinge.png)  
+*7a  Lay the door face-down. Put every hinge (black, folded flat, do not pull it apart) into its pocket on the back of the door (arrow).*
+![door_screw](assembly/door_screw.png)  
+*7b  Fix the door leaf of every hinge with two M3 x 10 countersunk screws (red); the heads end flush with the leaf.*
+![hinge_side](assembly/hinge_side.png)  
+*7c  Hold the door open (about 100 degrees) and push the free hinge leaves from the front (arrow) into their pockets in the front edge of the side panel.*
+![side_screw](assembly/side_screw.png)  
+*7d  Fix these leaves with two M3 x 10 countersunk screws each (red), from the front.*
+![detail_hinge_done](assembly/detail_hinge_done.png)  
+*7e  Hinges installed, door opened 100 degrees: both leaves sit in their pockets, the hinges are hidden when the door is closed.*
 ![step 4](assembly/step4.png)
 
 ### 8  Magnets and handles
@@ -69,8 +93,28 @@ Press the magnets into the pockets (door back face + shelf front edge), **test t
 
 Built-in pull: press a hex nut into the pocket on top of each post, hold the pull on the door front and drive the screws **from the inside** through the door into the nuts.
 
+![magnet_door](assembly/magnet_door.png)
+
+*8a  Press the disc magnets (red) into the pockets on the back of the door near the free edge (arrow). Test the polarity before you glue.*
+
+![magnet_shelf](assembly/magnet_shelf.png)
+
+*8b  Press the counter magnets into the pockets in the front edge of the shelf / bottom panel (arrow) - the opposite polarity, so that the door is pulled shut.*
+
+![handle_nut](assembly/handle_nut.png)
+
+*8c  Built-in pull (shown upside down, as printed): press a hex nut (red) into the pocket on top of each post (arrows).*
+
+![handle_section](assembly/handle_section.png)
+
+*8d  Section through one post: from the inside of the door the screw (red) goes through the door into the nut of the pull.*
+
 ### 9  Secure the cabinet to the wall
 **Mandatory.** The two holes in the top panel take wall brackets or an anti-tip strap. Free-standing, an empty cabinet of this kind tips forward under a small load on its front edge (see *tip-over* in the verification summary below).
+
+![anchor](assembly/anchor.png)
+
+*9  Wall anchor: the two holes (red = screws) in the top panel near the rear edge take the wall screws / anti-tip strap (arrows).*
 
 ![finished](assembly/overview_open.png)
 

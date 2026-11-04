@@ -50,6 +50,22 @@ Rückwand von hinten in den Falz schieben und mit den M3-Schrauben fixieren (Vor
 
 ![step 3](assembly/step3.png)
 
+![back_tiles](assembly/back_tiles.png)
+
+*5a  Die Kacheln der Rückwand mit der Sichtseite nach unten wie gezeigt auslegen und zusammenschieben (Pfeile): Feder in Nut. Ein paar Tropfen Kleber oder ein Klebestreifen auf der Rückseite sichern die Fugen.*
+
+![back_rabbet](assembly/back_rabbet.png)
+
+*5b  Schnitt von oben: Die fertige Rückwand wird von hinten (Pfeil) in den Falz an der Hinterkante beider Seitenwände geschoben und schließt bündig ab.*
+
+![back_screw](assembly/back_screw.png)
+
+*5c  Schnitt durch eine Schraube: Die M3 x 16-Schraube (rot) geht von hinten durch das 3,4-mm-Loch der Rückwand in das Kernloch in der Hinterkante des Bodens und schneidet sich ihr Gewinde selbst.*
+
+![back_rear](assembly/back_rear.png)
+
+*5d  Ansicht von hinten: eine Schraube (rot) an jedem Boden, Deckel und Einlegeboden - 3 pro Kante, 1 bei schmalen Schränken.*
+
 ### 6  Schwalbenschwänze festschrauben (optional, bei hoher Last empfohlen)
 Von außen die **M4 x 30 Flügel-/Rändelschrauben** von Hand in die Muttern drehen - kein Werkzeug nötig.
 
@@ -58,8 +74,16 @@ Von außen die **M4 x 30 Flügel-/Rändelschrauben** von Hand in die Muttern dre
 ### 7  Türen einhängen
 **Scharniere:** jedes Scharnier ist ein Print-in-Place-Teil (zwei Flügel mit gedrucktem Stift) - nicht auseinanderziehen. Tür mit der Rückseite nach oben legen, einen Scharnierflügel in seine Tasche auf der Türrückseite drücken und mit **zwei M3 x 10 Senkkopfschrauben** befestigen (die Schrauben schneiden ihr Gewinde selbst in den verstärkten Dom; mit `hinge_inserts=true` vorher M3-Heat-Set-Einsätze einschmelzen). Das Scharnier öffnen, den anderen Flügel **von vorn** in die Tasche in der Vorderkante der Seitenwand schieben und mit zwei M3 x 10 Schrauben befestigen. Für jedes Scharnier wiederholen, dann die Tür schließen: sie liegt als Aufschlagtür über der Öffnung, die Scharniere sind dahinter verborgen. Prüfen, dass die Tür frei schwenkt; steht ein Schraubenkopf vor, ist die Senkung zu flach - Flügel neu drucken oder `hinge_fit` verringern.
 
-![hinge into its pocket](assembly/detail_hinge.png)
-![hinge into its pocket](assembly/detail_hinge_done.png)
+![door_hinge](assembly/door_hinge.png)  
+*7a  Die Tür mit der Vorderseite nach unten ablegen. Jedes Scharnier (schwarz, flach zusammengeklappt, nicht auseinanderziehen) in seine Tasche auf der Türrückseite legen (Pfeil).*
+![door_screw](assembly/door_screw.png)  
+*7b  Den Türflügel jedes Scharniers mit zwei M3 x 10-Senkkopfschrauben (rot) befestigen; die Köpfe schließen bündig ab.*
+![hinge_side](assembly/hinge_side.png)  
+*7c  Die Tür etwa 100 Grad geöffnet halten und die freien Scharnierflügel von vorn (Pfeil) in ihre Taschen in der Vorderkante der Seitenwand schieben.*
+![side_screw](assembly/side_screw.png)  
+*7d  Diese Flügel mit je zwei M3 x 10-Senkkopfschrauben (rot) von vorn befestigen.*
+![detail_hinge_done](assembly/detail_hinge_done.png)  
+*7e  Scharniere eingebaut, Tür 100 Grad geöffnet: beide Flügel sitzen in ihren Taschen, bei geschlossener Tür sind die Scharniere verdeckt.*
 ![step 4](assembly/step4.png)
 
 ### 8  Magnete und Griffe
@@ -67,8 +91,20 @@ Magnete in die Taschen drücken (Türrückseite + Bodenvorderkante), **vor dem V
 
 Griffmulde: nichts zu montieren.
 
+![magnet_door](assembly/magnet_door.png)
+
+*8a  Die Scheibenmagnete (rot) in die Taschen auf der Türrückseite nahe der freien Kante drücken (Pfeil). Polung vor dem Kleben testen.*
+
+![magnet_shelf](assembly/magnet_shelf.png)
+
+*8b  Die Gegenmagnete in die Taschen in der Vorderkante von Boden / Einlegeboden drücken (Pfeil) - entgegengesetzte Polung, damit die Tür zugezogen wird.*
+
 ### 9  Schrank an der Wand sichern
 **Pflicht.** Die zwei Löcher im Deckel nehmen Wandwinkel oder einen Kippschutz-Gurt auf. Freistehend kippt ein leerer Schrank dieser Art schon bei geringer Last auf der Vorderkante nach vorn (siehe *Kippen* in der Verifikations-Zusammenfassung unten).
+
+![anchor](assembly/anchor.png)
+
+*9  Wandsicherung: Die zwei Löcher (rot = Schrauben) im Deckel nahe der Hinterkante nehmen die Wandschrauben / den Kippschutz auf (Pfeile).*
 
 ![finished](assembly/overview_open.png)
 

@@ -8,6 +8,7 @@
 
 ### Benötigtes Zubehör
 
+- 0 x M4 hex nut for the built-in handle posts
 - 2 x Wall screw + plug or anti-tip strap for the 2 anchor holes in the top panel (wall dependent)
 
 **Werkzeug:** Gummihammer (optional), Sekundenkleber (optional); Bohrer für die Wandbefestigung
@@ -39,8 +40,20 @@ Rückwand von hinten in den Falz schieben. Sie sichert alle Böden gegen Herausr
 
 ![step 3](assembly/step3.png)
 
+![back_tiles](assembly/back_tiles.png)
+
+*5a  Die Kacheln der Rückwand mit der Sichtseite nach unten wie gezeigt auslegen und zusammenschieben (Pfeile): Feder in Nut. Ein paar Tropfen Kleber oder ein Klebestreifen auf der Rückseite sichern die Fugen.*
+
+![back_rabbet](assembly/back_rabbet.png)
+
+*5b  Schnitt von oben: Die fertige Rückwand wird von hinten (Pfeil) in den Falz an der Hinterkante beider Seitenwände geschoben und schließt bündig ab.*
+
 ### 9  Schrank an der Wand sichern
 **Pflicht.** Die zwei Löcher im Deckel nehmen Wandwinkel oder einen Kippschutz-Gurt auf. Freistehend kippt ein leerer Schrank dieser Art schon bei geringer Last auf der Vorderkante nach vorn (siehe *Kippen* in der Verifikations-Zusammenfassung unten).
+
+![anchor](assembly/anchor.png)
+
+*9  Wandsicherung: Die zwei Löcher (rot = Schrauben) im Deckel nahe der Hinterkante nehmen die Wandschrauben / den Kippschutz auf (Pfeile).*
 
 ![finished](assembly/overview.png)
 

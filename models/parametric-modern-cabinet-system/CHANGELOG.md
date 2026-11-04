@@ -11,6 +11,11 @@ folgt [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- Montageanleitungen (PDF EN/DE und Markdown): Rückwand und Türen sind jetzt in
+  Einzelschritten bebildert (Kacheln zusammenschieben, Falz, M3-Schrauben,
+  Scharniere in die Tür legen und verschrauben, Tür einhängen, Magnete, Griff,
+  Wandsicherung) mit Pfeilen, Schnitten und Nahaufnahmen aus dem echten Modell.
+
 - Customizer: Die parametrische Datei verteilt jede Schrankgröße selbst auf
   Druckplatten und exportiert eine 3MF mit einer Platte je Druckauftrag (bis zu
   36 Platten), alle Teile mittig auf dem Bett; der Drucker muss vor dem Download

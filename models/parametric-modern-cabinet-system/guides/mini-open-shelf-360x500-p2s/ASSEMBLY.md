@@ -8,6 +8,7 @@
 
 ### Hardware you need
 
+- 0 x M4 hex nut for the built-in handle posts
 - 2 x Wall screw + plug or anti-tip strap for the 2 anchor holes in the top panel (wall dependent)
 
 **Tools:** rubber mallet (optional), cyanoacrylate glue (optional); drill for the wall anchor
@@ -39,8 +40,20 @@ Slide the back panel into the rabbet from the rear. It also locks all shelves ag
 
 ![step 3](assembly/step3.png)
 
+![back_tiles](assembly/back_tiles.png)
+
+*5a  Lay the tiles of the back panel face-down in the arrangement shown and push them together (arrows): tongue into groove. A few drops of glue or a strip of tape on the rear make the seams permanent.*
+
+![back_rabbet](assembly/back_rabbet.png)
+
+*5b  Section from above: the finished back panel slides from the rear (arrow) into the rabbet at the rear edge of both side panels and ends flush with them.*
+
 ### 9  Secure the cabinet to the wall
 **Mandatory.** The two holes in the top panel take wall brackets or an anti-tip strap. Free-standing, an empty cabinet of this kind tips forward under a small load on its front edge (see *tip-over* in the verification summary below).
+
+![anchor](assembly/anchor.png)
+
+*9  Wall anchor: the two holes (red = screws) in the top panel near the rear edge take the wall screws / anti-tip strap (arrows).*
 
 ![finished](assembly/overview.png)
 
