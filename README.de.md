@@ -2,7 +2,7 @@
 
 🌐 [English](README.md) | **Deutsch**
 
-Dokumentation, Bilder und Links zu meinen parametrischen OpenSCAD-Modellen für den FDM-Druck. Die 36 Modelle sind parametrisch aufgebaut und werden im MakerWorld-Customizer eingestellt (nur die Dometic Cooker Grommet ist ein fertig druckbares Modell); die Modelle samt Druckprofilen gibt es ausschließlich auf MakerWorld.
+Dokumentation, Bilder und Links zu meinen parametrischen OpenSCAD-Modellen für den FDM-Druck. Die 38 Modelle sind parametrisch aufgebaut und werden im MakerWorld-Customizer eingestellt (nur die Dometic Cooker Grommet ist ein fertig druckbares Modell); die Modelle samt Druckprofilen gibt es ausschließlich auf MakerWorld.
 
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-BetaHydri-00AE42)](https://makerworld.com/en/@BetaHydri)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
@@ -18,11 +18,11 @@ Ein Klick auf das Bild oder auf **Details** öffnet die ausführliche Beschreibu
 
 - [Aufbewahrung und Ordnung](#aufbewahrung-und-ordnung) (14)
 - [Küche, Haushalt und Garten](#küche-haushalt-und-garten) (5)
-- [Haus, Möbel und Licht](#haus-möbel-und-licht) (7)
+- [Haus, Möbel und Licht](#haus-möbel-und-licht) (8)
 - [Technik und Elektronik](#technik-und-elektronik) (3)
 - [Mechanik](#mechanik) (3)
 - [Camping und Outdoor](#camping-und-outdoor) (2)
-- [Tier](#tier) (2)
+- [Tier](#tier) (3)
 - [Über dieses Repository](#über-dieses-repository)
 
 ## Aufbewahrung und Ordnung
@@ -65,6 +65,7 @@ Ein Klick auf das Bild oder auf **Details** öffnet die ausführliche Beschreibu
 | [<img src="docs/thumbs/parametric-lampshade.jpg" width="220" alt="Parametric Lampshade">](models/parametric-lampshade/README.de.md) | **Parametric Lampshade**<br>Lampenschirm für LED-Pucks als Tisch- oder Hängelampe aus einer Datei. | [Details](models/parametric-lampshade/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3062645-parametric-table-lamp-ceiling-lamp) |
 | [<img src="docs/thumbs/parametric-wall-lamp.jpg" width="220" alt="Parametric Imperial Lamp">](models/parametric-wall-lamp/README.de.md) | **Parametric Imperial Lamp**<br>Wandlampe im Imperial-Sci-Fi-Look für E14-Fassung oder LED-Puck mit Schlitzfenstern, Emblem, klebefreier Schwalbenschwanz-Halterung und Diffusor in eigener Farbe. | [Details](models/parametric-wall-lamp/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3416896-parametric-imperial-lamp) |
 | [<img src="docs/thumbs/parametric-modern-cabinet-system.jpg" width="220" alt="Parametric Modern Cabinet System">](models/parametric-modern-cabinet-system/README.de.md) | **Parametric Modern Cabinet System**<br>Offene Regale und Türschränke als Mehrplatten-Bausatz für P2S und H2C: Schwalbenschwanz-Verbindungen, verdeckte Print-in-Place-Scharniere, verstärkte Schraublöcher, verifizierte Montage und PDF-Anleitungen. | [Details](models/parametric-modern-cabinet-system/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3501978-parametric-modern-cabinet-system) |
+| [<img src="docs/thumbs/parametric-hook-generator.jpg" width="220" alt="Parametric Clip-On Hook">](models/parametric-hook-generator/README.de.md) | **Parametric Clip-On Hook**<br>Haken ohne Werkzeug für Türgriffe, Brettkanten und Heizkörperrippen mit runder oder eckiger Mulde, Festigkeitsprüfung und Freitext in zweiter Farbe. | [Details](models/parametric-hook-generator/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3546167-hook-generator#profileId-4056463) |
 
 ## Technik und Elektronik
 
@@ -95,6 +96,7 @@ Ein Klick auf das Bild oder auf **Details** öffnet die ausführliche Beschreibu
 |---|---|---|
 | [<img src="docs/thumbs/parametric-dog-bowl-table.jpg" width="220" alt="Parametric Dog & Cat Bowl Stand">](models/parametric-dog-bowl-table/README.de.md) | **Parametric Dog & Cat Bowl Stand**<br>Erhöhter Napfständer für Hund und Katze mit einer oder zwei Mulden und Schwalbenschwanz-Teilung. | [Details](models/parametric-dog-bowl-table/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3136049-parametric-dog-and-cat-bowl-stand) |
 | [<img src="docs/thumbs/parametric-treat-box.jpg" width="220" alt="Parametric Dog Treat Pocket Box">](models/parametric-treat-box/README.de.md) | **Parametric Dog Treat Pocket Box**<br>Taschen-Box für Hundeleckerli mit Print-in-Place-Scharnier und Schnapp-Verschluss. | [Details](models/parametric-treat-box/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3200091-ultimative-treats-box) |
+| [<img src="docs/thumbs/parametric-dog-tag-generator.jpg" width="220" alt="Parametric Dog Tag">](models/parametric-dog-tag-generator/README.de.md) | **Parametric Dog Tag**<br>Hundemarke rund, als Pfote oder Knochen mit Namen als Inlay in zweiter Farbe, erhabener Adresse und automatischer Schriftanpassung. | [Details](models/parametric-dog-tag-generator/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3545013-make-your-own-dog-tag-generator#profileId-4054965) |
 
 ## Über dieses Repository
 
