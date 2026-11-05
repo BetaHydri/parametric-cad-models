@@ -2,7 +2,7 @@
 
 🌐 **English** | [Deutsch](README.de.md)
 
-Documentation, images and links for my parametric OpenSCAD models for FDM printing. All 38 models are parametric and are configured in the MakerWorld Customizer (only the Dometic Cooker Grommet is a ready-made print model); the models including print profiles are available exclusively on MakerWorld.
+Documentation, images and links for my parametric OpenSCAD models for FDM printing. All 40 models are parametric and are configured in the MakerWorld Customizer (only the Dometic Cooker Grommet is a ready-made print model); the models including print profiles are available exclusively on MakerWorld.
 
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-BetaHydri-00AE42)](https://makerworld.com/en/@BetaHydri)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
@@ -18,10 +18,10 @@ Click the image or **Details** to open the full description with options, varian
 
 - [Storage and organization](#storage-and-organization) (14)
 - [Kitchen, household and garden](#kitchen-household-and-garden) (5)
-- [Home, furniture and lighting](#home-furniture-and-lighting) (8)
+- [Home, furniture and lighting](#home-furniture-and-lighting) (9)
 - [Technology and electronics](#technology-and-electronics) (3)
 - [Mechanics](#mechanics) (3)
-- [Camping and outdoor](#camping-and-outdoor) (2)
+- [Camping and outdoor](#camping-and-outdoor) (3)
 - [Pets](#pets) (3)
 - [About this repository](#about-this-repository)
 
@@ -66,7 +66,7 @@ Click the image or **Details** to open the full description with options, varian
 | [<img src="docs/thumbs/parametric-wall-lamp.jpg" width="220" alt="Parametric Imperial Lamp">](models/parametric-wall-lamp/README.md) | **Parametric Imperial Lamp**<br>Wall lamp in an Imperial sci-fi look for E14 socket or LED puck with slotted windows, emblem, a glue-free dovetail bracket and a diffuser in its own colour. | [Details](models/parametric-wall-lamp/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3416896-parametric-imperial-lamp) |
 | [<img src="docs/thumbs/parametric-modern-cabinet-system.jpg" width="220" alt="Parametric Modern Cabinet System">](models/parametric-modern-cabinet-system/README.md) | **Parametric Modern Cabinet System**<br>Open shelves and door cabinets as a multi-plate kit for P2S and H2C: dovetail joints, hidden print-in-place hinges, reinforced screw holes, verified assembly and PDF guides. | [Details](models/parametric-modern-cabinet-system/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3501978-parametric-modern-cabinet-system) |
 | [<img src="docs/thumbs/parametric-hook-generator.jpg" width="220" alt="Parametric Clip-On Hook">](models/parametric-hook-generator/README.md) | **Parametric Clip-On Hook**<br>Tool-free hook for door handles, board edges and radiator ribs with round or rectangular cradle, strength check and free text in a second colour. | [Details](models/parametric-hook-generator/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3546167-hook-generator#profileId-4056463) |
-
+| [<img src="docs/thumbs/parametric-picture-frame.jpg" width="220" alt="Parametric Picture Frames">](models/parametric-picture-frame/README.md) | **Parametric Picture Frames**<br>Picture frame in any size and shape (rectangle, polygon, diamond) from mitred strips with five profiles, snap-together clasps without glue and prongs that hold glass, photo and back board. | [Details](models/parametric-picture-frame/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3551154-parametric-picture-frame#profileId-4062778) |
 ## Technology and electronics
 
 | Preview | Model | Links |
@@ -89,7 +89,7 @@ Click the image or **Details** to open the full description with options, varian
 |---|---|---|
 | [<img src="docs/thumbs/parametric-airpump-adapters.jpg" width="220" alt="Parametric Airpump Adapters">](models/parametric-airpump-adapters/README.md) | **Parametric Airpump Adapters**<br>Pump hose adapters with a thread matched to your sample and cone, stepped cone, plug or ball-needle valve ends for SUP, boat, tent and air bed; seven presets or custom sizes. | [Details](models/parametric-airpump-adapters/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3525378-parametric-airpump-adapters#profileId-4030222) |
 | [<img src="docs/thumbs/dometic-cooker-grommet.jpg" width="220" alt="Dometic Cooker Grommet">](models/dometic-cooker-grommet/README.md) | **Dometic Cooker Grommet**<br>Soft TPU grate spacers that snap into a Dometic camper-van cooker grate and stop it rattling; ready-made print model (remix). | [Details](models/dometic-cooker-grommet/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3515779-dometic-cooker-grommet#profileId-4018201) |
-
+| [<img src="docs/thumbs/parametric-drain-adapters.jpg" width="220" alt="Parametric Drain Adapters">](models/parametric-drain-adapters/README.md) | **Parametric Drain Adapters**<br>Hose barbs and pipe sockets with O-ring groove in any size: reducers, extensions, elbows from 5 to 120°, Y and T pieces, caps and plugs for motorhome and camping drains in ASA. | [Details](models/parametric-drain-adapters/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3549013-parametric-drain-adapters#profileId-4060145) |
 ## Pets
 
 | Preview | Model | Links |
