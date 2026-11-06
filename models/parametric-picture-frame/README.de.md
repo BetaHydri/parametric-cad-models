@@ -180,7 +180,10 @@ Alle Prüfungen laufen an den **echten exportierten Netzen** (OpenSCAD,
 Manifold) in 25 Konfigurationen (u. a. 135 x 240 mm auf drei Bettgrößen, mit und
 ohne diagonale Leisten, ein schwerer Glasstapel 20 x 30 cm, schmale und breite
 Lippe), dazu 6 bewusst falsche Einstellungen, die die rote Meldung zeigen
-müssen: **1508 Prüfungen, 0 fehlgeschlagen**.
+müssen: **1604 Prüfungen, 0 fehlgeschlagen**. Auch die Schnappschlüssel-Verbindung
+wird am Mesh gemessen (Kopf, Wulst, Schlitz, Spiel jedes eingesetzten Schlüssels
+in seiner Tasche an Mündung und Rille, Taschentiefe); wie fest sie unter Zug
+hält, zeigt nur ein Druck, drucke deshalb zuerst die optionale Testecke.
 
 - **Die Gehrungen schließen:** die Fläche aller Leisten über der Lippenfase
   entspricht dem äußeren Umriss minus Öffnung, und benachbarte Leisten

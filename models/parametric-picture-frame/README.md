@@ -170,7 +170,7 @@ Print any other size or shape with the Customizer.
 
 ## What was checked
 
-All checks run on the **real exported meshes** (OpenSCAD, Manifold) in 25 configurations (including 135 x 240 mm on three bed sizes, with and without diagonal strips, a heavy 20 x 30 cm glass stack, narrow and wide lips) of rectangle, triangle, hexagon, octagon, rhombus, split A4, big glass, wide and narrow lip and several key settings, plus 6 deliberately wrong settings that must show the red message: **1508 checks, 0 failed**.
+All checks run on the **real exported meshes** (OpenSCAD, Manifold) in 25 configurations (including 135 x 240 mm on three bed sizes, with and without diagonal strips, a heavy 20 x 30 cm glass stack, narrow and wide lips) of rectangle, triangle, hexagon, octagon, rhombus, split A4, big glass, wide and narrow lip and several key settings, plus 6 deliberately wrong settings that must show the red message: **1604 checks, 0 failed**. The snap-key joint is measured on the meshes too (key head, bead, slit, clearance of every seated key in its pocket at the mouth and in the groove, pocket depth); how firmly it holds under tension can only be shown by a print, so print the optional test corner first.
 
 - **The mitres close:** the area of all strips above the lip chamfer equals outer outline minus opening, and neighbouring strips do not overlap.
 - **Rabbet:** equals the picture plus the clearance on every side; the picture fits in.
