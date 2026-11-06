@@ -9,6 +9,28 @@ folgt [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-11-06
+
+### Changed
+
+- Zungen neu gebaut: flache Blattfeder mit rechteckiger Wurzel, die gerade in
+  einen geraden Schlitz in der Falzwand geschoben wird (die runden Köpfe passten
+  nicht durch den engen Hals und drehten sich nur, ohne zu federn). 1,5 mm
+  Federweg, etwa 1,6 N pro Zunge. Die Zahl der Zungen richtet sich nach dem
+  Gewicht des Stapels.
+- Lange Leisten liegen diagonal auf dem Bett (bis etwa das 1,4-Fache der
+  Bettlänge), sodass der Rahmen weniger Teile braucht: 135 x 240 mm hat 4 statt 6
+  Leisten, A4 hat 6 statt 8.
+- Die 45°-Fase unter der Lippe läuft bis zur Falzwand (kein flacher Absatz mehr).
+- Prüfskript: 25 Konfigurationen plus 6 ungültige Einstellungen, 1508
+  Prüfungen; Zunge, Leistenzahl und Leistenplatten werden an den echten Netzen
+  gemessen.
+
+### Added
+
+- Test-Ecke mit drei Schlüsselpassungen (`key fit` -0,05 / ±0 / +0,05), standardmäßig
+  aus; Schalter `diag strips` für die diagonalen Leisten.
+
 ## [1.1.0] - 2026-11-06
 
 ### Changed

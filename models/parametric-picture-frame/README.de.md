@@ -8,7 +8,7 @@ Drucke einen Bilderrahmen **genau so groß und so geformt wie dein Bild**: ein
 Foto, ein Poster, ein Sechseck, eine Raute. Der Rahmen besteht aus **Gehrungsleisten**,
 die auf der Rückseite von kleinen gedruckten **Snap-Schlüsseln** zusammengehalten
 werden: kein Kleber, von vorn nichts zu sehen, und du kannst den Rahmen wieder
-auseinandernehmen. Glas, Foto und Rückwand halten **flexible Zungen**, die du
+auseinandernehmen. Glas, Foto und Rückwand halten **Federzungen**, die du
 zum Bildwechsel herausziehst.
 
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-Modell-00AE42)](https://makerworld.com/en/models/3551154-parametric-picture-frame#profileId-4062778)
@@ -51,22 +51,28 @@ zum Bildwechsel herausziehst.
   dünner Schraubendreher in der runden Aussparung an der Verbindung hebelt den
   Schlüssel wieder heraus. Mit der Einstellung **Schlüsselsitz** passt du den
   Halt an deinen Drucker an.
-- **Große Rahmen aus mehreren Leisten.** Seiten, die länger sind als das Bett
-  minus 14 mm, werden automatisch geteilt, und auch die Stoßstellen bekommen
-  Schlüssel: ein **A4-Rahmen** oder **Posterrahmen** passt auf ein 256-mm-Bett.
+- **So wenige Teile wie möglich.** Das Bild bestimmt das Innenmaß; die
+  Außenlänge einer Leiste (Öffnung + 2 x Rahmenbreite) muss aufs Bett passen.
+  Eine Leiste, die länger ist als das Bett, wird **diagonal** gedruckt (bis zum
+  etwa 1,4-Fachen der Bettlänge, auf einem 256-mm-Bett etwa 320 mm), sodass ein
+  **135 x 240 mm** großer Rahmen nur **4 Leisten** braucht statt 6. Nur noch
+  längere Seiten werden geteilt, in gleich große Stücke mit Schlüsseln an den
+  Stoßstellen: Ein **A4-Rahmen** passt auf ein 256-mm-Bett. Mit `diag strips`
+  aus liegt jede Leiste gerade.
 - **Glas, Foto, Rückwand.** Der Falz ist so tief wie dein Stapel (Glas 0 bis
   6 mm, Foto, Rückwand 1,5 bis 8 mm) plus Platz für die Zungen. Keine Rückwand?
   Drucke eine **Rückplatte** (wenn sie aufs Bett passt).
-- **Bild jederzeit wechseln.** Die **flexiblen Zungen** rutschen in kleine
-  Fenster in der Falzwand und drücken den Stapel nach vorn. Seitlich
-  herausziehen, Bild tauschen, wieder einschieben.
+- **Bild jederzeit wechseln.** Die **flachen Federzungen** werden gerade (mit
+  der Wurzel voran) in Schlitze in der Falzwand geschoben, ihr Arm drückt den
+  Stapel nach vorn. Gerade herausziehen, Bild tauschen, wieder einschieben. Die
+  Zahl der Zungen richtet sich nach dem Gewicht des Stapels.
 - **Aufhängen.** Zwei **Schlüssellöcher** in der oberen Leiste (Rechtecke und
   Vielecke mit flacher Oberseite).
 - **Druck ohne Stützen.** Jede Leiste liegt mit der Rückseite auf dem Bett. Die
-  Lippe, die das Bild hält, hat unten eine **45°-Fase** (nur ein 0,5 mm breites
-  Band berührt das Glas), sodass nichts in der Luft hängt: nur Schrägen bis 55°
-  und Brücken bis 10 mm. Der Rahmen wird dafür etwa um die Lippenbreite plus
-  1 mm tiefer.
+  Lippe, die das Bild hält, hat unten eine **45°-Fase**, die bis zur Falzwand
+  durchläuft: Sie berührt das Glas nur entlang der Bildkante, und nirgends gibt
+  es einen flachen Absatz. Der Rahmen wird dafür tiefer: an der dünnsten Stelle
+  etwa um die Lippenbreite minus 1 mm.
 - **Narrensicher.** Wenn eine Einstellung nicht funktionieren kann (Rahmen zu
   schmal für die Schlüssel, zu flach für den Stapel, eine Leiste breiter als das
   Bett, eine zu kleine Öffnung), **ersetzt eine rote Meldung das Modell**: du
@@ -90,7 +96,7 @@ zum Bildwechsel herausziehst.
 |---|---|
 | **So hält er** | zwei geschlitzte Ringköpfe mit einer kleinen Raste rasten in Nuten am Taschengrund ein; ein steifer Steg verbindet sie |
 | **Druckposition** | der Schlüssel liegt flach: Schichten in Zugrichtung, keine Stützen, keine freistehenden Teile |
-| **Sitz** | `key fit` 0 bis 0,15 mm: kleiner = fester. Die Test-Ecke zeigt in etwa 30 Minuten, wie der Schlüssel auf deinem Drucker sitzt |
+| **Sitz** | `key fit` 0 bis 0,15 mm: kleiner = fester. Die optionale Test-Ecke (im Customizer einschalten) druckt drei Passungen auf einmal und zeigt, wie der Schlüssel auf deinem Drucker sitzt |
 | **Wieder lösen** | mit einem dünnen Schraubendreher in der runden Aussparung an der Verbindung herauswippen |
 | **Reserve** | 2 zusätzliche Schlüssel werden mitgedruckt (mehr im Customizer) |
 
@@ -105,13 +111,14 @@ Wähle **Keine**, wenn du die Gehrungen lieber kleben möchtest.
 | Gruppe | Optionen |
 |---|---|
 | Bild und Umriss | Rechteck (Standardgrößen oder frei bis 600 mm), regelmäßiges Vieleck (3 bis 12 Seiten, Seite 20 bis 300 mm) oder Raute (Seite und Winkel 30 bis 85°) |
-| Rahmenprofil | Profil, Rahmenbreite, Tiefe und Lippe (der Rahmen wird an der dünnsten Stelle etwa um Lippe + 1 mm tiefer) |
-| Bildstapel und Rückseite | Dicke von Glas, Foto und Rückwand, Spiel (0,2 bis 0,5 mm), eigene Rückwand oder gedruckte Rückplatte, Zungen an oder aus, Schlüssellöcher an oder aus |
-| Verbindungen | Snap-Schlüssel oder keine; Schlüsseldicke, Schlüsselsitz, Anzahl Ersatzschlüssel, Test-Ecke an oder aus |
-| Drucker und Farben | Bettgröße (wähle **denselben Drucker im MakerWorld-Bettmenü**), Rahmenfarbe und Schlüsselfarbe; das Ansichtsmenü zeigt den fertigen Rahmen, die Rückseite oder die Explosionsansicht |
+| Rahmenprofil | Profil, Rahmenbreite, Tiefe und Lippe (der Rahmen wird an der dünnsten Stelle etwa um die Lippenbreite minus 1 mm tiefer) |
+| Bildstapel und Rückseite | Dicke von Glas, Foto und Rückwand, Spiel (0,2 bis 1 mm), eigene Rückwand oder gedruckte Rückplatte, Zungen an oder aus, Schlüssellöcher an oder aus |
+| Verbindungen | Snap-Schlüssel oder keine; Schlüsseldicke, Schlüsselsitz, Anzahl Ersatzschlüssel, Test-Ecke (standardmäßig aus: fügt eine erste Platte mit drei Schlüsselpassungen hinzu) |
+| Drucker und Farben | Lange Leisten diagonal (standardmäßig an), Bettgröße (wähle **denselben Drucker im MakerWorld-Bettmenü**), Rahmenfarbe und Schlüsselfarbe; das Ansichtsmenü zeigt den fertigen Rahmen, die Rückseite oder die Explosionsansicht |
 
-Ein Customizer-Download besteht aus mehreren Platten: zuerst die Test-Ecke, dann die
-Leisten, auf der letzten Platte die Schlüssel und Zungen.
+Ein Customizer-Download besteht aus mehreren Platten: zuerst die Leisten, auf
+der letzten Platte die Schlüssel und Zungen. Mit eingeschalteter `test corner`
+ist die Test-Ecke die erste Platte.
 
 ![Explosionsansicht eines Achteck-Rahmens](images/10_explosionsansicht.jpg)
 
@@ -119,16 +126,16 @@ Leisten, auf der letzten Platte die Schlüssel und Zungen.
 
 Druckfertige Bambu-Profile (**PETG, P2S**, 0,20 mm, 3 Wände, 15 % Gyroid,
 testgeslict) gibt es auf MakerWorld, alle Platten in einer 3MF: zuerst die
-Test-Ecke, dann die Leistenplatten, dann eine Platte mit Snap-Schlüsseln und Zungen.
+Leistenplatten, dann eine Platte mit Snap-Schlüsseln und Zungen.
 
 | Beispiel | Bild | Profil | Verbindung | Teile | Zeit / Gewicht |
 |---|---|---|---|---|---|
-| ![Fotorahmen 13 x 18 cm](images/03_foto-13x18-fase.jpg) **Fotorahmen 13 x 18 cm** | 130 x 180 mm | Fase | Snap-Schlüssel | 4 Leisten, 6 Snap-Schlüssel, 8 Zungen, Test-Ecke | 5,3 h / 148 g (3 Platten) |
-| ![Fotorahmen 10 x 15 cm](images/04_foto-10x15-flach.jpg) **Fotorahmen 10 x 15 cm, flaches Profil** | 100 x 150 mm | flach | Snap-Schlüssel | 4 Leisten, 6 Snap-Schlüssel, 5 Zungen, Test-Ecke | 3,9 h / 117 g (3 Platten) |
-| ![A4-Posterrahmen](images/05_a4-kassette.jpg) **A4-Posterrahmen, geteilte Seiten** | 210 x 297 mm | Stufen (Kassette) | Snap-Schlüssel | 8 Leisten, 10 Snap-Schlüssel, 10 Zungen, Test-Ecke | 9,0 h / 278 g (4 Platten) |
-| ![Sechseck-Rahmen](images/06_sechseck-halbrund.jpg) **Sechseck-Rahmen** | regelmäßiges 6-Eck, Seite 70 mm | halbrund | Snap-Schlüssel | 6 Leisten, 8 Snap-Schlüssel, 5 Zungen, Test-Ecke | 4,4 h / 121 g (3 Platten) |
-| ![Rautenrahmen](images/07_raute-hohlkehle.jpg) **Rautenrahmen** | Raute, Seite 90 mm, Winkel 60° | Hohlkehle | Snap-Schlüssel | 4 Leisten, 6 Snap-Schlüssel, 8 Zungen, Test-Ecke | 5,5 h / 156 g (3 Platten) |
-| ![Achteck-Rahmen](images/08_achteck-fase.jpg) **Achteck-Rahmen** | regelmäßiges 8-Eck, Seite 60 mm | Fase | Snap-Schlüssel | 8 Leisten, 10 Snap-Schlüssel, 7 Zungen, Test-Ecke | 4,8 h / 126 g (4 Platten) |
+| ![Fotorahmen 13 x 18 cm](images/03_foto-13x18-fase.jpg) **Fotorahmen 13 x 18 cm** | 130 x 180 mm | Fase | Snap-Schlüssel | 4 Leisten, 6 Snap-Schlüssel, 8 Zungen | 4,5 h / 132 g (2 Platten) |
+| ![Fotorahmen 10 x 15 cm](images/04_foto-10x15-flach.jpg) **Fotorahmen 10 x 15 cm, flaches Profil** | 100 x 150 mm | flach | Snap-Schlüssel | 4 Leisten, 6 Snap-Schlüssel, 5 Zungen | 3,2 h / 101 g (2 Platten) |
+| ![A4-Posterrahmen](images/05_a4-kassette.jpg) **A4-Posterrahmen, geteilte Seiten** | 210 x 297 mm | Stufen (Kassette) | Snap-Schlüssel | 6 Leisten, 8 Snap-Schlüssel, 10 Zungen | 8,0 h / 255 g (3 Platten) |
+| ![Sechseck-Rahmen](images/06_sechseck-halbrund.jpg) **Sechseck-Rahmen** | regelmäßiges 6-Eck, Seite 70 mm | halbrund | Snap-Schlüssel | 6 Leisten, 8 Snap-Schlüssel, 5 Zungen | 3,8 h / 104 g (2 Platten) |
+| ![Rautenrahmen](images/07_raute-hohlkehle.jpg) **Rautenrahmen** | Raute, Seite 90 mm, Winkel 60° | Hohlkehle | Snap-Schlüssel | 4 Leisten, 6 Snap-Schlüssel, 8 Zungen | 4,6 h / 134 g (2 Platten) |
+| ![Achteck-Rahmen](images/08_achteck-fase.jpg) **Achteck-Rahmen** | regelmäßiges 8-Eck, Seite 60 mm | Fase | Snap-Schlüssel | 8 Leisten, 10 Snap-Schlüssel, 7 Zungen | 4,0 h / 108 g (3 Platten) |
 
 Jede andere Größe oder Form druckst du mit dem Customizer.
 
@@ -142,15 +149,16 @@ Jede andere Größe oder Form druckst du mit dem Customizer.
 | Füllung | 15 % Gyroid |
 | Stützen / Brim | keine (Stützen im Slicer aus lassen: die Lippe hat eine 45°-Fase) |
 | Lage | Leisten liegen mit der Rückseite auf dem Bett, Schlüssel und Zungen liegen flach |
-| Genauigkeit | Der Schlüssel rastet um wenige Zehntelmillimeter ein, der Sitz hängt also von deinem Drucker ab. Drucke zuerst die **Test-Ecke**. Ist der Schlüssel schwer hineinzudrücken, erhöhe `key fit` um 0,05; fällt er heraus, senke es um 0,05 |
+| Genauigkeit | Der Schlüssel rastet um wenige Zehntelmillimeter ein, der Sitz hängt also von deinem Drucker ab. Schalte `test corner` ein und drucke sie zuerst (drei Passungen auf einmal). Ist der Schlüssel schwer hineinzudrücken, erhöhe `key fit` um 0,05; fällt er heraus, senke es um 0,05 |
 
 > **Status:** Die Geometrie ist an den echten exportierten Netzen geprüft, und
 > jedes Beispiel ist in Bambu Studio testgeslict. **In dieser Version noch
-> nicht gedruckt.** Die erste Version hatte runde Zapfen auf der Rückseite der
-> Leisten; beim ersten echten Druck sind sie abgebrochen (jeder Zapfen war
-> eine freistehende Säule), deshalb wurde die Verbindung **neu gebaut**. Die
-> erste Platte jedes Downloads ist eine **Test-Ecke** (zwei kurze
-> Leistenstücke und ein Schlüssel): drucke sie vor einem ganzen Rahmen.
+> nicht gedruckt.** Die erste Version hatte runde Zapfen und Zungen mit rundem
+> Kopf; beim ersten echten Druck sind die Zapfen abgebrochen, und die Zungen
+> passten nicht in ihre Löcher und federten nicht, deshalb wurden Verbindung
+> und Zungen **neu gebaut**. Eine **Test-Ecke** (drei Schlüsselpassungen) ist
+> optional: Schalte `test corner` im Customizer (Verbindungen) ein, dann ist
+> sie die erste Platte.
 
 ## Montage
 
@@ -160,18 +168,19 @@ Jede andere Größe oder Form druckst du mit dem Customizer.
    bis die Rasten klicken und er bündig sitzt.
 3. Drehe den Rahmen **mit der Vorderseite nach unten** auf eine weiche
    Unterlage und lege Glas, Foto und Rückwand ein.
-4. Schiebe jede Zunge in ihr Fenster, das Polster des Arms flach auf die
-   Rückwand gedrückt.
+4. Schiebe jede Zunge mit der Wurzel voran bis zum Anschlag in ihren Schlitz in
+   der Falzwand: Der Arm liegt dann auf der Rückwand und drückt den Stapel nach
+   vorn.
 5. Häng ihn an eine Schraube: der Kopf geht durch den runden Teil des
    Schlüssellochs, dann schiebst du den Rahmen nach unten.
 
 ## Was geprüft wurde
 
 Alle Prüfungen laufen an den **echten exportierten Netzen** (OpenSCAD,
-Manifold) in 16 Konfigurationen aus Rechteck, Dreieck, Sechseck, Achteck,
-Raute, geteiltem A4, großem Glas, breiter und schmaler Lippe und mehreren
-Schlüssel-Einstellungen, dazu 6 bewusst falsche Einstellungen, die die rote
-Meldung zeigen müssen: **951 Prüfungen, 0 fehlgeschlagen**.
+Manifold) in 25 Konfigurationen (u. a. 135 x 240 mm auf drei Bettgrößen, mit und
+ohne diagonale Leisten, ein schwerer Glasstapel 20 x 30 cm, schmale und breite
+Lippe), dazu 6 bewusst falsche Einstellungen, die die rote Meldung zeigen
+müssen: **1508 Prüfungen, 0 fehlgeschlagen**.
 
 - **Die Gehrungen schließen:** die Fläche aller Leisten über der Lippenfase
   entspricht dem äußeren Umriss minus Öffnung, und benachbarte Leisten
@@ -179,31 +188,38 @@ Meldung zeigen müssen: **951 Prüfungen, 0 fehlgeschlagen**.
 - **Falz:** entspricht dem Bild plus Spiel auf jeder Seite.
 - **Jede Leiste** ist ein Körper, liegt flach auf dem Bett, passt aufs Bett und
   **druckt ohne Stützen**. Die Prüfung ist streng: Ein flacher Absatz, der mehr
-  als etwa 1 mm freisteht, fällt durch (Brücken bis 10 mm sind in Ordnung). Die
-  frühere Prüfung ließ bis etwa 5,8 mm durch und übersah die flache vordere
-  Lippe, die im echten Druck Stützen brauchte.
-- **Die Lippenfase** wird an den Schnitten gemessen: In jeder Höhe beginnt das
-  Material genau dort, wo die 45°-Linie es sagt.
+  als etwa 0,7 mm freisteht, fällt durch (Brücken bis 10 mm sind in Ordnung).
+- **Die Lippenfase** wird an den Schnitten gemessen: In jeder Höhe von der
+  Wandkante bis zur Öffnung beginnt das Material genau dort, wo die 45°-Linie es
+  sagt.
 - **Keine freistehenden Inseln:** Jede Schicht jeder Leiste ist ein
-  zusammenhängendes Gebiet. Die runden Zapfen der ersten Version waren
-  getrennte Säulen von bis zu 4,6 mm Höhe.
-- **Wände:** mindestens 2 mm um jede Tasche und jedes Fenster.
-- **Schlüssel und Zungen** sitzen in ihren Taschen, ohne den Rahmen zu berühren
-  (Überlappungsvolumen 0,000 mm³).
+  zusammenhängendes Gebiet.
+- **Leisten:** Eine Leiste, die länger als das Bett ist, liegt diagonal (eine
+  284-mm-Leiste braucht ein Feld von 201 x 201 mm), ein Rahmen 135 x 240 mm hat
+  also 4 Leisten. Jede Leistenplatte wird gemessen: Alle Leisten darauf sind
+  getrennt, liegen im Bett und berühren sich nicht.
+- **Wände:** mindestens 2 mm um jede Tasche und jeden Schlitz.
+- **Schlüssel und Zungen** sitzen in ihren Taschen und Schlitzen, ohne den
+  Rahmen zu berühren (außer den Quetschzähnen der Zungen).
 - **Snap-Schlüssel:** Der Kopf schließt sich um 0,25 mm, während die Raste durch
   die Taschenöffnung gedrückt wird; das dehnt das PETG um etwa **1,5 %** (2,2 %
   bei 0,1 mm zu strammem Drucker; Grenze 3 %). Die Raste greift auch, wenn der
   Drucker 0,1 mm zu locker druckt, und der Schlüssel druckt flach ohne Stützen.
-  Der Steg ist mit etwa 300 N Zugkraft abgeschätzt (eine Schätzung, keine
-  Messung).
-- **Zunge:** etwa **1,7 N** auf den Stapel bei 1,5 mm Auslenkung, Biegedehnung
-  beim Einschieben **1,8 %**.
+- **Zunge:** am echten Netz gemessen: Die Wurzel gleitet gerade in ihren
+  Schlitz (Arm und Pad berühren auf dem Weg nichts), die Zähne werden um
+  0,02 mm² eingepresst (Presssitz), der gebogene Arm bleibt frei von der Wand,
+  und die Padoberseite liegt entspannt 1,5 mm in der Rückwand, der Stapel biegt
+  den Arm also um 1,5 mm. Das ergibt etwa **1,6 N pro Zunge** (Balkenmodell mit
+  der gemessenen Auslenkung), Biegedehnung **1,1 %** (1,8 % beim Einlegen des
+  Bildes). Alle Zungen zusammen drücken auf einen 13 x 18-cm-Stapel von etwa
+  1,8 N Gewicht mit etwa 13 N. Ein schwerer Stapel bekommt mehr Zungen (zusammen
+  mindestens das Doppelte seines Gewichts).
 - **Alle Platten** liegen im Bett; jedes Beispiel ist testgeslict, und die 3MF
   lädt in Bambu Studio nur mit Bambu-Filament.
 
-**Noch nicht geprüft:** wie fest der gedruckte Snap-Schlüssel wirklich hält und
-wie viel Kraft zum Eindrücken und Herausziehen nötig ist; das hängt von der
-Toleranz deines Druckers ab. Von dieser Version ist noch nichts gedruckt.
+**Noch nicht geprüft:** wie fest der gedruckte Snap-Schlüssel wirklich hält, wie
+sich Presssitz und Steifigkeit der gedruckten Zunge anfühlen (das hängt von
+der Toleranz deines Druckers ab). Von dieser Version ist noch nichts gedruckt.
 
 ## Downloads
 
