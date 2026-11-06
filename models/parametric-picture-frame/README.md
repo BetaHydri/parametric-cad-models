@@ -1,4 +1,4 @@
-# Parametric Picture Frames – Any Size, Any Shape, Five Profiles, Snap-Together Clasps, No Glue
+# Parametric Picture Frames – Any Size, Any Shape, Five Profiles, Snap Keys, No Glue
 
 [← All models](../../README.md)
 
@@ -6,7 +6,7 @@
 
 Print a picture frame **exactly as big and as shaped as your picture**: a photo,
 a poster, a hexagon, a diamond. The frame is made from **mitred strips** held
-together by small printed **clasps on the back**: no glue, nothing visible from
+together by small printed **snap keys on the back**: no glue, nothing visible from
 the front, and you can take the frame apart again. Glass, photo and back board
 are held by **flexible prongs** you can pull out to change the picture.
 
@@ -24,7 +24,7 @@ are held by **flexible prongs** you can pull out to change the picture.
 
 - [Highlights](#highlights)
 - [The profiles](#the-profiles)
-- [The joints](#the-joints)
+- [The joint](#the-joint)
 - [Parametric Options](#parametric-options)
 - [Samples](#samples)
 - [Print Recommendations](#print-recommendations)
@@ -41,14 +41,16 @@ are held by **flexible prongs** you can pull out to change the picture.
   automatically.
 - **Five profiles.** Flat, bevel, half-round, steps (cassette) and cove. Width
   20 to 70 mm, depth 14 to 50 mm, lip 2 to 10 mm.
-- **Joints without glue.** On the back of every mitre sit two round pegs in
-  pockets. A **clasp** (two slit C-ends and a rigid bar) is pressed onto both
-  pegs with a friction fit; the pegs sit 0.3 mm further apart than the C-ends,
-  so the clasp **draws the mitre shut**. Nothing is visible from the front, and
-  a thin screwdriver levers the clasp off again. Prefer a rigid part? Choose the
-  **tapered butterfly key**; a **spring clip** is also in the Customizer.
+- **Joints without glue.** The back of every mitre has one pocket in each
+  strip. A flat **snap key** (two split-ring heads on a bar) is pressed into
+  both pockets from behind: a small bead on each head **clicks into a groove**
+  at the bottom of the pocket. The key is printed lying flat, so its layers
+  run along the pull of the joint and nothing stands up in the air while
+  printing. Nothing is visible from the front, and a thin screwdriver in the
+  round relief at the joint levers the key out again. The **key fit** setting
+  tunes the grip to your printer.
 - **Big frames in several strips.** Sides longer than the bed minus 14 mm are
-  split automatically, and the butt joints get clasps too: an **A4 frame** or a
+  split automatically, and the butt joints get keys too: an **A4 frame** or a
   **poster frame** prints on a 256 mm bed.
 - **Glass, photo, back board.** The rabbet is as deep as your stack (glass 0 to
   6 mm, photo, board 1.5 to 8 mm) plus room for the prongs. No board? Print a
@@ -58,9 +60,11 @@ are held by **flexible prongs** you can pull out to change the picture.
   sideways, swap the picture, slide them back.
 - **Hang it.** Two **keyholes** in the top strip (rectangles and polygons with a
   flat top).
-- **Prints without support.** Every strip lies with its back on the bed: slopes
-  up to 55° and short bridges only.
-- **Foolproof.** If a setting cannot work (frame too narrow for the clasps,
+- **Prints without support.** Every strip lies with its back on the bed. The lip
+  that holds the picture has a **45° chamfer underneath** (only a 0.5 mm band
+  touches the glass), so nothing hangs in the air: slopes up to 55° and bridges
+  up to 10 mm only. The frame gets about the lip width plus 1 mm deeper for it.
+- **Foolproof.** If a setting cannot work (frame too narrow for the keys,
   frame too shallow for the stack, a strip wider than the bed, an opening that
   is too small) **a red message replaces the model**, so you can never download
   a broken part by accident.
@@ -77,31 +81,34 @@ are held by **flexible prongs** you can pull out to change the picture.
 | Steps | cassette with two steps | posters, art prints, A4 |
 | Cove | hollow groove | diamonds and wide frames |
 
-## The joints
+## The joint
 
-| | Clasp (default) | Butterfly key | Spring clip |
-|---|---|---|---|
-| **How it holds** | two slit C-ends grip round pegs with a friction fit, rigid bar between them | tapered dumbbell pressed into tight pockets | two C-rings and a zigzag spring |
-| **Draws the mitre shut** | yes, the pegs are 0.3 mm further apart | by the tight fit of the taper | yes, by the spring (about 6 N) |
-| **Take apart again** | lever off with a thin screwdriver | lever out at the round relief | lever off; the spring can fatigue |
-| **Good for** | everything | rigid frames, small corner parts | maximum pull |
+| | Snap key |
+|---|---|
+| **How it holds** | two split-ring heads with a small bead snap into grooves at the bottom of the pockets; a rigid bar joins them |
+| **Print position** | the key lies flat: layers run along the pull, no support, no free-standing parts |
+| **Fit** | `key fit` 0 to 0.15 mm: lower = tighter. The test corner shows in about 30 minutes how the key fits your printer |
+| **Take apart again** | lever the key out with a thin screwdriver in the round relief at the joint |
+| **Spares** | 2 extra keys are printed (more in the Customizer) |
 
-![The clasps on the back of the frame](images/09_rueckseite-klammern.jpg)
+Choose **None** to glue the mitres instead.
 
-![Section through the clasp on its peg](images/11_schnitt-klammer.jpg)
+![The snap keys on the back of the frame](images/09_rueckseite-schluessel.jpg)
+
+![Section through the frame: the lip has a 45° chamfer underneath](images/11_schnitt-lippe-fase.jpg)
 
 ## Parametric Options
 
 | Group | Options |
 |---|---|
 | Picture and outline | Rectangle (standard sizes or custom up to 600 mm), regular polygon (3 to 12 sides, side 20 to 300 mm) or rhombus (side and angle 30 to 85°) |
-| Frame profile | Profile, frame width, depth and lip |
-| Picture stack and back | Thickness of glass, photo and back board, clearance, own board or printed back plate, prongs on or off, keyholes on or off |
-| Joints | Clasp, butterfly key, spring clip or none; clasp thickness, peg diameter, number of spare clasps |
-| Printer and colours | Bed size (pick **the same printer in the MakerWorld bed menu**), frame colour and clasp colour; the view menu shows the assembled frame, the back or the exploded view |
+| Frame profile | Profile, frame width, depth and lip (the frame gets about lip + 1 mm deeper at its thinnest point) |
+| Picture stack and back | Thickness of glass, photo and back board, clearance (0.2 to 0.5 mm), own board or printed back plate, prongs on or off, keyholes on or off |
+| Joints | Snap key or none; key thickness, key fit, number of spare keys, test corner on or off |
+| Printer and colours | Bed size (pick **the same printer in the MakerWorld bed menu**), frame colour and key colour; the view menu shows the assembled frame, the back or the exploded view |
 
-A Customizer download is a set of plates: the strips first, the clasps and
-prongs on the last plate.
+A Customizer download is a set of plates: the test corner first, then the
+strips, the keys and prongs on the last plate.
 
 ![Exploded view of an octagon frame](images/10_explosionsansicht.jpg)
 
@@ -109,16 +116,16 @@ prongs on the last plate.
 
 Ready-to-print Bambu profiles (**PETG, P2S**, 0.20 mm, 3 walls, 15 % gyroid,
 test-sliced) are available on MakerWorld, every plate in one 3MF: first the
-strip plates, then a plate with the clasps and prongs.
+test corner, then the strip plates, then a plate with the snap keys and prongs.
 
 | Sample | Picture | Profile | Joint | Parts | Time / weight |
 |---|---|---|---|---|---|
-| ![Photo frame 13 x 18 cm](images/03_foto-13x18-fase.jpg) **Photo frame 13 x 18 cm** | 130 x 180 mm | bevel | Clasp | 4 strips, 6 clasps, 8 prongs | 4.6 h / 127 g (2 plates) |
-| ![Photo frame 10 x 15 cm](images/04_foto-10x15-flach-schmetterling.jpg) **Photo frame 10 x 15 cm, butterfly keys** | 100 x 150 mm | flat | Butterfly key (rigid) | 4 strips, 6 keys, 6 prongs | 3.3 h / 102 g (2 plates) |
-| ![A4 poster frame](images/05_a4-kassette.jpg) **A4 poster frame, split sides** | 210 x 297 mm | steps (cassette) | Clasp | 8 strips, 10 clasps, 12 prongs | 8.3 h / 255 g (3 plates) |
-| ![Hexagon frame](images/06_sechseck-halbrund.jpg) **Hexagon frame** | regular 6-gon, side 70 mm | half-round | Clasp | 6 strips, 8 clasps, 6 prongs | 3.7 h / 101 g (2 plates) |
-| ![Diamond frame](images/07_raute-hohlkehle.jpg) **Diamond frame** | rhombus, side 90 mm, angle 60° | cove | Clasp | 4 strips, 6 clasps, 8 prongs | 4.4 h / 126 g (2 plates) |
-| ![Octagon frame](images/08_achteck-fase.jpg) **Octagon frame** | regular 8-gon, side 60 mm | bevel | Clasp | 8 strips, 10 clasps, 8 prongs | 4.2 h / 105 g (3 plates) |
+| ![Photo frame 13 x 18 cm](images/03_foto-13x18-fase.jpg) **Photo frame 13 x 18 cm** | 130 x 180 mm | bevel | Snap key | 4 strips, 6 snap keys, 8 prongs, test corner | 5.3 h / 148 g (3 plates) |
+| ![Photo frame 10 x 15 cm](images/04_foto-10x15-flach.jpg) **Photo frame 10 x 15 cm, flat profile** | 100 x 150 mm | flat | Snap key | 4 strips, 6 snap keys, 5 prongs, test corner | 3.9 h / 117 g (3 plates) |
+| ![A4 poster frame](images/05_a4-kassette.jpg) **A4 poster frame, split sides** | 210 x 297 mm | steps (cassette) | Snap key | 8 strips, 10 snap keys, 10 prongs, test corner | 9.0 h / 278 g (4 plates) |
+| ![Hexagon frame](images/06_sechseck-halbrund.jpg) **Hexagon frame** | regular 6-gon, side 70 mm | half-round | Snap key | 6 strips, 8 snap keys, 5 prongs, test corner | 4.4 h / 121 g (3 plates) |
+| ![Diamond frame](images/07_raute-hohlkehle.jpg) **Diamond frame** | rhombus, side 90 mm, angle 60° | cove | Snap key | 4 strips, 6 snap keys, 8 prongs, test corner | 5.5 h / 156 g (3 plates) |
+| ![Octagon frame](images/08_achteck-fase.jpg) **Octagon frame** | regular 8-gon, side 60 mm | bevel | Snap key | 8 strips, 10 snap keys, 7 prongs, test corner | 4.8 h / 126 g (4 plates) |
 
 Print any other size or shape with the Customizer.
 
@@ -127,22 +134,25 @@ Print any other size or shape with the Customizer.
 | Setting | Recommendation |
 |---|---|
 | Printer | Bambu Lab P2S (the samples), P1S and any printer with a 256 mm bed; pick the printer in the MakerWorld bed menu |
-| Filament | **PETG** for everything (ASA or PLA work too). Clasps and prongs can also be printed in **TPU 95A**, which is softer and easier to push on |
+| Filament | **PETG** for everything (ASA or PLA work too). The **keys** should be PETG (stiff, they must snap); the **prongs** can also be printed in **TPU 95A**, which is softer |
 | Layer height / walls | 0.20 mm, 3 walls |
 | Infill | 15 % gyroid |
-| Support / brim | none |
-| Pose | Strips lie with their back on the bed, clasps and prongs lie flat |
-| Accuracy | The clasp relies on the pegs coming out slightly large. If a clasp is too tight, sand the pegs gently; if it is too loose, print the clasp with one more wall |
+| Support / brim | none (leave support off: the lip has a 45° chamfer) |
+| Pose | Strips lie with their back on the bed, keys and prongs lie flat |
+| Accuracy | The key snaps by a few tenths of a millimetre, so it depends on your printer. Print the **test corner** first. If the key is hard to press in, raise `key fit` by 0.05; if it falls out, lower it by 0.05 |
 
 > **Status:** the geometry is checked on the real exported meshes and every
-> sample is test-sliced in Bambu Studio. The clasp fit has **not been printed
-> yet**, so print **one test joint first** (a short strip pair and a clasp)
-> before you print a whole frame.
+> sample is test-sliced in Bambu Studio. **Not printed yet in this version.**
+> The first version had round pegs on the back of the strips; on the first
+> real print they tore off (each peg was a free-standing column), so the joint
+> was **redesigned**. The first plate of every download is a **test corner**
+> (two short strip stubs and a key): print it before a whole frame.
 
 ## Assembly
 
 1. Lay the strips as a ring on the table with the **back up**; the mitres touch.
-2. Press a clasp onto the two pegs of every joint from behind until it is flush.
+2. Press a snap key into the two pockets of every joint from behind until its
+   beads click and it is flush.
 3. Turn the frame **face down** on a soft surface and lay in glass, photo and
    back board.
 4. Slide every prong into its window, the pad of the arm pressed flat onto the
@@ -152,31 +162,40 @@ Print any other size or shape with the Customizer.
 
 ## What was checked
 
-All checks run on the **real exported meshes** (OpenSCAD, Manifold) in 12
-configurations of rectangle, triangle, hexagon, octagon, rhombus, split A4 and
-big glass, plus 5 deliberately wrong settings that must show the red message:
-**386 checks, 0 failed**.
+All checks run on the **real exported meshes** (OpenSCAD, Manifold) in 16
+configurations of rectangle, triangle, hexagon, octagon, rhombus, split A4,
+big glass, wide and narrow lip and several key settings, plus 6 deliberately
+wrong settings that must show the red message: **951 checks, 0 failed**.
 
-- **The mitres close:** the area of all strips above the rabbet equals the outer
-  outline minus the opening (13 x 18: 17 992 mm² vs 17 992 mm²) and neighbouring
-  strips do not overlap.
+- **The mitres close:** the area of all strips above the lip chamfer equals the
+  outer outline minus the opening, and neighbouring strips do not overlap.
 - **Rabbet:** equals the picture plus the clearance on every side.
 - **Every strip** is one body, lies flat on the bed, fits the bed and **prints
-  without support** (overhangs checked layer by layer: slopes to 55°, ledges
-  2.9 mm, bridges 10 mm).
-- **Walls:** at least 2 mm around every pocket and window, 13 mm behind every
-  prong window.
-- **Clasps, keys and prongs** sit in their pockets without touching the frame
-  (overlap volume 0.000 mm³).
-- **Clasp:** a C-end pushed over the 0.2 mm peg bump bends by about **1.6 %**
-  (limit 3 % for PETG).
+  without support**. The check is strict: a flat ledge hanging out more than
+  about 1 mm fails (bridges up to 10 mm are fine). The earlier check let up to
+  about 5.8 mm through and missed the flat front lip, which needed support on a
+  real print.
+- **The lip chamfer** is measured on the sections: at every height the material
+  starts exactly where the 45° line says.
+- **No free-standing islands:** every layer of every strip is one connected
+  region. The first version's round pegs were separate columns up to 4.6 mm
+  tall.
+- **Walls:** at least 2 mm around every pocket and window.
+- **Keys and prongs** sit in their pockets without touching the frame (overlap
+  volume 0.000 mm³).
+- **Snap key:** the head closes by 0.25 mm while the bead is pressed through the
+  pocket mouth, which strains the PETG by about **1.5 %** (2.2 % with the printer
+  0.1 mm tight; limit 3 %). The bead still catches with the printer 0.1 mm
+  loose, and the key prints flat without support. The bar is estimated at
+  roughly 300 N tensile (an estimate, not a measurement).
 - **Prong:** about **1.7 N** on the stack for 1.5 mm deflection, bending strain
   while sliding in **1.8 %**.
 - **All plates** are inside the bed; each sample is test-sliced and the 3MF
   reloads in Bambu Studio with Bambu filament only.
 
-**Not checked yet:** how well a printed clasp really grips; this depends on your
-printer's tolerance.
+**Not checked yet:** how firmly the printed snap key really holds and how much
+force it takes to press in and pull out; this depends on your printer's
+tolerance. Nothing of this version is printed yet.
 
 ## Downloads
 

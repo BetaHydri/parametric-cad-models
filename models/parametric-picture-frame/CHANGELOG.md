@@ -9,6 +9,34 @@ folgt [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-06
+
+### Changed
+
+- Neue Verbindung: Die runden Zapfen sind weg. Ein flacher Snap-Schlüssel (zwei
+  geschlitzte Ringköpfe mit einer 45°-Raste an einem Steg) wird von hinten in
+  eine Tasche in jeder Leiste gedrückt; die Raste klickt in eine Nut am
+  Taschengrund. Der Schlüssel wird liegend gedruckt, die Schichten laufen in
+  Zugrichtung. Klammer, Federklammer und Schmetterlingsverbinder entfallen.
+- Die Lippe, die das Bild hält, hat unten eine 45°-Fase (nur ein 0,5 mm breites
+  Band berührt das Glas); der Rahmen wird dafür um etwa Lippe + 1 mm tiefer. Das
+  Spiel um das Bild ist auf 0,5 mm begrenzt.
+- Zungenfenster, die in ein Schlüsselloch der oberen Leiste laufen würden,
+  entfallen.
+- Prüfskript: strenge Prüfung auf flache Absätze, auf freistehende Inseln und
+  auf die Lippenfase; 951 Prüfungen in 22 Konfigurationen.
+
+### Added
+
+- Test-Ecke (zwei kurze Leistenstücke und ein Schlüssel) als erste Platte jedes
+  Downloads, dazu die Einstellung `key fit` für den Sitz des Schlüssels.
+
+### Fixed
+
+- Beim ersten echten Druck sind fast alle runden Zapfen abgebrochen (freistehende
+  Säulen, nur über das überbrückte Dach der Tasche mit der Leiste verbunden), und
+  die flache vordere Lippe brauchte Stützen. Beides ist behoben.
+
 ## [1.0.0] - 2026-11-05
 
 ### Added
