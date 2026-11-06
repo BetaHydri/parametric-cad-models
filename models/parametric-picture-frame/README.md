@@ -64,10 +64,15 @@ are held by **spring prongs** you can pull out to change the picture.
   **back plate** (if it fits the bed).
 - **Change the picture any time.** The **flat spring prongs** are pushed
   straight into slots in the rabbet wall (root first) and their arm presses the
-  stack forward. Pull them straight out, swap the picture, push them back in.
+  stack forward. The arm is printed **steeply raised**: relaxed, the pad reaches
+  just past the front of the stack, so a thin print (2.5 mm) is pressed as well
+  as glass + photo + board; barbs on the root bite into the slot walls so the
+  prong stays put. Pull them straight out, swap the picture, push them back in.
   The number of prongs follows the weight of the stack.
-- **Hang it.** Two **keyholes** in the top strip (rectangles and polygons with a
-  flat top).
+- **Hang it.** One **keyhole** in the middle of a **short** and one in the middle
+  of a **long** side (rectangles): turn the frame by 90 degrees to hang it
+  upright or flat. A split side gets two keyholes beside the joint; polygons with
+  a flat top have one on the top strip.
 - **Prints without support.** Every strip lies with its back on the bed. The lip
   that holds the picture has a **45° chamfer underneath** that runs on to the
   rabbet wall: it touches the glass only along the edge of the picture, and
@@ -167,13 +172,15 @@ Print any other size or shape with the Customizer.
 3. Turn the frame **face down** on a soft surface and lay in glass, photo and
    back board.
 4. Push every prong, root first, into its slot in the rabbet wall until it
-   stops: the arm then lies on the back board and presses the stack forward.
+   stops (press the arm flat with a finger while you slide it in): the arm then
+   lies on the back board and presses the stack forward.
 5. Hang it on a screw: the head goes through the round part of the keyhole, then
-   slide the frame down.
+   slide the frame down. Upright or flat: turn the frame and use the keyhole of
+   the other side.
 
 ## What was checked
 
-All checks run on the **real exported meshes** (OpenSCAD, Manifold) in 25 configurations (including 135 x 240 mm on three bed sizes, with and without diagonal strips, a heavy 20 x 30 cm glass stack, narrow and wide lips) of rectangle, triangle, hexagon, octagon, rhombus, split A4, big glass, wide and narrow lip and several key settings, plus 6 deliberately wrong settings that must show the red message: **1598 checks, 0 failed**. The snap-key joint is measured on the meshes too (key head, bead, slit, clearance of every seated key in its pocket at the mouth and in the groove, pocket depth); how firmly it holds under tension can only be shown by a print, so print the optional test corner first.
+All checks run on the **real exported meshes** (OpenSCAD, Manifold) in 26 configurations (including 135 x 240 mm on three bed sizes, with and without diagonal strips, with a thin 2.5 mm printed picture, a heavy 20 x 30 cm glass stack, narrow and wide lips) of rectangle, triangle, hexagon, octagon, rhombus, split A4, big glass, wide and narrow lip and several key settings, plus 6 deliberately wrong settings that must show the red message: **1799 checks, 0 failed**. The snap-key joint is measured on the meshes too (key head, bead, slit, clearance of every seated key in its pocket at the mouth and in the groove, pocket depth); how firmly it holds under tension can only be shown by a print, so print the optional test corner first.
 
 - **The mitres close:** the area of all strips above the lip chamfer equals outer outline minus opening, and neighbouring strips do not overlap.
 - **Rabbet:** equals the picture plus the clearance on every side; the picture fits in.
@@ -183,9 +190,10 @@ All checks run on the **real exported meshes** (OpenSCAD, Manifold) in 25 config
 - **Walls:** at least 2 mm around every pocket and slot.
 - **Keys and prongs** sit in their pockets without touching the frame (overlap volume 0.000 mm³).
 - **Snap key:** the head closes by 0.25 mm while the bead is pressed through the pocket mouth, which strains the PETG by about **1.5 %** (2.2 % with the printer 0.1 mm tight; limit 3 %). The slit is wide enough, the bead still catches with the printer 0.1 mm loose, the pocket roof bridges 9.7 mm, the key prints flat without support. The bar is estimated at roughly 300 N tensile (an estimate, not a measurement).
-- **Number of prongs:** a heavy stack gets more prongs, so that together they press with at least twice the weight of glass, photo and board (13 x 18 cm: 8 prongs for a 184 g stack; 20 x 30 cm with 4 mm glass: 14 prongs for 906 g).
+- **Number of prongs:** a heavy stack gets more prongs, so that together they press with at least twice the weight of glass, photo and board (13 x 18 cm: 8 prongs for a 184 g stack; 20 x 30 cm with 4 mm glass: 13 prongs for 906 g).
 - **Strips:** a strip longer than the bed lies diagonally (a 284 mm strip needs a 201 x 201 mm field), so a 135 x 240 mm frame has 4 strips, and on a 256 mm bed all 4 lie on one plate (two 284 mm strips in the middle, two 179 mm strips outside); every strip plate is measured: all strips on it are separate, inside the bed and not touching.
-- **Prong:** measured on the real meshes: the root slides straight into its slot (the arm and pad touch nothing on the way in), the teeth are pressed in by 0.02 mm² (a press fit), the bent arm stays clear of the wall, and the pad top sits 1.5 mm inside the back board when relaxed, so the stack bends the arm by 1.5 mm. That gives about **1.6 N per prong** (beam model with the measured deflection), bending strain **1.1 %** (1.8 % while the picture is put in). All prongs together press with about 13 N on a 13 x 18 cm stack that weighs about 1.8 N. How the printed prong feels (press fit, stiffness of your PETG) is **not** measured: it depends on your printer.
+- **Prong:** measured on the real meshes: the root slides straight into its slot (the arm and pad touch nothing on the way in), the teeth bite 0.2 mm into the slot walls (barbs, 0.08 mm² per prong), the bent arm stays clear of the wall. Relaxed, the pad top reaches **1 mm past the front plane of the stack**, so the **full stack** (13 x 18 cm: 5.5 mm) bends the arm by 6.5 mm and a thin print alone (1 mm) still bends it; the arm is 24 mm long so the bending strain stays at **2.2 %** (2.5 % while the picture is put in). That gives about **2.3 N per prong** on the full stack and **0.7 N** on a 1 mm print (beam model with the measured deflection). All 8 prongs together press with about 19 N on a 13 x 18 cm stack that weighs about 1.8 N. How the printed prong feels (grip of the teeth, stiffness of your PETG) is **not** measured: it depends on your printer.
+- **Hanging keyholes:** measured on the strip meshes: every keyhole has the keyhole size and at least 2 mm of wall to the outside; a rectangle has one on a short and one on a long side.
 - **Test corner:** two stubs and a key, flat on the bed, inside the bed.
 - **All plates** are inside the bed; each sample is test-sliced and the 3MF reloads in Bambu Studio with Bambu filament only.
 

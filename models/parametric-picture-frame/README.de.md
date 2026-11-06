@@ -68,10 +68,16 @@ zum Bildwechsel herausziehst.
   Drucke eine **Rückplatte** (wenn sie aufs Bett passt).
 - **Bild jederzeit wechseln.** Die **flachen Federzungen** werden gerade (mit
   der Wurzel voran) in Schlitze in der Falzwand geschoben, ihr Arm drückt den
-  Stapel nach vorn. Gerade herausziehen, Bild tauschen, wieder einschieben. Die
-  Zahl der Zungen richtet sich nach dem Gewicht des Stapels.
-- **Aufhängen.** Zwei **Schlüssellöcher** in der oberen Leiste (Rechtecke und
-  Vielecke mit flacher Oberseite).
+  Stapel nach vorn. Der Arm ist **steil aufgerichtet** gedruckt: Entspannt
+  reicht das Pad knapp über die Vorderseite des Stapels hinaus, so wird auch ein
+  dünner Druck (2,5 mm) gut angedrückt wie Glas + Foto + Rückwand; Widerhaken an
+  der Wurzel beißen in die Schlitzwände, damit die Zunge sitzen bleibt. Gerade
+  herausziehen, Bild tauschen, wieder einschieben. Die Zahl der Zungen richtet
+  sich nach dem Gewicht des Stapels.
+- **Aufhängen.** Je ein **Schlüsselloch** mittig an einer **kurzen** und einer
+  **langen** Seite (Rechtecke): Rahmen um 90° drehen, um ihn hochkant oder quer
+  aufzuhängen. Eine geteilte Seite bekommt zwei Schlüssellöcher neben der
+  Stoßstelle; Vielecke mit flacher Oberseite eines an der oberen Leiste.
 - **Druck ohne Stützen.** Jede Leiste liegt mit der Rückseite auf dem Bett. Die
   Lippe, die das Bild hält, hat unten eine **45°-Fase**, die bis zur Falzwand
   durchläuft: Sie berührt das Glas nur entlang der Bildkante, und nirgends gibt
@@ -173,18 +179,20 @@ Jede andere Größe oder Form druckst du mit dem Customizer.
 3. Drehe den Rahmen **mit der Vorderseite nach unten** auf eine weiche
    Unterlage und lege Glas, Foto und Rückwand ein.
 4. Schiebe jede Zunge mit der Wurzel voran bis zum Anschlag in ihren Schlitz in
-   der Falzwand: Der Arm liegt dann auf der Rückwand und drückt den Stapel nach
-   vorn.
+   der Falzwand (den Arm beim Einschieben mit einem Finger flach drücken): Der
+   Arm liegt dann auf der Rückwand und drückt den Stapel nach vorn.
 5. Häng ihn an eine Schraube: der Kopf geht durch den runden Teil des
-   Schlüssellochs, dann schiebst du den Rahmen nach unten.
+   Schlüssellochs, dann schiebst du den Rahmen nach unten. Hochkant oder quer:
+   Rahmen drehen und das Schlüsselloch der anderen Seite benutzen.
 
 ## Was geprüft wurde
 
 Alle Prüfungen laufen an den **echten exportierten Netzen** (OpenSCAD,
-Manifold) in 25 Konfigurationen (u. a. 135 x 240 mm auf drei Bettgrößen, mit und
-ohne diagonale Leisten, ein schwerer Glasstapel 20 x 30 cm, schmale und breite
+Manifold) in 26 Konfigurationen (u. a. 135 x 240 mm auf drei Bettgrößen, mit und
+ohne diagonale Leisten, mit einem dünnen 2,5-mm-Druckbild, ein schwerer
+Glasstapel 20 x 30 cm, schmale und breite
 Lippe), dazu 6 bewusst falsche Einstellungen, die die rote Meldung zeigen
-müssen: **1598 Prüfungen, 0 fehlgeschlagen**. Auch die Schnappschlüssel-Verbindung
+müssen: **1799 Prüfungen, 0 fehlgeschlagen**. Auch die Schnappschlüssel-Verbindung
 wird am Mesh gemessen (Kopf, Wulst, Schlitz, Spiel jedes eingesetzten Schlüssels
 in seiner Tasche an Mündung und Rille, Taschentiefe); wie fest sie unter Zug
 hält, zeigt nur ein Druck, drucke deshalb zuerst die optionale Testecke.
@@ -214,14 +222,20 @@ hält, zeigt nur ein Druck, drucke deshalb zuerst die optionale Testecke.
   bei 0,1 mm zu strammem Drucker; Grenze 3 %). Die Raste greift auch, wenn der
   Drucker 0,1 mm zu locker druckt, und der Schlüssel druckt flach ohne Stützen.
 - **Zunge:** am echten Netz gemessen: Die Wurzel gleitet gerade in ihren
-  Schlitz (Arm und Pad berühren auf dem Weg nichts), die Zähne werden um
-  0,02 mm² eingepresst (Presssitz), der gebogene Arm bleibt frei von der Wand,
-  und die Padoberseite liegt entspannt 1,5 mm in der Rückwand, der Stapel biegt
-  den Arm also um 1,5 mm. Das ergibt etwa **1,6 N pro Zunge** (Balkenmodell mit
-  der gemessenen Auslenkung), Biegedehnung **1,1 %** (1,8 % beim Einlegen des
-  Bildes). Alle Zungen zusammen drücken auf einen 13 x 18-cm-Stapel von etwa
-  1,8 N Gewicht mit etwa 13 N. Ein schwerer Stapel bekommt mehr Zungen (zusammen
-  mindestens das Doppelte seines Gewichts).
+  Schlitz (Arm und Pad berühren auf dem Weg nichts), die Widerhaken beißen
+  0,2 mm in die Schlitzwände (0,08 mm² pro Zunge), der gebogene Arm bleibt frei
+  von der Wand. Entspannt reicht die Padoberseite **1 mm über die Vorderebene des
+  Stapels** hinaus: Der **volle Stapel** (13 x 18 cm: 5,5 mm) biegt den Arm um
+  6,5 mm, ein dünner Druck allein (1 mm) biegt ihn immer noch. Der Arm ist 24 mm
+  lang, die Biegedehnung bleibt bei **2,2 %** (2,5 % beim Einlegen des Bildes).
+  Das ergibt etwa **2,3 N pro Zunge** beim vollen Stapel und **0,7 N** bei einem
+  1-mm-Druck (Balkenmodell mit der gemessenen Auslenkung). Alle 8 Zungen zusammen
+  drücken auf einen 13 x 18-cm-Stapel von etwa 1,8 N Gewicht mit etwa 19 N. Ein
+  schwerer Stapel bekommt mehr Zungen (zusammen mindestens das Doppelte seines
+  Gewichts).
+- **Schlüssellöcher zum Aufhängen:** an den Leistennetzen gemessen: Jedes
+  Schlüsselloch hat die Schlüssellochgröße und mindestens 2 mm Wand nach außen;
+  ein Rechteck hat eines an einer kurzen und eines an einer langen Seite.
 - **Alle Platten** liegen im Bett; jedes Beispiel ist testgeslict, und die 3MF
   lädt in Bambu Studio nur mit Bambu-Filament.
 
