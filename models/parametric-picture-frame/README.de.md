@@ -55,7 +55,11 @@ zum Bildwechsel herausziehst.
   Außenlänge einer Leiste (Öffnung + 2 x Rahmenbreite) muss aufs Bett passen.
   Eine Leiste, die länger ist als das Bett, wird **diagonal** gedruckt (bis zum
   etwa 1,4-Fachen der Bettlänge, auf einem 256-mm-Bett etwa 320 mm), sodass ein
-  **135 x 240 mm** großer Rahmen nur **4 Leisten** braucht statt 6. Nur noch
+  **135 x 240 mm** großer Rahmen nur **4 Leisten** braucht statt 6. Die Leisten
+  liegen nebeneinander quer zur Diagonale des Betts, die längsten in der Mitte,
+  und kürzere Leisten füllen die freien Plätze daneben: Auf einem 256-mm-Bett
+  passt der ganze Rahmen 135 x 240 mm auf **eine Platte** (plus eine für
+  Schlüssel und Zungen). Nur noch
   längere Seiten werden geteilt, in gleich große Stücke mit Schlüsseln an den
   Stoßstellen: Ein **A4-Rahmen** passt auf ein 256-mm-Bett. Mit `diag strips`
   aus liegt jede Leiste gerade.
@@ -180,7 +184,7 @@ Alle Prüfungen laufen an den **echten exportierten Netzen** (OpenSCAD,
 Manifold) in 25 Konfigurationen (u. a. 135 x 240 mm auf drei Bettgrößen, mit und
 ohne diagonale Leisten, ein schwerer Glasstapel 20 x 30 cm, schmale und breite
 Lippe), dazu 6 bewusst falsche Einstellungen, die die rote Meldung zeigen
-müssen: **1604 Prüfungen, 0 fehlgeschlagen**. Auch die Schnappschlüssel-Verbindung
+müssen: **1598 Prüfungen, 0 fehlgeschlagen**. Auch die Schnappschlüssel-Verbindung
 wird am Mesh gemessen (Kopf, Wulst, Schlitz, Spiel jedes eingesetzten Schlüssels
 in seiner Tasche an Mündung und Rille, Taschentiefe); wie fest sie unter Zug
 hält, zeigt nur ein Druck, drucke deshalb zuerst die optionale Testecke.
@@ -199,7 +203,8 @@ hält, zeigt nur ein Druck, drucke deshalb zuerst die optionale Testecke.
   zusammenhängendes Gebiet.
 - **Leisten:** Eine Leiste, die länger als das Bett ist, liegt diagonal (eine
   284-mm-Leiste braucht ein Feld von 201 x 201 mm), ein Rahmen 135 x 240 mm hat
-  also 4 Leisten. Jede Leistenplatte wird gemessen: Alle Leisten darauf sind
+  also 4 Leisten, die auf einem 256-mm-Bett alle auf einer Platte liegen (zwei
+  284-mm-Leisten in der Mitte, zwei 179-mm-Leisten außen). Jede Leistenplatte wird gemessen: Alle Leisten darauf sind
   getrennt, liegen im Bett und berühren sich nicht.
 - **Wände:** mindestens 2 mm um jede Tasche und jeden Schlitz.
 - **Schlüssel und Zungen** sitzen in ihren Taschen und Schlitzen, ohne den

@@ -53,7 +53,10 @@ are held by **spring prongs** you can pull out to change the picture.
   length of a strip (opening + 2 x frame width) must fit the bed. A strip longer
   than the bed is printed **diagonally** (up to about 1.4 times the bed length,
   about 320 mm on a 256 mm bed), so a **135 x 240 mm** frame needs only **4
-  strips**, not 6. Only sides that are longer still are split, into equal
+  strips**, not 6. The strips lie side by side across the diagonal of the bed,
+  the longest in the middle, and shorter strips fill the free places beside
+  them: on a 256 mm bed the whole 135 x 240 mm frame fits on **one plate**
+  (plus one for keys and prongs). Only sides that are longer still are split, into equal
   pieces with keys at the butt joints: an **A4 frame** prints on a 256 mm bed.
   Switch `diag strips` off if you prefer every strip to lie straight.
 - **Glass, photo, back board.** The rabbet is as deep as your stack (glass 0 to
@@ -170,7 +173,7 @@ Print any other size or shape with the Customizer.
 
 ## What was checked
 
-All checks run on the **real exported meshes** (OpenSCAD, Manifold) in 25 configurations (including 135 x 240 mm on three bed sizes, with and without diagonal strips, a heavy 20 x 30 cm glass stack, narrow and wide lips) of rectangle, triangle, hexagon, octagon, rhombus, split A4, big glass, wide and narrow lip and several key settings, plus 6 deliberately wrong settings that must show the red message: **1604 checks, 0 failed**. The snap-key joint is measured on the meshes too (key head, bead, slit, clearance of every seated key in its pocket at the mouth and in the groove, pocket depth); how firmly it holds under tension can only be shown by a print, so print the optional test corner first.
+All checks run on the **real exported meshes** (OpenSCAD, Manifold) in 25 configurations (including 135 x 240 mm on three bed sizes, with and without diagonal strips, a heavy 20 x 30 cm glass stack, narrow and wide lips) of rectangle, triangle, hexagon, octagon, rhombus, split A4, big glass, wide and narrow lip and several key settings, plus 6 deliberately wrong settings that must show the red message: **1598 checks, 0 failed**. The snap-key joint is measured on the meshes too (key head, bead, slit, clearance of every seated key in its pocket at the mouth and in the groove, pocket depth); how firmly it holds under tension can only be shown by a print, so print the optional test corner first.
 
 - **The mitres close:** the area of all strips above the lip chamfer equals outer outline minus opening, and neighbouring strips do not overlap.
 - **Rabbet:** equals the picture plus the clearance on every side; the picture fits in.
@@ -181,7 +184,7 @@ All checks run on the **real exported meshes** (OpenSCAD, Manifold) in 25 config
 - **Keys and prongs** sit in their pockets without touching the frame (overlap volume 0.000 mm³).
 - **Snap key:** the head closes by 0.25 mm while the bead is pressed through the pocket mouth, which strains the PETG by about **1.5 %** (2.2 % with the printer 0.1 mm tight; limit 3 %). The slit is wide enough, the bead still catches with the printer 0.1 mm loose, the pocket roof bridges 9.7 mm, the key prints flat without support. The bar is estimated at roughly 300 N tensile (an estimate, not a measurement).
 - **Number of prongs:** a heavy stack gets more prongs, so that together they press with at least twice the weight of glass, photo and board (13 x 18 cm: 8 prongs for a 184 g stack; 20 x 30 cm with 4 mm glass: 14 prongs for 906 g).
-- **Strips:** a strip longer than the bed lies diagonally (a 284 mm strip needs a 201 x 201 mm field), so a 135 x 240 mm frame has 4 strips; every strip plate is measured: all strips on it are separate, inside the bed and not touching.
+- **Strips:** a strip longer than the bed lies diagonally (a 284 mm strip needs a 201 x 201 mm field), so a 135 x 240 mm frame has 4 strips, and on a 256 mm bed all 4 lie on one plate (two 284 mm strips in the middle, two 179 mm strips outside); every strip plate is measured: all strips on it are separate, inside the bed and not touching.
 - **Prong:** measured on the real meshes: the root slides straight into its slot (the arm and pad touch nothing on the way in), the teeth are pressed in by 0.02 mm² (a press fit), the bent arm stays clear of the wall, and the pad top sits 1.5 mm inside the back board when relaxed, so the stack bends the arm by 1.5 mm. That gives about **1.6 N per prong** (beam model with the measured deflection), bending strain **1.1 %** (1.8 % while the picture is put in). All prongs together press with about 13 N on a 13 x 18 cm stack that weighs about 1.8 N. How the printed prong feels (press fit, stiffness of your PETG) is **not** measured: it depends on your printer.
 - **Test corner:** two stubs and a key, flat on the bed, inside the bed.
 - **All plates** are inside the bed; each sample is test-sliced and the 3MF reloads in Bambu Studio with Bambu filament only.
