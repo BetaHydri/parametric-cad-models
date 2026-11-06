@@ -37,14 +37,22 @@ generator, in **ASA** (or PETG) for grey water outdoors.
 
 ## Highlights
 
-- **Any size on every end, independently.** Hose sizes 20 to 130 mm (dropdown
-  for the usual 25 / 28 / 32 / 40 / 50 / 63 / 70 / 75 / 90 / 100 / 110 mm, or
-  type your own). A reducer is simply two different sizes.
+- **Any size on every end, independently.** Metric and inch: sizes 5 to 130 mm.
+  The dropdown has the usual metric sizes (20 to 110 mm), the **inch hoses 1/4" /
+  3/8" / 1/2" / 5/8" / 3/4" / 1" / 1-1/4" / 1-1/2" / 2"** and the **DIN 2440 /
+  ISO 65 steel pipe sizes** (1/4" to 4", DN8 to DN100), or type your own. A
+  reducer is simply two different sizes, even 50 mm down to 1/4" in one piece:
+  for reductions of more than 2.5 : 1 the funnel is automatically steeper (about
+  100 mm tall instead of 165 mm), and you can add a bend of any angle (shape:
+  elbow) to the same piece.
+- **Hose connectors and pipe connectors.** Two hoses of the same size: shape
+  straight, barb + barb, then a hose clamp on each hose. Two pipes: socket +
+  socket with an extension. Hose to pipe: barb + socket.
 - **Barb or socket per end.** Mix them freely: socket to barb (pipe to hose),
   barb to barb (hose to hose), socket to socket (pipe to pipe, with an extension
   of any length).
 - **Seals without glue.** Every socket has a tapered bore, a stop for the pipe
-  and an **O-ring groove** (3 mm cord, the usual 40 x 3 or 50 x 3 ring). Prefer
+  and an **O-ring groove with 45° flanks** (prints without support; 3 mm cord, the usual 40 x 3 or 50 x 3 ring). Prefer
   not to buy rings? Choose **TPU rings** in the Customizer: they are printed on a
   second plate.
 - **Bends of any angle.** Elbows from 5 to 120° with a smooth long-radius bend,
@@ -72,6 +80,11 @@ generator, in **ASA** (or PETG) for grey water outdoors.
 | **Size means** | the **inside** diameter of your hose | the **outside** diameter of your pipe |
 | **How it connects** | the hose slides over three ridges; a hose clamp makes it permanent | the pipe slides in until it stops; the O-ring in the groove seals |
 | **Good to know** | the ridge crest is 1.6 mm wider than the hose bore (about 4 % stretch at 40 mm) | the bore is tapered: 0.8 mm play at the mouth, 0.2 mm at the bottom, so the pipe jams slightly |
+
+Hoses under 20 mm (1/4" to 3/4") get a lower ridge and a thinner wall
+automatically, so the bore stays open (a 1/4" connector has a 4 mm bore: fine
+for water and air, too narrow for grey water with hair and grease). Sockets
+start at 10 mm pipe diameter.
 
 Typical sizes: DN40 pipe = 40 mm outside, DN50 = 50 mm, DN70 = 75 mm, **DN100
 sewer pipe = 110 mm**. Measure your pipe or hose; a 40 mm "drain stub" on a
@@ -118,14 +131,17 @@ support where it is needed.
 |---|---|---|---|---|
 | ![Motorhome outlet](images/03_wohnmobil-auslass-40-schlauch-50.jpg) **Motorhome outlet 40 mm to 50 mm hose** | Straight piece | hose barb 50 / socket 40 | none | 1.6 h / 45 g |
 | ![Hose reducer](images/04_reduzierstueck-50-40.jpg) **Hose reducer 50 mm to 40 mm** | Straight piece | hose barb 50 / hose barb 40 | none | 1.4 h / 36 g |
-| ![Pipe extension](images/05_verlaengerung-40.jpg) **Pipe extension 40 mm, 60 mm straight** | Straight piece | socket 40 / socket 40 | none | 2.9 h / 73 g |
-| ![Hose to sewer pipe](images/06_schlauch-50-kanalrohr-110.jpg) **Hose 50 mm to sewer pipe DN100** | Straight piece | socket 110 / hose barb 50 | none | 5.8 h / 222 g |
-| ![90 degree elbow](images/07_bogen-90.jpg) **90 degree elbow, socket 40 mm to hose 40 mm** | Elbow | socket 40 / hose barb 40, 90° | painted, normal (manual) | 3.2 h / 80 g |
-| ![45 degree elbow](images/08_bogen-45.jpg) **45 degree elbow, socket 40 mm to hose 50 mm** | Elbow | socket 40 / hose barb 50, 45° | painted, normal (manual) | 2.7 h / 63 g |
+| ![Pipe extension](images/05_verlaengerung-40.jpg) **Pipe extension 40 mm, 60 mm straight** | Straight piece | socket 40 / socket 40 | none | 2.8 h / 73 g |
+| ![Hose to sewer pipe](images/06_schlauch-50-kanalrohr-110.jpg) **Hose 50 mm to sewer pipe DN100** | Straight piece | socket 110 / hose barb 50 | none | 5.7 h / 223 g |
+| ![90 degree elbow](images/07_bogen-90.jpg) **90 degree elbow, socket 40 mm to hose 40 mm** | Elbow | socket 40 / hose barb 40, 90° | painted, normal (manual) | 3.1 h / 84 g |
+| ![45 degree elbow](images/08_bogen-45.jpg) **45 degree elbow, socket 40 mm to hose 50 mm** | Elbow | socket 40 / hose barb 50, 45° | painted, normal (manual) | 2.7 h / 69 g |
 | ![Y piece](images/09_y-stueck.jpg) **Y piece 40 / 40 / 32 mm** | T / Y piece | hose barb 40 / 40 / 32, branch 45° | painted, normal (manual) | 2.8 h / 78 g |
 | ![T piece](images/10_t-stueck.jpg) **T piece 50 / 50 / 40 mm** | T / Y piece | hose barb 50 / 50 / 40, branch 90° | painted, normal (manual) | 2.1 h / 60 g |
 | ![Cap](images/11_kappe-40.jpg) **Cap for a 40 mm pipe** | Cap / plug | socket 40 | none | 0.8 h / 22 g |
 | ![Plug](images/12_stopfen-schlauch-40.jpg) **Plug for a 40 mm hose** | Cap / plug | hose barb 40 | none | 0.5 h / 12 g |
+| ![Hose connector 1/4 inch](images/16_schlauchverbinder-1-4-zoll.jpg) **Hose connector 1/4 inch** | Straight piece | hose barb 6.35 / hose barb 6.35 | none | 0.2 h / 1 g |
+| ![Motorhome outlet 50 mm to 1/4 inch hose](images/17_wohnmobil-auslass-50-schlauch-1-4-zoll.jpg) **Motorhome outlet 50 mm to 1/4 inch hose** | Straight piece | socket 50 / hose barb 6.35 | none | 1.6 h / 43 g |
+| ![45 degree elbow, socket 50 mm to 1/4 inch hose](images/18_bogen-45-muffe-50-schlauch-1-4-zoll.jpg) **45 degree elbow, socket 50 mm to 1/4 inch hose** | Elbow | socket 50 / hose barb 6.35, 45° | painted, normal (manual) | 1.7 h / 49 g |
 
 Print any other combination with the Customizer.
 
@@ -200,10 +216,14 @@ the 45° elbow first.
 
 ## What was checked
 
-28 configurations (reducers, extensions, sockets from 32 to 110 mm, barbs from
-25 to 110 mm, elbows 30 / 40 / 45 / 55 / 60 / 90 / 120°, Y and T pieces with
+46 configurations (reducers, extensions, sockets from 21.3 to 110 mm, barbs
+from 6.35 (1/4") to 110 mm, inch hose and steel pipe connectors, 50 mm down to
+1/4" reducers, elbows 30 / 40 / 45 / 55 / 60 / 90 / 120° (also 50 mm socket to 1/4" hose
+with a bend), Y and T pieces with
 mixed sizes, caps and plugs, wall 2 to 6 mm, 2 to 6 ridges, 3.5 mm O-ring) were
-measured automatically on the real exported meshes: **705 checks, 0 failed**.
+measured automatically on the real exported meshes: **1124 checks, 0 failed**. A second run goes through **every dropdown size**
+in all shapes (184 configurations, 4554 checks, 0 failed): both plates build
+without a warning, and impossible settings are refused with a red message.
 
 - **One connected body, flat on the bed, valid solid** and **one connected flow
   channel**.
@@ -220,8 +240,10 @@ measured automatically on the real exported meshes: **705 checks, 0 failed**.
 - **The bed check is reliable:** the real height and width of every part stay
   inside the numbers the generator uses for its warning.
 - **Overhang check in the print pose**, layer by layer: the free-printing shapes
-  stay within 55° and about 2.9 mm ledges; the shapes that need support are
-  exactly those with a leg leaning over 35°. All four support variants were
+  stay within 55° and have no flat ledge over about 1 mm (a flat 2 mm groove roof
+  failed on a real print, so the check is strict now; groove and hose-stop collar
+  have 45° flanks); the shapes that need support are
+  exactly those with a leg leaning over 35°. All five support variants were
   test-sliced in Bambu Studio.
 
 **Not tested:** real prints, water tightness, pressure, hot water, UV ageing. A

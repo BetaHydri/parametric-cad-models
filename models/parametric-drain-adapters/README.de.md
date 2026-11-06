@@ -38,15 +38,23 @@ demselben Generator, in **ASA** (oder PETG) für Grauwasser im Freien.
 
 ## Highlights
 
-- **Jede Größe an jedem Ende, unabhängig.** Schlauchgrößen von 20 bis 130 mm
-  (Auswahlliste für die üblichen 25 / 28 / 32 / 40 / 50 / 63 / 70 / 75 / 90 /
-  100 / 110 mm oder eigener Wert). Ein Reduzierstück sind einfach zwei
-  verschiedene Größen.
+- **Jede Größe an jedem Ende, unabhängig.** Metrisch und Zoll: Größen von 5 bis
+  130 mm. Die Auswahlliste enthält die üblichen metrischen Größen (20 bis
+  110 mm), die **Zollschläuche 1/4" / 3/8" / 1/2" / 5/8" / 3/4" / 1" / 1-1/4" /
+  1-1/2" / 2"** und die **Stahlrohrgrößen nach DIN 2440 / ISO 65** (1/4" bis 4",
+  DN8 bis DN100) oder einen eigenen Wert. Ein Reduzierstück sind einfach zwei
+  verschiedene Größen, auch 50 mm auf 1/4" in einem Teil: Bei Reduzierungen über
+  2,5 : 1 wird der Trichter automatisch steiler (etwa 100 mm hoch statt 165 mm),
+  und derselbe Adapter lässt sich mit einem Bogen beliebigen Winkels (Form:
+  Bogen) kombinieren.
+- **Schlauch- und Rohrverbinder.** Zwei Schläuche gleicher Größe: Form gerade,
+  Tülle + Tülle, dann je eine Schlauchschelle auf jeden Schlauch. Zwei Rohre:
+  Muffe + Muffe mit Verlängerung. Schlauch auf Rohr: Tülle + Muffe.
 - **Tülle oder Muffe pro Ende.** Frei mischbar: Muffe auf Tülle (Rohr auf
   Schlauch), Tülle auf Tülle (Schlauch auf Schlauch), Muffe auf Muffe (Rohr auf
   Rohr, mit Verlängerung in beliebiger Länge).
 - **Dichtung ohne Kleber.** Jede Muffe hat eine konische Bohrung, einen Anschlag
-  für das Rohr und eine **O-Ring-Nut** (3-mm-Schnur, der übliche O-Ring 40 x 3
+  für das Rohr und eine **O-Ring-Nut mit 45°-Flanken** (druckt ohne Stützen; 3-mm-Schnur, der übliche O-Ring 40 x 3
   oder 50 x 3). Keine O-Ringe kaufen? Wähle im Customizer **TPU-Ringe**: sie
   werden auf einer zweiten Platte gedruckt.
 - **Bögen in jedem Winkel.** Bögen von 5 bis 120° mit sanftem, großem Radius,
@@ -77,6 +85,11 @@ demselben Generator, in **ASA** (oder PETG) für Grauwasser im Freien.
 | **Größe bedeutet** | der **Innen**durchmesser deines Schlauchs | der **Außen**durchmesser deines Rohrs |
 | **So verbindet sie** | der Schlauch wird über drei Rippen geschoben; eine Schlauchschelle macht es dauerhaft | das Rohr wird bis zum Anschlag eingeschoben; der O-Ring in der Nut dichtet |
 | **Gut zu wissen** | der Rippenkamm ist 1,6 mm weiter als die Schlauchbohrung (etwa 4 % Dehnung bei 40 mm) | die Bohrung ist konisch: 0,8 mm Spiel an der Öffnung, 0,2 mm am Grund, das Rohr klemmt also leicht |
+
+Schläuche unter 20 mm (1/4" bis 3/4") bekommen automatisch einen niedrigeren Wulst
+und eine dünnere Wand, damit die Bohrung offen bleibt (ein 1/4"-Verbinder hat
+4 mm Bohrung: gut für Wasser und Luft, zu eng für Grauwasser mit Haaren und
+Fett). Muffen beginnen bei 10 mm Rohrdurchmesser.
 
 Typische Größen: DN40-Rohr = 40 mm außen, DN50 = 50 mm, DN70 = 75 mm,
 **DN100-Kanalrohr = 110 mm**. Miss dein Rohr oder deinen Schlauch; ein
@@ -124,14 +137,17 @@ dort, wo sie nötig sind.
 |---|---|---|---|---|
 | ![Wohnmobil-Auslass](images/03_wohnmobil-auslass-40-schlauch-50.jpg) **Wohnmobil-Auslass 40 mm auf 50-mm-Schlauch** | Gerade | Tülle 50 / Muffe 40 | keine | 1,6 h / 45 g |
 | ![Reduzierstück](images/04_reduzierstueck-50-40.jpg) **Schlauch-Reduzierstück 50 mm auf 40 mm** | Gerade | Tülle 50 / Tülle 40 | keine | 1,4 h / 36 g |
-| ![Rohrverlängerung](images/05_verlaengerung-40.jpg) **Rohrverlängerung 40 mm, 60 mm gerade** | Gerade | Muffe 40 / Muffe 40 | keine | 2,9 h / 73 g |
-| ![Schlauch auf Kanalrohr](images/06_schlauch-50-kanalrohr-110.jpg) **Schlauch 50 mm auf Kanalrohr DN100** | Gerade | Muffe 110 / Tülle 50 | keine | 5,8 h / 222 g |
-| ![90°-Bogen](images/07_bogen-90.jpg) **90°-Bogen, Muffe 40 mm auf Schlauch 40 mm** | Bogen | Muffe 40 / Tülle 40, 90° | gemalt, normal (manuell) | 3,2 h / 80 g |
-| ![45°-Bogen](images/08_bogen-45.jpg) **45°-Bogen, Muffe 40 mm auf Schlauch 50 mm** | Bogen | Muffe 40 / Tülle 50, 45° | gemalt, normal (manuell) | 2,7 h / 63 g |
+| ![Rohrverlängerung](images/05_verlaengerung-40.jpg) **Rohrverlängerung 40 mm, 60 mm gerade** | Gerade | Muffe 40 / Muffe 40 | keine | 2,8 h / 73 g |
+| ![Schlauch auf Kanalrohr](images/06_schlauch-50-kanalrohr-110.jpg) **Schlauch 50 mm auf Kanalrohr DN100** | Gerade | Muffe 110 / Tülle 50 | keine | 5,7 h / 223 g |
+| ![90°-Bogen](images/07_bogen-90.jpg) **90°-Bogen, Muffe 40 mm auf Schlauch 40 mm** | Bogen | Muffe 40 / Tülle 40, 90° | gemalt, normal (manuell) | 3,1 h / 84 g |
+| ![45°-Bogen](images/08_bogen-45.jpg) **45°-Bogen, Muffe 40 mm auf Schlauch 50 mm** | Bogen | Muffe 40 / Tülle 50, 45° | gemalt, normal (manuell) | 2,7 h / 69 g |
 | ![Y-Stück](images/09_y-stueck.jpg) **Y-Stück 40 / 40 / 32 mm** | T- / Y-Stück | Tülle 40 / 40 / 32, Abzweig 45° | gemalt, normal (manuell) | 2,8 h / 78 g |
 | ![T-Stück](images/10_t-stueck.jpg) **T-Stück 50 / 50 / 40 mm** | T- / Y-Stück | Tülle 50 / 50 / 40, Abzweig 90° | gemalt, normal (manuell) | 2,1 h / 60 g |
 | ![Kappe](images/11_kappe-40.jpg) **Kappe für ein 40-mm-Rohr** | Kappe / Stopfen | Muffe 40 | keine | 0,8 h / 22 g |
 | ![Stopfen](images/12_stopfen-schlauch-40.jpg) **Stopfen für einen 40-mm-Schlauch** | Kappe / Stopfen | Tülle 40 | keine | 0,5 h / 12 g |
+| ![Schlauchverbinder 1/4 Zoll](images/16_schlauchverbinder-1-4-zoll.jpg) **Schlauchverbinder 1/4 Zoll** | Gerades Stück | Tülle 6,35 / Tülle 6,35 | keine | 0,2 h / 1 g |
+| ![Wohnmobil-Ablauf 50 mm auf 1/4-Zoll-Schlauch](images/17_wohnmobil-auslass-50-schlauch-1-4-zoll.jpg) **Wohnmobil-Ablauf 50 mm auf 1/4-Zoll-Schlauch** | Gerades Stück | Muffe 50 / Tülle 6,35 | keine | 1,6 h / 43 g |
+| ![45°-Bogen, Muffe 50 mm auf 1/4-Zoll-Schlauch](images/18_bogen-45-muffe-50-schlauch-1-4-zoll.jpg) **45°-Bogen, Muffe 50 mm auf 1/4-Zoll-Schlauch** | Bogen | Muffe 50 / Tülle 6,35, 45° | gemalt, normal (manuell) | 1,7 h / 49 g |
 
 Jede andere Kombination druckst du mit dem Customizer.
 
@@ -207,11 +223,15 @@ zuerst an der Kappe oder dem 45°-Bogen.
 
 ## Was geprüft wurde
 
-28 Konfigurationen (Reduzierstücke, Verlängerungen, Muffen von 32 bis 110 mm,
-Tüllen von 25 bis 110 mm, Bögen 30 / 40 / 45 / 55 / 60 / 90 / 120°, Y- und
+46 Konfigurationen (Reduzierstücke, Verlängerungen, Muffen von 21,3 bis 110 mm,
+Tüllen von 6,35 (1/4") bis 110 mm, Verbinder für Zollschläuche und Stahlrohr, 50 mm
+auf 1/4", Bögen 30 / 40 / 45 / 55 / 60 / 90 / 120°, Y- und
 T-Stücke mit gemischten Größen, Kappen und Stopfen, Wand 2 bis 6 mm, 2 bis 6
 Rippen, 3,5-mm-O-Ring) wurden automatisch an den echten exportierten Netzen
-vermessen: **705 Prüfungen, 0 fehlgeschlagen**.
+vermessen: **1124 Prüfungen, 0 fehlgeschlagen**. Ein zweiter Lauf geht **jede Größe der
+Auswahlliste** in allen Formen durch (184 Konfigurationen, 4554 Prüfungen, 0
+fehlgeschlagen): Beide Platten bauen ohne Warnung, unmögliche Einstellungen
+werden mit roter Meldung abgelehnt.
 
 - **Ein zusammenhängender Körper, flach auf dem Bett, gültiger Festkörper** und
   **ein zusammenhängender Strömungskanal**.
@@ -228,7 +248,9 @@ vermessen: **705 Prüfungen, 0 fehlgeschlagen**.
 - **Die Bettprüfung ist verlässlich:** die echte Höhe und Breite jedes Teils
   bleibt innerhalb der Zahlen, die der Generator für seine Warnung nutzt.
 - **Überhangprüfung in der Drucklage**, Schicht für Schicht: die frei
-  druckenden Formen bleiben innerhalb von 55° und etwa 2,9 mm Absätzen; die
+  druckenden Formen bleiben innerhalb von 55° und haben keinen flachen Absatz über etwa 1 mm (ein flaches 2-mm-Dach der Nut
+  scheiterte in einem echten Druck, die Prüfung ist deshalb jetzt streng; Nut und
+  Schlauchanschlag haben 45°-Flanken); die
   Formen, die Stützen brauchen, sind genau die mit einem Schenkel über 35°. Alle
   vier Stützenvarianten wurden in Bambu Studio testgeslict.
 

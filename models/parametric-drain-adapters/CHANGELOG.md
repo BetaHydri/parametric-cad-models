@@ -9,6 +9,39 @@ folgt [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-06
+
+### Added
+
+- Zoll- und DIN-Größen in der Auswahlliste: Zollschläuche 1/4" bis 2" und
+  Stahlrohre nach DIN 2440 / ISO 65 (1/4" bis 4", DN8 bis DN100) sowie weitere
+  metrische Größen; eigener Wert ab 5 mm. Muffen beginnen bei 10 mm.
+- Schläuche unter 20 mm bekommen automatisch einen niedrigeren Wulst und eine
+  dünnere Wand, damit die Bohrung offen bleibt (1/4"-Tülle: 4 mm Bohrung).
+- Steilerer Trichter (38° statt 15°) bei Reduzierungen über 2,5 : 1, zum
+  Beispiel 50 mm auf 1/4" in einem Teil (etwa 100 mm statt 165 mm hoch); mit
+  einem Bogen beliebigen Winkels kombinierbar.
+- Drei neue Beispielteile: Schlauchverbinder 1/4 Zoll, Wohnmobil-Ablauf 50 mm
+  auf 1/4-Zoll-Schlauch und 45°-Bogen Muffe 50 mm auf 1/4-Zoll-Schlauch.
+- Größen-Prüflauf über jede Größe der Auswahlliste (184 Konfigurationen, 4554
+  Prüfungen).
+
+### Changed
+
+- Die Kollisionsprüfung beim Bogen rechnet gegen die echte Kontur von Ende A;
+  Bögen mit stark unterschiedlichen Größen werden dadurch nicht mehr unnötig
+  abgelehnt.
+- Prüfskript: 46 Konfigurationen mit 1124 Prüfungen und strengere Prüfung auf
+  flache Absätze.
+
+### Fixed
+
+- O-Ring-Nut: Das waagerechte 2-mm-Dach der Nut hing beim Druck frei in der
+  Luft (Fäden in der Bohrung, Meldung "floating regions" im Slicer). Beide
+  Flanken der Nut haben jetzt 45°, der gedruckte TPU-Ring folgt dem Profil.
+- Schlauchanschlag der Tüllen: flache Stufe durch eine 45°-Fase ersetzt.
+- Alle Beispiel-3MFs und Bilder neu erzeugt und im Bambu Studio testgeslict.
+
 ## [1.0.0] - 2026-11-05
 
 ### Added
