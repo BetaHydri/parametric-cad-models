@@ -2,7 +2,7 @@
 
 🌐 [English](README.md) | **Deutsch**
 
-Dokumentation, Bilder und Links zu meinen parametrischen OpenSCAD-Modellen für den FDM-Druck. Die 40 Modelle sind parametrisch aufgebaut und werden im MakerWorld-Customizer eingestellt (nur die Dometic Cooker Grommet ist ein fertig druckbares Modell); die Modelle samt Druckprofilen gibt es ausschließlich auf MakerWorld.
+Dokumentation, Bilder und Links zu meinen parametrischen OpenSCAD-Modellen für den FDM-Druck. Die 41 Modelle sind parametrisch aufgebaut und werden im MakerWorld-Customizer eingestellt (nur die Dometic Cooker Grommet ist ein fertig druckbares Modell); die Modelle samt Druckprofilen gibt es ausschließlich auf MakerWorld.
 
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-BetaHydri-00AE42)](https://makerworld.com/en/@BetaHydri)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
@@ -22,7 +22,7 @@ Ein Klick auf das Bild oder auf **Details** öffnet die ausführliche Beschreibu
 - [Technik und Elektronik](#technik-und-elektronik) (3)
 - [Mechanik](#mechanik) (3)
 - [Camping und Outdoor](#camping-und-outdoor) (3)
-- [Tier](#tier) (3)
+- [Tier](#tier) (4)
 - [Über dieses Repository](#über-dieses-repository)
 
 ## Aufbewahrung und Ordnung
@@ -97,6 +97,7 @@ Ein Klick auf das Bild oder auf **Details** öffnet die ausführliche Beschreibu
 | [<img src="docs/thumbs/parametric-dog-bowl-table.jpg" width="220" alt="Parametric Dog & Cat Bowl Stand">](models/parametric-dog-bowl-table/README.de.md) | **Parametric Dog & Cat Bowl Stand**<br>Erhöhter Napfständer für Hund und Katze mit einer oder zwei Mulden und Schwalbenschwanz-Teilung. | [Details](models/parametric-dog-bowl-table/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3136049-parametric-dog-and-cat-bowl-stand) |
 | [<img src="docs/thumbs/parametric-treat-box.jpg" width="220" alt="Parametric Dog Treat Pocket Box">](models/parametric-treat-box/README.de.md) | **Parametric Dog Treat Pocket Box**<br>Taschen-Box für Hundeleckerli mit Print-in-Place-Scharnier und Schnapp-Verschluss. | [Details](models/parametric-treat-box/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3200091-ultimative-treats-box) |
 | [<img src="docs/thumbs/parametric-dog-tag-generator.jpg" width="220" alt="Parametric Dog Tag">](models/parametric-dog-tag-generator/README.de.md) | **Parametric Dog Tag**<br>Hundemarke rund, als Pfote oder Knochen mit Namen als Inlay in zweiter Farbe, erhabener Adresse und automatischer Schriftanpassung. | [Details](models/parametric-dog-tag-generator/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3545013-make-your-own-dog-tag-generator#profileId-4054965) |
+| [<img src="docs/thumbs/parametric-axolotl-funnel.jpg" width="220" alt="Parametric Axolotl Funnel">](models/parametric-axolotl-funnel/README.de.md) | **Parametric Axolotl Funnel**<br>Futtertrichter mit Axolotl-Gesicht fürs Aquarium: Röhre und Fuß mit Bogenöffnungen, feste oder Clip-on-Kiemen, bis zu drei Farben mit dem AMS, wahlweise eigene Acrylröhre und Saugnapf-Lasche; druckt ohne Stützen. | [Details](models/parametric-axolotl-funnel/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3590605-axolotl-feeding-funnel#profileId-4112498) |
 
 ## Über dieses Repository
 

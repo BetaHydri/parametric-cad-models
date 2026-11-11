@@ -2,7 +2,7 @@
 
 🌐 **English** | [Deutsch](README.de.md)
 
-Documentation, images and links for my parametric OpenSCAD models for FDM printing. All 40 models are parametric and are configured in the MakerWorld Customizer (only the Dometic Cooker Grommet is a ready-made print model); the models including print profiles are available exclusively on MakerWorld.
+Documentation, images and links for my parametric OpenSCAD models for FDM printing. All 41 models are parametric and are configured in the MakerWorld Customizer (only the Dometic Cooker Grommet is a ready-made print model); the models including print profiles are available exclusively on MakerWorld.
 
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-BetaHydri-00AE42)](https://makerworld.com/en/@BetaHydri)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
@@ -22,7 +22,7 @@ Click the image or **Details** to open the full description with options, varian
 - [Technology and electronics](#technology-and-electronics) (3)
 - [Mechanics](#mechanics) (3)
 - [Camping and outdoor](#camping-and-outdoor) (3)
-- [Pets](#pets) (3)
+- [Pets](#pets) (4)
 - [About this repository](#about-this-repository)
 
 ## Storage and organization
@@ -97,6 +97,7 @@ Click the image or **Details** to open the full description with options, varian
 | [<img src="docs/thumbs/parametric-dog-bowl-table.jpg" width="220" alt="Parametric Dog & Cat Bowl Stand">](models/parametric-dog-bowl-table/README.md) | **Parametric Dog & Cat Bowl Stand**<br>Raised feeder stand for dogs and cats with one or two bowl recesses and dovetail split. | [Details](models/parametric-dog-bowl-table/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3136049-parametric-dog-and-cat-bowl-stand) |
 | [<img src="docs/thumbs/parametric-treat-box.jpg" width="220" alt="Parametric Dog Treat Pocket Box">](models/parametric-treat-box/README.md) | **Parametric Dog Treat Pocket Box**<br>Pocket box for dog treats with print-in-place hinge and snap latch. | [Details](models/parametric-treat-box/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3200091-ultimative-treats-box) |
 | [<img src="docs/thumbs/parametric-dog-tag-generator.jpg" width="220" alt="Parametric Dog Tag">](models/parametric-dog-tag-generator/README.md) | **Parametric Dog Tag**<br>Pet tag in round, paw or bone shape with name inlaid in a second colour, raised address text and automatic text fitting. | [Details](models/parametric-dog-tag-generator/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3545013-make-your-own-dog-tag-generator#profileId-4054965) |
+| [<img src="docs/thumbs/parametric-axolotl-funnel.jpg" width="220" alt="Parametric Axolotl Funnel">](models/parametric-axolotl-funnel/README.md) | **Parametric Axolotl Funnel**<br>Feeding funnel with an axolotl face for the aquarium: tube and foot with arched openings, fixed or clip-on gills, up to three colours with the AMS, optional own acrylic tube and suction-cup tab; prints without supports. | [Details](models/parametric-axolotl-funnel/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3590605-axolotl-feeding-funnel#profileId-4112498) |
 
 ## About this repository
 
