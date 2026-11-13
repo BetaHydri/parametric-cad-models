@@ -2,7 +2,7 @@
 
 🌐 [English](README.md) | **Deutsch**
 
-Dokumentation, Bilder und Links zu meinen parametrischen OpenSCAD-Modellen für den FDM-Druck. Die 41 Modelle sind parametrisch aufgebaut und werden im MakerWorld-Customizer eingestellt (nur die Dometic Cooker Grommet ist ein fertig druckbares Modell); die Modelle samt Druckprofilen gibt es ausschließlich auf MakerWorld.
+Dokumentation, Bilder und Links zu meinen parametrischen OpenSCAD-Modellen für den FDM-Druck. Die 42 Modelle sind parametrisch aufgebaut und werden im MakerWorld-Customizer eingestellt (nur die Dometic Cooker Grommet ist ein fertig druckbares Modell); die Modelle samt Druckprofilen gibt es ausschließlich auf MakerWorld.
 
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-BetaHydri-00AE42)](https://makerworld.com/en/@BetaHydri)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
@@ -16,7 +16,7 @@ Ein Klick auf das Bild oder auf **Details** öffnet die ausführliche Beschreibu
 
 ## Inhaltsverzeichnis
 
-- [Aufbewahrung und Ordnung](#aufbewahrung-und-ordnung) (14)
+- [Aufbewahrung und Ordnung](#aufbewahrung-und-ordnung) (15)
 - [Küche, Haushalt und Garten](#küche-haushalt-und-garten) (5)
 - [Haus, Möbel und Licht](#haus-möbel-und-licht) (9)
 - [Technik und Elektronik](#technik-und-elektronik) (3)
@@ -42,7 +42,8 @@ Ein Klick auf das Bild oder auf **Details** öffnet die ausführliche Beschreibu
 | [<img src="docs/thumbs/parametric-coin-inlets.jpg" width="220" alt="Ultimate Parametric Coin Sorter and Drop-in">](models/parametric-coin-inlets/README.de.md) | **Ultimate Parametric Coin Sorter and Drop-in**<br>Münzsortierer aus Gefäß, Einsatz und Deckel, automatisch passend zu deinen Münzen dimensioniert. | [Details](models/parametric-coin-inlets/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3248811-ultimate-parametric-coin-sorter-drop-in-vessel) |
 | [<img src="docs/thumbs/parametric-niche-shelf-system.jpg" width="220" alt="Parametric Niche Shelf System">](models/parametric-niche-shelf-system/README.de.md) | **Parametric Niche Shelf System**<br>Regal für schmale, auch schräge Nischen mit 1–4 Schalen, Eckpfosten, gedruckten Schraubfüßen, fünf Befestigungsarten und optionaler Schlauchabdeckung. | [Details](models/parametric-niche-shelf-system/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3464475-parametric-niche-shelf-system) |
 | [<img src="docs/thumbs/parametric-label-holder-generator.jpg" width="220" alt="Parametric Label Holder Generator">](models/parametric-label-holder-generator/README.de.md) | **Parametric Label Holder Generator**<br>Etikettenhalter für jede ebene Wand: Aufsteck-Clip (1–9 mm), Klebeplatte oder beides, mit Einschub-Papiertasche, gedruckter Kachel oder gravierter Schrift; ohne Support. | [Details](models/parametric-label-holder-generator/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3444426-label-holder-generator) |
-| [<img src="docs/thumbs/parametric-tool-wall.jpg" width="220" alt="Parametric Tool Wall">](models/parametric-tool-wall/README.de.md) | **Parametric Tool Wall**<br>Werkzeugwand mit Französischer Leiste im 42-mm-Raster und einhängbaren Werkzeughaltern: Rundlöcher, Sechskant-Taschen, Schlitze, Gridfinity-Schale und Haken, in zwei Farben. | [Details](models/parametric-tool-wall/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3526950-parametric-tool-wall#profileId-4032192) |
+| [<img src="docs/thumbs/parametric-tool-wall.jpg" width="220" alt="Parametric Tool Wall">](models/parametric-tool-wall/README.de.md) | **Parametric Tool Wall**<br>Werkzeugwand mit Französischer Leiste im 42-mm-Raster und 16 Arten einhängbarer Halter: Rundlöcher, Sechskant-Taschen, Schlitze, V-Kerben für Zangen, Gridfinity-Schale, Haken, Stiftebecher, Stifte, Hammerhalter und mehr, in zwei Farben. | [Details](models/parametric-tool-wall/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3526950-parametric-tool-wall#profileId-4032192) |
+| [<img src="docs/thumbs/parametric-skadis-holders.jpg" width="220" alt="Parametric Skadis Holders">](models/parametric-skadis-holders/README.de.md) | **Parametric Skadis Holders**<br>Ein Customizer, sechs Halter für das IKEA-SKÅDIS-Board: Regal oder Tisch, Haken und Stifte, Aufbewahrungsbox, Becher, Werkzeughalter (rund, sechskant, Schlitz oder V-Kerbe für Zangen, wahlweise mit Boden und eingravierten Größenangaben) und ein Passungstest; druckt ohne Stützen. | [Details](models/parametric-skadis-holders/README.de.md)<br>[MakerWorld](https://makerworld.com/en/models/3591819-parametric-skadis-holders#profileId-4114026) |
 
 ## Küche, Haushalt und Garten
 

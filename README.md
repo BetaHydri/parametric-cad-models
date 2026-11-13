@@ -2,7 +2,7 @@
 
 🌐 **English** | [Deutsch](README.de.md)
 
-Documentation, images and links for my parametric OpenSCAD models for FDM printing. All 41 models are parametric and are configured in the MakerWorld Customizer (only the Dometic Cooker Grommet is a ready-made print model); the models including print profiles are available exclusively on MakerWorld.
+Documentation, images and links for my parametric OpenSCAD models for FDM printing. All 42 models are parametric and are configured in the MakerWorld Customizer (only the Dometic Cooker Grommet is a ready-made print model); the models including print profiles are available exclusively on MakerWorld.
 
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-BetaHydri-00AE42)](https://makerworld.com/en/@BetaHydri)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
@@ -16,7 +16,7 @@ Click the image or **Details** to open the full description with options, varian
 
 ## Table of contents
 
-- [Storage and organization](#storage-and-organization) (14)
+- [Storage and organization](#storage-and-organization) (15)
 - [Kitchen, household and garden](#kitchen-household-and-garden) (5)
 - [Home, furniture and lighting](#home-furniture-and-lighting) (9)
 - [Technology and electronics](#technology-and-electronics) (3)
@@ -42,7 +42,8 @@ Click the image or **Details** to open the full description with options, varian
 | [<img src="docs/thumbs/parametric-coin-inlets.jpg" width="220" alt="Ultimate Parametric Coin Sorter and Drop-in">](models/parametric-coin-inlets/README.md) | **Ultimate Parametric Coin Sorter and Drop-in**<br>Coin sorter made of vessel, insert and lid, automatically sized to your coins. | [Details](models/parametric-coin-inlets/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3248811-ultimate-parametric-coin-sorter-drop-in-vessel) |
 | [<img src="docs/thumbs/parametric-niche-shelf-system.jpg" width="220" alt="Parametric Niche Shelf System">](models/parametric-niche-shelf-system/README.md) | **Parametric Niche Shelf System**<br>Shelf for narrow, including slanted, niches with 1–4 trays, corner posts, printed screw feet, five mounting options and optional hose cover. | [Details](models/parametric-niche-shelf-system/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3464475-parametric-niche-shelf-system) |
 | [<img src="docs/thumbs/parametric-label-holder-generator.jpg" width="220" alt="Parametric Label Holder Generator">](models/parametric-label-holder-generator/README.md) | **Parametric Label Holder Generator**<br>Label holders for any flat wall: snap-on clip (1–9 mm), glue-on plate or both, with slide-in paper pocket, printed tile or engraved text; no supports. | [Details](models/parametric-label-holder-generator/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3444426-label-holder-generator) |
-| [<img src="docs/thumbs/parametric-tool-wall.jpg" width="220" alt="Parametric Tool Wall">](models/parametric-tool-wall/README.md) | **Parametric Tool Wall**<br>French-cleat wall plate on a 42 mm grid with hang-on tool holders: round holes, hex pockets, slots, Gridfinity tray and hooks, in two colours. | [Details](models/parametric-tool-wall/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3526950-parametric-tool-wall#profileId-4032192) |
+| [<img src="docs/thumbs/parametric-tool-wall.jpg" width="220" alt="Parametric Tool Wall">](models/parametric-tool-wall/README.md) | **Parametric Tool Wall**<br>French-cleat wall plate on a 42 mm grid with 16 types of hang-on holders: round holes, hex pockets, slots, V-notch pockets for pliers, Gridfinity tray, hooks, pen cup, pegs, hammer holder and more, in two colours. | [Details](models/parametric-tool-wall/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3526950-parametric-tool-wall#profileId-4032192) |
+| [<img src="docs/thumbs/parametric-skadis-holders.jpg" width="220" alt="Parametric Skadis Holders">](models/parametric-skadis-holders/README.md) | **Parametric Skadis Holders**<br>One Customizer, six holders for the IKEA SKÅDIS board: shelf or table, hooks and pegs, storage bin, cup, tool holder (round, hexagon, slot or V-notch for pliers, optional floor and engraved labels) and a fit test; prints without supports. | [Details](models/parametric-skadis-holders/README.md)<br>[MakerWorld](https://makerworld.com/en/models/3591819-parametric-skadis-holders#profileId-4114026) |
 
 ## Kitchen, household and garden
 
