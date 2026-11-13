@@ -4,7 +4,7 @@
 
 🌐 **English** | [Deutsch](README.de.md)
 
-Parametric tool wall you build from **one wall plate and as many hang-on modules as you like**. The plate is a **French cleat on a 42 mm grid** (1–7 cells wide, 1–7 rows high, one 45° ridge per row). The modules hang on any ridge, **slide sideways** and **lift off** when you want to rearrange. In the MakerWorld Customizer you pick up to five modules: **round holes**, **hex pockets**, **slots**, a **tray with Gridfinity sockets** and **hooks**. Everything is laid out on **two plates in two colours**.
+Parametric tool wall you build from **one wall plate and as many hang-on modules as you like**. The plate is a **French cleat on a 42 mm grid** (1–7 cells wide, 1–7 rows high, one 45° ridge per row). The modules hang on any ridge, **slide sideways** and **lift off** when you want to rearrange. In the MakerWorld Customizer you pick up to five modules from **16 holder types**: **round holes**, **hex pockets**, **slots**, **V-notch pockets for pliers**, a **tray with Gridfinity sockets**, **hooks**, a **pen cup**, **pegs for spools**, a **hammer holder**, a drill cradle, a pipe-wrench holder and more. Round, slot and V-notch holders can have a **floor** and **engraved labels**. Everything is laid out on **two plates in two colours**.
 
 [![MakerWorld](https://img.shields.io/badge/MakerWorld-Model-00AE42)](https://makerworld.com/en/models/3526950-parametric-tool-wall#profileId-4032192)
 ![OpenSCAD](https://img.shields.io/badge/OpenSCAD-parametric-yellow)
@@ -16,7 +16,7 @@ Parametric tool wall you build from **one wall plate and as many hang-on modules
 >
 > ![Parametric Tool Wall – screwdriver rack on a French-cleat wall plate](images/01_hero.jpg)
 
-> **Status:** the geometry is checked automatically (see [Verification and Status](#verification-and-status)) and every profile is test-sliced in Bambu Studio. **Not yet printed by the author.** The load capacity is a **calculation**, **not a measurement** (see [Load Estimate](#load-estimate)). Feedback on fit and load is welcome in the MakerWorld comments.
+> **Status:** the geometry is checked automatically (see [Verification and Status](#verification-and-status)) and every profile is test-sliced in Bambu Studio. **Not yet printed by the author.** The load capacity is a **calculation**, **not a measurement** (see [Load Estimate](#load-estimate)). The **pen cup, the straight pegs and the hammer holder are new and untested prints**: try them with a light load first, no load rating is claimed for them. Feedback on fit and load is welcome in the MakerWorld comments.
 
 ## Table of Contents
 
@@ -53,12 +53,17 @@ The wall carries **a plate with one 45° cleat ridge per row**, screwed to the w
 
 - **French-cleat system.** The 45° ridge pulls every module against the wall. A **spacer at the bottom of the back plate** stops the module from tilting forward, even with a load at the front of the shelf. To take a module off, lift it about 10 mm. Pulling it out horizontally makes it climb the bevel (about 1–2 times its weight), so do not yank tools out sideways.
 - **Rearrange in seconds.** Modules **slide sideways** along a ridge and hang on **every row, including the lowest**: the wall plate reaches 11 mm (23 mm with hooks) below the lowest ridge, so the spacer of a bottom-row module always has plate behind it. A module is 41 mm tall (hooks 53 mm), so modules in directly neighbouring rows have only 1 mm between them: to lift a lower module off, first take off the module above it (or slide the lower one out sideways past the end of the row).
-- **Five module types.** Round holes (graduated sizes, e.g. 5–9 mm), hex pockets (graduated for a hex key set, or all 6.35 mm for 1/4" bits), slots (pliers 28 × 12 mm, flat wrench 22 × 7 mm or your own size), a **Gridfinity tray** and **hooks**.
+- **16 holder types.** Round holes (graduated sizes, e.g. 5–9 mm), hex pockets (graduated for a hex key set, or all 6.35 mm for 1/4" bits), slots (pliers 28 × 12 mm, flat wrench 22 × 7 mm, tweezers or your own size), **V-notch pockets** for pliers and scissors of any thickness, a **Gridfinity tray**, **hooks**, a **pen cup**, **straight pegs** for spools and rolls, a **hammer holder** (two hooks with a gap: the head rests on both, the handle hangs down between them), plus a drill cradle, a drill-bit rack, a pipe-wrench holder, a sandpaper / disc pocket, a caliper holder, an open-front storage box and a work table (see [More Holders](#9--more-holders)).
+- **V-notch pockets for pliers.** A tapered pocket that is open at the top: the pliers sink in until the pocket is as narrow as they are thick and wedge there, so one holder fits pliers of any thickness. A wall in front keeps them from falling out forward.
+- **Floors and engraved labels.** Round, slot and V-notch holders can have a **floor** (blind holes, so brushes and tweezers cannot fall through), and holders with holes can carry **labels engraved 0.6 mm deep**, one per hole, for example Cut, Nose, Flat, Snip. There is a ready tweezers preset for the slots.
+- **Removable bins and large walls.** The tray can come with removable 41.5 × 41.5 mm bins (21–70 mm high) with a write-on area or engraved text, and a large wall of up to 60 × 60 cells can be cut into bed-sized panels with optional alignment keys.
 - **Gridfinity-compatible tray module.** Only the tray follows the Gridfinity spec: **42 mm sockets** (0.7 / 1.8 / 2.15 mm profile from the community spec). Standard 1 × 1 bins sit in it, are held sideways and lift straight out. The wall plate itself is a French cleat, not a Gridfinity baseplate. Not affiliated with the Gridfinity project (MIT-licensed, by Zack Freedman).
 - **Any size.** 1–7 cells wide and high, plate 4–8 mm thick, M3 / M4 / M5 countersunk screws, one per cell. 5 cells fit a 256 mm bed, **7 cells fit the H2C** (6 rows high there because of the foot), 4 cells the A1 mini.
 - **Two colours, no prime tower.** Plate in colour 1, modules in colour 2, each colour on **its own plate**.
-- **Supports only where the French cleat needs them.** The plate prints on its back without supports (the ridge bevel is exactly 45°). The modules print upright with a flat foot; the hanging lip of a module is a wedge that points down towards the wall, so Bambu Studio puts **automatic support under the lip, the shelf chamfer and the hook tips**. The profiles already contain this setting for the modules only (the wall plate has none).
-- **Four ready-made sample variants** with test-sliced Bambu Studio profiles for 3, 4 and 5 walls (see [Print Recommendations](#print-recommendations)).
+- **Supports only where the French cleat needs them.** The plate prints on its back without supports (the ridge bevel is exactly 45°). The modules print upright with a flat foot; the hanging lip of a module is a wedge that points down towards the wall, so the modules need **support in two places on the wall side of the back plate**: under the spacer and under the 45° lip. The ready-made projects contain this as a support block (support type **normal (manual)**); the wall plate has none.
+- **Four ready-made sample variants and fourteen extension kits** with test-sliced Bambu Studio profiles (see [Print Recommendations](#print-recommendations)).
+
+![All 16 holder types on one wall](images/06_alle-module.jpg)
 
 ![Close-up of the module on the wall plate](images/04_detail-nahaufnahme.jpg)
 
@@ -86,7 +91,7 @@ The names correspond to the model's Customizer parameters.
 | `plate_t` | Plate thickness; the screws sit countersunk in the plate | 5 | 4–8 mm, step 0.5 |
 | `screw` | Screw for the wall: one per cell, countersunk, hidden behind the modules | `m4` | `m3` (M3), `m4` (M4 or 4 mm wood screw), `m5` (M5 or 5 mm wood screw) |
 
-The plate gets an automatic **foot** below the lowest ridge (11 mm, 23 mm with hooks).
+The plate gets an automatic **foot** below the lowest ridge (11 mm, 23 mm with hooks). For a **large wall** choose the tiled mode: a wall of up to 60 × 60 cells is cut into bed-sized panels with a continuous 42 mm ridge pattern, 0.3 mm seams and optional loose alignment keys. Every panel needs its own wall fixings; the keys only align.
 
 ### 2 – Modules
 
@@ -94,7 +99,7 @@ Up to five modules. For each one, choose the type and the width in 42 mm cells; 
 
 | Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `module_1` … `module_5` | Module type: `none`, `round` (round holes: screwdrivers, round tools, files), `hex` (hex pockets: hex keys and bits), `slots` (pliers and flat wrenches), `tray` (tray with Gridfinity sockets), `hook` (hooks for cables, keys, gloves) | `round`, `hex`, `slots`, `none`, `none` | selection |
+| `module_1` … `module_5` | Module type: `none`, `round` (round holes: screwdrivers, round tools, files), `hex` (hex pockets: hex keys and bits), `slots` (pliers, flat wrenches, tweezers), `vee` (V-notch pockets for pliers and scissors), `tray` (tray with Gridfinity sockets), `hook` (hooks for cables, keys, gloves), `cup` (pen cup), `peg` (straight pegs), `hammer` (hammer holder), `drill`, `drillbits`, `pipewrench`, `sanding`, `caliper`, `box`, `table` (see [More Holders](#9--more-holders)) | `round`, `hex`, `slots`, `none`, `none` | selection |
 | `width_1` … `width_5` | Module width in cells | 2, 1, 2, 2, 1 | 1–4 |
 
 ### 3 – Round Holes
@@ -122,10 +127,10 @@ Up to five modules. For each one, choose the type and the width in 42 mm cells; 
 
 | Parameter | Meaning | Default | Range / Unit |
 |---|---|---|---|
-| `slot_kind` | What the slots are for: `pliers` (jaws 28 × 12 mm), `wrench` (flat wrench, handle 22 × 7 mm) or `custom` (uses the two sizes below) | `pliers` | selection |
+| `slot_kind` | What the slots are for: `pliers` (jaws 28 × 12 mm), `wrench` (flat wrench, handle 22 × 7 mm), `tweezers` (14 × 5 mm slot) or `custom` (uses the two sizes below) | `pliers` | selection |
 | `slot_w` | Slot width along the module (custom only) | 26 | 8–60 mm, step 0.5 |
 | `slot_t` | Slot thickness (custom only) | 10 | 3–30 mm, step 0.5 |
-| `slot_n` | Slots per slots module | 2 | 1–5 |
+| `slot_n` | Slots per slots module | 2 | 1–8 |
 | `slot_fit` | Play of the slot, added on both sizes | 0.5 | 0.2–1 mm, step 0.1 |
 
 ### 6 – Hooks
@@ -152,7 +157,41 @@ The round, hex, slot and hook settings apply to **every module of that type** (t
 | `printer` | Sets the plate size: `P2S` (256 mm beds: P1S, P2S, X1C, A1), `H2C` (large bed), `A1M` (A1 mini, 180 mm bed). **Choose the same printer in the MakerWorld bed menu before you download.** | `P2S` | selection |
 | `$fn` | Circle quality | 48 | 24–96, step 8 |
 
+### 9 – More Holders
+
+Choose these types in any of `module_1` … `module_5`. All of them use the same hanging interface as the first holders, so a wall you have already printed keeps working.
+
+| Type | What it is | Main settings |
+|---|---|---|
+| `vee` | **V-notch pockets** for pliers and scissors of any thickness. Closed, tapered pockets: the tool is dropped in from the top and wedges where the pocket is as narrow as the tool is thick. Heads of 8 × 18, 10 × 22 and 12 × 25 mm fit between the wedge point and the front wall of the default pocket. | `vee_n` pockets side by side (one row, 1–5), `vee_width` 30 mm at the front, `vee_depth` 40 mm long, `vee_size` + `vee_fit` = 6.5 mm at the narrow end; optional `vee_floor` and `vee_labels` |
+| `cup` | **Pen cup**, round or square, tied to the back plate. New, untested print | `cup_shape`, `cup_size` (60 mm inside), `cup_height` (80 mm), `cup_wall` (1.6 mm) |
+| `peg` | **Straight pegs** for spools and rolls: octagonal section with a flat underside and 45° corners, so they print without support. New, untested print | `peg_n` 1–3, `peg_len` 40–150 mm, `peg_d` (14 mm), `peg_pitch`, `peg_tilt` (3°: the top side rises towards the tip so spools lean back to the wall) |
+| `hammer` | **Hammer holder:** two hooks with a gap in the middle. The head rests on both hooks, the handle hangs straight down in the gap, which is open to the front. A small lip at the outer end of each hook only stops the head sliding sideways. New, untested print | `hammer_gap` (34 mm, clear gap for the handle), `hammer_span` (130 mm, distance between the lips = longest head), `hammer_depth` (40 mm reach), `hammer_tip` (12 mm lip height, 0 = plain hooks), `hammer_lean` (10°) |
+| `drill` | Drill / driver cradle: front-open 42 mm fork, 70 mm reach, 2 mm C-lip per side | `drill_opening`, `drill_depth`, `drill_lip` |
+| `drillbits` | Graduated rack of blind pockets for drill bits, 3 to 10 mm | `bit_n`, `bit_d_min`, `bit_d_max`, `bit_fit`, `bit_pitch`, `bit_depth` |
+| `pipewrench` | Pipe-wrench holder: closed slot (32 × 16 mm), two holes or an open fork | `wrench_style`, `wrench_slot_w`, `wrench_slot_t`, `wrench_opening`, `wrench_depth` |
+| `sanding` | Upright pocket for sandpaper sheets and sanding discs, 125 × 12 mm | `sand_width`, `sand_stack`, `sand_lip` |
+| `caliper` | Caliper holder: jaw slot 30 × 5 mm, the beam lies flat on the wall | `caliper_jaw_w`, `caliper_jaw_t`, `caliper_fit`, `caliper_pocket`, `caliper_gap` |
+| `box` | Open-front storage box 120 × 100 × 70 mm with a low front and sloped sides, optional label recess or engraved text | `box_width`, `box_depth`, `box_height`, `box_text`, `box_text_style` |
+| `table` | Work table: a flat shelf with a rim (`flat`) or with recesses for 32 mm paint pots | `table_surface`, `table_depth`, `table_lip`, `table_pots_x`, `table_pots_y`, `table_pot_d` |
+
+Measure your own tools before you choose a holder. A drill cradle, pipe-wrench holder or caliper holder is **not a universal fit**: set the opening to your tool in the Customizer.
+
+### 10 – Floors and Labels
+
+| Parameter | Meaning | Default | Range / Unit |
+|---|---|---|---|
+| `round_floor`, `slot_floor`, `vee_floor` | Floor under the holes of round, slot and V-notch holders. 0 = the holes go through, otherwise the holes are blind (brushes and tweezers cannot fall through). The holes must stay at least 8 mm deep | 0 | 0 or at least 0.8 mm |
+| `round_labels`, `hex_labels`, `slot_labels`, `vee_labels` | Comma-separated labels, one per hole, engraved 0.6 mm deep; the first label belongs to the leftmost hole as seen from the front | empty | text |
+| `label_size` | Letter height; letters shrink to fit | 4 | 3–8 mm |
+
+### 11 – Removable Bins
+
+Select a `tray` and switch on `include_bins` to get **one individual 1 × 1 bin per socket** (41.5 × 41.5 mm). `bin_height` is the overall height including the foot (21–70 mm, default 35). `bin_label` adds a recessed 29 × 10 mm write-on area; `bin_text` engraves free text (up to 24 characters) there, either engraved in one colour or as a coloured inlay (needs a colour change). The bins have no lid, dividers or stacking rim and print opening up without support. Leave at least 6 mm above a seated bin for removal.
+
 **Preview:** the Assemble view in the Customizer shows the wall plate with all modules hung on it (and Gridfinity bins in the tray); it is not part of the download.
+
+![All 16 holder types, portrait format](images/07_alle-module-hochformat.jpg)
 
 If a setting cannot work (plate too wide for the printer, modules do not fit on the plate, too many holes for the module width), the preview shows a **red message instead of a model**.
 
@@ -178,7 +217,7 @@ The model is a single parametric OpenSCAD file. The wall plate sits at y = 0 and
 ### Print Optimisations
 
 - **The wall plate prints on its back, ridges up, without supports** (the bevel is exactly 45°).
-- No overhang steeper than 45° on the wall plate or in the module print pose, apart from the lip wedge, the shelf chamfer and the hook tips, which need automatic support.
+- No overhang steeper than 45° on the wall plate or in the module print pose, apart from the spacer and the lip wedge on the wall side of the back plate, which need support.
 - The modules print upright on a 14 mm flat foot.
 
 ![Screwdriver rack, portrait format](images/02_hero-hochformat.jpg)
@@ -201,6 +240,7 @@ The model is a single parametric OpenSCAD file. The wall plate sits at y = 0 and
 - **Pull-off:** a horizontal pull has to lift the module along the 45° bevel: about **1 × the hanging weight without friction, 1.9 × with friction 0.3**. Do not yank tools out sideways.
 - **Wall screw:** the tension in the screw above a module is about 1.7–2.6 × the load. Anchor the plate in studs or with plugs that are rated for that.
 - The weakest parts are the **hooks** (10 mm wide pegs printed upright, tension across the layers) and the root of the ridge; the ridge root is 4 mm high for this reason.
+- **No load rating** is given for the V-notch pockets, the pen cup, the pegs, the hammer holder, the drill cradle, the pipe-wrench holder and the other newer holders. Start with a light load, and measure your own tool, spool or hammer handle. The work table is calculated at roughly 1.4 kg per 37 mm pot width with all load on the front edge (a rough estimate).
 - **This is not a replacement for a test:** print one module, hang a weight on it and tell the author what you get. Use more screws or a thicker plate (up to 8 mm) if you want to be on the safe side.
 
 ## Print Recommendations
@@ -215,14 +255,16 @@ The profiles are built for the **Bambu Lab P2S** (and any 256 mm bed) and the **
 | Walls | 4 (the profiles come with 3, 4 and 5) |
 | Top / bottom layers | 5 / 4 |
 | Infill | 15 % gyroid |
-| Supports | wall plate: none. Modules: **normal (auto), threshold angle 50°, "on build plate only" off** |
+| Supports | wall plate: none. Modules: support in two places on the wall side of the back plate (under the spacer and under the 45° lip), support type **normal (manual)** |
 | Plates | plate 1: wall plate lying on its back, ridges up, in colour 1; swap the filament; plate 2: modules upright in colour 2 |
 
-The profiles already contain the support setting for the module objects only. If you slice an STL yourself, enable the same support settings for the modules. After printing, break the support out of the slot behind the lip and **clean the 45° face of the lip** (knife or fine file) so the module sits flat on the ridge.
+The ready-made projects already contain the support as a support block for the modules only. If you slice an STL yourself or print a Customizer download without that block, set the support type to **normal (manual)** and paint the underside of the spacer and of the lip with the support painter; do not use automatic or tree support. After printing, break the support out from the wall side and **clean the 45° face of the lip** (knife or fine file) so the module sits flat on the ridge. Pegs, pen cup, hammer hooks and V-notch pockets need no support besides the lip and the spacer. The flat work table prints standing on its front edge with one breakable fin and needs no support. Bins print opening up without support.
+
+**Easier support removal (optional tip):** the support under the spacer and the lip sits on the 45° face, and PETG on PETG bonds hard. If your printer can print with two filaments, make only the **support interface layers** (the contact layers between support and module) from a filament that does not bond to the module. Bambu Lab documents **Bambu PLA Basic as support interface under a PETG HF or PETG Basic module** for the H2D and P2S: PLA and PETG stick poorly to each other, so the support snaps off cleanly. Print that PLA at 230 °C with the bed at 60 °C, dry both filaments, use the PLA for the interface only, and open the door or top cover of an enclosed printer to keep the chamber cool. A dedicated **Bambu Support for PLA/PETG** also works and allows a top Z distance of 0 for a smooth 45° face. **Do not use PVA with PETG.** A second nozzle (H2D, X2D, H2C, H3C) makes the material change quick with little waste; on a single-nozzle printer with an AMS every change purges a lot of filament. In Bambu Studio choose the interface filament in the support settings. Not tested on this exact model.
 
 ### Sample Variants
 
-Four ready-to-print sample variants (each with 3 / 4 / 5 walls). The Customizer can build any other combination.
+Four ready-to-print sample variants (3 / 4 / 5 walls for the three smaller ones). The Customizer can build any other combination.
 
 | Variant | Plate | Modules | Printer | Material | Time / weight (4 walls, plate 1 + plate 2 incl. support) |
 |---|---|---|---|---|---|
@@ -232,6 +274,38 @@ Four ready-to-print sample variants (each with 3 / 4 / 5 walls). The Customizer 
 | `workshop-7x3-h2c` | 7 × 3 cells (294 × 149 mm) | round, hex keys (9 pockets, 3 rows), pliers, Gridfinity tray (3 sockets), hooks | H2C | PETG | 4.2 h / 179 g + 9.5 h / 349 g |
 
 Each profile is a **two-plate, two-colour project**: plate 1 = wall plate (filament 1), plate 2 = the modules (filament 2). The colours are anthracite / amber (anthracite / teal for the tray set, graphite / red for the workshop); change them in Bambu Studio.
+
+### Extension Kits
+
+Fourteen more ready-to-print kits (P2S, PETG, 4 walls). They use the same hanging interface, so a wall you have already printed keeps working: every kit contains the holder and an optional wall plate.
+
+| Kit | Holder |
+|---|---|
+| `drill-cradle-3x2` | front-open 42 mm fork with a 2 mm C-lip per side, 70 mm reach |
+| `drill-bit-rack-4x2` | six blind pockets for 3 to 10 mm bits |
+| `pipe-wrench-holder-3x2` | closed 32 × 16 mm slot (or two holes, or an open fork) |
+| `sanding-pocket-5x2` | 125 × 12 mm pocket with 25 mm walls |
+| `caliper-fork-2x2` | jaw slot 30 × 5 mm, 20 mm deep |
+| `storage-box-3x2` | open-front box 120 × 100 × 70 mm with label recess |
+| `work-table-3x2` | flat table with 3 recesses for 32 mm paint pots |
+| `work-table-flat-3x2` | plain flat table with a 6 mm rim, no recesses |
+| `gridfinity-bins-35mm-3x2` | two-socket tray + two 35 mm bins |
+| `pliers-vee-4x2` | four V-notch pockets labelled Cut, Nose, Flat, Snip |
+| `tweezers-floor-4x2` | six blind slots 14.5 × 5.5 mm with a 1.6 mm floor, labelled |
+| `pen-cup-3x2` | round pen cup, 60 mm inside, 80 mm tall (untested) |
+| `spool-peg-3x2` | two 100 mm pegs, 84 mm apart, top tilted up 3 degrees (untested) |
+| `hammer-holder-4x2` | two hooks with a 34 mm gap: head (up to 130 mm) rests on both, handle hangs between them (untested) |
+
+| | |
+|---|---|
+| ![V-notch pliers holder, four pockets](images/08_kit-zangen-v-kerben.jpg) | ![Tweezers holder with six blind slots and labels](images/09_kit-pinzetten-boden.jpg) |
+| **pliers-vee-4x2:** four V-notch pockets | **tweezers-floor-4x2:** six blind slots with a floor |
+| ![Pen cup](images/10_kit-stiftebecher.jpg) | ![Spool pegs](images/11_kit-spulenhalter.jpg) |
+| **pen-cup-3x2:** round pen cup | **spool-peg-3x2:** two pegs for spools |
+| ![Hammer holder: two hooks with a gap](images/12_kit-hammerhalter.jpg) | |
+| **hammer-holder-4x2:** two hooks with a gap for the handle | |
+
+The pen cup, the spool pegs and the hammer holder are untested prints. Each kit comes with an English and a German assembly guide (PDF).
 
 ### Assembly
 
@@ -243,9 +317,11 @@ Each profile is a **two-plate, two-colour project**: plate 1 = wall plate (filam
 ## Use Cases
 
 - **Screwdriver rack:** a round-hole module above the workbench, graduated hole sizes for different handles.
-- **Pliers and wrenches:** slots for pliers and flat wrenches within easy reach.
+- **Pliers and wrenches:** slots for pliers and flat wrenches within easy reach, or **V-notch pockets** that take pliers and scissors of any thickness.
 - **Hex key and bit holder:** up to 24 pockets, in 1 to 3 rows, graduated for a hex key set or all 6.35 mm for 1/4" bits.
 - **Small parts:** a tray with Gridfinity sockets for standard bins.
+- **Tweezers and brushes:** slots or round holes with a floor and engraved labels.
+- **Pens, spools, hammer:** a pen cup, straight pegs for spools and rolls, a hammer holder with a gap for the handle.
 - **Cables, keys, gloves:** hooks that point up at 45°.
 - **A growing workshop wall:** start with a small plate and a module, add rows and modules later, or rearrange when your tools change.
 - **Different printers:** 4 cells on the A1 mini, 5 cells on 256 mm beds, 7 cells on the H2C.
@@ -269,7 +345,7 @@ Each profile is a **two-plate, two-colour project**: plate 1 = wall plate (filam
 
 ## Verification and Status
 
-11 configurations (default, every module type, blind and through hex pockets, 1 to 7 cells wide, M4 / M5 screws, plates of 5 and 7 mm, three printers, plate only) were checked automatically on the real geometry: **589 checks, 0 failed**.
+The whole suite (every module type including the V-notch pockets, pen cup, pegs, hammer holder, floors, labels and the tiled wall, in many configurations and on all three printers) was checked automatically on the real geometry: **1502 checks in the main suite, 0 failed**. The original holders and the plate behave exactly as before the extension.
 
 - **Wall plate:** one watertight solid, one ridge per row at a **42 mm pitch**, bevel angle **45°**, one screw hole per cell with the countersink at the front face, holes clear of the ridges, no overhang steeper than 45°.
 - **Hanging:** modules and plate **never overlap**; the lip has **0.18 mm play on the bevel** and **0.4 mm to the plate face**; a horizontal pull collides with the plate, so the module can only leave by **lifting** it about 10 mm along the bevel; it **slides** sideways; the **spacer** sits 0.4 mm from the plate face and stays 11 mm below the ridge foot, also for a module in the lowest row; tilting a module about the ridge tip is stopped after a small angle; modules stay on the plate.
@@ -282,7 +358,7 @@ Printed fit depends on your printer. **Not yet printed by the author**; the Grid
 
 ## About the Images
 
-The wall plates, modules, screw heads and Gridfinity bins in every image are the real geometry of the model (rendered from the exported parts, with simulated layer lines; these are renderings, not photographs of a print). The workshop around them (brick, concrete or plywood wall, workbench, shelving, vise) was painted by an AI **around** the model, which was pasted in unchanged. The tools (screwdrivers, pliers, hex keys, bits, keys, cable) are AI-generated images of tools placed in the holes; the screws and the bin contents are illustrations. None of this is part of the model. No photos of prints are included.
+The wall plates, modules, screw heads and Gridfinity bins in every image are the real geometry of the model (rendered from the exported parts, with simulated layer lines; these are renderings, not photographs of a print). The workshop around them (brick, concrete or plywood wall, workbench, shelving, vise) was painted by an AI **around** the model, which was pasted in unchanged. The tools (screwdrivers, pliers, hex keys, bits, keys, cable) are AI-generated images of tools placed in the holes; the screws and the bin contents are illustrations. None of this is part of the model. The kit pictures show the real holder geometry in a simple scene; the tools in them (hammer, tweezers, pens, spools) are simple illustrations. No photos of prints are included.
 
 ## Downloads
 

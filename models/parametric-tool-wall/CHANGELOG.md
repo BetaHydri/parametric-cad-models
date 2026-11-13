@@ -9,6 +9,38 @@ folgt [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-13
+
+### Added
+
+- 16 Halter-Typen statt fünf. Neu: V-Kerben für Zangen und Scheren beliebiger
+  Dicke (`vee`), Stiftebecher (`cup`), gerade Stifte für Spulen und Rollen
+  (`peg`) und Hammerhalter mit zwei Haken und einer Lücke für den Stiel
+  (`hammer`); dazu Bohrmaschinen-Aufnahme, Bohrerständer, Rohrzangen-Halter,
+  Schleifpapier-Tasche, Messschieber-Halter, Box mit offener Front und
+  Arbeitstisch.
+- Boden (Sacklöcher) für runde, Schlitz- und V-Kerben-Halter sowie 0,6 mm tief
+  eingravierte Beschriftungen pro Loch; Pinzetten-Voreinstellung für die
+  Schlitze (bis 8 Schlitze).
+- Wechselbare 1×1-Behälter (21–70 mm hoch) mit Beschriftungsfläche oder
+  eingraviertem Text sowie eine Kachelwand bis 60 × 60 Zellen in bettgroßen
+  Feldern.
+- Fünf neue druckfertige Kits (`pliers-vee-4x2`, `tweezers-floor-4x2`,
+  `pen-cup-3x2`, `spool-peg-3x2`, `hammer-holder-4x2`), zusätzlich zu neun
+  Erweiterungs-Kits für die älteren neuen Halter; jedes mit optionaler
+  Wandplatte und Montageanleitung (DE/EN).
+- Tipp für ein separates Filament für die Stützen-Kontaktschichten
+  (z. B. PLA unter PETG) für leichteres Entfernen der Stützen.
+- Neue Bilder: alle 16 Halter-Typen an einer Wand (Quer- und Hochformat) und
+  Cover der neuen Kits.
+
+### Changed
+
+- Stützen: Die fertigen Projekte enthalten einen Stützblock (Stützentyp normal
+  (manuell)) unter Abstandshalter und Lippe statt automatischer Stützen.
+- Neue Halter (Stiftebecher, Stifte, Hammerhalter) sind ungetestete Drucke;
+  für sie und die V-Kerben wird keine Tragfähigkeit angegeben.
+
 ## [1.0.0] - 2026-11-01
 
 ### Added
